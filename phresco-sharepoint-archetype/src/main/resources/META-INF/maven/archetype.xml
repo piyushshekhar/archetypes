@@ -1,0 +1,99 @@
+<!--
+  ###
+  Archetype - Sharepoint
+  
+  Copyright (C) 1999 - 2012 Photon Infotech Inc.
+  
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+  
+       http://www.apache.org/licenses/LICENSE-2.0
+  
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  ###
+  -->
+<archetype>
+	<id>phresco-sharepoint-archetype</id>
+	<sources>
+		<source>source/CabLib.dll</source>
+		<source>source/Mono.Cecil.dll</source>
+		<source>source/Phresco.HelloWorld.sln</source>
+		<source>source/WSPBuilder.exe</source>
+		<source>source/WSPBuilder.exe.config</source>
+		<source>source/Phresco.HelloWorld/Phresco.HelloWorld.csproj</source>
+		<source>source/Phresco.HelloWorld/Phresco.HelloWorld.snk</source>
+	</sources>
+	<testSources>
+		<source>test/load/tests/PhrescoFrameWork_TestPlan.jmx</source>
+		<source>test/performance/tests/PhrescoFrameWork_TestPlan.jmx</source>
+		<source>test/functional/AllTest/AllTest.cs</source>
+		<source>test/functional/AllTest/AllTest.csproj</source>
+		<source>test/functional/AllTest/App.config</source>
+		<source>source/test/AllTest/AllTest.cs</source>
+		<source>source/test/AllTest/AllTest.csproj</source>
+	</testSources>
+	<resources>
+		<resource>source/Phresco.HelloWorld/solutionid.txt</resource>
+		<resource>source/Phresco.HelloWorld/12/TEMPLATE/FEATURES/HelloWorld/elements.xml</resource>
+		<resource>source/Phresco.HelloWorld/12/TEMPLATE/FEATURES/HelloWorld/feature.xml</resource>
+		<resource>source/Phresco.HelloWorld/12/TEMPLATE/FEATURES/HelloWorld/HelloWorld.webpart</resource>
+		<resource>source/Phresco.HelloWorld/Properties/AssemblyInfo.cs</resource>
+		<resource>source/Phresco.HelloWorld/WebPartCode/HelloWorld.cs</resource>
+	</resources>
+	<testResources>
+		<resource>test/load/build.properties</resource>
+		<resource>test/load/build.xml</resource>
+		<resource>test/load/pom.xml</resource>
+		<resource>test/load/tests/config.csv</resource>
+		<resource>test/performance/build.properties</resource>
+		<resource>test/performance/build.xml</resource>
+		<resource>test/performance/pom.xml</resource>
+		<resource>test/performance/tests/config.csv</resource>
+		<resource>test/functional/AllTest.sln</resource>
+		<resource>test/functional/AllTest.suo</resource>
+		<resource>test/functional/AllTest/phresco-env-config.xml</resource>
+		<resource>test/functional/AllTest/bin/Debug/AllTest.dll</resource>
+		<resource>test/functional/AllTest/bin/Debug/AllTest.dll.config</resource>
+		<resource>test/functional/AllTest/bin/Debug/AllTest.pdb</resource>
+		<resource>test/functional/AllTest/bin/Debug/nmock.dll</resource>
+		<resource>test/functional/AllTest/bin/Debug/nunit.core.dll</resource>
+		<resource>test/functional/AllTest/bin/Debug/nunit.framework.dll</resource>
+		<resource>test/functional/AllTest/bin/Debug/ThoughtWorks.Selenium.Core.dll</resource>
+		<resource>test/functional/AllTest/bin/Debug/ThoughtWorks.Selenium.Core.pdb</resource>
+		<resource>test/functional/AllTest/bin/Debug/ThoughtWorks.Selenium.IntegrationTests.dll</resource>
+		<resource>test/functional/AllTest/bin/Debug/ThoughtWorks.Selenium.IntegrationTests.pdb</resource>
+		<resource>test/functional/AllTest/bin/Release/AllTest.dll</resource>
+		<resource>test/functional/AllTest/bin/Release/AllTest.dll.config</resource>
+		<resource>test/functional/AllTest/bin/Release/AllTest.dll.VisualState.xml</resource>
+		<resource>test/functional/AllTest/bin/Release/AllTest.pdb</resource>
+		<resource>test/functional/AllTest/bin/Release/nmock.dll</resource>
+		<resource>test/functional/AllTest/bin/Release/nunit.core.dll</resource>
+		<resource>test/functional/AllTest/bin/Release/nunit.framework.dll</resource>
+		<resource>test/functional/AllTest/bin/Release/TestResult.xml</resource>
+		<resource>test/functional/AllTest/bin/Release/ThoughtWorks.Selenium.Core.dll</resource>
+		<resource>test/functional/AllTest/bin/Release/ThoughtWorks.Selenium.Core.pdb</resource>
+		<resource>test/functional/AllTest/bin/Release/ThoughtWorks.Selenium.IntegrationTests.dll</resource>
+		<resource>test/functional/AllTest/bin/Release/ThoughtWorks.Selenium.IntegrationTests.pdb</resource>
+		<resource>source/test/AllTest/bin/Debug/AllTest.dll</resource>
+		<resource>source/test/AllTest/bin/Debug/AllTest.pdb</resource>
+		<resource>source/test/AllTest/bin/Debug/nunit.framework.dll</resource>
+		<resource>source/test/AllTest/bin/Debug/nunit.framework.xml</resource>
+		<resource>source/test/AllTest/bin/Release/AllTest.dll</resource>
+		<resource>source/test/AllTest/bin/Release/AllTest.dll.VisualState.xml</resource>
+		<resource>source/test/AllTest/bin/Release/AllTest.pdb</resource>
+		<resource>source/test/AllTest/bin/Release/nunit.framework.dll</resource>
+		<resource>source/test/AllTest/bin/Release/nunit.framework.xml</resource>
+		<resource>source/test/AllTest/bin/Release/TestResult.xml</resource>
+		<resource>source/test/AllTest/obj/Debug/AllTest.csproj.FileListAbsolute.txt</resource>
+		<resource>source/test/AllTest/obj/Debug/AllTest.dll</resource>
+		<resource>source/test/AllTest/obj/Debug/AllTest.pdb</resource>
+		<resource>source/test/AllTest/obj/Debug/ResolveAssemblyReference.cache</resource>
+		<resource>source/test/AllTest/obj/Release/AllTest.csproj.FileListAbsolute.txt</resource>
+		<resource>source/test/AllTest/obj/Release/AllTest.pdb</resource>
+	</testResources>
+</archetype>
