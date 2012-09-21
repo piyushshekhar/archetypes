@@ -7,8 +7,9 @@ Author by {phresco} QA Automation Team
 
 require 'tests/Node.php';
 
-class NodeModules extends PHPUnit_Framework_TestSuite {
-
+    class NodeModules extends PHPUnit_Framework_TestSuite {
+    protected $backupGlobals = FALSE;
+    
 	protected function setUp() {
 	}
 
