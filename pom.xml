@@ -52,6 +52,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 		<module>windows7-pivot-archetype</module>
 		<module>windows7-databound-archetype</module>
 		<module>phresco-windows8-archetype</module>
+        <module>phresco-blackberry-archetype</module>
     </modules>
 	
 	<properties>
