@@ -27,6 +27,7 @@
 			<includes> 
 				<include>archetype-metadata.xml</include> 
 				<include>excludefiles.txt</include> 
+				<include>phresco-plugin-info.xml</include>
 			</includes> 
 		</fileSet>
 		<fileSet filtered="false" packaged="false"> 
