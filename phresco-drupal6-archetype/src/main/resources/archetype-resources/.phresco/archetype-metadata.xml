@@ -27,6 +27,7 @@
 			<includes> 
 				<include>archetype-metadata.xml</include> 
 				<include>excludefiles.txt</include> 
+				<include>phresco-plugin-info.xml</include>
 			</includes> 
 		</fileSet>
 		<fileSet filtered="false" packaged="false"> 
@@ -123,11 +124,11 @@
 		<fileSet filtered="false"> 
 			<directory>test/functional/src/test/php/phresco/tests</directory> 
 			<includes> 
-				<include>CommonAll.php</include>
-				<include>CreateNewAC.php</include>
+				<include>CommonSuite.php</include>
+				<include>UserCreate_NewAC.php</include>
 				<include>DrupalCommonFun.php</include>
 				<include>Login_NewUsers.php</include>
-				<include>UserAll.php</include>
+				<include>UserSuite.php</include>
 				<include>phresco-env-config.xml</include>
 				<include>Drupal6Data.xml</include>
                 <include>UserInfo.xml</include>
