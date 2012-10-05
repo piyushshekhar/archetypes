@@ -45,6 +45,12 @@
 				<include>default.properties</include>
 			</includes>
 		</fileSet>
+        <fileSet filtered="false" packaged="false"> 
+			<directory>source/assets</directory> 
+			<includes>
+				<include>phresco-env-config.xml</include>
+			</includes>
+		</fileSet>
 		<fileSet filtered="false" packaged="false"> 
 			<directory>source/assets/www</directory> 
 			<includes>
