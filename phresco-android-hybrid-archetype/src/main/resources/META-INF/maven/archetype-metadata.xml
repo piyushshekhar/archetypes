@@ -45,19 +45,20 @@
 				<include>default.properties</include>
 			</includes>
 		</fileSet>
-        <fileSet filtered="false" packaged="false"> 
-			<directory>source/assets</directory> 
-			<includes>
-				<include>phresco-env-config.xml</include>
-			</includes>
-		</fileSet>
 		<fileSet filtered="false" packaged="false"> 
 			<directory>source/assets/www</directory> 
 			<includes>
 				<include>index.html</include>
 				<include>main.js</include>
 				<include>master.css</include>
-				<include>phonegap-1.4.1.js</include>
+				<include>cordova-2.1.0.js</include>
+			</includes>
+		</fileSet>
+        <fileSet filtered="false" packaged="false"> 
+			<directory>source/gen/com/photon/phresco/hybrid</directory> 
+			<includes>
+				<include>BuildConfig.java</include>
+				<include>R.java</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="false" packaged="false"> 
@@ -71,13 +72,6 @@
 			<includes>
 				<include>ConfigReader.java</include>
                 <include>Configuration.java</include>
-                <include>EnvConstuctor.java</include>
-			</includes>
-		</fileSet>
-         <fileSet filtered="false" packaged="false"> 
-			<directory>source/src/com/photon/phresco/nativeapp/logger</directory> 
-			<includes>
-				<include>PhrescoLogger.java</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="false" packaged="false"> 
@@ -98,6 +92,12 @@
 				<include>ic_launcher.png</include>
 			</includes>
 		</fileSet>
+        <fileSet filtered="false" packaged="false"> 
+			<directory>source/res/drawable-xhdpi</directory> 
+			<includes>
+				<include>**/*</include>
+			</includes>
+		</fileSet>
 		<fileSet filtered="false" packaged="false"> 
 			<directory>source/res/layout</directory> 
 			<includes>
@@ -113,8 +113,7 @@
 		<fileSet filtered="false" packaged="false"> 
 			<directory>source/res/xml</directory> 
 			<includes>
-				<include>phonegap.xml</include>
-				<include>plugins.xml</include>
+				<include>config.xml</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="false" packaged="false"> 
@@ -126,7 +125,7 @@
 		<fileSet filtered="false" packaged="false"> 
 			<directory>source/libs</directory> 
 			<includes>
-				<include>phonegap-1.4.1.jar</include>
+				<include>cordova-2.1.0.jar</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="false" packaged="false"> 
