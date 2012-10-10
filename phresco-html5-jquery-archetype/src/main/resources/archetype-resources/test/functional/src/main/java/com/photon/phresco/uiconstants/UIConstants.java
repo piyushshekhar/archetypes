@@ -1,9 +1,9 @@
 /*
  * ###
- * PHR_jquery-widget-hw
- * %%
+ * Archetype - phresco-html5-archetype
+ * 
  * Copyright (C) 1999 - 2012 Photon Infotech Inc.
- * %%
+ * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
@@ -22,26 +22,17 @@ package com.photon.phresco.uiconstants;
 
 import java.lang.reflect.Field;
 
-public class PhrescoUiConstants {
+public class UIConstants {
 	private ReadXMLFile readXml;
-
-	public String PROTOCOL = "protocol";
-	
-	public String CONTEXT = "context";
-	public String HOST = "host";
-	public String BROWSER = "Browser";
-	public String RESOLUTION="resolution";
-	
-	
-	public String PORT= "port";
 
 	// ***************LOGINPAGE*****************
     public String TEXTCAPTURED="loginText";
 	// ***************LOGINPAGE*****************
 
-    public PhrescoUiConstants() {
+    public UIConstants() {
 		try {
 			readXml = new ReadXMLFile();
+			readXml.loadUIConstants();
 			Field[] arrayOfField1 = super.getClass().getFields();
 			Field[] arrayOfField2 = arrayOfField1;
 			int i = arrayOfField2.length;
