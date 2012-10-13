@@ -35,12 +35,12 @@
         <sourceDirectory>source/src</sourceDirectory>
 		<directory>do_not_checkin/target</directory>
         <plugins>
-           <plugin>
-				<groupId>com.photon.phresco.plugins</groupId>
-				<artifactId>dotnet-maven-plugin</artifactId>
-				<version>2.0.0.16001-SNAPSHOT</version>
-				<extensions>true</extensions>
-			</plugin>
+			<plugin>
+                <groupId>com.photon.phresco.plugins</groupId>
+                <artifactId>phresco-maven-plugin</artifactId>
+                <version>2.0.0.16001-SNAPSHOT</version>
+			    <extensions>true</extensions>
+            </plugin>
 		</plugins>
 	</build>
 	

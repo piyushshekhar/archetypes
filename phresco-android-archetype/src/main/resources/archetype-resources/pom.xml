@@ -56,6 +56,11 @@
 					<version>2.0.0.16001-SNAPSHOT</version>
 					<extensions>true</extensions>
 				</plugin>
+				<plugin>
+                    <groupId>com.photon.phresco.plugins</groupId>
+                    <artifactId>phresco-maven-plugin</artifactId>
+                    <version>2.0.0.16001-SNAPSHOT</version>
+                </plugin>
 			</plugins>
 		</pluginManagement>
     <!-- To use the plugin goals in your POM or parent POM -->
@@ -73,6 +78,11 @@
 					<extractDuplicates>true</extractDuplicates> 
                     <undeployBeforeDeploy>true</undeployBeforeDeploy>
                 </configuration>
+            </plugin>
+			<plugin>
+                <groupId>com.photon.phresco.plugins</groupId>
+                <artifactId>phresco-maven-plugin</artifactId>
+                <version>2.0.0.16001-SNAPSHOT</version>
             </plugin>
         </plugins>
 	</build>
