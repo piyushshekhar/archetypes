@@ -2,7 +2,7 @@
 <mojos>
     <mojo>
         <goal>package</goal>
-        <description>Goal which deploys the Java Standalone project</description>
+        <description>Goal which packages the Java-quickstart project</description>
         <requiresDirectInvocation>false</requiresDirectInvocation>
         <requiresProject>true</requiresProject>
         <requiresReports>false</requiresReports>
@@ -85,7 +85,7 @@
                     <name>
                         <value lang="en">Logs</value>
                     </name>
-                    <type>String</type>
+                    <type>List</type>
                     <required>false</required>
                     <editable>true</editable>
                     <key>logs</key>
@@ -112,7 +112,7 @@
     </mojo>
     <mojo>
         <goal>deploy</goal>
-        <description>Goal which deploys the PHP project</description>
+        <description>Goal which deploys the Java-quickstart project</description>
         <requiresDirectInvocation>false</requiresDirectInvocation>
         <requiresProject>true</requiresProject>
         <requiresReports>false</requiresReports>
@@ -152,7 +152,7 @@
                     <name>
                         <value lang="en">Logs</value>
                     </name>
-                    <type>String</type>
+                    <type>List</type>
                     <required>false</required>
                     <editable>true</editable>
                     <description></description>
@@ -166,5 +166,77 @@
                 </parameter>
             </parameters>
         </configuration>
+    </mojo>
+	<mojo>
+      <goal>validate-code</goal>
+      <description>Goal which validates the Java-quickstart project</description>
+      <requiresDirectInvocation>false</requiresDirectInvocation>
+      <requiresProject>true</requiresProject>
+      <requiresReports>false</requiresReports>
+      <aggregator>false</aggregator>
+      <requiresOnline>false</requiresOnline>
+      <inheritedByDefault>true</inheritedByDefault>
+      <language>java</language>
+      <instantiationStrategy>per-lookup</instantiationStrategy>
+      <executionStrategy>once-per-session</executionStrategy>
+      <threadSafe>false</threadSafe>
+	  <configuration>
+      <parameters>
+        <parameter>
+		<pluginParameter>plugin</pluginParameter>
+			<mavenCommands>
+				<mavenCommand>
+					<key>skipTests</key>
+					<value>-DskipTests</value>
+				</mavenCommand>
+			</mavenCommands>
+			<name>codeValidation</name>
+			<type>java.lang.String</type>
+			<required>false</required>
+			<editable>true</editable>
+			<description></description>
+			<key>sonar</key>
+			<possibleValues>
+				<value dependency="src,skipTests">src</value>
+				<value>functional</value>
+			</possibleValues>
+		  <value></value>
+        </parameter>
+		<parameter>
+			<name>src</name>
+			<mavenCommands>
+				<mavenCommand>
+					<key>js</key>
+					<value>-Pjs</value>
+				</mavenCommand>
+				<mavenCommand>
+					<key>java</key>
+					<value>-Pjava</value>
+				</mavenCommand>
+				<mavenCommand>
+					<key>html</key>
+					<value>-Phtml</value>
+				</mavenCommand>
+				<mavenCommand>
+					<key>jsp/jsf</key>
+					<value>-Pweb</value>
+				</mavenCommand>
+			</mavenCommands>
+			<pluginParameter>plugin</pluginParameter>
+          <type>java.lang.String</type>
+          <required>false</required>
+          <editable>true</editable>
+          <description></description>
+		  <key>src</key>
+			<possibleValues>
+				<value>js</value>
+				<value>java</value>
+				<value>html</value>
+				<value>jsp/jsf</value>
+			</possibleValues>
+		  <value></value>
+        </parameter>
+          </parameters>
+      </configuration>
     </mojo>
 </mojos>

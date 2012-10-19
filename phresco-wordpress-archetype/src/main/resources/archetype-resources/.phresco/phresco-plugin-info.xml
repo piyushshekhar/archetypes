@@ -2,7 +2,7 @@
 <mojos>
     <mojo>
         <goal>package</goal>
-        <description>Goal which deploys the wordpress project</description>
+        <description>Goal which packages the wordpress project</description>
         <requiresDirectInvocation>false</requiresDirectInvocation>
         <requiresProject>true</requiresProject>
         <requiresReports>false</requiresReports>
@@ -63,7 +63,7 @@
                     <name>
                         <value lang="en">Logs</value>
                     </name>
-                    <type>String</type>
+                    <type>List</type>
                     <required>false</required>
                     <editable>true</editable>
                     <key>logs</key>
@@ -118,7 +118,7 @@
                     <name>
                         <value lang="en">Logs</value>
                     </name>
-                    <type>String</type>
+                    <type>List</type>
                     <required>false</required>
                     <editable>true</editable>
                     <description></description>
