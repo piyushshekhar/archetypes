@@ -1,5 +1,77 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <mojos>
+	<mojo>
+      <goal>start</goal>
+      <description>Goal which starts the HTML project</description>
+      <requiresDirectInvocation>false</requiresDirectInvocation>
+      <requiresProject>true</requiresProject>
+      <requiresReports>false</requiresReports>
+      <aggregator>false</aggregator>
+      <requiresOnline>false</requiresOnline>
+      <inheritedByDefault>true</inheritedByDefault>
+      <implementation>com.photon.phresco.plugins.java.JavaPlugin</implementation>
+      <language>java</language>
+      <instantiationStrategy>per-lookup</instantiationStrategy>
+      <executionStrategy>once-per-session</executionStrategy>
+      <threadSafe>false</threadSafe>
+	  <configuration>
+      <parameters>
+        <parameter>
+          <name>
+			<value lang="en">Port</value>
+		  </name>
+          <type>DynamicParam</type>
+		  <type>java.lang.String</type>
+          <required>false</required>
+          <editable>true</editable>
+          <description></description>
+		  <key>port</key>
+		  <value>3933</value>
+        </parameter>
+		<parameter>
+          <name>
+			<value lang="en">context</value>
+		  </name>
+          <type>DynamicParam</type>
+		  
+          <required>false</required>
+          <editable>true</editable>
+          <description></description>
+		  <key>context</key>
+		  <value>sample</value>
+        </parameter>
+        <parameter>
+          <name>environmentName</name>
+          <type>java.lang.String</type>
+          <required>false</required>
+          <editable>true</editable>
+          <description></description>
+		  <key>environmentName</key>
+		  <possiblevalues>
+            <value>Show Errors</value>
+            <value>Hide Logs</value>
+            <value>Show Debug</value>
+          </possiblevalues>
+		  <value>Production</value>
+        </parameter>
+          </parameters>
+      </configuration>
+    </mojo>
+	<mojo>
+      <goal>stop</goal>
+      <description>Goal which stops the HTML project</description>
+      <requiresDirectInvocation>false</requiresDirectInvocation>
+      <requiresProject>true</requiresProject>
+      <requiresReports>false</requiresReports>
+      <aggregator>false</aggregator>
+      <requiresOnline>false</requiresOnline>
+      <inheritedByDefault>true</inheritedByDefault>
+      <implementation>com.photon.phresco.plugins.java.JavaPlugin</implementation>
+      <language>java</language>
+      <instantiationStrategy>per-lookup</instantiationStrategy>
+      <executionStrategy>once-per-session</executionStrategy>
+      <threadSafe>false</threadSafe>
+    </mojo>
     <mojo>
         <goal>package</goal>
         <description>Goal which packages the html5-jquery project</description>

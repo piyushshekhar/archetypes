@@ -1,5 +1,53 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <mojos>
+	<mojo>
+      <goal>start</goal>
+      <description>Goal which starts the nodejs project</description>
+      <requiresDirectInvocation>false</requiresDirectInvocation>
+      <requiresProject>true</requiresProject>
+      <requiresReports>false</requiresReports>
+      <aggregator>false</aggregator>
+      <requiresOnline>false</requiresOnline>
+      <inheritedByDefault>true</inheritedByDefault>
+      <implementation>com.photon.phresco.plugins.nodejs.NodeJsPlugin</implementation>
+      <language>java</language>
+      <instantiationStrategy>per-lookup</instantiationStrategy>
+      <executionStrategy>once-per-session</executionStrategy>
+      <threadSafe>false</threadSafe>
+	  <configuration>
+      <parameters>
+        <parameter>
+          <name>environmentName</name>
+          <type>java.lang.String</type>
+          <required>false</required>
+          <editable>true</editable>
+          <description></description>
+		  <key>environmentName</key>
+		  <possiblevalues>
+            <value>Show Errors</value>
+            <value>Hide Logs</value>
+            <value>Show Debug</value>
+          </possiblevalues>
+		  <value>Production</value>
+        </parameter>
+          </parameters>
+      </configuration>
+    </mojo>
+	<mojo>
+      <goal>stop</goal>
+      <description>Goal which stops the nodejs project</description>
+      <requiresDirectInvocation>false</requiresDirectInvocation>
+      <requiresProject>true</requiresProject>
+      <requiresReports>false</requiresReports>
+      <aggregator>false</aggregator>
+      <requiresOnline>false</requiresOnline>
+      <inheritedByDefault>true</inheritedByDefault>
+      <implementation>com.photon.phresco.plugins.nodejs.NodeJsPlugin</implementation>
+      <language>java</language>
+      <instantiationStrategy>per-lookup</instantiationStrategy>
+      <executionStrategy>once-per-session</executionStrategy>
+      <threadSafe>false</threadSafe>
+    </mojo>
     <mojo>
         <goal>package</goal>
         <description>Goal which packages the nodejs project</description>
@@ -47,10 +95,10 @@
                         <class>com.photon.phresco.param.impl.EnvironmentParameter</class>
                         <dependencies>
                             <dependency>
-<groupId>com.photon.phresco.commons</groupId>
-<artifactId>phresco-commons</artifactId>
-<type>jar</type>
-<version>1.0.0</version>
+								<groupId>com.photon.phresco.commons</groupId>
+								<artifactId>phresco-commons</artifactId>
+								<type>jar</type>
+								<version>1.0.0</version>
                             </dependency>
                         </dependencies>
                     </dynamicParameter>
@@ -102,10 +150,10 @@
                         <class>com.photon.phresco.param.impl.EnvironmentParameter</class>
                         <dependencies>
                             <dependency>
-<groupId>com.photon.phresco.commons</groupId>
-<artifactId>phresco-commons</artifactId>
-<type>jar</type>
-<version>1.0.0</version>
+								<groupId>com.photon.phresco.commons</groupId>
+								<artifactId>phresco-commons</artifactId>
+								<type>jar</type>
+								<version>1.0.0</version>
                             </dependency>
                         </dependencies>
                     </dynamicParameter>
