@@ -72,7 +72,7 @@
                     <required>false</required>
                     <editable>true</editable>
                     <description></description>
-                    <key>userBuildName</key>
+                    <key>buildName</key>
                     <value></value>
                 </parameter>
                 <parameter>
@@ -83,7 +83,7 @@
                     <required>false</required>
                     <editable>true</editable>
                     <description></description>
-                    <key>userBuildNumber</key>
+                    <key>buildNumber</key>
                     <value></value>
                 </parameter>
                 <parameter>
@@ -92,7 +92,7 @@
                     </name>
                     <type>DynamicParameter</type>
                     <dynamicParameter>
-                        <class>com.photon.phresco.param.impl.EnvironmentParameter</class>
+                        <class>com.photon.phresco.framework.param.EnvironmentParameter</class>
                         <dependencies>
                             <dependency>
 								<groupId>com.photon.phresco.commons</groupId>
@@ -141,13 +141,24 @@
         <threadSafe>false</threadSafe>
         <configuration>
             <parameters>
+				<parameter>
+                    <name>
+                        <value lang="en">Build Number</value>
+                    </name>
+                    <type>Hidden</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>buildNumber</key>
+                    <value></value>
+                </parameter>
                 <parameter>
                     <name>
                         <value lang="en">Environment</value>
                     </name>
                     <type>DynamicParameter</type>
                     <dynamicParameter>
-                        <class>com.photon.phresco.param.impl.EnvironmentParameter</class>
+                        <class>com.photon.phresco.framework.param.DeployEnvironment</class>
                         <dependencies>
                             <dependency>
 								<groupId>com.photon.phresco.commons</groupId>
