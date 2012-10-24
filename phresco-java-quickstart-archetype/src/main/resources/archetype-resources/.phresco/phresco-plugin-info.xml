@@ -25,6 +25,7 @@
                     <editable>true</editable>
                     <description></description>
                     <key>buildName</key>
+					<multiple>false</multiple>
                     <value></value>
                 </parameter>
                 <parameter>
@@ -36,30 +37,10 @@
                     <editable>true</editable>
                     <description></description>
                     <key>buildNumber</key>
+					<multiple>false</multiple>
                     <value></value>
                 </parameter>
-                <parameter>
-                    <name>
-                        <value lang="en">Environment</value>
-                    </name>
-                    <type>DynamicParameter</type>
-                    <dynamicParameter>
-                         <class>com.photon.phresco.framework.param.EnvironmentParameter</class>
-                        <dependencies>
-                            <dependency>
-<groupId>com.photon.phresco.commons</groupId>
-<artifactId>phresco-commons</artifactId>
-<type>jar</type>
-<version>1.0.0</version>
-                            </dependency>
-                        </dependencies>
-                    </dynamicParameter>
-                    <required>true</required>
-                    <editable>true</editable>
-                    <key>environmentName</key>
-                    <value>Production</value>
-                </parameter>
-                <parameter>
+				<parameter>
                     <name>
                         <value lang="en">Jar Name</value>
                     </name>
@@ -68,6 +49,7 @@
                     <editable>true</editable>
                     <description></description>
                     <key>jarName</key>
+					<multiple>false</multiple>
                     <value></value>
                 </parameter>
                 <parameter>
@@ -79,101 +61,97 @@
                     <editable>true</editable>
                     <description></description>
                     <key>mainClassName</key>
+					<multiple>false</multiple>
                     <value>com.photon.phresco.HelloWorld</value>
                 </parameter>
                 <parameter>
                     <name>
-                        <value lang="en">Logs</value>
-                    </name>
-                    <type>List</type>
-                    <required>false</required>
-                    <editable>true</editable>
-                    <key>logs</key>
-                    <possibleValues>
-                        <value>Show Errors</value>
-                        <value>Hide Logs</value>
-                        <value>Show Debug</value>
-                    </possibleValues>
-                    <value>Show Debug</value>
-                </parameter>
-                <parameter>
-                    <name>
-                        <value lang="en">Skip UnitTest</value>
-                    </name>
-                    <type>Boolean</type>
-                    <required>false</required>
-                    <editable>true</editable>
-                    <description></description>
-                    <key>skipTest</key>
-                    <value>true</value>
-                </parameter>
-            </parameters>
-        </configuration>
-    </mojo>
-    <mojo>
-        <goal>deploy</goal>
-        <description>Goal which deploys the Java-quickstart project</description>
-        <requiresDirectInvocation>false</requiresDirectInvocation>
-        <requiresProject>true</requiresProject>
-        <requiresReports>false</requiresReports>
-        <aggregator>false</aggregator>
-        <requiresOnline>false</requiresOnline>
-        <inheritedByDefault>true</inheritedByDefault>
-        <implementation>com.photon.phresco.plugins.java.JavaPlugin</implementation>
-        <language>java</language>
-        <instantiationStrategy>per-lookup</instantiationStrategy>
-        <executionStrategy>once-per-session</executionStrategy>
-        <threadSafe>false</threadSafe>
-        <configuration>
-            <parameters>
-                <parameter>
-                    <name>
                         <value lang="en">Environment</value>
-                        <value lang="cv">Envit</value>
                     </name>
                     <type>DynamicParameter</type>
                     <dynamicParameter>
-                        <class>com.photon.phresco.framework.param.DeployEnvironment</class>
+                         <class>com.photon.phresco.framework.param.EnvironmentParameter</class>
                         <dependencies>
                             <dependency>
-<groupId>com.photon.phresco.commons</groupId>
-<artifactId>phresco-commons</artifactId>
-<type>jar</type>
-<version>1.0.0</version>
+								<groupId>com.photon.phresco.commons</groupId>
+								<artifactId>phresco-commons</artifactId>
+								<type>jar</type>
+								<version>1.0.0</version>
                             </dependency>
                         </dependencies>
                     </dynamicParameter>
                     <required>true</required>
                     <editable>true</editable>
                     <key>environmentName</key>
+					<multiple>true</multiple>
                     <value>Production</value>
                 </parameter>
-				<parameter>
+                <parameter>
                     <name>
-                        <value lang="en">Build Number</value>
+                        <value lang="en">Show Settings</value>
                     </name>
-                    <type>Hidden</type>
+                    <type>Boolean</type>
                     <required>false</required>
                     <editable>true</editable>
                     <description></description>
-                    <key>buildNumber</key>
-                    <value></value>
+                    <key>showSettings</key>
+                    <multiple>false</multiple>
+                    <value>true</value>
+                    <dependency>environmentName</dependency>
+                </parameter>
+				<parameter>
+                    <pluginParameter>framework</pluginParameter>
+                    <mavenCommands>
+                        <mavenCommand>
+                            <key>true</key>
+                            <value>-DskipTests=true</value>
+                        </mavenCommand>
+                        <mavenCommand>
+                            <key>false</key>
+                            <value>-DskipTests=false</value>
+                        </mavenCommand>
+                    </mavenCommands>
+                    <name>
+                        <value lang="en">Skip Unit Test</value>
+                    </name>
+                    <type>Boolean</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>skipTest</key>
+					<multiple>false</multiple>
+                    <value>true</value>
                 </parameter>
                 <parameter>
+                    <pluginParameter>framework</pluginParameter>
+                    <mavenCommands>
+                        <mavenCommand>
+                            <key>Show Errors</key>
+                            <value>-e</value>
+                        </mavenCommand>
+                        <mavenCommand>
+                            <key>Hide Logs</key>
+                            <value>-q</value>
+                        </mavenCommand>
+                        <mavenCommand>
+                            <key>Show Debug</key>
+                            <value>-X</value>
+                        </mavenCommand>
+                    </mavenCommands>
                     <name>
                         <value lang="en">Logs</value>
                     </name>
                     <type>List</type>
                     <required>false</required>
                     <editable>true</editable>
-                    <description></description>
                     <key>logs</key>
                     <possibleValues>
                         <value>Show Errors</value>
                         <value>Hide Logs</value>
                         <value>Show Debug</value>
                     </possibleValues>
-                    <value>Show Debug</value>
+                    <multiple>false</multiple>
+                    <value></value>
                 </parameter>
             </parameters>
         </configuration>
@@ -211,6 +189,7 @@
 				<value dependency="src,skipTests">src</value>
 				<value>functional</value>
 			</possibleValues>
+			<multiple>false</multiple>
 		  <value></value>
         </parameter>
 		<parameter>
@@ -234,7 +213,7 @@
 				</mavenCommand>
 			</mavenCommands>
 			<pluginParameter>plugin</pluginParameter>
-          <type>java.lang.String</type>
+          <type>String</type>
           <required>false</required>
           <editable>true</editable>
           <description></description>
@@ -245,6 +224,7 @@
 				<value>html</value>
 				<value>jsp/jsf</value>
 			</possibleValues>
+			<multiple>false</multiple>
 		  <value></value>
         </parameter>
           </parameters>

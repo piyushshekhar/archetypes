@@ -15,8 +15,8 @@
         <executionStrategy>once-per-session</executionStrategy>
         <threadSafe>false</threadSafe>
         <configuration>
-            <parameters>
-                <parameter>
+			<parameters>
+				<parameter>
                     <name>
                         <value lang="en">Build Name</value>
                     </name>
@@ -25,6 +25,7 @@
                     <editable>true</editable>
                     <description></description>
                     <key>buildName</key>
+                    <multiple>false</multiple>
                     <value></value>
                 </parameter>
                 <parameter>
@@ -36,28 +37,7 @@
                     <editable>true</editable>
                     <description></description>
                     <key>buildNumber</key>
-                    <value></value>
-                </parameter>
-				<parameter>
-                    <name>
-                        <value lang="en">Version</value>
-                    </name>
-                    <type>String</type>
-                    <required>false</required>
-                    <editable>true</editable>
-                    <description></description>
-                    <key>android_version</key>
-                    <value></value>
-                </parameter>
-				<parameter>
-                    <name>
-                        <value lang="en">SDK</value>
-                    </name>
-                    <type>String</type>
-                    <required>false</required>
-                    <editable>true</editable>
-                    <description></description>
-                    <key>sdk</key>
+                    <multiple>false</multiple>
                     <value></value>
                 </parameter>
                 <parameter>
@@ -79,9 +59,50 @@
                     <required>true</required>
                     <editable>true</editable>
                     <key>environmentName</key>
+                    <multiple>false</multiple>
                     <value>Production</value>
                 </parameter>
+				<parameter>
+                    <name>
+                        <value lang="en">SDK</value>
+                    </name>
+                    <type>String</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>sdk</key>
+					<multiple>false</multiple>
+                    <value></value>
+                </parameter>
+				<parameter>
+                    <name>
+                        <value lang="en">Show Settings</value>
+                    </name>
+                    <type>Boolean</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>showSettings</key>
+                    <multiple>false</multiple>
+                    <value>true</value>
+                    <dependency>environmentName</dependency>
+                </parameter>
                 <parameter>
+                    <pluginParameter>framework</pluginParameter>
+                    <mavenCommands>
+                        <mavenCommand>
+                            <key>Show Errors</key>
+                            <value>-e</value>
+                        </mavenCommand>
+                        <mavenCommand>
+                            <key>Hide Logs</key>
+                            <value>-q</value>
+                        </mavenCommand>
+                        <mavenCommand>
+                            <key>Show Debug</key>
+                            <value>-X</value>
+                        </mavenCommand>
+                    </mavenCommands>
                     <name>
                         <value lang="en">Logs</value>
                     </name>
@@ -94,21 +115,95 @@
                         <value>Hide Logs</value>
                         <value>Show Debug</value>
                     </possibleValues>
-                    <value>Show Debug</value>
+                    <multiple>false</multiple>
+                    <value></value>
+                </parameter>
+				<parameter>
+                    <name>
+                        <value lang="en">Proguard</value>
+                    </name>
+                    <type>boolean</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>proguard</key>
+                    <multiple>false</multiple>
+                    <value></value>
+                </parameter>
+				<parameter>
+                    <name>
+                        <value lang="en">Signing</value>
+                    </name>
+                    <type>boolean</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>signing</key>
+                    <multiple>false</multiple>
+                    <value></value>
+					<dependency>keystore,storepass,keypass,alias</dependency>
+                </parameter>
+				<parameter>
+                    <name>
+                        <value lang="en">Keystore</value>
+                    </name>
+                    <type>String</type>
+                    <required>true</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>keystore</key>
+                    <multiple>false</multiple>
+                    <value></value>
+                </parameter>
+				<parameter>
+                    <name>
+                        <value lang="en">Storepass</value>
+                    </name>
+                    <type>String</type>
+                    <required>true</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>storepass</key>
+                    <multiple>false</multiple>
+                    <value></value>
+                </parameter>
+				<parameter>
+                    <name>
+                        <value lang="en">Keypass</value>
+                    </name>
+                    <type>String</type>
+                    <required>true</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>keypass</key>
+                    <multiple>false</multiple>
+                    <value></value>
+                </parameter>
+				<parameter>
+                    <name>
+                        <value lang="en">Alias</value>
+                    </name>
+                    <type>String</type>
+                    <required>true</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>alias</key>
+                    <multiple>false</multiple>
+                    <value></value>
                 </parameter>
             </parameters>
         </configuration>
     </mojo>
     <mojo>
         <goal>deploy</goal>
-        <description>Goal which deploys the Drupal-6 project</description>
+        <description>Goal which deploys the Android Native project</description>
         <requiresDirectInvocation>false</requiresDirectInvocation>
         <requiresProject>true</requiresProject>
         <requiresReports>false</requiresReports>
         <aggregator>false</aggregator>
         <requiresOnline>false</requiresOnline>
         <inheritedByDefault>true</inheritedByDefault>
-        <implementation>com.photon.phresco.plugins.drupal.DrupalPlugin</implementation>
+        <implementation>com.photon.phresco.plugins.android.AndroidPlugin</implementation>
         <language>java</language>
         <instantiationStrategy>per-lookup</instantiationStrategy>
         <executionStrategy>once-per-session</executionStrategy>
@@ -117,40 +212,32 @@
             <parameters>
                 <parameter>
                     <name>
-                        <value lang="en">Environment</value>
-                    </name>
-                    <type>DynamicParameter</type>
-                    <dynamicParameter>
-                        <class>com.photon.phresco.framework.param.DeployEnvironment</class>
-                        <dependencies>
-                            <dependency>
-<groupId>com.photon.phresco.commons</groupId>
-<artifactId>phresco-commons</artifactId>
-<type>jar</type>
-<version>1.0.0</version>
-                            </dependency>
-                        </dependencies>
-                    </dynamicParameter>
-                    <required>true</required>
-                    <editable>true</editable>
-                    <key>environmentName</key>
-                    <value>Production</value>
-                </parameter>
-                <parameter>
-                    <name>
-                        <value lang="en">Logs</value>
+                        <value lang="en">Devices</value>
                     </name>
                     <type>List</type>
                     <required>false</required>
                     <editable>true</editable>
                     <description></description>
-                    <key>logs</key>
-                    <possibleValues>
-                        <value>Show Errors</value>
-                        <value>Hide Logs</value>
-                        <value>Show Debug</value>
+                    <key>devices</key>
+					<possibleValues>
+                        <value>USB</value>
+                        <value>Emulator</value>
+                        <value dependency="serialNumber">SerialNumber</value>
                     </possibleValues>
-                    <value>Show Errors</value>
+					<multiple>false</multiple>
+                    <value></value>
+                </parameter>
+				<parameter>
+                    <name>
+                        <value lang="en">serialNumber</value>
+                    </name>
+                    <type>String</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>serialNumber</key>
+					<multiple>false</multiple>
+                    <value></value>
                 </parameter>
                 <parameter>
                     <name>
@@ -161,6 +248,7 @@
                     <editable>true</editable>
                     <description></description>
                     <key>buildNumber</key>
+					<multiple>false</multiple>
                     <value></value>
                 </parameter>
             </parameters>
@@ -168,7 +256,7 @@
     </mojo>
 	<mojo>
       <goal>validate-code</goal>
-      <description>Goal which validates the Drupal-6 project</description>
+      <description>Goal which validates the Android Native project</description>
       <requiresDirectInvocation>false</requiresDirectInvocation>
       <requiresProject>true</requiresProject>
       <requiresReports>false</requiresReports>
@@ -199,6 +287,7 @@
 				<value dependency="src,skipTests">src</value>
 				<value>functional</value>
 			</possibleValues>
+			<multiple>false</multiple>
 		  <value></value>
         </parameter>
 		<parameter>
@@ -233,9 +322,70 @@
 				<value>html</value>
 				<value>jsp/jsf</value>
 			</possibleValues>
+			<multiple>false</multiple>
 		  <value></value>
         </parameter>
           </parameters>
       </configuration>
+    </mojo>
+	<mojo>
+        <goal>unit-test</goal>
+        <description>Goal which Unit Test for Android Native project</description>
+        <requiresDirectInvocation>false</requiresDirectInvocation>
+        <requiresProject>true</requiresProject>
+        <requiresReports>false</requiresReports>
+        <aggregator>false</aggregator>
+        <requiresOnline>false</requiresOnline>
+        <inheritedByDefault>true</inheritedByDefault>
+        <implementation>com.photon.phresco.plugins.android.AndroidPlugin</implementation>
+        <language>java</language>
+        <instantiationStrategy>per-lookup</instantiationStrategy>
+        <executionStrategy>once-per-session</executionStrategy>
+        <threadSafe>false</threadSafe>
+        <configuration>
+            <parameters>
+                <parameter>
+                    <name>
+                        <value lang="en">Devices</value>
+                    </name>
+                    <type>List</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>devices</key>
+					<possibleValues>
+						<value>USB</value>
+						<value>Emulator</value>
+						<value dependency="serialNumber">Serial Number</value>
+					</possibleValues>
+					<multiple>false</multiple>
+                    <value></value>
+                </parameter>
+				<parameter>
+                    <name>
+                        <value lang="en">Serial Number</value>
+                    </name>
+                    <type>String</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>serialNumber</key>
+					<multiple>false</multiple>
+                    <value></value>
+                </parameter>
+				<parameter>
+                    <name>
+                        <value lang="en">Devices</value>
+                    </name>
+                    <type>String</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>devices</key>
+					<multiple>false</multiple>
+                    <value></value>
+                </parameter>
+            </parameters>
+        </configuration>
     </mojo>
 </mojos>

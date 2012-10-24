@@ -26,35 +26,46 @@
           <editable>true</editable>
           <description></description>
 		  <key>port</key>
-		  <value>3933</value>
+		  <multiple>false</multiple>
+		  <value></value>
         </parameter>
 		<parameter>
           <name>
 			<value lang="en">context</value>
 		  </name>
-          <type>DynamicParam</type>
+          <type>String</type>
 		  
-          <required>false</required>
+          <required>true</required>
           <editable>true</editable>
           <description></description>
 		  <key>context</key>
-		  <value>sample</value>
+		  <multiple>false</multiple>
+		  <value></value>
         </parameter>
         <parameter>
-          <name>environmentName</name>
-          <type>java.lang.String</type>
-          <required>false</required>
-          <editable>true</editable>
-          <description></description>
-		  <key>environmentName</key>
-		  <possiblevalues>
-            <value>Show Errors</value>
-            <value>Hide Logs</value>
-            <value>Show Debug</value>
-          </possiblevalues>
-		  <value>Production</value>
+			<name>
+				<value lang="en">Environment</value>
+				<value lang="cv">Envit</value>
+			</name>
+			<type>DynamicParameter</type>
+			<dynamicParameter>
+				<class>com.photon.phresco.framework.param.DeployEnvironment</class>
+				<dependencies>
+					<dependency>
+						<groupId>com.photon.phresco.commons</groupId>
+						<artifactId>phresco-commons</artifactId>
+						<type>jar</type>
+						<version>1.0.0</version>
+					</dependency>
+				</dependencies>
+			</dynamicParameter>
+			<required>true</required>
+			<editable>true</editable>
+			<key>environmentName</key>
+			<multiple>true</multiple>
+			<value>Production</value>
         </parameter>
-          </parameters>
+    </parameters>
       </configuration>
     </mojo>
 	<mojo>
@@ -97,6 +108,7 @@
                     <editable>true</editable>
                     <description></description>
                     <key>buildName</key>
+					<multiple>false</multiple>
                     <value></value>
                 </parameter>
                 <parameter>
@@ -108,6 +120,7 @@
                     <editable>true</editable>
                     <description></description>
                     <key>buildNumber</key>
+					<multiple>false</multiple>
                     <value></value>
                 </parameter>
                 <parameter>
@@ -119,19 +132,48 @@
                         <class>com.photon.phresco.framework.param.EnvironmentParameter</class>
                         <dependencies>
                             <dependency>
-<groupId>com.photon.phresco.commons</groupId>
-<artifactId>phresco-commons</artifactId>
-<type>jar</type>
-<version>1.0.0</version>
+								<groupId>com.photon.phresco.commons</groupId>
+								<artifactId>phresco-commons</artifactId>
+								<type>jar</type>
+								<version>1.0.0</version>
                             </dependency>
                         </dependencies>
                     </dynamicParameter>
                     <required>true</required>
                     <editable>true</editable>
                     <key>environmentName</key>
+					<multiple>true</multiple>
                     <value>Production</value>
                 </parameter>
                 <parameter>
+                    <name>
+                        <value lang="en">Show Settings</value>
+                    </name>
+                    <type>Boolean</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>showSettings</key>
+                    <multiple>false</multiple>
+                    <value>true</value>
+                    <dependency>environmentName</dependency>
+                </parameter>
+                <parameter>
+                    <pluginParameter>framework</pluginParameter>
+                    <mavenCommands>
+                        <mavenCommand>
+                            <key>Show Errors</key>
+                            <value>-e</value>
+                        </mavenCommand>
+                        <mavenCommand>
+                            <key>Hide Logs</key>
+                            <value>-q</value>
+                        </mavenCommand>
+                        <mavenCommand>
+                            <key>Show Debug</key>
+                            <value>-X</value>
+                        </mavenCommand>
+                    </mavenCommands>
                     <name>
                         <value lang="en">Logs</value>
                     </name>
@@ -144,18 +186,8 @@
                         <value>Hide Logs</value>
                         <value>Show Debug</value>
                     </possibleValues>
-                    <value>Hide Logs</value>
-                </parameter>
-                <parameter>
-                    <name>
-                        <value lang="en">Skip Unit Test</value>
-                    </name>
-                    <type>Boolean</type>
-                    <required>false</required>
-                    <editable>true</editable>
-                    <description></description>
-                    <key>skipTest</key>
-                    <value>false</value>
+                    <multiple>false</multiple>
+                    <value></value>
                 </parameter>
             </parameters>
         </configuration>
@@ -185,6 +217,7 @@
                     <editable>true</editable>
                     <description></description>
                     <key>buildNumber</key>
+					<multiple>false</multiple>
                     <value></value>
                 </parameter>
                 <parameter>
@@ -197,33 +230,49 @@
                         <class>com.photon.phresco.framework.param.DeployEnvironment</class>
                         <dependencies>
                             <dependency>
-<groupId>com.photon.phresco.commons</groupId>
-<artifactId>phresco-commons</artifactId>
-<type>jar</type>
-<version>1.0.0</version>
+								<groupId>com.photon.phresco.commons</groupId>
+								<artifactId>phresco-commons</artifactId>
+								<type>jar</type>
+								<version>1.0.0</version>
                             </dependency>
                         </dependencies>
                     </dynamicParameter>
                     <required>true</required>
                     <editable>true</editable>
                     <key>environmentName</key>
+					<multiple>false</multiple>
                     <value>Production</value>
                 </parameter>
                 <parameter>
+                    <pluginParameter>framework</pluginParameter>
+                    <mavenCommands>
+                        <mavenCommand>
+                            <key>Show Errors</key>
+                            <value>-e</value>
+                        </mavenCommand>
+                        <mavenCommand>
+                            <key>Hide Logs</key>
+                            <value>-q</value>
+                        </mavenCommand>
+                        <mavenCommand>
+                            <key>Show Debug</key>
+                            <value>-X</value>
+                        </mavenCommand>
+                    </mavenCommands>
                     <name>
                         <value lang="en">Logs</value>
                     </name>
                     <type>List</type>
                     <required>false</required>
                     <editable>true</editable>
-                    <description></description>
                     <key>logs</key>
                     <possibleValues>
                         <value>Show Errors</value>
                         <value>Hide Logs</value>
                         <value>Show Debug</value>
                     </possibleValues>
-                    <value>Show Debug</value>
+                    <multiple>false</multiple>
+                    <value></value>
                 </parameter>
             </parameters>
         </configuration>
@@ -252,7 +301,7 @@
 				</mavenCommand>
 			</mavenCommands>
 			<name>codeValidation</name>
-			<type>java.lang.String</type>
+			<type>String</type>
 			<required>false</required>
 			<editable>true</editable>
 			<description></description>
@@ -261,6 +310,7 @@
 				<value dependency="src,skipTests">src</value>
 				<value>functional</value>
 			</possibleValues>
+			<multiple>false</multiple>
 		  <value></value>
         </parameter>
 		<parameter>
@@ -295,9 +345,10 @@
 				<value>html</value>
 				<value>jsp/jsf</value>
 			</possibleValues>
+			<multiple>false</multiple>
 		  <value></value>
         </parameter>
-          </parameters>
+    </parameters>
       </configuration>
     </mojo>
 </mojos>
