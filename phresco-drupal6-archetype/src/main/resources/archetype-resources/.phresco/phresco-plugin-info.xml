@@ -209,62 +209,44 @@
 	  <configuration>
       <parameters>
         <parameter>
-		<pluginParameter>plugin</pluginParameter>
-			<mavenCommands>
-				<mavenCommand>
-					<key>skipTests</key>
-					<value>-DskipTests</value>
-				</mavenCommand>
-			</mavenCommands>
-			<name>codeValidation</name>
-			<type>java.lang.String</type>
+			<name>
+               <value lang="en">Validate Against</value>
+            </name>
+			<type>List</type>
 			<required>false</required>
 			<editable>true</editable>
 			<description></description>
 			<key>sonar</key>
 			<possibleValues>
-				<value dependency="src,skipTests">src</value>
-				<value>functional</value>
+				<value dependency="skipTests">Source</value>
+				<value>Functional Test</value>
 			</possibleValues>
 			<multiple>false</multiple>
 		  <value></value>
         </parameter>
 		<parameter>
-			<name>src</name>
+			<pluginParameter>framework</pluginParameter>
 			<mavenCommands>
 				<mavenCommand>
-					<key>js</key>
-					<value>-Pjs</value>
+					<key>true</key>
+					<value>-DskipTests=true</value>
 				</mavenCommand>
 				<mavenCommand>
-					<key>java</key>
-					<value>-Pjava</value>
-				</mavenCommand>
-				<mavenCommand>
-					<key>html</key>
-					<value>-Phtml</value>
-				</mavenCommand>
-				<mavenCommand>
-					<key>jsp/jsf</key>
-					<value>-Pweb</value>
+					<key>false</key>
+					<value>-DskipTests=false</value>
 				</mavenCommand>
 			</mavenCommands>
-			<pluginParameter>plugin</pluginParameter>
-          <type>java.lang.String</type>
-          <required>false</required>
-          <editable>true</editable>
-          <description></description>
-		  <key>src</key>
-			<possibleValues>
-				<value>js</value>
-				<value>java</value>
-				<value>html</value>
-				<value>jsp/jsf</value>
-			</possibleValues>
-			<multiple>false</multiple>
-		  <value></value>
+			<name>
+				<value lang="en">Skip Unit Test</value>
+			</name>
+			<type>Boolean</type>
+			<required>false</required>
+			<editable>true</editable>
+			<description></description>
+			<key>skipTests</key>
+			<value>true</value>
         </parameter>
-          </parameters>
-      </configuration>
+    </parameters>
+    </configuration>
     </mojo>
 </mojos>
