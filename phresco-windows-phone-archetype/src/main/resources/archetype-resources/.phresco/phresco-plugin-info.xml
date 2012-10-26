@@ -1,72 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <mojos>
-	<mojo>
-      <goal>start</goal>
-      <description>Goal which starts the nodejs project</description>
-      <requiresDirectInvocation>false</requiresDirectInvocation>
-      <requiresProject>true</requiresProject>
-      <requiresReports>false</requiresReports>
-      <aggregator>false</aggregator>
-      <requiresOnline>false</requiresOnline>
-      <inheritedByDefault>true</inheritedByDefault>
-      <implementation>com.photon.phresco.plugins.nodejs.NodeJsPlugin</implementation>
-      <language>java</language>
-      <instantiationStrategy>per-lookup</instantiationStrategy>
-      <executionStrategy>once-per-session</executionStrategy>
-      <threadSafe>false</threadSafe>
-	  <configuration>
-      <parameters>
-        <parameter>
-			<name>
-				<value lang="en">Environment</value>
-				<value lang="cv">Envit</value>
-			</name>
-			<type>DynamicParameter</type>
-			<dynamicParameter>
-				<class>com.photon.phresco.framework.param.DeployEnvironment</class>
-				<dependencies>
-					<dependency>
-						<groupId>com.photon.phresco.commons</groupId>
-						<artifactId>phresco-commons</artifactId>
-						<type>jar</type>
-						<version>1.0.0</version>
-					</dependency>
-				</dependencies>
-			</dynamicParameter>
-			<required>true</required>
-			<editable>true</editable>
-			<key>environmentName</key>
-			<multiple>true</multiple>
-			<value>Production</value>
-        </parameter>
-        </parameters>
-      </configuration>
-    </mojo>
-	<mojo>
-      <goal>stop</goal>
-      <description>Goal which stops the nodejs project</description>
-      <requiresDirectInvocation>false</requiresDirectInvocation>
-      <requiresProject>true</requiresProject>
-      <requiresReports>false</requiresReports>
-      <aggregator>false</aggregator>
-      <requiresOnline>false</requiresOnline>
-      <inheritedByDefault>true</inheritedByDefault>
-      <implementation>com.photon.phresco.plugins.nodejs.NodeJsPlugin</implementation>
-      <language>java</language>
-      <instantiationStrategy>per-lookup</instantiationStrategy>
-      <executionStrategy>once-per-session</executionStrategy>
-      <threadSafe>false</threadSafe>
-    </mojo>
     <mojo>
         <goal>package</goal>
-        <description>Goal which packages the nodejs project</description>
+        <description>Goal which packages the Windows Phone project</description>
         <requiresDirectInvocation>false</requiresDirectInvocation>
         <requiresProject>true</requiresProject>
         <requiresReports>false</requiresReports>
         <aggregator>false</aggregator>
         <requiresOnline>false</requiresOnline>
         <inheritedByDefault>true</inheritedByDefault>
-        <implementation>com.photon.phresco.plugins.nodejs.NodeJsPlugin</implementation>
+        <implementation>com.photon.phresco.plugins.windows.WPPlugin</implementation>
         <language>java</language>
         <instantiationStrategy>per-lookup</instantiationStrategy>
         <executionStrategy>once-per-session</executionStrategy>
@@ -97,13 +40,28 @@
 					<multiple>false</multiple>
                     <value></value>
                 </parameter>
+				<parameter>
+                    <name>
+                        <value lang="en">Configuration</value>
+                    </name>
+                    <type>List</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <key>configuration</key>
+                    <possibleValues>
+                        <value>Release</value>
+                        <value>Debug</value>
+                    </possibleValues>
+					<multiple>false</multiple>
+                    <value></value>
+                </parameter>
                 <parameter>
                     <name>
                         <value lang="en">Environment</value>
                     </name>
                     <type>DynamicParameter</type>
                     <dynamicParameter>
-                        <class>com.photon.phresco.framework.param.EnvironmentParameter</class>
+                        <class>com.photon.phresco.param.impl.EnvironmentParameter</class>
                         <dependencies>
                             <dependency>
 								<groupId>com.photon.phresco.commons</groupId>
@@ -166,9 +124,108 @@
             </parameters>
         </configuration>
     </mojo>
+    <mojo>
+        <goal>deploy</goal>
+        <description>Goal which deploys the Windows project</description>
+        <requiresDirectInvocation>false</requiresDirectInvocation>
+        <requiresProject>true</requiresProject>
+        <requiresReports>false</requiresReports>
+        <aggregator>false</aggregator>
+        <requiresOnline>false</requiresOnline>
+        <inheritedByDefault>true</inheritedByDefault>
+        <implementation>com.photon.phresco.plugins.windows.WPPlugin</implementation>
+        <language>java</language>
+        <instantiationStrategy>per-lookup</instantiationStrategy>
+        <executionStrategy>once-per-session</executionStrategy>
+        <threadSafe>false</threadSafe>
+        <configuration>
+            <parameters>
+                <parameter>
+                    <name>
+                        <value lang="en">Environment</value>
+                    </name>
+                    <type>DynamicParameter</type>
+                    <dynamicParameter>
+                        <class>com.photon.phresco.param.impl.EnvironmentParameter</class>
+                        <dependencies>
+                            <dependency>
+								<groupId>com.photon.phresco.commons</groupId>
+								<artifactId>phresco-commons</artifactId>
+								<type>jar</type>
+								<version>1.0.0</version>
+                            </dependency>
+                        </dependencies>
+                    </dynamicParameter>
+                    <required>true</required>
+                    <editable>true</editable>
+                    <key>environmentName</key>
+					<multiple>false</multiple>
+                    <value>Production</value>
+                </parameter>
+				<parameter>
+                    <name>
+                        <value lang="en">Target</value>
+                    </name>
+                    <type>List</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <key>target</key>
+                    <possibleValues>
+                        <value>Emulator</value>
+                        <value>Device</value>
+                    </possibleValues>
+					<multiple>false</multiple>
+                    <value></value>
+                </parameter>
+                <parameter>
+                    <pluginParameter>framework</pluginParameter>
+                    <mavenCommands>
+                        <mavenCommand>
+                            <key>Show Errors</key>
+                            <value>-e</value>
+                        </mavenCommand>
+                        <mavenCommand>
+                            <key>Hide Logs</key>
+                            <value>-q</value>
+                        </mavenCommand>
+                        <mavenCommand>
+                            <key>Show Debug</key>
+                            <value>-X</value>
+                        </mavenCommand>
+                    </mavenCommands>
+                    <name>
+                        <value lang="en">Logs</value>
+                    </name>
+                    <type>List</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <key>logs</key>
+                    <possibleValues>
+                        <value>Show Errors</value>
+                        <value>Hide Logs</value>
+                        <value>Show Debug</value>
+                    </possibleValues>
+                    <multiple>false</multiple>
+                    <value></value>
+                </parameter>
+                <parameter>
+                    <name>
+                        <value lang="en">buildNumber</value>
+                    </name>
+                    <type>Hidden</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>buildNumber</key>
+					<multiple>false</multiple>
+                    <value></value>
+                </parameter>
+            </parameters>
+        </configuration>
+    </mojo>
 	<mojo>
       <goal>validate-code</goal>
-      <description>Goal which validates the NodeJs project</description>
+      <description>Goal which validates the Windows Phone project</description>
       <requiresDirectInvocation>false</requiresDirectInvocation>
       <requiresProject>true</requiresProject>
       <requiresReports>false</requiresReports>

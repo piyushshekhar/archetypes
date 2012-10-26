@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<mojos>
+    <mojo>
+        <goal>package</goal>
+        <description>Goal which packages the Android Library project</description>
+        <requiresDirectInvocation>false</requiresDirectInvocation>
+        <requiresProject>true</requiresProject>
+        <requiresReports>false</requiresReports>
+        <aggregator>false</aggregator>
+        <requiresOnline>false</requiresOnline>
+        <inheritedByDefault>true</inheritedByDefault>
+        <implementation>com.photon.phresco.plugins.android.AndroidPlugin</implementation>
+        <language>java</language>
+        <instantiationStrategy>per-lookup</instantiationStrategy>
+        <executionStrategy>once-per-session</executionStrategy>
+        <threadSafe>false</threadSafe>
+        <configuration>
+            <parameters>
+				<parameter>
+                    <name>
+                        <value lang="en">Build Name</value>
+                    </name>
+                    <type>String</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>buildName</key>
+                    <multiple>false</multiple>
+                    <value></value>
+                </parameter>
+                <parameter>
+                    <name>
+                        <value lang="en">Build Number</value>
+                    </name>
+                    <type>Number</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>buildNumber</key>
+                    <multiple>false</multiple>
+                    <value></value>
+                </parameter>
+                <parameter>
+                    <name>
+                        <value lang="en">Environment</value>
+                    </name>
+                    <type>DynamicParameter</type>
+                    <dynamicParameter>
+                        <class>com.photon.phresco.framework.param.EnvironmentParameter</class>
+                        <dependencies>
+                            <dependency>
+<groupId>com.photon.phresco.commons</groupId>
+<artifactId>phresco-commons</artifactId>
+<type>jar</type>
+<version>1.0.0</version>
+                            </dependency>
+                        </dependencies>
+                    </dynamicParameter>
+                    <required>true</required>
+                    <editable>true</editable>
+                    <key>environmentName</key>
+                    <multiple>false</multiple>
+                    <value>Production</value>
+                </parameter>
+				<parameter>
+                    <name>
+                        <value lang="en">SDK</value>
+                    </name>
+                    <type>String</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>sdk</key>
+                    <value></value>
+                </parameter>
+				<parameter>
+                    <name>
+                        <value lang="en">Show Settings</value>
+                    </name>
+                    <type>Boolean</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>showSettings</key>
+                    <multiple>false</multiple>
+                    <value>true</value>
+                    <dependency>environmentName</dependency>
+                </parameter>
+                <parameter>
+                    <pluginParameter>framework</pluginParameter>
+                    <mavenCommands>
+                        <mavenCommand>
+                            <key>Show Errors</key>
+                            <value>-e</value>
+                        </mavenCommand>
+                        <mavenCommand>
+                            <key>Hide Logs</key>
+                            <value>-q</value>
+                        </mavenCommand>
+                        <mavenCommand>
+                            <key>Show Debug</key>
+                            <value>-X</value>
+                        </mavenCommand>
+                    </mavenCommands>
+                    <name>
+                        <value lang="en">Logs</value>
+                    </name>
+                    <type>List</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <key>logs</key>
+                    <possibleValues>
+                        <value>Show Errors</value>
+                        <value>Hide Logs</value>
+                        <value>Show Debug</value>
+                    </possibleValues>
+                    <multiple>false</multiple>
+                    <value></value>
+                </parameter>
+				<parameter>
+                    <name>
+                        <value lang="en">Proguard</value>
+                    </name>
+                    <type>boolean</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>proguard</key>
+                    <multiple>false</multiple>
+                    <value></value>
+                </parameter>
+				<parameter>
+                    <name>
+                        <value lang="en">Signing</value>
+                    </name>
+                    <type>boolean</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>signing</key>
+                    <multiple>false</multiple>
+                    <value></value>
+					<dependency>keystore,storepass,keypass,alias</dependency>
+                </parameter>
+				<parameter>
+                    <name>
+                        <value lang="en">Keystore</value>
+                    </name>
+                    <type>String</type>
+                    <required>true</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>keystore</key>
+                    <multiple>false</multiple>
+                    <value></value>
+                </parameter>
+				<parameter>
+                    <name>
+                        <value lang="en">Storepass</value>
+                    </name>
+                    <type>String</type>
+                    <required>true</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>storepass</key>
+                    <multiple>false</multiple>
+                    <value></value>
+                </parameter>
+				<parameter>
+                    <name>
+                        <value lang="en">Keypass</value>
+                    </name>
+                    <type>String</type>
+                    <required>true</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>keypass</key>
+                    <multiple>false</multiple>
+                    <value></value>
+                </parameter>
+				<parameter>
+                    <name>
+                        <value lang="en">Alias</value>
+                    </name>
+                    <type>String</type>
+                    <required>true</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>alias</key>
+                    <multiple>false</multiple>
+                    <value></value>
+                </parameter>
+            </parameters>
+        </configuration>
+    </mojo>
+    <mojo>
+        <goal>deploy</goal>
+        <description>Goal which deploys the Android Library project</description>
+        <requiresDirectInvocation>false</requiresDirectInvocation>
+        <requiresProject>true</requiresProject>
+        <requiresReports>false</requiresReports>
+        <aggregator>false</aggregator>
+        <requiresOnline>false</requiresOnline>
+        <inheritedByDefault>true</inheritedByDefault>
+        <implementation>com.photon.phresco.plugins.android.AndroidPlugin</implementation>
+        <language>java</language>
+        <instantiationStrategy>per-lookup</instantiationStrategy>
+        <executionStrategy>once-per-session</executionStrategy>
+        <threadSafe>false</threadSafe>
+        <configuration>
+            <parameters>
+                <parameter>
+                    <name>
+                        <value lang="en">Devices</value>
+                    </name>
+                    <type>List</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>devices</key>
+					<possibleValues>
+                        <value>USB</value>
+                        <value>Emulator</value>
+                        <value dependency="serialNumber">SerialNumber</value>
+                    </possibleValues>
+					<multiple>false</multiple>
+                    <value></value>
+                </parameter>
+				<parameter>
+                    <name>
+                        <value lang="en">serialNumber</value>
+                    </name>
+                    <type>String</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>serialNumber</key>
+					<multiple>false</multiple>
+                    <value></value>
+                </parameter>
+                <parameter>
+                    <name>
+                        <value lang="en">Build Number</value>
+                    </name>
+                    <type>Hidden</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>buildNumber</key>
+					<multiple>false</multiple>
+                    <value></value>
+                </parameter>
+            </parameters>
+        </configuration>
+    </mojo>
+	<mojo>
+      <goal>validate-code</goal>
+      <description>Goal which validates the Android Library project</description>
+      <requiresDirectInvocation>false</requiresDirectInvocation>
+      <requiresProject>true</requiresProject>
+      <requiresReports>false</requiresReports>
+      <aggregator>false</aggregator>
+      <requiresOnline>false</requiresOnline>
+      <inheritedByDefault>true</inheritedByDefault>
+      <language>java</language>
+      <instantiationStrategy>per-lookup</instantiationStrategy>
+      <executionStrategy>once-per-session</executionStrategy>
+      <threadSafe>false</threadSafe>
+	  <configuration>
+      <parameters>
+        <parameter>
+			<name>
+               <value lang="en">Validate Against</value>
+            </name>
+			<type>List</type>
+			<required>false</required>
+			<editable>true</editable>
+			<description></description>
+			<key>sonar</key>
+			<possibleValues>
+				<value dependency="skipTests">Source</value>
+				<value>Functional Test</value>
+			</possibleValues>
+			<multiple>false</multiple>
+		  <value></value>
+        </parameter>
+		<parameter>
+			<pluginParameter>framework</pluginParameter>
+			<mavenCommands>
+				<mavenCommand>
+					<key>true</key>
+					<value>-DskipTests=true</value>
+				</mavenCommand>
+				<mavenCommand>
+					<key>false</key>
+					<value>-DskipTests=false</value>
+				</mavenCommand>
+			</mavenCommands>
+			<name>
+				<value lang="en">Skip Unit Test</value>
+			</name>
+			<type>Boolean</type>
+			<required>false</required>
+			<editable>true</editable>
+			<description></description>
+			<key>skipTests</key>
+			<value>true</value>
+        </parameter>
+          </parameters>
+      </configuration>
+    </mojo>
+	<mojo>
+        <goal>unit-test</goal>
+        <description>Goal which Unit Test for Android Library project</description>
+        <requiresDirectInvocation>false</requiresDirectInvocation>
+        <requiresProject>true</requiresProject>
+        <requiresReports>false</requiresReports>
+        <aggregator>false</aggregator>
+        <requiresOnline>false</requiresOnline>
+        <inheritedByDefault>true</inheritedByDefault>
+        <implementation>com.photon.phresco.plugins.android.AndroidPlugin</implementation>
+        <language>java</language>
+        <instantiationStrategy>per-lookup</instantiationStrategy>
+        <executionStrategy>once-per-session</executionStrategy>
+        <threadSafe>false</threadSafe>
+        <configuration>
+            <parameters>
+                <parameter>
+					<pluginParameter>plugin</pluginParameter>
+					<mavenCommands>
+						<mavenCommand>
+							<key>skipTests</key>
+							<value>-DskipTests</value>
+						</mavenCommand>
+						<mavenCommand>
+							<key>USB</key>
+							<value>-Dandroid.divice="usb"</value>
+						</mavenCommand>
+						<mavenCommand>
+							<key>Emulator</key>
+							<value>-Dandroid.divice="emulator"</value>
+						</mavenCommand>
+					</mavenCommands>
+                    <name>
+                        <value lang="en">Devices</value>
+                    </name>
+                    <type>List</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>devices</key>
+					<possibleValues>
+						<value>USB</value>
+						<value>Emulator</value>
+						<value dependency="serialNumber">Serial Number</value>
+					</possibleValues>
+					<multiple>false</multiple>
+                    <value></value>
+                </parameter>
+				<parameter>
+                    <name>
+                        <value lang="en">Serial Number</value>
+                    </name>
+                    <type>String</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>serialNumber</key>
+					<multiple>false</multiple>
+                    <value></value>
+                </parameter>
+				<parameter>
+                    <name>
+                        <value lang="en">Devices</value>
+                    </name>
+                    <type>String</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>devices</key>
+					<multiple>false</multiple>
+                    <value></value>
+                </parameter>
+            </parameters>
+        </configuration>
+    </mojo>
+</mojos>
