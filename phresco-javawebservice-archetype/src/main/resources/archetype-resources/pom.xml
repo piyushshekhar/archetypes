@@ -28,6 +28,7 @@
        
     <properties>
         <jersey-version>1.9-ea07</jersey-version>
+		<phresco.source.resource.dir>/src/main/resources</phresco.source.resource.dir>
     </properties>
 	
 	<dependencies>

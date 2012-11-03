@@ -144,4 +144,9 @@
 		</profile>
 		
     </profiles>
+	
+	 <properties>
+        <phresco.source.resource.dir>/src/main/webapp/WEB-INF/resources</phresco.source.resource.dir>
+    </properties>
+	
 </project>

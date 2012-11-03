@@ -26,6 +26,7 @@
   <name>${artifactId}</name>
 	
 	<properties>
+		<phresco.source.resource.dir>/source/wordpress/config</phresco.source.resource.dir>
 		<sonar.language>php</sonar.language>
 		<sonar.phpPmd.skip>false</sonar.phpPmd.skip>
 		<sonar.dynamicAnalysis>true</sonar.dynamicAnalysis>

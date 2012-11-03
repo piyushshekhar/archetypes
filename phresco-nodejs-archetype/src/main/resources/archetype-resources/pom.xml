@@ -26,6 +26,7 @@
 	<name>${artifactId}</name>
 	
 	<properties>
+		<phresco.source.resource.dir>/source/public/resources</phresco.source.resource.dir>
 		<sonar.language>js</sonar.language>
 		<sonar.dynamicAnalysis>true</sonar.dynamicAnalysis>
 		<sonar.exclusions>**/node_modules/**</sonar.exclusions>

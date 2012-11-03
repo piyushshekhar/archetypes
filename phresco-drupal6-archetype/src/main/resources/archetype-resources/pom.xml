@@ -26,6 +26,7 @@
   <name>${artifactId}</name>
     
 	<properties>
+		<phresco.source.resource.dir>/source/sites/default/config</phresco.source.resource.dir>
 		<drupal.version>6.19</drupal.version>
 		<sonar.language>php</sonar.language>
 		<sonar.phpPmd.skip>false</sonar.phpPmd.skip>
