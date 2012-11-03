@@ -2,21 +2,21 @@
 <mojos>
     <mojo>
         <goal>package</goal>
-        <description>Goal which packages the Android Library project</description>
+        <description>Goal which packages the Iphone project</description>
         <requiresDirectInvocation>false</requiresDirectInvocation>
         <requiresProject>true</requiresProject>
         <requiresReports>false</requiresReports>
         <aggregator>false</aggregator>
         <requiresOnline>false</requiresOnline>
         <inheritedByDefault>true</inheritedByDefault>
-        <implementation>com.photon.phresco.plugins.android.AndroidPlugin</implementation>
+        <implementation>com.photon.phresco.plugins.xcode.XcodePlugin</implementation>
         <language>java</language>
         <instantiationStrategy>per-lookup</instantiationStrategy>
         <executionStrategy>once-per-session</executionStrategy>
         <threadSafe>false</threadSafe>
         <configuration>
             <parameters>
-				<parameter>
+                <parameter>
                     <name>
                         <value lang="en">Build Name</value>
                     </name>
@@ -25,7 +25,7 @@
                     <editable>true</editable>
                     <description></description>
                     <key>buildName</key>
-                    <multiple>false</multiple>
+					<multiple>false</multiple>
                     <value></value>
                 </parameter>
                 <parameter>
@@ -37,7 +37,7 @@
                     <editable>true</editable>
                     <description></description>
                     <key>buildNumber</key>
-                    <multiple>false</multiple>
+					<multiple>false</multiple>
                     <value></value>
                 </parameter>
                 <parameter>
@@ -59,21 +59,10 @@
                     <required>true</required>
                     <editable>true</editable>
                     <key>environmentName</key>
-                    <multiple>false</multiple>
+					<multiple>true</multiple>
                     <value>Production</value>
                 </parameter>
-				<parameter>
-                    <name>
-                        <value lang="en">SDK</value>
-                    </name>
-                    <type>String</type>
-                    <required>false</required>
-                    <editable>true</editable>
-                    <description></description>
-                    <key>sdk</key>
-                    <value></value>
-                </parameter>
-				<parameter>
+                <parameter>
                     <name>
                         <value lang="en">Show Settings</value>
                     </name>
@@ -85,6 +74,40 @@
                     <multiple>false</multiple>
                     <value>true</value>
                     <dependency>environmentName</dependency>
+                </parameter>
+				  <parameter>
+					<pluginParameter>plugin</pluginParameter>
+					<mavenCommands>
+						<mavenCommand>
+							<key>iphonesimulator5.1</key>
+							<value>-Dsdk="iphonesimulator5.1"</value>
+						</mavenCommand>
+						<mavenCommand>
+							<key>iphoneos5.1</key>
+							<value>-Dsdk="iphoneos5.1"</value>
+						</mavenCommand>
+					</mavenCommands>
+                    <name>
+                        <value lang="en">SDK</value>
+                    </name>
+                    <type>DynamicParameter</type>
+                    <dynamicParameter>
+                        <class>com.photon.phresco.plugins.xcode.IosSdkParameter</class>
+                        <dependencies>
+                            <dependency>
+								<groupId>com.photon.phresco.commons</groupId>
+								<artifactId>phresco-commons</artifactId>
+								<type>jar</type>
+								<version>1.0.0</version>
+                            </dependency>
+                        </dependencies>
+                    </dynamicParameter>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>sdk</key>
+					<multiple>false</multiple>
+                    <value></value>
                 </parameter>
                 <parameter>
                     <pluginParameter>framework</pluginParameter>
@@ -117,92 +140,19 @@
                     <multiple>false</multiple>
                     <value></value>
                 </parameter>
-				<parameter>
-                    <name>
-                        <value lang="en">Proguard</value>
-                    </name>
-                    <type>boolean</type>
-                    <required>false</required>
-                    <editable>true</editable>
-                    <description></description>
-                    <key>proguard</key>
-                    <multiple>false</multiple>
-                    <value></value>
-                </parameter>
-				<parameter>
-                    <name>
-                        <value lang="en">Signing</value>
-                    </name>
-                    <type>boolean</type>
-                    <required>false</required>
-                    <editable>true</editable>
-                    <description></description>
-                    <key>signing</key>
-                    <multiple>false</multiple>
-                    <value></value>
-					<dependency>keystore,storepass,keypass,alias</dependency>
-                </parameter>
-				<parameter>
-                    <name>
-                        <value lang="en">Keystore</value>
-                    </name>
-                    <type>String</type>
-                    <required>true</required>
-                    <editable>true</editable>
-                    <description></description>
-                    <key>keystore</key>
-                    <multiple>false</multiple>
-                    <value></value>
-                </parameter>
-				<parameter>
-                    <name>
-                        <value lang="en">Storepass</value>
-                    </name>
-                    <type>String</type>
-                    <required>true</required>
-                    <editable>true</editable>
-                    <description></description>
-                    <key>storepass</key>
-                    <multiple>false</multiple>
-                    <value></value>
-                </parameter>
-				<parameter>
-                    <name>
-                        <value lang="en">Keypass</value>
-                    </name>
-                    <type>String</type>
-                    <required>true</required>
-                    <editable>true</editable>
-                    <description></description>
-                    <key>keypass</key>
-                    <multiple>false</multiple>
-                    <value></value>
-                </parameter>
-				<parameter>
-                    <name>
-                        <value lang="en">Alias</value>
-                    </name>
-                    <type>String</type>
-                    <required>true</required>
-                    <editable>true</editable>
-                    <description></description>
-                    <key>alias</key>
-                    <multiple>false</multiple>
-                    <value></value>
-                </parameter>
             </parameters>
         </configuration>
     </mojo>
     <mojo>
         <goal>deploy</goal>
-        <description>Goal which deploys the Android Library project</description>
+        <description>Goal which deploys the Drupal-6 project</description>
         <requiresDirectInvocation>false</requiresDirectInvocation>
         <requiresProject>true</requiresProject>
         <requiresReports>false</requiresReports>
         <aggregator>false</aggregator>
         <requiresOnline>false</requiresOnline>
         <inheritedByDefault>true</inheritedByDefault>
-        <implementation>com.photon.phresco.plugins.android.AndroidPlugin</implementation>
+        <implementation>com.photon.phresco.plugins.drupal.DrupalPlugin</implementation>
         <language>java</language>
         <instantiationStrategy>per-lookup</instantiationStrategy>
         <executionStrategy>once-per-session</executionStrategy>
@@ -211,31 +161,55 @@
             <parameters>
                 <parameter>
                     <name>
-                        <value lang="en">Devices</value>
+                        <value lang="en">Environment</value>
+                    </name>
+                    <type>DynamicParameter</type>
+                    <dynamicParameter>
+                        <class>com.photon.phresco.framework.param.DeployEnvironment</class>
+                        <dependencies>
+                            <dependency>
+<groupId>com.photon.phresco.commons</groupId>
+<artifactId>phresco-commons</artifactId>
+<type>jar</type>
+<version>1.0.0</version>
+                            </dependency>
+                        </dependencies>
+                    </dynamicParameter>
+                    <required>true</required>
+                    <editable>true</editable>
+                    <key>environmentName</key>
+					<multiple>false</multiple>
+                    <value>Production</value>
+                </parameter>
+                <parameter>
+                    <pluginParameter>framework</pluginParameter>
+                    <mavenCommands>
+                        <mavenCommand>
+                            <key>Show Errors</key>
+                            <value>-e</value>
+                        </mavenCommand>
+                        <mavenCommand>
+                            <key>Hide Logs</key>
+                            <value>-q</value>
+                        </mavenCommand>
+                        <mavenCommand>
+                            <key>Show Debug</key>
+                            <value>-X</value>
+                        </mavenCommand>
+                    </mavenCommands>
+                    <name>
+                        <value lang="en">Logs</value>
                     </name>
                     <type>List</type>
                     <required>false</required>
                     <editable>true</editable>
-                    <description></description>
-                    <key>devices</key>
-					<possibleValues>
-                        <value>USB</value>
-                        <value>Emulator</value>
-                        <value dependency="serialNumber">SerialNumber</value>
+                    <key>logs</key>
+                    <possibleValues>
+                        <value>Show Errors</value>
+                        <value>Hide Logs</value>
+                        <value>Show Debug</value>
                     </possibleValues>
-					<multiple>false</multiple>
-                    <value></value>
-                </parameter>
-				<parameter>
-                    <name>
-                        <value lang="en">serialNumber</value>
-                    </name>
-                    <type>String</type>
-                    <required>false</required>
-                    <editable>true</editable>
-                    <description></description>
-                    <key>serialNumber</key>
-					<multiple>false</multiple>
+                    <multiple>false</multiple>
                     <value></value>
                 </parameter>
                 <parameter>
@@ -255,7 +229,7 @@
     </mojo>
 	<mojo>
       <goal>validate-code</goal>
-      <description>Goal which validates the Android Library project</description>
+      <description>Goal which validates the Drupal-6 project</description>
       <requiresDirectInvocation>false</requiresDirectInvocation>
       <requiresProject>true</requiresProject>
       <requiresReports>false</requiresReports>
@@ -269,56 +243,74 @@
 	  <configuration>
       <parameters>
         <parameter>
-			<name>
-               <value lang="en">Validate Against</value>
-            </name>
-			<type>List</type>
+		<pluginParameter>plugin</pluginParameter>
+			<mavenCommands>
+				<mavenCommand>
+					<key>skipTests</key>
+					<value>-DskipTests</value>
+				</mavenCommand>
+			</mavenCommands>
+			<name>codeValidation</name>
+			<type>java.lang.String</type>
 			<required>false</required>
 			<editable>true</editable>
 			<description></description>
 			<key>sonar</key>
 			<possibleValues>
-				<value dependency="skipTests">Source</value>
-				<value>Functional Test</value>
+				<value dependency="src,skipTests">src</value>
+				<value>functional</value>
 			</possibleValues>
 			<multiple>false</multiple>
 		  <value></value>
         </parameter>
 		<parameter>
-			<pluginParameter>framework</pluginParameter>
+			<name>src</name>
 			<mavenCommands>
 				<mavenCommand>
-					<key>true</key>
-					<value>-DskipTests=true</value>
+					<key>js</key>
+					<value>-Pjs</value>
 				</mavenCommand>
 				<mavenCommand>
-					<key>false</key>
-					<value>-DskipTests=false</value>
+					<key>java</key>
+					<value>-Pjava</value>
+				</mavenCommand>
+				<mavenCommand>
+					<key>html</key>
+					<value>-Phtml</value>
+				</mavenCommand>
+				<mavenCommand>
+					<key>jsp/jsf</key>
+					<value>-Pweb</value>
 				</mavenCommand>
 			</mavenCommands>
-			<name>
-				<value lang="en">Skip Unit Test</value>
-			</name>
-			<type>Boolean</type>
-			<required>false</required>
-			<editable>true</editable>
-			<description></description>
-			<key>skipTests</key>
-			<value>true</value>
+			<pluginParameter>plugin</pluginParameter>
+          <type>java.lang.String</type>
+          <required>false</required>
+          <editable>true</editable>
+          <description></description>
+		  <key>src</key>
+			<possibleValues>
+				<value>js</value>
+				<value>java</value>
+				<value>html</value>
+				<value>jsp/jsf</value>
+			</possibleValues>
+			<multiple>false</multiple>
+		  <value></value>
         </parameter>
           </parameters>
       </configuration>
     </mojo>
 	<mojo>
         <goal>unit-test</goal>
-        <description>Goal which Unit Test for Android Library project</description>
+        <description>Goal which Unit Test for Iphone project</description>
         <requiresDirectInvocation>false</requiresDirectInvocation>
         <requiresProject>true</requiresProject>
         <requiresReports>false</requiresReports>
         <aggregator>false</aggregator>
         <requiresOnline>false</requiresOnline>
         <inheritedByDefault>true</inheritedByDefault>
-        <implementation>com.photon.phresco.plugins.android.AndroidPlugin</implementation>
+        <implementation>com.photon.phresco.plugins.xcode.XcodePlugin</implementation>
         <language>java</language>
         <instantiationStrategy>per-lookup</instantiationStrategy>
         <executionStrategy>once-per-session</executionStrategy>
@@ -329,116 +321,66 @@
 					<pluginParameter>plugin</pluginParameter>
 					<mavenCommands>
 						<mavenCommand>
-							<key>skipTests</key>
-							<value>-DskipTests</value>
+							<key>iphonesimulator5.1</key>
+							<value>-Dsdk="iphonesimulator5.1"</value>
 						</mavenCommand>
 						<mavenCommand>
-							<key>USB</key>
-							<value>-Dandroid.divice="usb"</value>
-						</mavenCommand>
-						<mavenCommand>
-							<key>Emulator</key>
-							<value>-Dandroid.divice="emulator"</value>
+							<key>iphoneos5.1</key>
+							<value>-Dsdk="iphoneos5.1"</value>
 						</mavenCommand>
 					</mavenCommands>
                     <name>
-                        <value lang="en">Devices</value>
+                        <value lang="en">SDK</value>
                     </name>
-                    <type>List</type>
+                    <type>DynamicParameter</type>
+                    <dynamicParameter>
+                        <class>com.photon.phresco.plugins.xcode.IosSdkParameter</class>
+                        <dependencies>
+                            <dependency>
+								<groupId>com.photon.phresco.commons</groupId>
+								<artifactId>phresco-commons</artifactId>
+								<type>jar</type>
+								<version>1.0.0</version>
+                            </dependency>
+                        </dependencies>
+                    </dynamicParameter>
                     <required>false</required>
                     <editable>true</editable>
                     <description></description>
-                    <key>devices</key>
+                    <key>sdk</key>
 					<possibleValues>
-						<value>USB</value>
-						<value>Emulator</value>
-						<value dependency="serialNumber">Serial Number</value>
+						<value key="iphonesimulator5.1">iphonesimulator5.1</value>
+						<value key="iphoneos5.1">iphoneos5.1</value>
 					</possibleValues>
 					<multiple>false</multiple>
-                    <value></value>
+                    <value>iphonesimulator5.1</value>
                 </parameter>
-				<parameter>
-                    <name>
-                        <value lang="en">Serial Number</value>
-                    </name>
-                    <type>String</type>
-                    <required>false</required>
-                    <editable>true</editable>
-                    <description></description>
-                    <key>serialNumber</key>
-					<multiple>false</multiple>
-                    <value></value>
-                </parameter>
-				<parameter>
-                    <name>
-                        <value lang="en">Devices</value>
-                    </name>
-                    <type>String</type>
-                    <required>false</required>
-                    <editable>true</editable>
-                    <description></description>
-                    <key>devices</key>
-					<multiple>false</multiple>
-                    <value></value>
-                </parameter>
-            </parameters>
-        </configuration>
-    </mojo>
-	<mojo>
-        <goal>functional-test</goal>
-        <description>Goal which functional Test the Android Library project</description>
-        <requiresDirectInvocation>false</requiresDirectInvocation>
-        <requiresProject>true</requiresProject>
-        <requiresReports>false</requiresReports>
-        <aggregator>false</aggregator>
-        <requiresOnline>false</requiresOnline>
-        <inheritedByDefault>true</inheritedByDefault>
-        <implementation>com.photon.phresco.plugins.android.AndroidPlugin</implementation>
-        <language>java</language>
-        <instantiationStrategy>per-lookup</instantiationStrategy>
-        <executionStrategy>once-per-session</executionStrategy>
-        <threadSafe>false</threadSafe>
-        <configuration>
-            <parameters>
 				<parameter>
 					<pluginParameter>plugin</pluginParameter>
 					<mavenCommands>
 						<mavenCommand>
-							<key>USB</key>
-							<value>-Dandroid.divice="usb"</value>
+							<key>iphonesimulator5.1</key>
+							<value>-Dsdk="iphonesimulator5.1"</value>
 						</mavenCommand>
 						<mavenCommand>
-							<key>Emulator</key>
-							<value>-Dandroid.divice="emulator"</value>
+							<key>iphoneos5.1</key>
+							<value>-Dsdk="iphoneos5.1"</value>
 						</mavenCommand>
 					</mavenCommands>
                     <name>
-                        <value lang="en">Devices</value>
+                        <value lang="en">Target</value>
                     </name>
                     <type>List</type>
                     <required>false</required>
                     <editable>true</editable>
                     <description></description>
-                    <key>devices</key>
+                    <key>target</key>
 					<possibleValues>
-						<value>USB</value>
-						<value>Emulator</value>
-						<value dependency="serialNumber">Serial Number</value>
+						<value key="HelloWorld">HelloWorld</value>
+						<value key="alltest">AllTest</value>
 					</possibleValues>
 					<multiple>false</multiple>
-                    <value></value>
-                </parameter>
-				<parameter>
-                    <name>
-                        <value lang="en">Serial Number</value>
-                    </name>
-                    <type>String</type>
-                    <required>false</required>
-                    <editable>true</editable>
-                    <description></description>
-                    <key>serialNumber</key>
-					<multiple>false</multiple>
-                    <value></value>
+                    <value>AllTest</value>
                 </parameter>
             </parameters>
         </configuration>
