@@ -17,32 +17,6 @@
 	  <configuration>
       <parameters>
         <parameter>
-          <name>
-			<value lang="en">Port</value>
-		  </name>
-          <type>DynamicParam</type>
-		  <type>java.lang.String</type>
-          <required>false</required>
-          <editable>true</editable>
-          <description></description>
-		  <key>port</key>
-		  <multiple>false</multiple>
-		  <value></value>
-        </parameter>
-		<parameter>
-          <name>
-			<value lang="en">context</value>
-		  </name>
-          <type>String</type>
-		  
-          <required>true</required>
-          <editable>true</editable>
-          <description></description>
-		  <key>context</key>
-		  <multiple>false</multiple>
-		  <value></value>
-        </parameter>
-        <parameter>
 			<name>
 				<value lang="en">Environment</value>
 				<value lang="cv">Envit</value>

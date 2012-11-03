@@ -17,28 +17,6 @@
 	  <configuration>
       <parameters>
         <parameter>
-          <name>
-			<value lang="en">Port</value>
-		  </name>
-		  <type>String</type>
-          <required>true</required>
-          <editable>true</editable>
-          <description></description>
-		  <key>port</key>
-		  <value></value>
-        </parameter>
-		<parameter>
-          <name>
-			<value lang="en">context</value>
-		  </name>
-          <type>String</type>
-          <required>true</required>
-          <editable>true</editable>
-          <description></description>
-		  <key>context</key>
-		  <value></value>
-        </parameter>
-        <parameter>
 			<name>
 				<value lang="en">Environment</value>
 			</name>
