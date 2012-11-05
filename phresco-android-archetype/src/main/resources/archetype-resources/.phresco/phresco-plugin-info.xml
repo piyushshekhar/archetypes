@@ -26,6 +26,8 @@
                     <description></description>
                     <key>buildName</key>
                     <multiple>false</multiple>
+					<sort>false</sort>
+                    <show>true</show>
                     <value></value>
                 </parameter>
                 <parameter>
@@ -38,7 +40,24 @@
                     <description></description>
                     <key>buildNumber</key>
                     <multiple>false</multiple>
+					<sort>false</sort>
+                    <show>true</show>
                     <value></value>
+                </parameter>
+				<parameter>
+                    <name>
+                        <value lang="en">Show Settings</value>
+                    </name>
+                    <type>Boolean</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>showSettings</key>
+                    <multiple>false</multiple>
+					<sort>false</sort>
+                    <show>true</show>
+                    <value>false</value>
+                    <dependency>environmentName</dependency>
                 </parameter>
                 <parameter>
                     <name>
@@ -60,7 +79,9 @@
                     <editable>true</editable>
                     <key>environmentName</key>
                     <multiple>false</multiple>
-                    <value>Production</value>
+					<sort>false</sort>
+                    <show>false</show>
+                    <value></value>
                 </parameter>
 				<parameter>
                     <name>
@@ -72,39 +93,28 @@
                     <description></description>
                     <key>sdk</key>
 					<possibleValues>
-                        <value>2.2</value>
-                        <value>2.3.3</value>
-                        <value>4.0.3</value>
+                        <value key="2.2">2.2</value>
+                        <value key="2.3.3">2.3.3</value>
+                        <value key="4.0.3">4.0.3</value>
                     </possibleValues>
 					<multiple>false</multiple>
+					<sort>false</sort>
+                    <show>true</show>
                     <value></value>
-                </parameter>
-				<parameter>
-                    <name>
-                        <value lang="en">Show Settings</value>
-                    </name>
-                    <type>Boolean</type>
-                    <required>false</required>
-                    <editable>true</editable>
-                    <description></description>
-                    <key>showSettings</key>
-                    <multiple>false</multiple>
-                    <value>true</value>
-                    <dependency>environmentName</dependency>
                 </parameter>
                 <parameter>
                     <pluginParameter>framework</pluginParameter>
                     <mavenCommands>
                         <mavenCommand>
-                            <key>Show Errors</key>
+                            <key>showErrors</key>
                             <value>-e</value>
                         </mavenCommand>
                         <mavenCommand>
-                            <key>Hide Logs</key>
+                            <key>hideLogs</key>
                             <value>-q</value>
                         </mavenCommand>
                         <mavenCommand>
-                            <key>Show Debug</key>
+                            <key>showDebug</key>
                             <value>-X</value>
                         </mavenCommand>
                     </mavenCommands>
@@ -116,11 +126,13 @@
                     <editable>true</editable>
                     <key>logs</key>
                     <possibleValues>
-                        <value>Show Errors</value>
-                        <value>Hide Logs</value>
-                        <value>Show Debug</value>
+                        <value key="showErrors">Show Errors</value>
+                        <value key="hideLogs">Hide Logs</value>
+                        <value key="showDebug">Show Debug</value>
                     </possibleValues>
                     <multiple>false</multiple>
+					<sort>false</sort>
+                    <show>true</show>
                     <value></value>
                 </parameter>
 				<parameter>
@@ -133,6 +145,8 @@
                     <description></description>
                     <key>proguard</key>
                     <multiple>false</multiple>
+					<sort>false</sort>
+                    <show>true</show>
                     <value></value>
                 </parameter>
 				<parameter>
@@ -145,6 +159,8 @@
                     <description></description>
                     <key>signing</key>
                     <multiple>false</multiple>
+					<sort>false</sort>
+                    <show>true</show>
                     <value></value>
 					<dependency>keystore,storepass,keypass,alias</dependency>
                 </parameter>
@@ -158,6 +174,8 @@
                     <description></description>
                     <key>keystore</key>
                     <multiple>false</multiple>
+					<sort>false</sort>
+                    <show>false</show>
                     <value></value>
                 </parameter>
 				<parameter>
@@ -170,6 +188,8 @@
                     <description></description>
                     <key>storepass</key>
                     <multiple>false</multiple>
+					<sort>false</sort>
+                    <show>false</show>
                     <value></value>
                 </parameter>
 				<parameter>
@@ -182,6 +202,8 @@
                     <description></description>
                     <key>keypass</key>
                     <multiple>false</multiple>
+					<sort>false</sort>
+                    <show>false</show>
                     <value></value>
                 </parameter>
 				<parameter>
@@ -194,6 +216,8 @@
                     <description></description>
                     <key>alias</key>
                     <multiple>false</multiple>
+					<sort>false</sort>
+                    <show>false</show>
                     <value></value>
                 </parameter>
             </parameters>
@@ -225,11 +249,13 @@
                     <description></description>
                     <key>devices</key>
 					<possibleValues>
-                        <value>USB</value>
-                        <value>Emulator</value>
-                        <value dependency="serialNumber">SerialNumber</value>
+                        <value key="usb">USB</value>
+                        <value key="emulator">Emulator</value>
+                        <value key="serialNumber" dependency="serialNumber">SerialNumber</value>
                     </possibleValues>
 					<multiple>false</multiple>
+					<sort>false</sort>
+                    <show>true</show>
                     <value></value>
                 </parameter>
 				<parameter>
@@ -242,6 +268,8 @@
                     <description></description>
                     <key>serialNumber</key>
 					<multiple>false</multiple>
+					<sort>false</sort>
+                    <show>false</show>
                     <value></value>
                 </parameter>
                 <parameter>
@@ -254,6 +282,8 @@
                     <description></description>
                     <key>buildNumber</key>
 					<multiple>false</multiple>
+					<sort>false</sort>
+                    <show>false</show>
                     <value></value>
                 </parameter>
             </parameters>
@@ -284,10 +314,12 @@
 			<description></description>
 			<key>sonar</key>
 			<possibleValues>
-				<value dependency="skipTests">Source</value>
-				<value>Functional Test</value>
+				<value key="src" dependency="skipTests">Source</value>
+				<value key="functional">Functional Test</value>
 			</possibleValues>
 			<multiple>false</multiple>
+			<sort>false</sort>
+            <show>true</show>
 		  <value></value>
         </parameter>
 		<parameter>
@@ -310,7 +342,10 @@
 			<editable>true</editable>
 			<description></description>
 			<key>skipTests</key>
-			<value>true</value>
+			<multiple>false</multiple>
+			<sort>false</sort>
+            <show>false</show>
+			<value>false</value>
         </parameter>
           </parameters>
       </configuration>
@@ -339,11 +374,11 @@
 							<value>-DskipTests</value>
 						</mavenCommand>
 						<mavenCommand>
-							<key>USB</key>
+							<key>usb</key>
 							<value>-Dandroid.divice="usb"</value>
 						</mavenCommand>
 						<mavenCommand>
-							<key>Emulator</key>
+							<key>emulator</key>
 							<value>-Dandroid.divice="emulator"</value>
 						</mavenCommand>
 					</mavenCommands>
@@ -356,11 +391,13 @@
                     <description></description>
                     <key>devices</key>
 					<possibleValues>
-						<value>USB</value>
-						<value>Emulator</value>
-						<value dependency="serialNumber">Serial Number</value>
+						<value key="usb">USB</value>
+						<value key="emulator">Emulator</value>
+						<value key="serialNumber" dependency="serialNumber">Serial Number</value>
 					</possibleValues>
 					<multiple>false</multiple>
+					<sort>false</sort>
+                    <show>true</show>
                     <value></value>
                 </parameter>
 				<parameter>
@@ -373,6 +410,8 @@
                     <description></description>
                     <key>serialNumber</key>
 					<multiple>false</multiple>
+					<sort>false</sort>
+                    <show>false</show>
                     <value></value>
                 </parameter>
             </parameters>
@@ -398,11 +437,11 @@
 					<pluginParameter>plugin</pluginParameter>
 					<mavenCommands>
 						<mavenCommand>
-							<key>USB</key>
+							<key>usb</key>
 							<value>-Dandroid.divice="usb"</value>
 						</mavenCommand>
 						<mavenCommand>
-							<key>Emulator</key>
+							<key>emulator</key>
 							<value>-Dandroid.divice="emulator"</value>
 						</mavenCommand>
 					</mavenCommands>
@@ -415,11 +454,13 @@
                     <description></description>
                     <key>devices</key>
 					<possibleValues>
-						<value>USB</value>
-						<value>Emulator</value>
-						<value dependency="serialNumber">Serial Number</value>
+						<value key="usb">USB</value>
+						<value key="emulator">Emulator</value>
+						<value key="serialNumber" dependency="serialNumber">Serial Number</value>
 					</possibleValues>
 					<multiple>false</multiple>
+					<sort>false</sort>
+                    <show>true</show>
                     <value></value>
                 </parameter>
 				<parameter>
@@ -432,6 +473,8 @@
                     <description></description>
                     <key>serialNumber</key>
 					<multiple>false</multiple>
+					<sort>false</sort>
+                    <show>false</show>
                     <value></value>
                 </parameter>
             </parameters>

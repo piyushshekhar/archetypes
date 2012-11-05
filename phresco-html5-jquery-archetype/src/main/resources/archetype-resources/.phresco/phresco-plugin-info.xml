@@ -36,7 +36,9 @@
 			<editable>true</editable>
 			<key>environmentName</key>
 			<multiple>false</multiple>
-			<value>Production</value>
+			<sort>false</sort>
+			<show>true</show>
+			<value></value>
 		</parameter>
           </parameters>
       </configuration>
@@ -82,6 +84,8 @@
                     <description></description>
                     <key>buildName</key>
 					<multiple>false</multiple>
+					<sort>false</sort>
+					<show>true</show>
                     <value></value>
                 </parameter>
                 <parameter>
@@ -94,7 +98,24 @@
                     <description></description>
                     <key>buildNumber</key>
 					<multiple>false</multiple>
+					<sort>false</sort>
+					<show>true</show>
                     <value></value>
+                </parameter>
+				<parameter>
+                    <name>
+                        <value lang="en">Show Settings</value>
+                    </name>
+                    <type>Boolean</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>showSettings</key>
+                    <multiple>false</multiple>
+					<sort>false</sort>
+					<show>true</show>
+                    <value>true</value>
+                    <dependency>environmentName</dependency>
                 </parameter>
                 <parameter>
                     <name>
@@ -115,21 +136,10 @@
                     <required>true</required>
                     <editable>true</editable>
                     <key>environmentName</key>
-					<multiple>false</multiple>
-                    <value>Production</value>
-                </parameter>
-                <parameter>
-                    <name>
-                        <value lang="en">Show Settings</value>
-                    </name>
-                    <type>Boolean</type>
-                    <required>false</required>
-                    <editable>true</editable>
-                    <description></description>
-                    <key>showSettings</key>
-                    <multiple>false</multiple>
-                    <value>true</value>
-                    <dependency>environmentName</dependency>
+					<multiple>true</multiple>
+					<sort>false</sort>
+					<show>false</show>
+                    <value></value>
                 </parameter>
 				<parameter>
                     <pluginParameter>framework</pluginParameter>
@@ -152,21 +162,23 @@
                     <description></description>
                     <key>skipTest</key>
 					<multiple>false</multiple>
-                    <value>true</value>
+					<sort>false</sort>
+					<show>true</show>
+                    <value>false</value>
                 </parameter>
                 <parameter>
                     <pluginParameter>framework</pluginParameter>
                     <mavenCommands>
                         <mavenCommand>
-                            <key>Show Errors</key>
+                            <key>showErrors</key>
                             <value>-e</value>
                         </mavenCommand>
                         <mavenCommand>
-                            <key>Hide Logs</key>
+                            <key>hideLogs</key>
                             <value>-q</value>
                         </mavenCommand>
                         <mavenCommand>
-                            <key>Show Debug</key>
+                            <key>showDebug</key>
                             <value>-X</value>
                         </mavenCommand>
                     </mavenCommands>
@@ -178,11 +190,13 @@
                     <editable>true</editable>
                     <key>logs</key>
                     <possibleValues>
-                        <value>Show Errors</value>
-                        <value>Hide Logs</value>
-                        <value>Show Debug</value>
+                        <value key="showErrors">Show Errors</value>
+                        <value key="hideLogs">Hide Logs</value>
+                        <value key="showDebug">Show Debug</value>
                     </possibleValues>
                     <multiple>false</multiple>
+					<sort>false</sort>
+					<show>true</show>
                     <value></value>
                 </parameter>
             </parameters>
@@ -214,6 +228,8 @@
                     <description></description>
                     <key>buildNumber</key>
 					<multiple>false</multiple>
+					<sort>false</sort>
+					<show>true</show>
                     <value></value>
                 </parameter>
                 <parameter>
@@ -237,21 +253,23 @@
                     <editable>true</editable>
                     <key>environmentName</key>
 					<multiple>false</multiple>
-                    <value>Production</value>
+					<sort>false</sort>
+					<show>true</show>
+                    <value></value>
                 </parameter>
                 <parameter>
                     <pluginParameter>framework</pluginParameter>
                     <mavenCommands>
                         <mavenCommand>
-                            <key>Show Errors</key>
+                            <key>showErrors</key>
                             <value>-e</value>
                         </mavenCommand>
                         <mavenCommand>
-                            <key>Hide Logs</key>
+                            <key>hideLogs</key>
                             <value>-q</value>
                         </mavenCommand>
                         <mavenCommand>
-                            <key>Show Debug</key>
+                            <key>showDebug</key>
                             <value>-X</value>
                         </mavenCommand>
                     </mavenCommands>
@@ -263,11 +281,13 @@
                     <editable>true</editable>
                     <key>logs</key>
                     <possibleValues>
-                        <value>Show Errors</value>
-                        <value>Hide Logs</value>
-                        <value>Show Debug</value>
+                        <value key="showErrors">Show Errors</value>
+                        <value key="hideLogs">Hide Logs</value>
+                        <value key="showDebug">Show Debug</value>
                     </possibleValues>
                     <multiple>false</multiple>
+					<sort>false</sort>
+					<show>true</show>
                     <value></value>
                 </parameter>
             </parameters>
@@ -302,6 +322,8 @@
 				<value>Functional Test</value>
 			</possibleValues>
 			<multiple>false</multiple>
+			<sort>false</sort>
+			<show>true</show>
 		  <value></value>
         </parameter>
 		<parameter>
@@ -333,15 +355,16 @@
           <description></description>
 		  <key>src</key>
 			<possibleValues>
-				<value>js</value>
-				<value>java</value>
-				<value>html</value>
-				<value>jsp/jsf</value>
+				<value key="js">js</value>
+				<value key="java">java</value>
+				<value key="html">html</value>
+				<value key="jsp/jsf">jsp/jsf</value>
 			</possibleValues>
 			<multiple>false</multiple>
+			<sort>false</sort>
+			<show>false</show>
 		  <value></value>
         </parameter>
-      </parameters>
 	  <parameter>
 			<pluginParameter>framework</pluginParameter>
 			<mavenCommands>
@@ -362,8 +385,12 @@
 			<editable>true</editable>
 			<description></description>
 			<key>skipTests</key>
+			<multiple>false</multiple>
+			<sort>false</sort>
+			<show>false</show>
 			<value>true</value>
       </parameter>
+	  </parameters>
       </configuration>
     </mojo>
 	<mojo>

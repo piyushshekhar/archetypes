@@ -37,7 +37,9 @@
 			<editable>true</editable>
 			<key>environmentName</key>
 			<multiple>true</multiple>
-			<value>Production</value>
+			<sort>false</sort>
+			<show>true</show>
+			<value></value>
         </parameter>
         </parameters>
       </configuration>
@@ -83,6 +85,8 @@
                     <description></description>
                     <key>buildName</key>
 					<multiple>false</multiple>
+					<sort>false</sort>
+					<show>true</show>
                     <value></value>
                 </parameter>
                 <parameter>
@@ -95,7 +99,24 @@
                     <description></description>
                     <key>buildNumber</key>
 					<multiple>false</multiple>
+					<sort>false</sort>
+					<show>true</show>
                     <value></value>
+                </parameter>
+				<parameter>
+                    <name>
+                        <value lang="en">Show Settings</value>
+                    </name>
+                    <type>Boolean</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>showSettings</key>
+                    <multiple>false</multiple>
+					<sort>false</sort>
+					<show>true</show>
+                    <value>false</value>
+                    <dependency>environmentName</dependency>
                 </parameter>
                 <parameter>
                     <name>
@@ -117,34 +138,23 @@
                     <editable>true</editable>
                     <key>environmentName</key>
 					<multiple>true</multiple>
+					<sort>false</sort>
+					<show>false</show>
                     <value>Production</value>
-                </parameter>
-                <parameter>
-                    <name>
-                        <value lang="en">Show Settings</value>
-                    </name>
-                    <type>Boolean</type>
-                    <required>false</required>
-                    <editable>true</editable>
-                    <description></description>
-                    <key>showSettings</key>
-                    <multiple>false</multiple>
-                    <value>true</value>
-                    <dependency>environmentName</dependency>
                 </parameter>
                 <parameter>
                     <pluginParameter>framework</pluginParameter>
                     <mavenCommands>
                         <mavenCommand>
-                            <key>Show Errors</key>
+                            <key>showErrors</key>
                             <value>-e</value>
                         </mavenCommand>
                         <mavenCommand>
-                            <key>Hide Logs</key>
+                            <key>hideLogs</key>
                             <value>-q</value>
                         </mavenCommand>
                         <mavenCommand>
-                            <key>Show Debug</key>
+                            <key>showDebug</key>
                             <value>-X</value>
                         </mavenCommand>
                     </mavenCommands>
@@ -156,11 +166,13 @@
                     <editable>true</editable>
                     <key>logs</key>
                     <possibleValues>
-                        <value>Show Errors</value>
-                        <value>Hide Logs</value>
-                        <value>Show Debug</value>
+                        <value key="showErrors">Show Errors</value>
+                        <value key="hideLogs">Hide Logs</value>
+                        <value key="showDebug">Show Debug</value>
                     </possibleValues>
                     <multiple>false</multiple>
+					<sort>false</sort>
+					<show>true</show>
                     <value></value>
                 </parameter>
             </parameters>
@@ -191,10 +203,12 @@
 			<description></description>
 			<key>sonar</key>
 			<possibleValues>
-				<value dependency="skipTests">Source</value>
-				<value>Functional Test</value>
+				<value key="src" dependency="skipTests">Source</value>
+				<value key="functional">Functional Test</value>
 			</possibleValues>
 			<multiple>false</multiple>
+			<sort>false</sort>
+			<show>true</show>
 		  <value></value>
         </parameter>
 		<parameter>
@@ -217,7 +231,10 @@
 			<editable>true</editable>
 			<description></description>
 			<key>skipTests</key>
-			<value>true</value>
+			<multiple>false</multiple>
+			<sort>false</sort>
+			<show>false</show>
+			<value>false</value>
         </parameter>
     </parameters>
     </configuration>

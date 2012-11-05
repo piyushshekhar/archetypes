@@ -26,6 +26,8 @@
                     <description></description>
                     <key>buildName</key>
 					<multiple>false</multiple>
+					<sort>false</sort>
+					<show>true</show>
                     <value></value>
                 </parameter>
                 <parameter>
@@ -38,7 +40,24 @@
                     <description></description>
                     <key>buildNumber</key>
 					<multiple>false</multiple>
+					<sort>false</sort>
+					<show>true</show>
                     <value></value>
+                </parameter>
+				<parameter>
+                    <name>
+                        <value lang="en">Show Settings</value>
+                    </name>
+                    <type>Boolean</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>showSettings</key>
+                    <multiple>false</multiple>
+					<sort>false</sort>
+					<show>true</show>
+                    <value>false</value>
+                    <dependency>environmentName</dependency>
                 </parameter>
                 <parameter>
                     <name>
@@ -60,20 +79,9 @@
                     <editable>true</editable>
                     <key>environmentName</key>
 					<multiple>true</multiple>
-                    <value>Production</value>
-                </parameter>
-                <parameter>
-                    <name>
-                        <value lang="en">Show Settings</value>
-                    </name>
-                    <type>Boolean</type>
-                    <required>false</required>
-                    <editable>true</editable>
-                    <description></description>
-                    <key>showSettings</key>
-                    <multiple>false</multiple>
-                    <value>true</value>
-                    <dependency>environmentName</dependency>
+					<sort>false</sort>
+					<show>false</show>
+                    <value></value>
                 </parameter>
 				  <parameter>
 					<pluginParameter>plugin</pluginParameter>
@@ -107,21 +115,23 @@
                     <description></description>
                     <key>sdk</key>
 					<multiple>false</multiple>
+					<sort>false</sort>
+					<show>true</show>
                     <value></value>
                 </parameter>
                 <parameter>
                     <pluginParameter>framework</pluginParameter>
                     <mavenCommands>
                         <mavenCommand>
-                            <key>Show Errors</key>
+                            <key>showErrors</key>
                             <value>-e</value>
                         </mavenCommand>
                         <mavenCommand>
-                            <key>Hide Logs</key>
+                            <key>hideLogs</key>
                             <value>-q</value>
                         </mavenCommand>
                         <mavenCommand>
-                            <key>Show Debug</key>
+                            <key>showDebug</key>
                             <value>-X</value>
                         </mavenCommand>
                     </mavenCommands>
@@ -133,11 +143,13 @@
                     <editable>true</editable>
                     <key>logs</key>
                     <possibleValues>
-                        <value>Show Errors</value>
-                        <value>Hide Logs</value>
-                        <value>Show Debug</value>
+                        <value key="showErrors">Show Errors</value>
+                        <value key="hideLogs">Hide Logs</value>
+                        <value key="showDebug">Show Debug</value>
                     </possibleValues>
                     <multiple>false</multiple>
+					<sort>false</sort>
+					<show>true</show>
                     <value></value>
                 </parameter>
             </parameters>
@@ -179,21 +191,23 @@
                     <editable>true</editable>
                     <key>environmentName</key>
 					<multiple>false</multiple>
-                    <value>Production</value>
+					<sort>false</sort>
+					<show>true</show>
+                    <value></value>
                 </parameter>
                 <parameter>
                     <pluginParameter>framework</pluginParameter>
                     <mavenCommands>
                         <mavenCommand>
-                            <key>Show Errors</key>
+                            <key>showErrors</key>
                             <value>-e</value>
                         </mavenCommand>
                         <mavenCommand>
-                            <key>Hide Logs</key>
+                            <key>hideLogs</key>
                             <value>-q</value>
                         </mavenCommand>
                         <mavenCommand>
-                            <key>Show Debug</key>
+                            <key>showDebug</key>
                             <value>-X</value>
                         </mavenCommand>
                     </mavenCommands>
@@ -205,11 +219,13 @@
                     <editable>true</editable>
                     <key>logs</key>
                     <possibleValues>
-                        <value>Show Errors</value>
-                        <value>Hide Logs</value>
-                        <value>Show Debug</value>
+                        <value key="showErrors">Show Errors</value>
+                        <value key="hideLogs">Hide Logs</value>
+                        <value key="showDebug">Show Debug</value>
                     </possibleValues>
                     <multiple>false</multiple>
+					<sort>false</sort>
+					<show>true</show>
                     <value></value>
                 </parameter>
                 <parameter>
@@ -222,6 +238,8 @@
                     <description></description>
                     <key>buildNumber</key>
 					<multiple>false</multiple>
+					<sort>false</sort>
+					<show>true</show>
                     <value></value>
                 </parameter>
             </parameters>
@@ -244,17 +262,6 @@
         <configuration>
             <parameters>
                 <parameter>
-					<pluginParameter>plugin</pluginParameter>
-					<mavenCommands>
-						<mavenCommand>
-							<key>iphonesimulator5.1</key>
-							<value>-Dsdk="iphonesimulator5.1"</value>
-						</mavenCommand>
-						<mavenCommand>
-							<key>iphoneos5.1</key>
-							<value>-Dsdk="iphoneos5.1"</value>
-						</mavenCommand>
-					</mavenCommands>
                     <name>
                         <value lang="en">SDK</value>
                     </name>
@@ -274,23 +281,21 @@
                     <editable>true</editable>
                     <description></description>
                     <key>sdk</key>
-					<possibleValues>
-						<value key="iphonesimulator5.1">iphonesimulator5.1</value>
-						<value key="iphoneos5.1">iphoneos5.1</value>
-					</possibleValues>
 					<multiple>false</multiple>
-                    <value>iphonesimulator5.1</value>
+					<sort>false</sort>
+					<show>true</show>
+                    <value></value>
                 </parameter>
 				<parameter>
 					<pluginParameter>plugin</pluginParameter>
 					<mavenCommands>
 						<mavenCommand>
-							<key>iphonesimulator5.1</key>
-							<value>-Dsdk="iphonesimulator5.1"</value>
+							<key>helloWorld</key>
+							<value>-DtargetName="helloWorld"</value>
 						</mavenCommand>
 						<mavenCommand>
-							<key>iphoneos5.1</key>
-							<value>-Dsdk="iphoneos5.1"</value>
+							<key>allTest</key>
+							<value>-DtargetName="allTest"</value>
 						</mavenCommand>
 					</mavenCommands>
                     <name>
@@ -302,10 +307,12 @@
                     <description></description>
                     <key>target</key>
 					<possibleValues>
-						<value key="HelloWorld">HelloWorld</value>
-						<value key="alltest">AllTest</value>
+						<value key="helloWorld">HelloWorld</value>
+						<value key="allTest">AllTest</value>
 					</possibleValues>
 					<multiple>false</multiple>
+					<sort>false</sort>
+					<show>true</show>
                     <value>AllTest</value>
                 </parameter>
             </parameters>
