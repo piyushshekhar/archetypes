@@ -28,6 +28,18 @@
     
     <properties>
     	<android.version>2.3.3</android.version>
+		<phresco.unitTest.dir>/test/unit</phresco.unitTest.dir>
+		<phresco.unitTest.report.dir>/test/unit/target/surefire-reports</phresco.unitTest.report.dir>
+		<phresco.unitTest.testsuite.xpath>/testsuites/testsuite</phresco.unitTest.testsuite.xpath>
+		<phresco.unitTest.testcase.path>/testcase</phresco.unitTest.testcase.path>
+		<phresco.functionalTest.dir>/test/functional</phresco.functionalTest.dir>
+		<phresco.functionalTest.report.dir>/test/functional/target/surefire-reports</phresco.functionalTest.report.dir>
+		<phresco.functionalTest.testsuite.xpath>/testsuites/testsuite</phresco.functionalTest.testsuite.xpath>
+		<phresco.functionalTest.testcase.path>/testcase</phresco.functionalTest.testcase.path>
+		<phresco.performanceTest.dir>/test/performance</phresco.performanceTest.dir>
+		<phresco.performanceTest.report.dir>/test/performance/target/surefire-reports</phresco.performanceTest.report.dir>
+		<phresco.loadTest.dir>/test/load</phresco.loadTest.dir>
+		<phresco.loadTest.report.dir>/test/load/results/jmeter</phresco.loadTest.report.dir>
     </properties>
     
     <dependencies>

@@ -30,6 +30,19 @@
         <visual.test.project.pattern>test/functional/*.Tests;*Test</visual.test.project.pattern>
         <dotnet.tool.version>3.5</dotnet.tool.version>
         <sonar.language>cs</sonar.language>
+		<phresco.unitTest.dir>/source/test</phresco.unitTest.dir>
+		<phresco.unitTest.report.dir>/source/test/target/nunit-report</phresco.unitTest.report.dir>
+		<phresco.unitTest.testsuite.xpath>/test-results/test-suite/results/test-suite/results/test-suite/results/test-suite</phresco.unitTest.testsuite.xpath>
+		<phresco.unitTest.testcase.path>/results/test-case</phresco.unitTest.testcase.path>
+		<phresco.functionalTest.dir>/test/functional</phresco.functionalTest.dir>
+		<phresco.functionalTest.report.dir>/test/functional/target/nunit-report</phresco.functionalTest.report.dir>
+		<phresco.functionalTest.testsuite.xpath>/test-results/test-suite/results/test-suite/results/test-suite</phresco.functionalTest.testsuite.xpath>
+		<phresco.functionalTest.testcase.path>/results/test-case</phresco.functionalTest.testcase.path>
+		<phresco.functionalTest.adapt.config>/test/functional/src/test/sharepoint/phresco/tests/phresco-env-config.xml</phresco.functionalTest.adapt.config>
+		<phresco.performanceTest.dir>/test/performance</phresco.performanceTest.dir>
+		<phresco.performanceTest.report.dir>/test/performance/dir_type/results/jmeter</phresco.performanceTest.report.dir>
+		<phresco.loadTest.dir>/test/load</phresco.loadTest.dir>
+		<phresco.loadTest.report.dir>/test/load/results/jmeter</phresco.loadTest.report.dir>
     </properties>
 
     <build>

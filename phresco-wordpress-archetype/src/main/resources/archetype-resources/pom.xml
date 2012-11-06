@@ -40,6 +40,20 @@
 		<sonar.phpcpd.excludes>source/public_html</sonar.phpcpd.excludes>
 	    <sonar.phase>validate</sonar.phase>
 		<sonar.phpCodesniffer.standardArgument>WordPress</sonar.phpCodesniffer.standardArgument>
+		<!-- Test, Test Report and Test Suite Directories -->
+		<phresco.unitTest.dir>/test/unit</phresco.unitTest.dir>
+		<phresco.unitTest.report.dir>/test/unit/target/surefire-reports</phresco.unitTest.report.dir>
+		<phresco.unitTest.testsuite.xpath>/testsuites/testsuite</phresco.unitTest.testsuite.xpath>
+		<phresco.unitTest.testcase.path>/testcase</phresco.unitTest.testcase.path>
+		<phresco.functionalTest.dir>/test/functional</phresco.functionalTest.dir>
+		<phresco.functionalTest.report.dir>/test/functional/target/surefire-reports</phresco.functionalTest.report.dir>
+		<phresco.functionalTest.testsuite.xpath>/testsuites/testsuite/testsuite</phresco.functionalTest.testsuite.xpath>
+		<phresco.functionalTest.testcase.path>/testcase</phresco.functionalTest.testcase.path>
+		<phresco.functionalTest.adapt.config>/test/functional/src/test/php/phresco/tests/phresco-env-config.xml</phresco.functionalTest.adapt.config>
+		<phresco.performanceTest.dir>/test/performance</phresco.performanceTest.dir>
+		<phresco.performanceTest.report.dir>/test/performance/dir_type/results/jmeter</phresco.performanceTest.report.dir>
+		<phresco.loadTest.dir>/test/load</phresco.loadTest.dir>
+		<phresco.loadTest.report.dir>/test/load/results/jmeter</phresco.loadTest.report.dir>
     </properties>
 
 	<build>
