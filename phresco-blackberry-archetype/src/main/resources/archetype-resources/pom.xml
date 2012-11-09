@@ -58,6 +58,7 @@
 		<phresco.unitTest.report.dir>/test/unit/target/surefire-reports</phresco.unitTest.report.dir>
 		<phresco.unitTest.testsuite.xpath>/testsuites/testsuite</phresco.unitTest.testsuite.xpath>
 		<phresco.unitTest.testcase.path>/testcase</phresco.unitTest.testcase.path>
+		<phresco.functioanlTest.selenium.tool>webdriver</phresco.functioanlTest.selenium.tool>
 		<phresco.functionalTest.dir>/test/functional</phresco.functionalTest.dir>
 		<phresco.functionalTest.report.dir>/test/functional/target/surefire-reports</phresco.functionalTest.report.dir>
 		<phresco.functionalTest.testsuite.xpath>/testsuites/testsuite</phresco.functionalTest.testsuite.xpath>
