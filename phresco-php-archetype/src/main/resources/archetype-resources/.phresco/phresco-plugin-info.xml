@@ -272,14 +272,14 @@
     </mojo>
 	<mojo>
 		<goal>functional-test</goal>
-		<description>Goal which deploys the PHP project</description>
+		<description>Goal which functional tests the PHP project</description>
 		<requiresDirectInvocation>false</requiresDirectInvocation>
 		<requiresProject>true</requiresProject>
 		<requiresReports>false</requiresReports>
 		<aggregator>false</aggregator>
 		<requiresOnline>false</requiresOnline>
 		<inheritedByDefault>true</inheritedByDefault>
-		<implementation>com.photon.phresco.plugins.drupal.DrupalPlugin</implementation>
+		<implementation>com.photon.phresco.plugins.php.PHPPlugin</implementation>
 		<language>java</language>
 		<instantiationStrategy>per-lookup</instantiationStrategy>
 		<executionStrategy>once-per-session</executionStrategy>
@@ -343,6 +343,7 @@
 					<value key="safari">Safari</value>
 					<value key="opera">Opera</value>
 					<value key="internetExplorer">Internet Explorer</value>
+					<value key="chrome">Chrome</value>
 				</possibleValues>
 				<multiple>false</multiple>
 				<value></value>
@@ -369,7 +370,7 @@
 				<editable>true</editable>
 				<key>buildEnvironmentName</key>
 				<multiple>false</multiple>
-				<value>Production</value>
+				<value></value>
 				<sort>false</sort>
 				<show>true</show>
 			</parameter>
@@ -408,7 +409,7 @@
 				<editable>true</editable>
 				<key>environmentName</key>
 				<multiple>false</multiple>
-				<value>Production</value>
+				<value></value>
 				<sort>false</sort>
 				<show>false</show>
 			</parameter>
