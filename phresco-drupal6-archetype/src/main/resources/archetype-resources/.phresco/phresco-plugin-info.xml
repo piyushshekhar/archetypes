@@ -272,7 +272,7 @@
     </parameters>
     </configuration>
     </mojo>
-	o>
+	<mojo>
 		<goal>functional-test</goal>
 		<description>Goal which deploys the Drupal-6 project</description>
 		<requiresDirectInvocation>false</requiresDirectInvocation>

@@ -33,7 +33,7 @@
 		<phresco.unitTest.report.dir>/do_not_checkin/target/surefire</phresco.unitTest.report.dir>
 		<phresco.unitTest.testsuite.xpath>/testsuite</phresco.unitTest.testsuite.xpath>
 		<phresco.unitTest.testcase.path>/testcase</phresco.unitTest.testcase.path>
-		<phresco.functioanlTest.selenium.tool>webdriver</phresco.functioanlTest.selenium.tool>
+		<phresco.functionalTest.selenium.tool>webdriver</phresco.functionalTest.selenium.tool>
 		<phresco.functionalTest.dir>/test/functional</phresco.functionalTest.dir>
 		<phresco.functionalTest.report.dir>/test/functional/target/surefire-reports</phresco.functionalTest.report.dir>
 		<phresco.functionalTest.testsuite.xpath>/testsuite</phresco.functionalTest.testsuite.xpath>
