@@ -2,7 +2,7 @@
 <mojos>
     <mojo>
         <goal>package</goal>
-        <description>Goal which packages the Iphone project</description>
+        <description>Goal which packages the Iphone Native project</description>
         <requiresDirectInvocation>false</requiresDirectInvocation>
         <requiresProject>true</requiresProject>
         <requiresReports>false</requiresReports>
@@ -25,10 +25,24 @@
                     <editable>true</editable>
                     <description></description>
                     <key>buildName</key>
-					<multiple>false</multiple>
-					<sort>false</sort>
-					<show>true</show>
+                    <multiple>false</multiple>
                     <value></value>
+                    <sort>false</sort>
+                    <show>true</show>
+                </parameter>
+                <parameter>
+                    <name>
+                        <value lang="en">Project Type</value>
+                    </name>
+                    <type>Hidden</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>projectType</key>
+                    <multiple>false</multiple>
+                    <value>xcode</value>
+                    <sort>false</sort>
+                    <show>false</show>
                 </parameter>
                 <parameter>
                     <name>
@@ -39,12 +53,12 @@
                     <editable>true</editable>
                     <description></description>
                     <key>buildNumber</key>
-					<multiple>false</multiple>
-					<sort>false</sort>
-					<show>true</show>
+                    <multiple>false</multiple>
                     <value></value>
+                    <sort>false</sort>
+                    <show>true</show>
                 </parameter>
-				<parameter>
+                <parameter>
                     <name>
                         <value lang="en">Show Settings</value>
                     </name>
@@ -54,9 +68,9 @@
                     <description></description>
                     <key>showSettings</key>
                     <multiple>false</multiple>
-					<sort>false</sort>
-					<show>true</show>
                     <value>false</value>
+                    <sort>false</sort>
+                    <show>true</show>
                     <dependency>environmentName</dependency>
                 </parameter>
                 <parameter>
@@ -65,48 +79,37 @@
                     </name>
                     <type>DynamicParameter</type>
                     <dynamicParameter>
-                        <class>com.photon.phresco.framework.param.EnvironmentParameter</class>
+                        <class>com.photon.phresco.impl.EnvironmentsParameterImpl</class>
                         <dependencies>
                             <dependency>
 								<groupId>com.photon.phresco.commons</groupId>
 								<artifactId>phresco-commons</artifactId>
 								<type>jar</type>
-								<version>1.0.0</version>
+								<version>2.0.0.23002-SNAPSHOT</version>
                             </dependency>
                         </dependencies>
                     </dynamicParameter>
                     <required>true</required>
                     <editable>true</editable>
                     <key>environmentName</key>
-					<multiple>true</multiple>
-					<sort>false</sort>
-					<show>false</show>
+                    <multiple>false</multiple>
                     <value></value>
+                    <sort>false</sort>
+                    <show>true</show>
                 </parameter>
-				  <parameter>
-					<pluginParameter>plugin</pluginParameter>
-					<mavenCommands>
-						<mavenCommand>
-							<key>iphonesimulator5.1</key>
-							<value>-Dsdk="iphonesimulator5.1"</value>
-						</mavenCommand>
-						<mavenCommand>
-							<key>iphoneos5.1</key>
-							<value>-Dsdk="iphoneos5.1"</value>
-						</mavenCommand>
-					</mavenCommands>
+                <parameter>
                     <name>
                         <value lang="en">SDK</value>
                     </name>
                     <type>DynamicParameter</type>
                     <dynamicParameter>
-                        <class>com.photon.phresco.plugins.xcode.IosSdkParameter</class>
+                        <class>com.photon.phresco.framework.param.impl.IosSdkParameterImpl</class>
                         <dependencies>
                             <dependency>
-								<groupId>com.photon.phresco.commons</groupId>
-								<artifactId>phresco-commons</artifactId>
+								<groupId>com.photon.phresco.framework</groupId>
+								<artifactId>phresco-framework-impl</artifactId>
 								<type>jar</type>
-								<version>1.0.0</version>
+								<version>2.0.0.23002-SNAPSHOT</version>
                             </dependency>
                         </dependencies>
                     </dynamicParameter>
@@ -114,10 +117,81 @@
                     <editable>true</editable>
                     <description></description>
                     <key>sdk</key>
-					<multiple>false</multiple>
-					<sort>false</sort>
-					<show>true</show>
+                    <multiple>false</multiple>
                     <value></value>
+                    <sort>false</sort>
+                    <show>true</show>
+                </parameter>
+                <parameter>
+                    <name>
+                        <value lang="en">Target</value>
+                    </name>
+                    <type>DynamicParameter</type>
+                    <dynamicParameter>
+                        <class>com.photon.phresco.framework.param.impl.IosTargetParameterImpl</class>
+                        <dependencies>
+                            <dependency>
+								<groupId>com.photon.phresco.framework</groupId>
+								<artifactId>phresco-framework-impl</artifactId>
+								<type>jar</type>
+								<version>2.0.0.23002-SNAPSHOT</version>
+                            </dependency>
+                        </dependencies>
+                    </dynamicParameter>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>target</key>
+                    <multiple>false</multiple>
+                    <value></value>
+                    <sort>false</sort>
+                    <show>true</show>
+                </parameter>
+                <parameter>
+                    <name>
+                        <value lang="en">Mode</value>
+                    </name>
+                    <type>List</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>mode</key>
+                    <possibleValues>
+                        <value key="debug">Debug</value>
+                        <value key="Release">Release</value>
+                    </possibleValues>
+                    <multiple>false</multiple>
+                    <value>Debug</value>
+                    <sort>false</sort>
+                    <show>true</show>
+                </parameter>
+                <parameter>
+                    <name>
+                        <value lang="en">Encrypt</value>
+                    </name>
+                    <type>Boolean</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>encrypt</key>
+                    <multiple>false</multiple>
+                    <value>true</value>
+                    <sort>false</sort>
+                    <show>false</show>
+                </parameter>
+                <parameter>
+                    <name>
+                        <value lang="en">PlistFile</value>
+                    </name>
+                    <type>String</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>plistFile</key>
+                    <multiple>false</multiple>
+                    <value>/phresco-env-config.xml</value>
+                    <sort>false</sort>
+                    <show>false</show>
                 </parameter>
                 <parameter>
                     <pluginParameter>framework</pluginParameter>
@@ -148,16 +222,16 @@
                         <value key="showDebug">Show Debug</value>
                     </possibleValues>
                     <multiple>false</multiple>
-					<sort>false</sort>
-					<show>true</show>
-                    <value></value>
+                    <value>Show Errors</value>
+                    <sort>false</sort>
+                    <show>true</show>
                 </parameter>
             </parameters>
         </configuration>
     </mojo>
     <mojo>
         <goal>deploy</goal>
-        <description>Goal which deploys the Iphone project</description>
+        <description>Goal which deploys the Iphone Native project</description>
         <requiresDirectInvocation>false</requiresDirectInvocation>
         <requiresProject>true</requiresProject>
         <requiresReports>false</requiresReports>
@@ -173,27 +247,46 @@
             <parameters>
                 <parameter>
                     <name>
-                        <value lang="en">Environment</value>
+                        <value lang="en">Simulator</value>
                     </name>
                     <type>DynamicParameter</type>
                     <dynamicParameter>
-                        <class>com.photon.phresco.framework.param.DeployEnvironment</class>
+                        <class>com.photon.phresco.framework.param.impl.IosSimSDKVersionsParameterImpl</class>
                         <dependencies>
                             <dependency>
-								<groupId>com.photon.phresco.commons</groupId>
-								<artifactId>phresco-commons</artifactId>
-								<type>jar</type>
-								<version>1.0.0</version>
+                                <groupId>com.photon.phresco.framework</groupId>
+                                <artifactId>phresco-framework-impl</artifactId>
+                                <type>jar</type>
+                                <version>2.0.0.23002-SNAPSHOT</version>
                             </dependency>
                         </dependencies>
                     </dynamicParameter>
-                    <required>true</required>
+                    <required>false</required>
                     <editable>true</editable>
-                    <key>environmentName</key>
-					<multiple>false</multiple>
-					<sort>false</sort>
-					<show>true</show>
+                    <description></description>
+                    <key>sdkVersion</key>
+                    <multiple>false</multiple>
                     <value></value>
+                    <sort>false</sort>
+                    <show>true</show>
+                </parameter>
+                <parameter>
+                    <name>
+                        <value lang="en">Family</value>
+                    </name>
+                    <type>List</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>family</key>
+                    <possibleValues>
+                        <value key="iphone">iphone</value>
+                        <value key="ipad">ipad</value>
+                    </possibleValues>
+                    <multiple>false</multiple>
+                    <value></value>
+                    <sort>false</sort>
+                    <show>true</show>
                 </parameter>
                 <parameter>
                     <pluginParameter>framework</pluginParameter>
@@ -224,9 +317,9 @@
                         <value key="showDebug">Show Debug</value>
                     </possibleValues>
                     <multiple>false</multiple>
-					<sort>false</sort>
-					<show>true</show>
-                    <value></value>
+                    <value>Show Errors</value>
+                    <sort>false</sort>
+                    <show>true</show>
                 </parameter>
                 <parameter>
                     <name>
@@ -237,10 +330,10 @@
                     <editable>true</editable>
                     <description></description>
                     <key>buildNumber</key>
-					<multiple>false</multiple>
-					<sort>false</sort>
-					<show>true</show>
+                    <multiple>false</multiple>
                     <value></value>
+                    <sort>false</sort>
+                    <show>true</show>
                 </parameter>
             </parameters>
         </configuration>
