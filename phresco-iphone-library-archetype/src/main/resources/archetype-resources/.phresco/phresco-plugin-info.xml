@@ -2,7 +2,7 @@
 <mojos>
     <mojo>
         <goal>package</goal>
-        <description>Goal which packages the Iphone Native project</description>
+        <description>Goal which packages the Iphone static library project</description>
         <requiresDirectInvocation>false</requiresDirectInvocation>
         <requiresProject>true</requiresProject>
         <requiresReports>false</requiresReports>
@@ -34,7 +34,7 @@
                     <name>
                         <value lang="en">Project Type</value>
                     </name>
-                    <type>Hidden</type>
+                    <type>String</type>
                     <required>false</required>
                     <editable>true</editable>
                     <description></description>
@@ -82,10 +82,10 @@
                         <class>com.photon.phresco.impl.EnvironmentsParameterImpl</class>
                         <dependencies>
                             <dependency>
-								<groupId>com.photon.phresco.commons</groupId>
-								<artifactId>phresco-commons</artifactId>
-								<type>jar</type>
-								<version>2.0.0.23002-SNAPSHOT</version>
+<groupId>com.photon.phresco.commons</groupId>
+<artifactId>phresco-commons</artifactId>
+<type>jar</type>
+<version>2.0.0.24001-SNAPSHOT</version>
                             </dependency>
                         </dependencies>
                     </dynamicParameter>
@@ -106,10 +106,10 @@
                         <class>com.photon.phresco.framework.param.impl.IosSdkParameterImpl</class>
                         <dependencies>
                             <dependency>
-								<groupId>com.photon.phresco.framework</groupId>
-								<artifactId>phresco-framework-impl</artifactId>
-								<type>jar</type>
-								<version>2.0.0.23002-SNAPSHOT</version>
+<groupId>com.photon.phresco.framework</groupId>
+<artifactId>phresco-framework-impl</artifactId>
+<type>jar</type>
+<version>2.0.0.24001-SNAPSHOT</version>
                             </dependency>
                         </dependencies>
                     </dynamicParameter>
@@ -131,10 +131,10 @@
                         <class>com.photon.phresco.framework.param.impl.IosTargetParameterImpl</class>
                         <dependencies>
                             <dependency>
-								<groupId>com.photon.phresco.framework</groupId>
-								<artifactId>phresco-framework-impl</artifactId>
-								<type>jar</type>
-								<version>2.0.0.23002-SNAPSHOT</version>
+<groupId>com.photon.phresco.framework</groupId>
+<artifactId>phresco-framework-impl</artifactId>
+<type>jar</type>
+<version>2.0.0.24001-SNAPSHOT</version>
                             </dependency>
                         </dependencies>
                     </dynamicParameter>
@@ -161,7 +161,7 @@
                         <value key="Release">Release</value>
                     </possibleValues>
                     <multiple>false</multiple>
-                    <value>Debug</value>
+                    <value></value>
                     <sort>false</sort>
                     <show>true</show>
                 </parameter>
@@ -222,7 +222,7 @@
                         <value key="showDebug">Show Debug</value>
                     </possibleValues>
                     <multiple>false</multiple>
-                    <value>Show Errors</value>
+                    <value></value>
                     <sort>false</sort>
                     <show>true</show>
                 </parameter>
@@ -230,188 +230,6 @@
         </configuration>
     </mojo>
     <mojo>
-        <goal>deploy</goal>
-        <description>Goal which deploys the Iphone Native project</description>
-        <requiresDirectInvocation>false</requiresDirectInvocation>
-        <requiresProject>true</requiresProject>
-        <requiresReports>false</requiresReports>
-        <aggregator>false</aggregator>
-        <requiresOnline>false</requiresOnline>
-        <inheritedByDefault>true</inheritedByDefault>
-        <implementation>com.photon.phresco.plugins.xcode.XcodePlugin</implementation>
-        <language>java</language>
-        <instantiationStrategy>per-lookup</instantiationStrategy>
-        <executionStrategy>once-per-session</executionStrategy>
-        <threadSafe>false</threadSafe>
-        <configuration>
-            <parameters>
-                <parameter>
-                    <name>
-                        <value lang="en">Simulator</value>
-                    </name>
-                    <type>DynamicParameter</type>
-                    <dynamicParameter>
-                        <class>com.photon.phresco.framework.param.impl.IosSimSDKVersionsParameterImpl</class>
-                        <dependencies>
-                            <dependency>
-                                <groupId>com.photon.phresco.framework</groupId>
-                                <artifactId>phresco-framework-impl</artifactId>
-                                <type>jar</type>
-                                <version>2.0.0.23002-SNAPSHOT</version>
-                            </dependency>
-                        </dependencies>
-                    </dynamicParameter>
-                    <required>false</required>
-                    <editable>true</editable>
-                    <description></description>
-                    <key>sdkVersion</key>
-                    <multiple>false</multiple>
-                    <value></value>
-                    <sort>false</sort>
-                    <show>true</show>
-                </parameter>
-                <parameter>
-                    <name>
-                        <value lang="en">Family</value>
-                    </name>
-                    <type>List</type>
-                    <required>false</required>
-                    <editable>true</editable>
-                    <description></description>
-                    <key>family</key>
-                    <possibleValues>
-                        <value key="iphone">iphone</value>
-                        <value key="ipad">ipad</value>
-                    </possibleValues>
-                    <multiple>false</multiple>
-                    <value></value>
-                    <sort>false</sort>
-                    <show>true</show>
-                </parameter>
-                <parameter>
-                    <pluginParameter>framework</pluginParameter>
-                    <mavenCommands>
-                        <mavenCommand>
-                            <key>showErrors</key>
-                            <value>-e</value>
-                        </mavenCommand>
-                        <mavenCommand>
-                            <key>hideLogs</key>
-                            <value>-q</value>
-                        </mavenCommand>
-                        <mavenCommand>
-                            <key>showDebug</key>
-                            <value>-X</value>
-                        </mavenCommand>
-                    </mavenCommands>
-                    <name>
-                        <value lang="en">Logs</value>
-                    </name>
-                    <type>List</type>
-                    <required>false</required>
-                    <editable>true</editable>
-                    <key>logs</key>
-                    <possibleValues>
-                        <value key="showErrors">Show Errors</value>
-                        <value key="hideLogs">Hide Logs</value>
-                        <value key="showDebug">Show Debug</value>
-                    </possibleValues>
-                    <multiple>false</multiple>
-                    <value>Show Errors</value>
-                    <sort>false</sort>
-                    <show>true</show>
-                </parameter>
-                <parameter>
-                    <name>
-                        <value lang="en">Build Number</value>
-                    </name>
-                    <type>Hidden</type>
-                    <required>false</required>
-                    <editable>true</editable>
-                    <description></description>
-                    <key>buildNumber</key>
-                    <multiple>false</multiple>
-                    <value></value>
-                    <sort>false</sort>
-                    <show>true</show>
-                </parameter>
-            </parameters>
-        </configuration>
-    </mojo>
-	<mojo>
-        <goal>unit-test</goal>
-        <description>Goal which Unit Test for Iphone project</description>
-        <requiresDirectInvocation>false</requiresDirectInvocation>
-        <requiresProject>true</requiresProject>
-        <requiresReports>false</requiresReports>
-        <aggregator>false</aggregator>
-        <requiresOnline>false</requiresOnline>
-        <inheritedByDefault>true</inheritedByDefault>
-        <implementation>com.photon.phresco.plugins.xcode.XcodePlugin</implementation>
-        <language>java</language>
-        <instantiationStrategy>per-lookup</instantiationStrategy>
-        <executionStrategy>once-per-session</executionStrategy>
-        <threadSafe>false</threadSafe>
-        <configuration>
-            <parameters>
-                <parameter>
-                    <name>
-                        <value lang="en">SDK</value>
-                    </name>
-                    <type>DynamicParameter</type>
-                    <dynamicParameter>
-                        <class>com.photon.phresco.plugins.xcode.IosSdkParameter</class>
-                        <dependencies>
-                            <dependency>
-								<groupId>com.photon.phresco.commons</groupId>
-								<artifactId>phresco-commons</artifactId>
-								<type>jar</type>
-								<version>1.0.0</version>
-                            </dependency>
-                        </dependencies>
-                    </dynamicParameter>
-                    <required>false</required>
-                    <editable>true</editable>
-                    <description></description>
-                    <key>sdk</key>
-					<multiple>false</multiple>
-					<sort>false</sort>
-					<show>true</show>
-                    <value></value>
-                </parameter>
-				<parameter>
-					<pluginParameter>plugin</pluginParameter>
-					<mavenCommands>
-						<mavenCommand>
-							<key>helloWorld</key>
-							<value>-DtargetName="helloWorld"</value>
-						</mavenCommand>
-						<mavenCommand>
-							<key>allTest</key>
-							<value>-DtargetName="allTest"</value>
-						</mavenCommand>
-					</mavenCommands>
-                    <name>
-                        <value lang="en">Target</value>
-                    </name>
-                    <type>List</type>
-                    <required>false</required>
-                    <editable>true</editable>
-                    <description></description>
-                    <key>target</key>
-					<possibleValues>
-						<value key="helloWorld">HelloWorld</value>
-						<value key="allTest">AllTest</value>
-					</possibleValues>
-					<multiple>false</multiple>
-					<sort>false</sort>
-					<show>true</show>
-                    <value>AllTest</value>
-                </parameter>
-            </parameters>
-        </configuration>
-    </mojo>
-	<mojo>
         <goal>CIPrebuildStep</goal>
         <description>Goal which do's CI pre build step</description>
         <requiresDirectInvocation>false</requiresDirectInvocation>

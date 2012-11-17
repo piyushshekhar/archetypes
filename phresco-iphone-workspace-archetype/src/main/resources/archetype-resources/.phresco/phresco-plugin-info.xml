@@ -2,7 +2,7 @@
 <mojos>
     <mojo>
         <goal>package</goal>
-        <description>Goal which packages the Iphone Native project</description>
+        <description>Goal which packages the Iphone workspace project</description>
         <requiresDirectInvocation>false</requiresDirectInvocation>
         <requiresProject>true</requiresProject>
         <requiresReports>false</requiresReports>
@@ -34,7 +34,7 @@
                     <name>
                         <value lang="en">Project Type</value>
                     </name>
-                    <type>Hidden</type>
+                    <type>String</type>
                     <required>false</required>
                     <editable>true</editable>
                     <description></description>
@@ -82,10 +82,10 @@
                         <class>com.photon.phresco.impl.EnvironmentsParameterImpl</class>
                         <dependencies>
                             <dependency>
-								<groupId>com.photon.phresco.commons</groupId>
-								<artifactId>phresco-commons</artifactId>
-								<type>jar</type>
-								<version>2.0.0.23002-SNAPSHOT</version>
+<groupId>com.photon.phresco.commons</groupId>
+<artifactId>phresco-commons</artifactId>
+<type>jar</type>
+<version>2.0.0.24001-SNAPSHOT</version>
                             </dependency>
                         </dependencies>
                     </dynamicParameter>
@@ -106,10 +106,10 @@
                         <class>com.photon.phresco.framework.param.impl.IosSdkParameterImpl</class>
                         <dependencies>
                             <dependency>
-								<groupId>com.photon.phresco.framework</groupId>
-								<artifactId>phresco-framework-impl</artifactId>
-								<type>jar</type>
-								<version>2.0.0.23002-SNAPSHOT</version>
+<groupId>com.photon.phresco.framework</groupId>
+<artifactId>phresco-framework-impl</artifactId>
+<type>jar</type>
+<version>2.0.0.24001-SNAPSHOT</version>
                             </dependency>
                         </dependencies>
                     </dynamicParameter>
@@ -131,10 +131,10 @@
                         <class>com.photon.phresco.framework.param.impl.IosTargetParameterImpl</class>
                         <dependencies>
                             <dependency>
-								<groupId>com.photon.phresco.framework</groupId>
-								<artifactId>phresco-framework-impl</artifactId>
-								<type>jar</type>
-								<version>2.0.0.23002-SNAPSHOT</version>
+<groupId>com.photon.phresco.framework</groupId>
+<artifactId>phresco-framework-impl</artifactId>
+<type>jar</type>
+<version>2.0.0.24001-SNAPSHOT</version>
                             </dependency>
                         </dependencies>
                     </dynamicParameter>
@@ -161,7 +161,7 @@
                         <value key="Release">Release</value>
                     </possibleValues>
                     <multiple>false</multiple>
-                    <value>Debug</value>
+                    <value></value>
                     <sort>false</sort>
                     <show>true</show>
                 </parameter>
@@ -222,7 +222,7 @@
                         <value key="showDebug">Show Debug</value>
                     </possibleValues>
                     <multiple>false</multiple>
-                    <value>Show Errors</value>
+                    <value></value>
                     <sort>false</sort>
                     <show>true</show>
                 </parameter>
@@ -231,7 +231,7 @@
     </mojo>
     <mojo>
         <goal>deploy</goal>
-        <description>Goal which deploys the Iphone Native project</description>
+        <description>Goal which deploys the Iphone workspace project</description>
         <requiresDirectInvocation>false</requiresDirectInvocation>
         <requiresProject>true</requiresProject>
         <requiresReports>false</requiresReports>
@@ -246,6 +246,42 @@
         <configuration>
             <parameters>
                 <parameter>
+                    <pluginParameter>framework</pluginParameter>
+                    <mavenCommands>
+                        <mavenCommand>
+                            <key>simulator</key>
+                            <value>-Ddevice.deploy=false</value>
+                        </mavenCommand>
+                        <mavenCommand>
+                            <key>device</key>
+                            <value>-Ddevice.deploy=true</value>
+                        </mavenCommand>
+                    </mavenCommands>
+                    <name>
+                        <value lang="en">Device Type</value>
+                    </name>
+                    <type>DynamicParameter</type>
+                    <dynamicParameter>
+                        <class>com.photon.phresco.framework.param.impl.IosDeployValidationImpl</class>
+                        <dependencies>
+                            <dependency>
+<groupId>com.photon.phresco.framework</groupId>
+<artifactId>phresco-framework-impl</artifactId>
+<type>jar</type>
+<version>2.0.0.24001-SNAPSHOT</version>
+                            </dependency>
+                        </dependencies>
+                    </dynamicParameter>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>deviceType</key>
+                    <multiple>false</multiple>
+                    <value></value>
+                    <sort>false</sort>
+                    <show>false</show>
+                </parameter>
+                <parameter>
                     <name>
                         <value lang="en">Simulator</value>
                     </name>
@@ -254,10 +290,10 @@
                         <class>com.photon.phresco.framework.param.impl.IosSimSDKVersionsParameterImpl</class>
                         <dependencies>
                             <dependency>
-                                <groupId>com.photon.phresco.framework</groupId>
-                                <artifactId>phresco-framework-impl</artifactId>
-                                <type>jar</type>
-                                <version>2.0.0.23002-SNAPSHOT</version>
+<groupId>com.photon.phresco.framework</groupId>
+<artifactId>phresco-framework-impl</artifactId>
+<type>jar</type>
+<version>2.0.0.24001-SNAPSHOT</version>
                             </dependency>
                         </dependencies>
                     </dynamicParameter>
@@ -268,7 +304,7 @@
                     <multiple>false</multiple>
                     <value></value>
                     <sort>false</sort>
-                    <show>true</show>
+                    <show>false</show>
                 </parameter>
                 <parameter>
                     <name>
@@ -286,7 +322,7 @@
                     <multiple>false</multiple>
                     <value></value>
                     <sort>false</sort>
-                    <show>true</show>
+                    <show>false</show>
                 </parameter>
                 <parameter>
                     <pluginParameter>framework</pluginParameter>
@@ -317,9 +353,9 @@
                         <value key="showDebug">Show Debug</value>
                     </possibleValues>
                     <multiple>false</multiple>
-                    <value>Show Errors</value>
+                    <value></value>
                     <sort>false</sort>
-                    <show>true</show>
+                    <show>false</show>
                 </parameter>
                 <parameter>
                     <name>
@@ -333,14 +369,14 @@
                     <multiple>false</multiple>
                     <value></value>
                     <sort>false</sort>
-                    <show>true</show>
+                    <show>false</show>
                 </parameter>
             </parameters>
         </configuration>
     </mojo>
-	<mojo>
+    <mojo>
         <goal>unit-test</goal>
-        <description>Goal which Unit Test for Iphone project</description>
+        <description>Goal which Unit Test for Iphone workspace project</description>
         <requiresDirectInvocation>false</requiresDirectInvocation>
         <requiresProject>true</requiresProject>
         <requiresReports>false</requiresReports>
@@ -363,10 +399,10 @@
                         <class>com.photon.phresco.plugins.xcode.IosSdkParameter</class>
                         <dependencies>
                             <dependency>
-								<groupId>com.photon.phresco.commons</groupId>
-								<artifactId>phresco-commons</artifactId>
-								<type>jar</type>
-								<version>1.0.0</version>
+<groupId>com.photon.phresco.commons</groupId>
+<artifactId>phresco-commons</artifactId>
+<type>jar</type>
+<version>1.0.0</version>
                             </dependency>
                         </dependencies>
                     </dynamicParameter>
@@ -374,23 +410,23 @@
                     <editable>true</editable>
                     <description></description>
                     <key>sdk</key>
-					<multiple>false</multiple>
-					<sort>false</sort>
-					<show>true</show>
+                    <multiple>false</multiple>
                     <value></value>
+                    <sort>false</sort>
+                    <show>true</show>
                 </parameter>
-				<parameter>
-					<pluginParameter>plugin</pluginParameter>
-					<mavenCommands>
-						<mavenCommand>
-							<key>helloWorld</key>
-							<value>-DtargetName="helloWorld"</value>
-						</mavenCommand>
-						<mavenCommand>
-							<key>allTest</key>
-							<value>-DtargetName="allTest"</value>
-						</mavenCommand>
-					</mavenCommands>
+                <parameter>
+                    <pluginParameter>plugin</pluginParameter>
+                    <mavenCommands>
+                        <mavenCommand>
+                            <key>helloWorld</key>
+                            <value>-DtargetName="helloWorld"</value>
+                        </mavenCommand>
+                        <mavenCommand>
+                            <key>allTest</key>
+                            <value>-DtargetName="allTest"</value>
+                        </mavenCommand>
+                    </mavenCommands>
                     <name>
                         <value lang="en">Target</value>
                     </name>
@@ -399,19 +435,19 @@
                     <editable>true</editable>
                     <description></description>
                     <key>target</key>
-					<possibleValues>
-						<value key="helloWorld">HelloWorld</value>
-						<value key="allTest">AllTest</value>
-					</possibleValues>
-					<multiple>false</multiple>
-					<sort>false</sort>
-					<show>true</show>
+                    <possibleValues>
+                        <value key="helloWorld">HelloWorld</value>
+                        <value key="allTest">AllTest</value>
+                    </possibleValues>
+                    <multiple>false</multiple>
                     <value>AllTest</value>
+                    <sort>false</sort>
+                    <show>true</show>
                 </parameter>
             </parameters>
         </configuration>
     </mojo>
-	<mojo>
+    <mojo>
         <goal>CIPrebuildStep</goal>
         <description>Goal which do's CI pre build step</description>
         <requiresDirectInvocation>false</requiresDirectInvocation>
