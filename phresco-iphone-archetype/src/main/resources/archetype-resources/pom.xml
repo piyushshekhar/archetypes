@@ -88,5 +88,6 @@
 		<phresco.performanceTest.report.dir>/test/performance/results/jmeter</phresco.performanceTest.report.dir>
 		<phresco.loadTest.dir>/test/load</phresco.loadTest.dir>
 		<phresco.loadTest.report.dir>/test/load/results/jmeter</phresco.loadTest.report.dir>
+		<phresco.module.source.dir>/source/ThirdParty</phresco.module.source.dir>
     </properties>
 </project>
