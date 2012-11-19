@@ -216,6 +216,7 @@
 			<directory>test/unit</directory> 
 			<includes> 
 				<include>pom.xml</include>
+				<include>Precondition-2-Run drupal unit test-In mac.txt</include>
 			</includes> 
 		</fileSet>
 		<fileSet filtered="false"> 
