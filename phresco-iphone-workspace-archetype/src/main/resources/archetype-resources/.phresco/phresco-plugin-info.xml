@@ -157,7 +157,7 @@
                     <description></description>
                     <key>mode</key>
                     <possibleValues>
-                        <value key="debug">Debug</value>
+                        <value key="Debug">Debug</value>
                         <value key="Release">Release</value>
                     </possibleValues>
                     <multiple>false</multiple>
