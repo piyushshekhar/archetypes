@@ -84,5 +84,6 @@
 		<phresco.functionalTest.report.dir>/do_not_checkin</phresco.functionalTest.report.dir>
 		<phresco.functionalTest.testsuite.xpath>/testsuites/testsuite</phresco.functionalTest.testsuite.xpath>
 		<phresco.functionalTest.testcase.path>/testcase</phresco.functionalTest.testcase.path>
+		<phresco.module.source.dir>/source/ThirdParty</phresco.module.source.dir>
     </properties>
 </project>
