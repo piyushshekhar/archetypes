@@ -484,7 +484,7 @@
     </mojo>
     <mojo>
         <goal>functional-test</goal>
-        <description>Goal which Functional Test for Iphone Natice Project</description>
+        <description>Goal which Functional Test for Iphone Workspace Project</description>
         <requiresDirectInvocation>false</requiresDirectInvocation>
         <requiresProject>true</requiresProject>
         <requiresReports>false</requiresReports>
