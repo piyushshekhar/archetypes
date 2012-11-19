@@ -84,9 +84,5 @@
 		<phresco.functionalTest.report.dir>/do_not_checkin</phresco.functionalTest.report.dir>
 		<phresco.functionalTest.testsuite.xpath>/testsuites/testsuite</phresco.functionalTest.testsuite.xpath>
 		<phresco.functionalTest.testcase.path>/testcase</phresco.functionalTest.testcase.path>
-		<phresco.performanceTest.dir>/test/performance</phresco.performanceTest.dir>
-		<phresco.performanceTest.report.dir>/test/performance/results/jmeter</phresco.performanceTest.report.dir>
-		<phresco.loadTest.dir>/test/load</phresco.loadTest.dir>
-		<phresco.loadTest.report.dir>/test/load/results/jmeter</phresco.loadTest.report.dir>
     </properties>
 </project>
