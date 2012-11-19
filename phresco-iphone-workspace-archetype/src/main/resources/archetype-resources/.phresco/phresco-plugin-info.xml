@@ -396,13 +396,13 @@
                     </name>
                     <type>DynamicParameter</type>
                     <dynamicParameter>
-                        <class>com.photon.phresco.plugins.xcode.IosSdkParameter</class>
+                        <class>com.photon.phresco.framework.param.impl.IosSdkParameterImpl</class>
                         <dependencies>
                             <dependency>
-<groupId>com.photon.phresco.commons</groupId>
-<artifactId>phresco-commons</artifactId>
+<groupId>com.photon.phresco.framework</groupId>
+<artifactId>phresco-framework-impl</artifactId>
 <type>jar</type>
-<version>1.0.0</version>
+<version>2.0.0.24001-SNAPSHOT</version>
                             </dependency>
                         </dependencies>
                     </dynamicParameter>
@@ -416,31 +416,27 @@
                     <show>true</show>
                 </parameter>
                 <parameter>
-                    <pluginParameter>plugin</pluginParameter>
-                    <mavenCommands>
-                        <mavenCommand>
-                            <key>helloWorld</key>
-                            <value>-DtargetName="helloWorld"</value>
-                        </mavenCommand>
-                        <mavenCommand>
-                            <key>allTest</key>
-                            <value>-DtargetName="allTest"</value>
-                        </mavenCommand>
-                    </mavenCommands>
                     <name>
                         <value lang="en">Target</value>
                     </name>
-                    <type>List</type>
+                    <type>DynamicParameter</type>
+                    <dynamicParameter>
+                        <class>com.photon.phresco.framework.param.impl.IosTargetParameterImpl</class>
+                        <dependencies>
+                            <dependency>
+                                <groupId>com.photon.phresco.framework</groupId>
+                                <artifactId>phresco-framework-impl</artifactId>
+                                <type>jar</type>
+                                <version>2.0.0.24001-SNAPSHOT</version>
+                            </dependency>
+                        </dependencies>
+                    </dynamicParameter>
                     <required>false</required>
                     <editable>true</editable>
                     <description></description>
                     <key>target</key>
-                    <possibleValues>
-                        <value key="helloWorld">HelloWorld</value>
-                        <value key="allTest">AllTest</value>
-                    </possibleValues>
                     <multiple>false</multiple>
-                    <value>AllTest</value>
+                    <value></value>
                     <sort>false</sort>
                     <show>true</show>
                 </parameter>
