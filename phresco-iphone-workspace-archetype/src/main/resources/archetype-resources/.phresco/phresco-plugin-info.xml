@@ -424,10 +424,10 @@
                         <class>com.photon.phresco.framework.param.impl.IosTargetParameterImpl</class>
                         <dependencies>
                             <dependency>
-                                <groupId>com.photon.phresco.framework</groupId>
-                                <artifactId>phresco-framework-impl</artifactId>
-                                <type>jar</type>
-                                <version>2.0.0.24001-SNAPSHOT</version>
+<groupId>com.photon.phresco.framework</groupId>
+<artifactId>phresco-framework-impl</artifactId>
+<type>jar</type>
+<version>2.0.0.24001-SNAPSHOT</version>
                             </dependency>
                         </dependencies>
                     </dynamicParameter>
@@ -439,6 +439,45 @@
                     <value></value>
                     <sort>false</sort>
                     <show>true</show>
+                </parameter>
+                <parameter>
+                    <pluginParameter>framework</pluginParameter>
+                    <mavenCommands>
+                        <mavenCommand>
+                            <key>true</key>
+                            <value>-DapplicationTest=true</value>
+                        </mavenCommand>
+                        <mavenCommand>
+                            <key>false</key>
+                            <value>-DapplicationTest=false</value>
+                        </mavenCommand>
+                    </mavenCommands>
+                    <name>
+                        <value lang="en">Application Test</value>
+                    </name>
+                    <type>Boolean</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>unitTestType</key>
+                    <multiple>false</multiple>
+                    <value>false</value>
+                    <sort>false</sort>
+                    <show>true</show>
+                </parameter>
+                <parameter>
+                    <name>
+                        <value lang="en">Unit test</value>
+                    </name>
+                    <type>String</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>unittest</key>
+                    <multiple>false</multiple>
+                    <value>true</value>
+                    <sort>false</sort>
+                    <show>false</show>
                 </parameter>
             </parameters>
         </configuration>
