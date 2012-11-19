@@ -32,7 +32,7 @@
 		<plugin>
 			<groupId>com.photon.phresco.plugins</groupId>
             <artifactId>phresco-maven-plugin</artifactId>
-			<version>2.0.0.24001-SNAPSHOT</version>
+			<version>2.0.0.25001-SNAPSHOT</version>
 			<extensions>true</extensions>
 			<configuration>
 				<xcodeProject>./source/Phresco.xcodeproj</xcodeProject>
@@ -85,5 +85,6 @@
 		<phresco.functionalTest.report.dir>/do_not_checkin</phresco.functionalTest.report.dir>
 		<phresco.functionalTest.testsuite.xpath>/testsuites/testsuite</phresco.functionalTest.testsuite.xpath>
 		<phresco.functionalTest.testcase.path>/testcase</phresco.functionalTest.testcase.path>
+		<phresco.module.source.dir>/source/ThirdParty</phresco.module.source.dir>
     </properties>
 </project>
