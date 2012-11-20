@@ -318,7 +318,7 @@
 			<description></description>
 			<key>sonar</key>
 			<possibleValues>
-				<value key="src"dependency="src,skipTests">Source</value>
+				<value key="src" dependency="src,skipTests">Source</value>
 				<value key="functional">Functional Test</value>
 			</possibleValues>
 			<multiple>false</multiple>

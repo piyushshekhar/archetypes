@@ -92,5 +92,6 @@
 		<phresco.functionalTest.testsuite.xpath>/testsuites/testsuite</phresco.functionalTest.testsuite.xpath>
 		<phresco.functionalTest.testcase.path>/testcase</phresco.functionalTest.testcase.path>
 		<phresco.module.source.dir>/source/ThirdParty</phresco.module.source.dir>
+		<phresco.code.validate.report>/do_not_checkin/static-analysis-report/</phresco.code.validate.report>
     </properties>
 </project>
