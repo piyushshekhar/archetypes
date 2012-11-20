@@ -9,13 +9,13 @@ import android.content.res.Resources;
 import com.photon.phresco.nativeapp.functional.R;
 
 
-public class Data {
+public class AndroidNativeData {
 	private ReadXMLFile readXml;
 
-	public String HELLO_WORLD_TEXT = "text1";
+	public String TEXT_MSG = "text_msg";
 	
 	
-	public Data() {
+	public AndroidNativeData() {
 		
 	}
     public void parser(Context context)
@@ -23,7 +23,7 @@ public class Data {
     	try {
     		
     	    Resources res = context.getResources(); 
-    	    InputStream inputStream = res.openRawResource(R.raw.data);
+    	    InputStream inputStream = res.openRawResource(R.raw.android_native_data);
     		
     	    readXml = new ReadXMLFile();
 			readXml.loadUserInfoConstants(inputStream);
