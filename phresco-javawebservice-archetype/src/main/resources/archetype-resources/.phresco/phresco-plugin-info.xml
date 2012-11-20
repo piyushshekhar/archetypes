@@ -23,7 +23,7 @@
 			</name>
 			<type>DynamicParameter</type>
 			<dynamicParameter>
-				<class>com.photon.phresco.framework.param.DeployEnvironment</class>
+				<class>com.photon.phresco.impl.BuildInfoEnvironmentsImpl</class>
 				<dependencies>
 					<dependency>
 						<groupId>com.photon.phresco.commons</groupId>
@@ -124,7 +124,7 @@
                     </name>
                     <type>DynamicParameter</type>
                     <dynamicParameter>
-                        <class>com.photon.phresco.framework.param.EnvironmentParameter</class>
+                        <class>com.photon.phresco.impl.EnvironmentsParameterImpl</class>
                         <dependencies>
                             <dependency>
 								<groupId>com.photon.phresco.commons</groupId>
@@ -215,7 +215,7 @@
                     </name>
                     <type>DynamicParameter</type>
                     <dynamicParameter>
-                        <class>com.photon.phresco.framework.param.DeployEnvironment</class>
+                        <class>com.photon.phresco.impl.BuildInfoEnvironmentsImpl</class>
                         <dependencies>
                             <dependency>
 								<groupId>com.photon.phresco.commons</groupId>
@@ -294,7 +294,7 @@
 			<description></description>
 			<key>sonar</key>
 			<possibleValues>
-				<value key="src"dependency="skipTests">Source</value>
+				<value key="src" dependency="skipTests">Source</value>
 				<value key="functional">Functional Test</value>
 			</possibleValues>
 			<multiple>false</multiple>
@@ -529,7 +529,7 @@
 					</name>
 					<type>DynamicParameter</type>
 					<dynamicParameter>
-						<class>com.photon.phresco.framework.param.EnvironmentParameter</class>
+						<class>com.photon.phresco.impl.EnvironmentsParameterImpl</class>
 						<dependencies>
 							<dependency>
 								<groupId>com.photon.phresco.commons</groupId>

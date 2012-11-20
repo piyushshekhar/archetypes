@@ -2,7 +2,7 @@
 <mojos>
 	<mojo>
       <goal>start</goal>
-      <description>Goal which starts the HTML project</description>
+      <description>Goal which starts the Html-5 Archetype project</description>
       <requiresDirectInvocation>false</requiresDirectInvocation>
       <requiresProject>true</requiresProject>
       <requiresReports>false</requiresReports>
@@ -22,7 +22,7 @@
 			</name>
 			<type>DynamicParameter</type>
 			<dynamicParameter>
-				<class>com.photon.phresco.framework.param.EnvironmentParameter</class>
+				<class>com.photon.phresco.impl.EnvironmentsParameterImpl</class>
 				<dependencies>
 					<dependency>
 						<groupId>com.photon.phresco.commons</groupId>
@@ -45,7 +45,7 @@
     </mojo>
 	<mojo>
       <goal>stop</goal>
-      <description>Goal which stops the HTML project</description>
+      <description>Goal which stops the Html-5 Archetype project</description>
       <requiresDirectInvocation>false</requiresDirectInvocation>
       <requiresProject>true</requiresProject>
       <requiresReports>false</requiresReports>
@@ -60,7 +60,7 @@
     </mojo>
     <mojo>
         <goal>package</goal>
-        <description>Goal which packages the html-5 project</description>
+        <description>Goal which packages the Html-5 Archetype project</description>
         <requiresDirectInvocation>false</requiresDirectInvocation>
         <requiresProject>true</requiresProject>
         <requiresReports>false</requiresReports>
@@ -123,7 +123,7 @@
                     </name>
                     <type>DynamicParameter</type>
                     <dynamicParameter>
-                        <class>com.photon.phresco.framework.param.EnvironmentParameter</class>
+                        <class>com.photon.phresco.impl.EnvironmentsParameterImpl</class>
                         <dependencies>
                             <dependency>
 								<groupId>com.photon.phresco.commons</groupId>
@@ -204,7 +204,7 @@
     </mojo>
     <mojo>
         <goal>deploy</goal>
-        <description>Goal which deploys the HTML project</description>
+        <description>Goal which deploys the Html-5 Archetype project</description>
         <requiresDirectInvocation>false</requiresDirectInvocation>
         <requiresProject>true</requiresProject>
         <requiresReports>false</requiresReports>
@@ -239,7 +239,7 @@
                     </name>
                     <type>DynamicParameter</type>
                     <dynamicParameter>
-                        <class>com.photon.phresco.framework.param.DeployEnvironment</class>
+                        <class>com.photon.phresco.impl.BuildInfoEnvironmentsImpl</class>
                         <dependencies>
                             <dependency>
 								<groupId>com.photon.phresco.commons</groupId>
@@ -295,7 +295,7 @@
     </mojo>
 	<mojo>
       <goal>validate-code</goal>
-      <description>Goal which validates the HTML project</description>
+      <description>Goal which validates the Html-5 Archetype project</description>
       <requiresDirectInvocation>false</requiresDirectInvocation>
       <requiresProject>true</requiresProject>
       <requiresReports>false</requiresReports>
@@ -318,7 +318,7 @@
 			<description></description>
 			<key>sonar</key>
 			<possibleValues>
-				<value key="src"dependency="src,skipTests">Source</value>
+				<value key="src" dependency="src,skipTests">Source</value>
 				<value key="functional">Functional Test</value>
 			</possibleValues>
 			<multiple>false</multiple>
@@ -395,7 +395,7 @@
     </mojo>
 	<mojo>
 		<goal>functional-test</goal>
-		<description>Goal which functionalTest the HTML project</description>
+		<description>Goal which functionalTest the Html-5 Archetype project</description>
 		<requiresDirectInvocation>false</requiresDirectInvocation>
 		<requiresProject>true</requiresProject>
 		<requiresReports>false</requiresReports>
@@ -565,7 +565,7 @@
 	</mojo>
 	<mojo>
 		<goal>load-test</goal>
-		<description>Goal which load Test to the HTML project</description>
+		<description>Goal which load Test to the Html-5 Archetype project</description>
 		<requiresDirectInvocation>false</requiresDirectInvocation>
 		<requiresProject>true</requiresProject>
 		<requiresReports>false</requiresReports>
@@ -616,7 +616,7 @@
 					</name>
 					<type>DynamicParameter</type>
 					<dynamicParameter>
-						<class>com.photon.phresco.framework.param.EnvironmentParameter</class>
+						<class>com.photon.phresco.impl.EnvironmentsParameterImpl</class>
 						<dependencies>
 							<dependency>
 								<groupId>com.photon.phresco.commons</groupId>
