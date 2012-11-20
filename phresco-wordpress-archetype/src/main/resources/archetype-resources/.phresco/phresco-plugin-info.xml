@@ -65,16 +65,16 @@
                     </name>
                     <type>DynamicParameter</type>
                     <dynamicParameter>
-                        <class>com.photon.phresco.framework.param.EnvironmentParameter</class>
-                        <dependencies>
-                            <dependency>
+						<class>com.photon.phresco.impl.EnvironmentsParameterImpl</class>
+						<dependencies>
+							<dependency>
 								<groupId>com.photon.phresco.commons</groupId>
 								<artifactId>phresco-commons</artifactId>
 								<type>jar</type>
 								<version>1.0.0</version>
-                            </dependency>
-                        </dependencies>
-                    </dynamicParameter>
+							</dependency>
+						</dependencies>
+				</dynamicParameter>
                     <required>true</required>
                     <editable>true</editable>
                     <key>environmentName</key>
@@ -141,16 +141,16 @@
                     </name>
                     <type>DynamicParameter</type>
                     <dynamicParameter>
-                         <class>com.photon.phresco.framework.param.DeployEnvironment</class>
-                        <dependencies>
-                            <dependency>
+						<class>com.photon.phresco.impl.BuildInfoEnvironmentsImpl</class>
+						<dependencies>
+							<dependency>
 								<groupId>com.photon.phresco.commons</groupId>
 								<artifactId>phresco-commons</artifactId>
 								<type>jar</type>
 								<version>1.0.0</version>
-                            </dependency>
-                        </dependencies>
-                    </dynamicParameter>
+							</dependency>
+						</dependencies>
+					</dynamicParameter>
                     <required>true</required>
                     <editable>true</editable>
                     <key>environmentName</key>
@@ -234,12 +234,41 @@
 			<description></description>
 			<key>sonar</key>
 			<possibleValues>
-				<value key="src"dependency="skipTests">Source</value>
+				<value key="src" dependency="src,skipTests">Source</value>
 				<value key="functional">Functional Test</value>
 			</possibleValues>
 			<multiple>false</multiple>
 			<sort>false</sort>
 			<show>true</show>
+		  <value></value>
+        </parameter>
+		<parameter>
+		<pluginParameter>plugin</pluginParameter>
+			<name>
+                <value lang="en">Technology</value>
+            </name>
+			<mavenCommands>
+				<mavenCommand>
+					<key>js</key>
+					<value>-Pjs</value>
+				</mavenCommand>
+				<mavenCommand>
+					<key>php</key>
+					<value>-Pphp</value>
+				</mavenCommand>
+			</mavenCommands>
+          <type>List</type>
+          <required>false</required>
+          <editable>true</editable>
+          <description></description>
+		  <key>src</key>
+			<possibleValues>
+				<value key="js">js</value>
+				<value key="php">php</value>
+			</possibleValues>
+			<multiple>false</multiple>
+			<sort>false</sort>
+			<show>false</show>
 		  <value></value>
         </parameter>
 		<parameter>
@@ -469,7 +498,7 @@
 					</name>
 					<type>DynamicParameter</type>
 					<dynamicParameter>
-						<class>com.photon.phresco.framework.param.EnvironmentParameter</class>
+						<class>com.photon.phresco.impl.EnvironmentsParameterImpl</class>
 						<dependencies>
 							<dependency>
 								<groupId>com.photon.phresco.commons</groupId>

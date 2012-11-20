@@ -65,7 +65,7 @@
                     </name>
                     <type>DynamicParameter</type>
                     <dynamicParameter>
-					<class>com.photon.phresco.framework.param.EnvironmentParameter</class>                       
+					<class>com.photon.phresco.impl.EnvironmentsParameterImpl</class>                       
                         <dependencies>
                             <dependency>
 								<groupId>com.photon.phresco.commons</groupId>
@@ -141,7 +141,7 @@
                     </name>
                     <type>DynamicParameter</type>
                     <dynamicParameter>
-					<class>com.photon.phresco.framework.param.DeployEnvironment</class>
+					<class>com.photon.phresco.impl.BuildInfoEnvironmentsImpl</class>
                         <dependencies>
                             <dependency>
 								<groupId>com.photon.phresco.commons</groupId>
@@ -469,7 +469,7 @@
 					</name>
 					<type>DynamicParameter</type>
 					<dynamicParameter>
-						<class>com.photon.phresco.framework.param.EnvironmentParameter</class>
+						<class>com.photon.phresco.impl.EnvironmentsParameterImpl</class>
 						<dependencies>
 							<dependency>
 								<groupId>com.photon.phresco.commons</groupId>

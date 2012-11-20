@@ -2,7 +2,7 @@
 <mojos>
 	<mojo>
       <goal>start</goal>
-      <description>Goal which starts the HTML5 - Jquery project</description>
+      <description>Goal which starts the HTML5-Jquery project</description>
       <requiresDirectInvocation>false</requiresDirectInvocation>
       <requiresProject>true</requiresProject>
       <requiresReports>false</requiresReports>
@@ -22,7 +22,7 @@
 			</name>
 			<type>DynamicParameter</type>
 			<dynamicParameter>
-				<class>com.photon.phresco.framework.param.EnvironmentParameter</class>
+				<class>com.photon.phresco.impl.EnvironmentsParameterImpl</class>
 				<dependencies>
 					<dependency>
 						<groupId>com.photon.phresco.commons</groupId>
@@ -45,7 +45,7 @@
     </mojo>
 	<mojo>
       <goal>stop</goal>
-      <description>Goal which stops the HTML5 - Jquery project</description>
+      <description>Goal which stops the HTML5-Jquery project</description>
       <requiresDirectInvocation>false</requiresDirectInvocation>
       <requiresProject>true</requiresProject>
       <requiresReports>false</requiresReports>
@@ -60,7 +60,7 @@
     </mojo>
     <mojo>
         <goal>package</goal>
-        <description>Goal which packages the HTML5 - Jquery project</description>
+        <description>Goal which packages the HTML5-Jquery project</description>
         <requiresDirectInvocation>false</requiresDirectInvocation>
         <requiresProject>true</requiresProject>
         <requiresReports>false</requiresReports>
@@ -123,7 +123,7 @@
                     </name>
                     <type>DynamicParameter</type>
                     <dynamicParameter>
-                        <class>com.photon.phresco.framework.param.EnvironmentParameter</class>
+                        <class>com.photon.phresco.impl.EnvironmentsParameterImpl</class>
                         <dependencies>
                             <dependency>
 								<groupId>com.photon.phresco.commons</groupId>
@@ -204,7 +204,7 @@
     </mojo>
     <mojo>
         <goal>deploy</goal>
-        <description>Goal which deploys the HTML5 - Jquery project</description>
+        <description>Goal which deploys the HTML5-Jquery project</description>
         <requiresDirectInvocation>false</requiresDirectInvocation>
         <requiresProject>true</requiresProject>
         <requiresReports>false</requiresReports>
@@ -239,7 +239,7 @@
                     </name>
                     <type>DynamicParameter</type>
                     <dynamicParameter>
-                        <class>com.photon.phresco.framework.param.DeployEnvironment</class>
+                        <class>com.photon.phresco.impl.BuildInfoEnvironmentsImpl</class>
                         <dependencies>
                             <dependency>
 								<groupId>com.photon.phresco.commons</groupId>
@@ -616,7 +616,7 @@
 					</name>
 					<type>DynamicParameter</type>
 					<dynamicParameter>
-						<class>com.photon.phresco.framework.param.EnvironmentParameter</class>
+						<class>com.photon.phresco.impl.EnvironmentsParameterImpl</class>
 						<dependencies>
 							<dependency>
 								<groupId>com.photon.phresco.commons</groupId>
