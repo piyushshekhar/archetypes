@@ -65,16 +65,16 @@
                     </name>
                     <type>DynamicParameter</type>
                     <dynamicParameter>
-                        <class>com.photon.phresco.framework.param.EnvironmentParameter</class>
-                        <dependencies>
-                            <dependency>
+						<class>com.photon.phresco.impl.EnvironmentsParameterImpl</class>
+						<dependencies>
+							<dependency>
 								<groupId>com.photon.phresco.commons</groupId>
 								<artifactId>phresco-commons</artifactId>
 								<type>jar</type>
 								<version>1.0.0</version>
-                            </dependency>
-                        </dependencies>
-                    </dynamicParameter>
+							</dependency>
+						</dependencies>
+				</dynamicParameter>
                     <required>true</required>
                     <editable>true</editable>
                     <key>environmentName</key>
@@ -155,16 +155,16 @@
                     </name>
                     <type>DynamicParameter</type>
                     <dynamicParameter>
-                        <class>com.photon.phresco.framework.param.DeployEnvironment</class>
-                        <dependencies>
-                            <dependency>
+						<class>com.photon.phresco.impl.BuildInfoEnvironmentsImpl</class>
+						<dependencies>
+							<dependency>
 								<groupId>com.photon.phresco.commons</groupId>
 								<artifactId>phresco-commons</artifactId>
 								<type>jar</type>
 								<version>1.0.0</version>
-                            </dependency>
-                        </dependencies>
-                    </dynamicParameter>
+							</dependency>
+						</dependencies>
+					</dynamicParameter>
                     <required>true</required>
                     <editable>true</editable>
                     <key>environmentName</key>
@@ -470,7 +470,7 @@
 					</name>
 					<type>DynamicParameter</type>
 					<dynamicParameter>
-						<class>com.photon.phresco.framework.param.EnvironmentParameter</class>
+						<class>com.photon.phresco.impl.EnvironmentsParameterImpl</class>
 						<dependencies>
 							<dependency>
 								<groupId>com.photon.phresco.commons</groupId>
