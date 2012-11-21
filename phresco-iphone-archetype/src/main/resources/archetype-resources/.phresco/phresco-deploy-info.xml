@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<mojos>
+    <mojo>
+        <goal>deploy</goal>
+        <description>Goal which deploys the Iphone Native Project</description>
+        <requiresDirectInvocation>false</requiresDirectInvocation>
+        <requiresProject>true</requiresProject>
+        <requiresReports>false</requiresReports>
+        <aggregator>false</aggregator>
+        <requiresOnline>false</requiresOnline>
+        <inheritedByDefault>true</inheritedByDefault>
+        <implementation>com.photon.phresco.plugins.xcode.XcodePlugin</implementation>
+        <language>java</language>
+        <instantiationStrategy>per-lookup</instantiationStrategy>
+        <executionStrategy>once-per-session</executionStrategy>
+        <threadSafe>false</threadSafe>
+        <configuration>
+            <parameters>
+                <parameter>
+                    <pluginParameter>framework</pluginParameter>
+                    <mavenCommands>
+                        <mavenCommand>
+                            <key>simulator</key>
+                            <value>-Ddevice.deploy=false</value>
+                        </mavenCommand>
+                        <mavenCommand>
+                            <key>device</key>
+                            <value>-Ddevice.deploy=true</value>
+                        </mavenCommand>
+                    </mavenCommands>
+                    <name>
+                        <value lang="en">Device Type</value>
+                    </name>
+                    <type>DynamicParameter</type>
+                    <dynamicParameter>
+                        <class>com.photon.phresco.framework.param.impl.IosDeployValidationImpl</class>
+                        <dependencies>
+                            <dependency>
+								<groupId>com.photon.phresco.framework</groupId>
+								<artifactId>phresco-framework-impl</artifactId>
+								<type>jar</type>
+								<version>2.0.0.25001-SNAPSHOT</version>
+                            </dependency>
+                        </dependencies>
+                    </dynamicParameter>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>deviceType</key>
+                    <multiple>false</multiple>
+                    <value></value>
+                    <sort>false</sort>
+                    <show>false</show>
+                </parameter>
+                <parameter>
+                    <name>
+                        <value lang="en">Simulator</value>
+                    </name>
+                    <type>DynamicParameter</type>
+                    <dynamicParameter>
+                        <class>com.photon.phresco.framework.param.impl.IosSimSDKVersionsParameterImpl</class>
+                        <dependencies>
+                            <dependency>
+								<groupId>com.photon.phresco.framework</groupId>
+								<artifactId>phresco-framework-impl</artifactId>
+								<type>jar</type>
+								<version>2.0.0.25001-SNAPSHOT</version>
+                            </dependency>
+                        </dependencies>
+                    </dynamicParameter>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>sdkVersion</key>
+                    <multiple>false</multiple>
+                    <value></value>
+                    <sort>false</sort>
+                    <show>false</show>
+                </parameter>
+                <parameter>
+                    <name>
+                        <value lang="en">Family</value>
+                    </name>
+                    <type>List</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>family</key>
+                    <possibleValues>
+                        <value key="iphone">iphone</value>
+                        <value key="ipad">ipad</value>
+                    </possibleValues>
+                    <multiple>false</multiple>
+                    <value></value>
+                    <sort>false</sort>
+                    <show>false</show>
+                </parameter>
+                <parameter>
+                    <pluginParameter>framework</pluginParameter>
+                    <mavenCommands>
+                        <mavenCommand>
+                            <key>showErrors</key>
+                            <value>-e</value>
+                        </mavenCommand>
+                        <mavenCommand>
+                            <key>hideLogs</key>
+                            <value>-q</value>
+                        </mavenCommand>
+                        <mavenCommand>
+                            <key>showDebug</key>
+                            <value>-X</value>
+                        </mavenCommand>
+                    </mavenCommands>
+                    <name>
+                        <value lang="en">Logs</value>
+                    </name>
+                    <type>List</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <key>logs</key>
+                    <possibleValues>
+                        <value key="showErrors">Show Errors</value>
+                        <value key="hideLogs">Hide Logs</value>
+                        <value key="showDebug">Show Debug</value>
+                    </possibleValues>
+                    <multiple>false</multiple>
+                    <value></value>
+                    <sort>false</sort>
+                    <show>false</show>
+                </parameter>
+                <parameter>
+                    <name>
+                        <value lang="en">Build Number</value>
+                    </name>
+                    <type>Hidden</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>buildNumber</key>
+                    <multiple>false</multiple>
+                    <value></value>
+                    <sort>false</sort>
+                    <show>false</show>
+                </parameter>
+            </parameters>
+        </configuration>
+    </mojo>
+</mojos>

@@ -671,7 +671,7 @@
 			</parameters>
 		</configuration>
 	</mojo>
-		<mojo>
+	<mojo>
         <goal>start-hub</goal>
         <description>Goal which starts the hub</description>
         <requiresDirectInvocation>false</requiresDirectInvocation>
@@ -680,7 +680,6 @@
         <aggregator>false</aggregator>
         <requiresOnline>false</requiresOnline>
         <inheritedByDefault>true</inheritedByDefault>
-        <implementation>com.photon.phresco.plugins.java.JavaPlugin</implementation>
         <language>java</language>
         <instantiationStrategy>per-lookup</instantiationStrategy>
         <executionStrategy>once-per-session</executionStrategy>
@@ -994,22 +993,22 @@
 						<childs>
 							<child>
 								<name>
-								<value lang="en">Browser Name</value>
+									<value lang="en">Browser Name</value>
 								</name>
 								<type>List</type>
 								<key>browserName</key>
 								<possibleValues>
-								<value key="firefox">Firefox</value>
-								<value key="chrome">Google Chrome</value>
-								<value key="ie">Internet Explorer</value>
-								<value key="safari">Safari</value>
+									<value key="firefox">Firefox</value>
+									<value key="chrome">Google Chrome</value>
+									<value key="ie">Internet Explorer</value>
+									<value key="safari">Safari</value>
 								</possibleValues>
 								<required>true</required>
 								<description>Name of the browsers</description>
 								</child>
 							<child>
 								<name>
-								<value lang="en">Max Instances</value>
+									<value lang="en">Max Instances</value>
 								</name>
 								<type>String</type>
 								<key>maxInstances</key>
@@ -1022,10 +1021,7 @@
 					<description></description>
 					<key>browserInfo</key>
 					<multiple>false</multiple>
-					<value>#&#xD;
-					#Wed Nov 21 00:00:21 IST 2012&#xD;
-					firefox=1&#xD;
-					</value>
+					<value></value>
 					<sort>false</sort>
 					<show>true</show>
 			</parameter>

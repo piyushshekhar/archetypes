@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<mojos>
+    <mojo>
+        <goal>unit-test</goal>
+        <description>Goal which Unit Test for Android Library project</description>
+        <requiresDirectInvocation>false</requiresDirectInvocation>
+        <requiresProject>true</requiresProject>
+        <requiresReports>false</requiresReports>
+        <aggregator>false</aggregator>
+        <requiresOnline>false</requiresOnline>
+        <inheritedByDefault>true</inheritedByDefault>
+        <implementation>com.photon.phresco.plugins.android.AndroidPlugin</implementation>
+        <language>java</language>
+        <instantiationStrategy>per-lookup</instantiationStrategy>
+        <executionStrategy>once-per-session</executionStrategy>
+        <threadSafe>false</threadSafe>
+        <configuration>
+            <parameters>
+                <parameter>
+					<pluginParameter>plugin</pluginParameter>
+					<mavenCommands>
+						<mavenCommand>
+							<key>skipTests</key>
+							<value>-DskipTests</value>
+						</mavenCommand>
+						<mavenCommand>
+							<key>usb</key>
+							<value>-Dandroid.divice="usb"</value>
+						</mavenCommand>
+						<mavenCommand>
+							<key>emulator</key>
+							<value>-Dandroid.divice="emulator"</value>
+						</mavenCommand>
+					</mavenCommands>
+                    <name>
+                        <value lang="en">Devices</value>
+                    </name>
+                    <type>List</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>devices</key>
+					<possibleValues>
+						<value key="usb">USB</value>
+						<value key="emulator">Emulator</value>
+						<value key="serialNumber" dependency="serialNumber">Serial Number</value>
+					</possibleValues>
+					<multiple>false</multiple>
+					<sort>false</sort>
+                    <show>true</show>
+                    <value></value>
+                </parameter>
+				<parameter>
+                    <name>
+                        <value lang="en">Serial Number</value>
+                    </name>
+                    <type>String</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>serialNumber</key>
+					<multiple>false</multiple>
+					<sort>false</sort>
+                    <show>false</show>
+                    <value></value>
+                </parameter>
+            </parameters>
+        </configuration>
+    </mojo>
+</mojos>

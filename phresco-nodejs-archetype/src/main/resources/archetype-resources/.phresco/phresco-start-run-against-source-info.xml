@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<mojos>
+    <mojo>
+      <goal>start</goal>
+      <description>Goal which starts the nodejs project</description>
+      <requiresDirectInvocation>false</requiresDirectInvocation>
+      <requiresProject>true</requiresProject>
+      <requiresReports>false</requiresReports>
+      <aggregator>false</aggregator>
+      <requiresOnline>false</requiresOnline>
+      <inheritedByDefault>true</inheritedByDefault>
+      <implementation>com.photon.phresco.plugins.nodejs.NodeJsPlugin</implementation>
+      <language>java</language>
+      <instantiationStrategy>per-lookup</instantiationStrategy>
+      <executionStrategy>once-per-session</executionStrategy>
+      <threadSafe>false</threadSafe>
+	  <configuration>
+      <parameters>
+        <parameter>
+			<name>
+				<value lang="en">Environment</value>
+				<value lang="cv">Envit</value>
+			</name>
+			<type>DynamicParameter</type>
+			<dynamicParameter>
+				<class>com.photon.phresco.impl.BuildInfoEnvironmentsImpl</class>
+				<dependencies>
+					<dependency>
+						<groupId>com.photon.phresco.commons</groupId>
+						<artifactId>phresco-commons</artifactId>
+						<type>jar</type>
+						<version>1.0.0</version>
+					</dependency>
+				</dependencies>
+			</dynamicParameter>
+			<required>true</required>
+			<editable>true</editable>
+			<key>environmentName</key>
+			<multiple>true</multiple>
+			<sort>false</sort>
+			<show>true</show>
+			<value></value>
+        </parameter>
+        </parameters>
+      </configuration>
+    </mojo>
+</mojos>

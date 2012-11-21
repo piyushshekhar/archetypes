@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <mojos>
+	<applicationHandler>
+		<groupId>com.photon.phresco.commons</groupId>
+		<artifactId>phresco-commons</artifactId>
+		<version>2.0.0.25003-SNAPSHOT</version>
+		<class>com.photon.phresco.impl.AndroidApplicationProcessor</class>
+	</applicationHandler>
     <mojo>
         <goal>package</goal>
         <description>Goal which packages the Android Library project</description>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<mojos>
+    <mojo>
+        <goal>functional-test</goal>
+        <description>Goal which Functional Test for Iphone Workspace Project</description>
+        <requiresDirectInvocation>false</requiresDirectInvocation>
+        <requiresProject>true</requiresProject>
+        <requiresReports>false</requiresReports>
+        <aggregator>false</aggregator>
+        <requiresOnline>false</requiresOnline>
+        <inheritedByDefault>true</inheritedByDefault>
+        <implementation>com.photon.phresco.plugins.xcode.XcodePlugin</implementation>
+        <language>java</language>
+        <instantiationStrategy>per-lookup</instantiationStrategy>
+        <executionStrategy>once-per-session</executionStrategy>
+        <threadSafe>false</threadSafe>
+        <configuration>
+            <parameters>
+                <parameter>
+                    <name>
+                        <value lang="en">Build Number</value>
+                    </name>
+                    <type>DynamicParameter</type>
+                    <dynamicParameter>
+                        <class>com.photon.phresco.impl.BuildInfoParameterImpl</class>
+                        <dependencies>
+                            <dependency>
+								<groupId>com.photon.phresco.commons</groupId>
+								<artifactId>phresco-commons</artifactId>
+								<type>jar</type>
+								<version>2.0.0.25001-SNAPSHOT</version>
+                            </dependency>
+                        </dependencies>
+                    </dynamicParameter>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>buildNumber</key>
+                    <multiple>false</multiple>
+                    <value>1</value>
+                    <sort>false</sort>
+                    <show>true</show>
+                </parameter>
+            </parameters>
+        </configuration>
+    </mojo>
+</mojos>

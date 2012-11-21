@@ -82,10 +82,10 @@
                         <class>com.photon.phresco.impl.EnvironmentsParameterImpl</class>
                         <dependencies>
                             <dependency>
-<groupId>com.photon.phresco.commons</groupId>
-<artifactId>phresco-commons</artifactId>
-<type>jar</type>
-<version>2.0.0.25001-SNAPSHOT</version>
+								<groupId>com.photon.phresco.commons</groupId>
+								<artifactId>phresco-commons</artifactId>
+								<type>jar</type>
+								<version>2.0.0.25001-SNAPSHOT</version>
                             </dependency>
                         </dependencies>
                     </dynamicParameter>
@@ -106,10 +106,10 @@
                         <class>com.photon.phresco.framework.param.impl.IosSdkParameterImpl</class>
                         <dependencies>
                             <dependency>
-<groupId>com.photon.phresco.framework</groupId>
-<artifactId>phresco-framework-impl</artifactId>
-<type>jar</type>
-<version>2.0.0.25001-SNAPSHOT</version>
+								<groupId>com.photon.phresco.framework</groupId>
+								<artifactId>phresco-framework-impl</artifactId>
+								<type>jar</type>
+								<version>2.0.0.25001-SNAPSHOT</version>
                             </dependency>
                         </dependencies>
                     </dynamicParameter>
@@ -131,10 +131,10 @@
                         <class>com.photon.phresco.framework.param.impl.IosTargetParameterImpl</class>
                         <dependencies>
                             <dependency>
-<groupId>com.photon.phresco.framework</groupId>
-<artifactId>phresco-framework-impl</artifactId>
-<type>jar</type>
-<version>2.0.0.25001-SNAPSHOT</version>
+								<groupId>com.photon.phresco.framework</groupId>
+								<artifactId>phresco-framework-impl</artifactId>
+								<type>jar</type>
+								<version>2.0.0.25001-SNAPSHOT</version>
                             </dependency>
                         </dependencies>
                     </dynamicParameter>
@@ -265,10 +265,10 @@
                         <class>com.photon.phresco.framework.param.impl.IosDeployValidationImpl</class>
                         <dependencies>
                             <dependency>
-<groupId>com.photon.phresco.framework</groupId>
-<artifactId>phresco-framework-impl</artifactId>
-<type>jar</type>
-<version>2.0.0.25001-SNAPSHOT</version>
+								<groupId>com.photon.phresco.framework</groupId>
+								<artifactId>phresco-framework-impl</artifactId>
+								<type>jar</type>
+								<version>2.0.0.25001-SNAPSHOT</version>
                             </dependency>
                         </dependencies>
                     </dynamicParameter>
@@ -290,10 +290,10 @@
                         <class>com.photon.phresco.framework.param.impl.IosSimSDKVersionsParameterImpl</class>
                         <dependencies>
                             <dependency>
-<groupId>com.photon.phresco.framework</groupId>
-<artifactId>phresco-framework-impl</artifactId>
-<type>jar</type>
-<version>2.0.0.25001-SNAPSHOT</version>
+								<groupId>com.photon.phresco.framework</groupId>
+								<artifactId>phresco-framework-impl</artifactId>
+								<type>jar</type>
+								<version>2.0.0.25001-SNAPSHOT</version>
                             </dependency>
                         </dependencies>
                     </dynamicParameter>
@@ -399,10 +399,10 @@
                         <class>com.photon.phresco.framework.param.impl.IosSdkParameterImpl</class>
                         <dependencies>
                             <dependency>
-<groupId>com.photon.phresco.framework</groupId>
-<artifactId>phresco-framework-impl</artifactId>
-<type>jar</type>
-<version>2.0.0.25001-SNAPSHOT</version>
+								<groupId>com.photon.phresco.framework</groupId>
+								<artifactId>phresco-framework-impl</artifactId>
+								<type>jar</type>
+								<version>2.0.0.25001-SNAPSHOT</version>
                             </dependency>
                         </dependencies>
                     </dynamicParameter>
@@ -424,10 +424,10 @@
                         <class>com.photon.phresco.framework.param.impl.IosTargetParameterImpl</class>
                         <dependencies>
                             <dependency>
-<groupId>com.photon.phresco.framework</groupId>
-<artifactId>phresco-framework-impl</artifactId>
-<type>jar</type>
-<version>2.0.0.25001-SNAPSHOT</version>
+								<groupId>com.photon.phresco.framework</groupId>
+								<artifactId>phresco-framework-impl</artifactId>
+								<type>jar</type>
+								<version>2.0.0.25001-SNAPSHOT</version>
                             </dependency>
                         </dependencies>
                     </dynamicParameter>
@@ -507,10 +507,10 @@
                         <class>com.photon.phresco.impl.BuildInfoParameterImpl</class>
                         <dependencies>
                             <dependency>
-<groupId>com.photon.phresco.commons</groupId>
-<artifactId>phresco-commons</artifactId>
-<type>jar</type>
-<version>2.0.0.25001-SNAPSHOT</version>
+								<groupId>com.photon.phresco.commons</groupId>
+								<artifactId>phresco-commons</artifactId>
+								<type>jar</type>
+								<version>2.0.0.25001-SNAPSHOT</version>
                             </dependency>
                         </dependencies>
                     </dynamicParameter>
@@ -551,10 +551,10 @@
                         <class>com.photon.phresco.framework.param.impl.IosTargetParameterImpl</class>
                         <dependencies>
                             <dependency>
-<groupId>com.photon.phresco.framework</groupId>
-<artifactId>phresco-framework-impl</artifactId>
-<type>jar</type>
-<version>2.0.0.25001-SNAPSHOT</version>
+								<groupId>com.photon.phresco.framework</groupId>
+								<artifactId>phresco-framework-impl</artifactId>
+								<type>jar</type>
+								<version>2.0.0.25001-SNAPSHOT</version>
                             </dependency>
                         </dependencies>
                     </dynamicParameter>
