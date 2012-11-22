@@ -639,7 +639,7 @@
                     <description></description>
                     <key>port</key>
                     <multiple>false</multiple>
-                    <value>4444</value>
+                    <value></value>
                     <sort>false</sort>
                     <show>true</show>
                 </parameter>
@@ -653,7 +653,7 @@
                     <description></description>
                     <key>newSessionWaitTimeout</key>
                     <multiple>false</multiple>
-                    <value>-1</value>
+                    <value></value>
                     <sort>false</sort>
                     <show>true</show>
                 </parameter>
@@ -709,7 +709,7 @@
                     <description></description>
                     <key>throwOnCapabilityNotPresent</key>
                     <multiple>false</multiple>
-                    <value>true</value>
+                    <value>false</value>
                     <sort>false</sort>
                     <show>true</show>
                 </parameter>
@@ -723,7 +723,7 @@
                     <description></description>
                     <key>nodePolling</key>
                     <multiple>false</multiple>
-                    <value>5000</value>
+                    <value></value>
                     <sort>false</sort>
                     <show>true</show>
                 </parameter>
@@ -737,7 +737,7 @@
                     <description></description>
                     <key>cleanUpCycle</key>
                     <multiple>false</multiple>
-                    <value>5000</value>
+                    <value></value>
                     <sort>false</sort>
                     <show>true</show>
                 </parameter>
@@ -751,7 +751,7 @@
                     <description></description>
                     <key>timeout</key>
                     <multiple>false</multiple>
-                    <value>30000</value>
+                    <value></value>
                     <sort>false</sort>
                     <show>true</show>
                 </parameter>
@@ -765,7 +765,7 @@
                     <description></description>
                     <key>browserTimeout</key>
                     <multiple>false</multiple>
-                    <value>0</value>
+                    <value></value>
                     <sort>false</sort>
                     <show>true</show>
                 </parameter>
@@ -779,7 +779,7 @@
                     <description></description>
                     <key>maxSession</key>
                     <multiple>false</multiple>
-                    <value>5</value>
+                    <value></value>
                     <sort>false</sort>
                     <show>true</show>
                 </parameter>
