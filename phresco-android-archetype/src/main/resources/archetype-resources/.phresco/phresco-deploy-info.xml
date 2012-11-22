@@ -17,6 +17,17 @@
         <configuration>
             <parameters>
                 <parameter>
+                    <pluginParameter>plugin</pluginParameter>
+                    <mavenCommands>
+                        <mavenCommand>
+                            <key>usb</key>
+                            <value>-Dandroid.device="usb"</value>
+                        </mavenCommand>
+                        <mavenCommand>
+                            <key>emulator</key>
+                            <value>-Dandroid.device="emulator"</value>
+                        </mavenCommand>
+                    </mavenCommands>
                     <name>
                         <value lang="en">Devices</value>
                     </name>
@@ -25,13 +36,13 @@
                     <editable>true</editable>
                     <description></description>
                     <key>devices</key>
-					<possibleValues>
+                    <possibleValues>
                         <value key="usb">USB</value>
                         <value key="emulator">Emulator</value>
-                        <value key="serialNumber" dependency="serialNumber">SerialNumber</value>
+                        <value key="serialNumber" dependency="serialNumber">Serial Number</value>
                     </possibleValues>
-					<multiple>false</multiple>
-					<sort>false</sort>
+                    <multiple>false</multiple>
+                    <sort>false</sort>
                     <show>true</show>
                     <value></value>
                 </parameter>
