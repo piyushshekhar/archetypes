@@ -53,8 +53,8 @@
                     <editable>true</editable>
                     <key>configuration</key>
                     <possibleValues>
-                        <value>Release</value>
-                        <value>Debug</value>
+                        <value key="release">Release</value>
+                        <value key="debug">Debug</value>
                     </possibleValues>
 					<multiple>false</multiple>
 					<sort>false</sort>
@@ -70,10 +70,10 @@
                     <editable>true</editable>
                     <key>Platform</key>
                     <possibleValues>
-                        <value>Any CPU</value>
-                        <value>ARM</value>
-						<value>X86</value>
-						<value>X64</value>
+                        <value key="anyCpu">Any CPU</value>
+                        <value key="arm">ARM</value>
+						<value key="x86">X86</value>
+						<value key="x64">X64</value>
                     </possibleValues>
 					<multiple>false</multiple>
 					<multiple>false</multiple>

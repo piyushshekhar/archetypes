@@ -9,6 +9,7 @@
         <aggregator>false</aggregator>
         <requiresOnline>false</requiresOnline>
         <inheritedByDefault>true</inheritedByDefault>
+        <implementation>com.photon.phresco.plugins.php.WordPressPlugin</implementation>
         <language>java</language>
         <instantiationStrategy>per-lookup</instantiationStrategy>
         <executionStrategy>once-per-session</executionStrategy>
@@ -95,7 +96,7 @@
                     <description></description>
                     <key>throwOnCapabilityNotPresent</key>
                     <multiple>false</multiple>
-                    <value>true</value>
+                    <value>false</value>
                     <sort>false</sort>
                     <show>true</show>
                 </parameter>

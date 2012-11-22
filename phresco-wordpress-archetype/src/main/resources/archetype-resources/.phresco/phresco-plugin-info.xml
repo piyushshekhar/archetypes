@@ -640,7 +640,7 @@
 			</parameters>
 		</configuration>
 	</mojo>
-		<mojo>
+	<mojo>
         <goal>start-hub</goal>
         <description>Goal which starts the hub</description>
         <requiresDirectInvocation>false</requiresDirectInvocation>
@@ -666,7 +666,7 @@
                     <description></description>
                     <key>port</key>
                     <multiple>false</multiple>
-                    <value>4444</value>
+                    <value></value>
                     <sort>false</sort>
                     <show>true</show>
                 </parameter>
@@ -680,7 +680,7 @@
                     <description></description>
                     <key>newSessionWaitTimeout</key>
                     <multiple>false</multiple>
-                    <value>-1</value>
+                    <value></value>
                     <sort>false</sort>
                     <show>true</show>
                 </parameter>
@@ -736,7 +736,7 @@
                     <description></description>
                     <key>throwOnCapabilityNotPresent</key>
                     <multiple>false</multiple>
-                    <value>true</value>
+                    <value>false</value>
                     <sort>false</sort>
                     <show>true</show>
                 </parameter>
@@ -750,7 +750,7 @@
                     <description></description>
                     <key>nodePolling</key>
                     <multiple>false</multiple>
-                    <value>5000</value>
+                    <value></value>
                     <sort>false</sort>
                     <show>true</show>
                 </parameter>
@@ -764,7 +764,7 @@
                     <description></description>
                     <key>cleanUpCycle</key>
                     <multiple>false</multiple>
-                    <value>5000</value>
+                    <value></value>
                     <sort>false</sort>
                     <show>true</show>
                 </parameter>
@@ -778,7 +778,7 @@
                     <description></description>
                     <key>timeout</key>
                     <multiple>false</multiple>
-                    <value>30000</value>
+                    <value></value>
                     <sort>false</sort>
                     <show>true</show>
                 </parameter>
@@ -792,7 +792,7 @@
                     <description></description>
                     <key>browserTimeout</key>
                     <multiple>false</multiple>
-                    <value>0</value>
+                    <value></value>
                     <sort>false</sort>
                     <show>true</show>
                 </parameter>
@@ -806,7 +806,7 @@
                     <description></description>
                     <key>maxSession</key>
                     <multiple>false</multiple>
-                    <value>5</value>
+                    <value></value>
                     <sort>false</sort>
                     <show>true</show>
                 </parameter>
@@ -831,7 +831,7 @@
 		<parameters>
 			<parameter>
 				<name>
-				<value lang="en">Hub Host</value>
+					<value lang="en">Hub Host</value>
 				</name>
 				<type>String</type>
 				<required>true</required>
@@ -845,7 +845,7 @@
 			</parameter>
 			<parameter>
 				<name>
-				<value lang="en">Max Session</value>
+					<value lang="en">Max Session</value>
 				</name>
 				<type>String</type>
 				<required>false</required>
@@ -859,7 +859,7 @@
 			</parameter>
 			<parameter>
 				<name>
-				<value lang="en">Selenium Protocol</value>
+					<value lang="en">Selenium Protocol</value>
 				</name>
 				<type>String</type>
 				<required>false</required>
@@ -873,7 +873,7 @@
 			</parameter>
 			<parameter>
 				<name>
-				<value lang="en">Node port</value>
+					<value lang="en">Node port</value>
 				</name>
 				<type>String</type>
 				<required>false</required>
@@ -887,7 +887,7 @@
 			</parameter>
 			<parameter>
 				<name>
-				<value lang="en">Host</value>
+					<value lang="en">Host</value>
 				</name>
 				<type>String</type>
 				<required>false</required>
@@ -901,7 +901,7 @@
 			</parameter>
 			<parameter>
 				<name>
-				<value lang="en">Register</value>
+					<value lang="en">Register</value>
 				</name>
 				<type>String</type>
 				<required>false</required>
@@ -915,7 +915,7 @@
 			</parameter>
 			<parameter>
 				<name>
-				<value lang="en">Register Cycle</value>
+					<value lang="en">Register Cycle</value>
 				</name>
 				<type>String</type>
 				<required>false</required>
@@ -929,7 +929,7 @@
 			</parameter>
 			<parameter>
 				<name>
-				<value lang="en">Hub Port</value>
+					<value lang="en">Hub Port</value>
 				</name>
 				<type>String</type>
 				<required>false</required>
@@ -943,7 +943,7 @@
 			</parameter>
 				<parameter>
 					<name>
-					<value lang="en">Proxy</value>
+						<value lang="en">Proxy</value>
 					</name>
 					<type>String</type>
 					<required>false</required>
@@ -957,28 +957,28 @@
 					</parameter>
 					<parameter>
 					<name>
-					<value lang="en">Browser Info</value>
+						<value lang="en">Browser Info</value>
 					</name>
 					<type>map</type>
 						<childs>
 							<child>
 								<name>
-								<value lang="en">Browser Name</value>
+									<value lang="en">Browser Name</value>
 								</name>
 								<type>List</type>
 								<key>browserName</key>
 								<possibleValues>
-								<value key="firefox">Firefox</value>
-								<value key="chrome">Google Chrome</value>
-								<value key="ie">Internet Explorer</value>
-								<value key="safari">Safari</value>
+									<value key="firefox">Firefox</value>
+									<value key="chrome">Google Chrome</value>
+									<value key="ie">Internet Explorer</value>
+									<value key="safari">Safari</value>
 								</possibleValues>
 								<required>true</required>
 								<description>Name of the browsers</description>
 								</child>
 							<child>
 								<name>
-								<value lang="en">Max Instances</value>
+									<value lang="en">Max Instances</value>
 								</name>
 								<type>String</type>
 								<key>maxInstances</key>
@@ -991,10 +991,7 @@
 					<description></description>
 					<key>browserInfo</key>
 					<multiple>false</multiple>
-					<value>#&#xD;
-					#Wed Nov 21 00:00:21 IST 2012&#xD;
-					firefox=1&#xD;
-					</value>
+					<value></value>
 					<sort>false</sort>
 					<show>true</show>
 			</parameter>

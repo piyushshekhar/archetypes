@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <mojos>
-    <mojo>
+     <mojo>
         <goal>start-hub</goal>
         <description>Goal which starts the hub</description>
         <requiresDirectInvocation>false</requiresDirectInvocation>
@@ -9,6 +9,7 @@
         <aggregator>false</aggregator>
         <requiresOnline>false</requiresOnline>
         <inheritedByDefault>true</inheritedByDefault>
+        <implementation>com.photon.phresco.plugins.sharepoint.SharePointPlugin</implementation>
         <language>java</language>
         <instantiationStrategy>per-lookup</instantiationStrategy>
         <executionStrategy>once-per-session</executionStrategy>
@@ -25,7 +26,7 @@
                     <description></description>
                     <key>port</key>
                     <multiple>false</multiple>
-                    <value></value>
+                    <value>4444</value>
                     <sort>false</sort>
                     <show>true</show>
                 </parameter>
@@ -39,7 +40,7 @@
                     <description></description>
                     <key>newSessionWaitTimeout</key>
                     <multiple>false</multiple>
-                    <value></value>
+                    <value>-1</value>
                     <sort>false</sort>
                     <show>true</show>
                 </parameter>
@@ -109,7 +110,7 @@
                     <description></description>
                     <key>nodePolling</key>
                     <multiple>false</multiple>
-                    <value></value>
+                    <value>5000</value>
                     <sort>false</sort>
                     <show>true</show>
                 </parameter>
@@ -123,7 +124,7 @@
                     <description></description>
                     <key>cleanUpCycle</key>
                     <multiple>false</multiple>
-                    <value></value>
+                    <value>5000</value>
                     <sort>false</sort>
                     <show>true</show>
                 </parameter>
@@ -137,7 +138,7 @@
                     <description></description>
                     <key>timeout</key>
                     <multiple>false</multiple>
-                    <value></value>
+                    <value>30000</value>
                     <sort>false</sort>
                     <show>true</show>
                 </parameter>
@@ -151,7 +152,7 @@
                     <description></description>
                     <key>browserTimeout</key>
                     <multiple>false</multiple>
-                    <value></value>
+                    <value>0</value>
                     <sort>false</sort>
                     <show>true</show>
                 </parameter>
@@ -165,7 +166,7 @@
                     <description></description>
                     <key>maxSession</key>
                     <multiple>false</multiple>
-                    <value></value>
+                    <value>5</value>
                     <sort>false</sort>
                     <show>true</show>
                 </parameter>
