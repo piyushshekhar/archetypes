@@ -44,6 +44,9 @@
 	</build>
 	
 	<properties>
+		<phresco.module.source.dir>/source</phresco.module.source.dir>
+		<phresco.jslibs.source.dir>/source/public_html/js</phresco.jslibs.source.dir>
+		<phresco.sql.path>/source/sql/</phresco.sql.path>
 		<phresco.source.resource.dir>/source/config</phresco.source.resource.dir>
 		<sonar.language>php</sonar.language>
 		<sonar.phpPmd.skip>false</sonar.phpPmd.skip>

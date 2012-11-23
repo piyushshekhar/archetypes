@@ -26,6 +26,7 @@
     <name>${artifactId}</name>
     
     <properties>
+		<phresco.module.source.dir>source</phresco.module.source.dir>
         <visual.studio.solution>source/Phresco.Sharepoint.sln</visual.studio.solution>
         <visual.test.project.pattern>test/functional/*.Tests;*Test</visual.test.project.pattern>
         <dotnet.tool.version>3.5</dotnet.tool.version>

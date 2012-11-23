@@ -27,6 +27,8 @@
 	<packaging>js</packaging>
 	
 	<properties>
+		<phresco.jslibs.source.dir>/src/main/webapp/lib</phresco.jslibs.source.dir>
+		<phresco.sql.path>/src/sql/</phresco.sql.path>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <sonar.language>js</sonar.language>
 	</properties>
