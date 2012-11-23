@@ -191,7 +191,7 @@
                     <name>
                         <value lang="en">Keystore</value>
                     </name>
-                    <type>String</type>
+                    <type>FileBrowse</type>
                     <required>true</required>
                     <editable>true</editable>
                     <description></description>
@@ -200,6 +200,7 @@
 					<sort>false</sort>
                     <show>false</show>
                     <value></value>
+                    <fileType>keystore</fileType>
                 </parameter>
 				<parameter>
                     <name>
