@@ -28,6 +28,15 @@
 				<include>archetype-metadata.xml</include> 
 				<include>excludefiles.txt</include> 
 				<include>phresco-plugin-info.xml</include>
+				<include>phresco-package-info.xml</include>
+				<include>phresco-deploy-info.xml</include>
+				<include>phresco-validate-code-info.xml</include>
+				<include>phresco-functional-test-info.xml</include>
+				<include>phresco-load-test-info.xml</include>
+				<include>phresco-ci-info.xml</include>
+				<include>phresco-application-handler-info.xml</include>
+				<include>phresco-start-hub-info.xml</include>
+				<include>phresco-start-node-info.xml</include>
 			</includes> 
 		</fileSet>
 		<fileSet filtered="false" packaged="false"> 
