@@ -48,29 +48,51 @@
                     <name>
                         <value lang="en">Jar Name</value>
                     </name>
-                    <type>String</type>
+                    <type>DynamicParameter</type>
+                    <dynamicParameter>
+                        <class>com.photon.phresco.framework.param.impl.JarNameImpl</class>
+                        <dependencies>
+                            <dependency>
+								<groupId>com.photon.phresco.framework</groupId>
+								<artifactId>phresco-framework-impl</artifactId>
+								<type>jar</type>
+								<version>2.0.0.25003-SNAPSHOT</version>
+                            </dependency>
+                        </dependencies>
+                    </dynamicParameter>
                     <required>false</required>
                     <editable>true</editable>
                     <description></description>
                     <key>jarName</key>
-					<multiple>false</multiple>
-					<sort>false</sort>
-					<show>true</show>
+                    <multiple>false</multiple>
                     <value></value>
+                    <sort>false</sort>
+                    <show>true</show>
                 </parameter>
                 <parameter>
                     <name>
                         <value lang="en">MainClass Name</value>
                     </name>
-                    <type>String</type>
+                    <type>DynamicParameter</type>
+                    <dynamicParameter>
+                        <class>com.photon.phresco.framework.param.impl.mainClassNameImpl</class>
+                        <dependencies>
+                            <dependency>
+								<groupId>com.photon.phresco.framework</groupId>
+								<artifactId>phresco-framework-impl</artifactId>
+								<type>jar</type>
+								<version>2.0.0.25003-SNAPSHOT</version>
+                            </dependency>
+                        </dependencies>
+                    </dynamicParameter>
                     <required>false</required>
                     <editable>true</editable>
                     <description></description>
                     <key>mainClassName</key>
-					<multiple>false</multiple>
-					<sort>false</sort>
-					<show>true</show>
+                    <multiple>false</multiple>
                     <value>com.photon.phresco.HelloWorld</value>
+                    <sort>false</sort>
+                    <show>true</show>
                 </parameter>
                 <parameter>
                     <name>
@@ -260,7 +282,7 @@
 				<key>testAgainst</key>
 				<possibleValues>
 					<value key="build" dependency="buildNumber">Build</value>
-					<value key="jarLocation">Jar</value>
+					<value key="jar" dependency="jarLocation">Jar</value>
 					</possibleValues>
 				<value></value>
 				<sort>false</sort>
@@ -292,19 +314,19 @@
 				<show>true</show>
 			</parameter>
 			<parameter>
-				<name>
-					<value lang="en">Jar</value>
-				</name>
-				<type>File</type>
-				<required>true</required>
-				<editable>true</editable>
-				<description></description>
-				<key>jarLocation</key>
-				<multiple>false</multiple>
-				<value></value>
-				<sort>false</sort>
-				<show>false</show>
-			</parameter>
+                    <name>
+                        <value lang="en">JAR Location</value>
+                    </name>
+                    <type>FileBrowse</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>jarLocation</key>
+                    <multiple>false</multiple>
+                    <value></value>
+                    <sort>false</sort>
+                    <show>false</show>
+                </parameter>
 		</parameters>
 	</configuration>
 	</mojo>
