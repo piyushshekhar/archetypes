@@ -83,6 +83,8 @@
         </profile>
     </profiles>
     <properties>
+		<phresco.module.source.dir>/source/ThirdParty</phresco.module.source.dir>
+		<phresco.jslibs.source.dir>/source/www/JSLibs</phresco.jslibs.source.dir>
         <phresco.code.validate.report>/do_not_checkin/static-analysis-report/</phresco.code.validate.report>
     </properties>
 </project>

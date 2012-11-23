@@ -27,6 +27,8 @@
 	<packaging>apk</packaging>
     
     <properties>
+		<phresco.module.source.dir>/source</phresco.module.source.dir>
+		<phresco.jslibs.source.dir>/source/assets/www/jslibs</phresco.jslibs.source.dir>
     	<android.version>2.3.3</android.version>
 		<phresco.unitTest.dir>/test/unit</phresco.unitTest.dir>
 		<phresco.unitTest.report.dir>/test/unit/target/surefire-reports</phresco.unitTest.report.dir>
