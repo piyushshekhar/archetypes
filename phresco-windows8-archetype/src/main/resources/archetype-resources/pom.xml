@@ -26,6 +26,7 @@
 	<name>${artifactId}</name>
      
 	<properties>
+		<phresco.module.source.dir>/source/src/Common/SharedAssemblies</phresco.module.source.dir>
         <sonar.language>cs</sonar.language>
 		<visual.studio.solution>source/Metro.sln</visual.studio.solution>
 		<sonar.dotnet.4.0.sdk.directory>C:\Windows\Microsoft.NET\Framework\v4.0.30319</sonar.dotnet.4.0.sdk.directory>
