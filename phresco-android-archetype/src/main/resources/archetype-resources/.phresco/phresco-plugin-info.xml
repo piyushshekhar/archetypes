@@ -518,6 +518,49 @@
             </parameters>
         </configuration>
     </mojo>
+    <mojo>
+        <goal>performance-test</goal>
+        <description>Goal which performance Test the Android Native project</description>
+        <requiresDirectInvocation>false</requiresDirectInvocation>
+        <requiresProject>true</requiresProject>
+        <requiresReports>false</requiresReports>
+        <aggregator>false</aggregator>
+        <requiresOnline>false</requiresOnline>
+        <inheritedByDefault>true</inheritedByDefault>
+        <implementation>com.photon.phresco.plugins.android.AndroidPlugin</implementation>
+        <language>java</language>
+        <instantiationStrategy>per-lookup</instantiationStrategy>
+        <executionStrategy>once-per-session</executionStrategy>
+        <threadSafe>false</threadSafe>
+        <configuration>
+            <parameters>
+                <parameter>
+                    <name>
+                        <value lang="en">Device List</value>
+                    </name>
+                    <type>DynamicParameter</type>
+                    <dynamicParameter>
+                        <class>com.photon.phresco.impl.EnvironmentsParameterImpl</class>
+                        <dependencies>
+                            <dependency>
+                                <groupId>com.photon.phresco.commons</groupId>
+                                <artifactId>phresco-commons</artifactId>
+                                <type>jar</type>
+                                <version>2.0.0.25004-SNAPSHOT</version>
+                            </dependency>
+                        </dependencies>
+                    </dynamicParameter>
+                    <required>true</required>
+                    <editable>true</editable>
+                    <key>deviceList</key>
+                    <multiple>true</multiple>
+                    <value></value>
+                    <sort>false</sort>
+                    <show>true</show>
+                </parameter>
+            </parameters>
+        </configuration>
+    </mojo>
 	<mojo>
         <goal>CIPrebuildStep</goal>
         <description>Goal which do's CI pre build step</description>
