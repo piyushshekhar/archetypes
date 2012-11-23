@@ -48,24 +48,13 @@
                     <name>
                         <value lang="en">Jar Name</value>
                     </name>
-                    <type>DynamicParameter</type>
-                    <dynamicParameter>
-                        <class>com.photon.phresco.framework.param.impl.JarNameImpl</class>
-                        <dependencies>
-                            <dependency>
-								<groupId>com.photon.phresco.framework</groupId>
-								<artifactId>phresco-framework-impl</artifactId>
-								<type>jar</type>
-								<version>2.0.0.25003-SNAPSHOT</version>
-                            </dependency>
-                        </dependencies>
-                    </dynamicParameter>
+                    <type>String</type>
                     <required>false</required>
                     <editable>true</editable>
                     <description></description>
                     <key>jarName</key>
                     <multiple>false</multiple>
-                    <value></value>
+                    <value>HelloWorld</value>
                     <sort>false</sort>
                     <show>true</show>
                 </parameter>
@@ -73,18 +62,7 @@
                     <name>
                         <value lang="en">MainClass Name</value>
                     </name>
-                    <type>DynamicParameter</type>
-                    <dynamicParameter>
-                        <class>com.photon.phresco.framework.param.impl.mainClassNameImpl</class>
-                        <dependencies>
-                            <dependency>
-								<groupId>com.photon.phresco.framework</groupId>
-								<artifactId>phresco-framework-impl</artifactId>
-								<type>jar</type>
-								<version>2.0.0.25003-SNAPSHOT</version>
-                            </dependency>
-                        </dependencies>
-                    </dynamicParameter>
+                    <type>String</type>
                     <required>false</required>
                     <editable>true</editable>
                     <description></description>
@@ -326,6 +304,7 @@
                     <value></value>
                     <sort>false</sort>
                     <show>false</show>
+					<fileType>jar</fileType>
                 </parameter>
 		</parameters>
 	</configuration>

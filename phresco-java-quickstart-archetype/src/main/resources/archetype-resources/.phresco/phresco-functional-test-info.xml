@@ -27,7 +27,7 @@
 				<key>testAgainst</key>
 				<possibleValues>
 					<value key="build" dependency="buildNumber">Build</value>
-					<value key="jarLocation">Jar</value>
+					<value key="jar" dependency="jarLocation">Jar</value>
 					</possibleValues>
 				<value></value>
 				<sort>false</sort>
@@ -60,10 +60,10 @@
 			</parameter>
 			<parameter>
 				<name>
-					<value lang="en">Jar</value>
+					<value lang="en">JAR Location</value>
 				</name>
-				<type>File</type>
-				<required>true</required>
+				<type>FileBrowse</type>
+				<required>false</required>
 				<editable>true</editable>
 				<description></description>
 				<key>jarLocation</key>
@@ -71,6 +71,7 @@
 				<value></value>
 				<sort>false</sort>
 				<show>false</show>
+				<fileType>jar</fileType>
 			</parameter>
 		</parameters>
 	</configuration>
