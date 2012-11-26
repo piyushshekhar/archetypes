@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <mojos>
     <mojo>
-        <goal>functional-test</goal>
-        <description>Goal which Functional Test for Iphone Hybrid Project</description>
+        <goal>functional-test-webdriver</goal>
+        <description>Goal which Functional Test-webdriver for Iphone Hybrid Project</description>
         <requiresDirectInvocation>false</requiresDirectInvocation>
         <requiresProject>true</requiresProject>
         <requiresReports>false</requiresReports>

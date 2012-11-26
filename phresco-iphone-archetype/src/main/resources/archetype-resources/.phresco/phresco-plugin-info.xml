@@ -382,7 +382,7 @@
     </mojo>
     <mojo>
         <goal>unit-test</goal>
-        <description>Goal which Unit Test for Iphone Natice Project</description>
+        <description>Goal which Unit Test for Iphone Native Project</description>
         <requiresDirectInvocation>false</requiresDirectInvocation>
         <requiresProject>true</requiresProject>
         <requiresReports>false</requiresReports>
@@ -489,8 +489,8 @@
         </configuration>
     </mojo>
     <mojo>
-        <goal>functional-test</goal>
-        <description>Goal which Functional Test for Iphone Natice Project</description>
+        <goal>functional-test-webdriver</goal>
+        <description>Goal which Functional Test-webdriver for Iphone Native Project</description>
         <requiresDirectInvocation>false</requiresDirectInvocation>
         <requiresProject>true</requiresProject>
         <requiresReports>false</requiresReports>
@@ -534,7 +534,7 @@
     </mojo>
     <mojo>
         <goal>validate-code</goal>
-        <description>Goal which Code Validation for Iphone Natice Project</description>
+        <description>Goal which Code Validation for Iphone Native Project</description>
         <requiresDirectInvocation>false</requiresDirectInvocation>
         <requiresProject>true</requiresProject>
         <requiresReports>false</requiresReports>
@@ -557,10 +557,10 @@
                         <class>com.photon.phresco.framework.param.impl.IosSdkParameterImpl</class>
                         <dependencies>
                             <dependency>
-<groupId>com.photon.phresco.framework</groupId>
-<artifactId>phresco-framework-impl</artifactId>
-<type>jar</type>
-<version>2.0.0.25001-SNAPSHOT</version>
+								<groupId>com.photon.phresco.framework</groupId>
+								<artifactId>phresco-framework-impl</artifactId>
+								<type>jar</type>
+								<version>2.0.0.25001-SNAPSHOT</version>
                             </dependency>
                         </dependencies>
                     </dynamicParameter>
