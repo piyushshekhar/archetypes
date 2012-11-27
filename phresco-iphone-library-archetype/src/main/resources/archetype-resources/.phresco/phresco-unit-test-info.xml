@@ -2,7 +2,7 @@
 <mojos>
     <mojo>
         <goal>unit-test</goal>
-        <description>Goal which Unit Test for Iphone Natice Project</description>
+        <description>Goal which Unit Test for Iphone Library Project</description>
         <requiresDirectInvocation>false</requiresDirectInvocation>
         <requiresProject>true</requiresProject>
         <requiresReports>false</requiresReports>
