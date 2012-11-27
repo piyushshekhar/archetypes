@@ -35,6 +35,8 @@
 				<include>phresco-functional-test-info.xml</include>
 				<include>phresco-ci-info.xml</include>
 				<include>phresco-application-handler-info.xml</include>
+				<include>phresco-env-config.xml</include>
+				<include>project.info</include>
 			</includes> 
 		</fileSet>
 		<fileSet filtered="false" packaged="false"> 
@@ -53,6 +55,7 @@
 				<include>Phresco_Prefix.pch</include>
 				<include>Phresco-Info.plist</include>
 				<include>phresco-env-config.xml</include>
+				<include>path.txt</include>
 			</includes>
 		</fileSet>
 			<fileSet filtered="false" packaged="false"> 
@@ -102,32 +105,41 @@
 				<include>ConfigurationReader.m</include>
 			</includes>
 		</fileSet>
+        <fileSet filtered="false" packaged="false"> 
+			<directory>source/ThirdParty/OCUnitReportLogger-1.0</directory> 
+			<includes>
+				<include>GDataXMLNode.h</include>
+				<include>GDataXMLNode.m</include>
+				<include>OCUnitToJUnitLogger.m</include>
+			</includes>
+		</fileSet>
 		<fileSet filtered="false" packaged="false"> 
 			<directory>source/OCUnitReports</directory> 
 			<includes>
 				<include>**/*</include>
 			</includes>
 		</fileSet>
-		<fileSet filtered="false" packaged="false"> 
-			<directory>source/AllTest</directory> 
+        <fileSet filtered="false" packaged="false"> 
+			<directory>source/LogicTest</directory> 
 			<includes>
-				<include>AllTest.h</include>
-				<include>AllTest.m</include>
-				<include>AllTest-Info.plist</include>
-				<include>AllTest-Prefix.pch</include>
+				<include>LogicTest.h</include>
+				<include>LogicTest.m</include>
+				<include>LogicTest-Info.plist</include>
+				<include>LogicTest-Prefix.pch</include>
 			</includes>
 		</fileSet>
-		<fileSet filtered="false" packaged="false"> 
-			<directory>source/AllTest/en.lproj</directory> 
+        <fileSet filtered="false" packaged="false"> 
+			<directory>source/LogicTest/en.lproj</directory> 
 			<includes>
 				<include>InfoPlist.strings</include>
 			</includes>
 		</fileSet>
+		
+		
 		<fileSet filtered="false" packaged="false"> 
 			<directory>test/functional/src</directory> 
 			<includes>
 				<include>AllTests.js</include>
-				<include>HelloWorld.js</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="false" packaged="false"> 
