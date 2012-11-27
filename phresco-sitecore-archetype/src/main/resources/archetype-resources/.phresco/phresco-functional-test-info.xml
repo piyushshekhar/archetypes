@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <mojos>
     <mojo>
-		<goal>functional-test</goal>
-		<description>Goal which functional tests the Site-Core project</description>
+		<goal>functional-test-webdriver</goal>
+		<description>Goal which functional test-webdriver the Site-Core project</description>
 		<requiresDirectInvocation>false</requiresDirectInvocation>
 		<requiresProject>true</requiresProject>
 		<requiresReports>false</requiresReports>

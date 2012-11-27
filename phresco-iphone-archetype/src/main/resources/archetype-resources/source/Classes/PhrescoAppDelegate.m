@@ -23,28 +23,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
     
-    ConfigurationReader *configReader = [[ConfigurationReader alloc]init];
-    [configReader parseXMLFileAtURL:@"phresco-env-config" environment:@"myWebservice"];
-    
-    NSString *protocol = [[configReader.stories objectAtIndex: 0] objectForKey:@"protocol"];
-    protocol = [protocol stringByTrimmingCharactersInSet:
-                [NSCharacterSet whitespaceAndNewlineCharacterSet]];
-    
-    NSString *host = [[configReader.stories objectAtIndex: 0] objectForKey:@"host"];
-    host = [host stringByTrimmingCharactersInSet:
-            [NSCharacterSet whitespaceAndNewlineCharacterSet]];
-    
-    NSString *port = [[configReader.stories objectAtIndex: 0] objectForKey:@"port"];
-    port = [port stringByTrimmingCharactersInSet:
-            [NSCharacterSet whitespaceAndNewlineCharacterSet]];
-    
-    NSString *context = [[configReader.stories objectAtIndex: 0] objectForKey:@"context"];
-    context = [context stringByTrimmingCharactersInSet:
-               [NSCharacterSet whitespaceAndNewlineCharacterSet]];
-    
-    NSString *urlString = [NSString stringWithFormat:@"%@://%@:%@/%@", protocol,host, port, context];
-    NSLog(@"Configuration urlString: %@",urlString);
-
     [self.window addSubview:viewController.view];
     
     [self.window makeKeyAndVisible];

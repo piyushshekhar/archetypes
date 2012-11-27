@@ -135,6 +135,24 @@
 		        </plugins>
             </build>
         </profile>
+		<profile>
+			<id>js</id> 
+			<properties>
+				<sonar.language>js</sonar.language>
+				<sonar.branch>js</sonar.branch>
+				<phresco.source.directory>source/wordpress/js</phresco.source.directory>
+				<sonar.exclusions>**/lib/**</sonar.exclusions>
+			</properties>	
+		</profile>
+		<profile>
+			<id>php</id> 
+			<properties>
+				<sonar.language>php</sonar.language>
+				<sonar.branch>php</sonar.branch>
+				<phresco.source.directory>source/wordpress</phresco.source.directory>
+				<sonar.exclusions>**/lib/**</sonar.exclusions>
+			</properties>	
+		</profile>
     </profiles>
 	<dependencies>
 		<dependency>

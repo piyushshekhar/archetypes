@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <mojos>
     <mojo>
-		<goal>functional-test</goal>
-		<description>Goal which functionalTest the Windows Metro project</description>
+		<goal>functional-test-webdriver</goal>
+		<description>Goal which functional Test-webdriver the Windows Metro project</description>
 		<requiresDirectInvocation>false</requiresDirectInvocation>
 		<requiresProject>true</requiresProject>
 		<requiresReports>false</requiresReports>

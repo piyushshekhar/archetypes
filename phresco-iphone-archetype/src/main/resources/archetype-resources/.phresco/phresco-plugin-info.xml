@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <mojos>
-	<applicationProcessor>
-		<groupId>com.photon.phresco.commons</groupId>
-		<artifactId>phresco-commons</artifactId>
-		<version>2.0.0.25003-SNAPSHOT</version>
-		<class>com.photon.phresco.impl.IPhoneApplicationProcessor</class>
-	</applicationProcessor>
+    <applicationProcessor>
+        <groupId>com.photon.phresco.commons</groupId>
+        <artifactId>phresco-commons</artifactId>
+        <version>2.0.0.25003-SNAPSHOT</version>
+        <class>com.photon.phresco.impl.IPhoneApplicationProcessor</class>
+    </applicationProcessor>
     <mojo>
         <goal>package</goal>
         <description>Goal which packages the Iphone Native Project</description>
@@ -60,7 +60,7 @@
                     <description></description>
                     <key>buildNumber</key>
                     <multiple>false</multiple>
-                    <value></value>
+                    <value>1</value>
                     <sort>false</sort>
                     <show>true</show>
                 </parameter>
@@ -88,10 +88,10 @@
                         <class>com.photon.phresco.impl.EnvironmentsParameterImpl</class>
                         <dependencies>
                             <dependency>
-								<groupId>com.photon.phresco.commons</groupId>
-								<artifactId>phresco-commons</artifactId>
-								<type>jar</type>
-								<version>2.0.0.25001-SNAPSHOT</version>
+<groupId>com.photon.phresco.commons</groupId>
+<artifactId>phresco-commons</artifactId>
+<type>jar</type>
+<version>2.0.0.25001-SNAPSHOT</version>
                             </dependency>
                         </dependencies>
                     </dynamicParameter>
@@ -99,7 +99,7 @@
                     <editable>true</editable>
                     <key>environmentName</key>
                     <multiple>false</multiple>
-                    <value></value>
+                    <value>Production</value>
                     <sort>false</sort>
                     <show>true</show>
                 </parameter>
@@ -112,10 +112,10 @@
                         <class>com.photon.phresco.framework.param.impl.IosSdkParameterImpl</class>
                         <dependencies>
                             <dependency>
-								<groupId>com.photon.phresco.framework</groupId>
-								<artifactId>phresco-framework-impl</artifactId>
-								<type>jar</type>
-								<version>2.0.0.25001-SNAPSHOT</version>
+<groupId>com.photon.phresco.framework</groupId>
+<artifactId>phresco-framework-impl</artifactId>
+<type>jar</type>
+<version>2.0.0.25001-SNAPSHOT</version>
                             </dependency>
                         </dependencies>
                     </dynamicParameter>
@@ -124,7 +124,7 @@
                     <description></description>
                     <key>sdk</key>
                     <multiple>false</multiple>
-                    <value></value>
+                    <value>iphonesimulator6.0</value>
                     <sort>false</sort>
                     <show>true</show>
                 </parameter>
@@ -137,10 +137,10 @@
                         <class>com.photon.phresco.framework.param.impl.IosTargetParameterImpl</class>
                         <dependencies>
                             <dependency>
-								<groupId>com.photon.phresco.framework</groupId>
-								<artifactId>phresco-framework-impl</artifactId>
-								<type>jar</type>
-								<version>2.0.0.25001-SNAPSHOT</version>
+<groupId>com.photon.phresco.framework</groupId>
+<artifactId>phresco-framework-impl</artifactId>
+<type>jar</type>
+<version>2.0.0.25001-SNAPSHOT</version>
                             </dependency>
                         </dependencies>
                     </dynamicParameter>
@@ -149,7 +149,7 @@
                     <description></description>
                     <key>target</key>
                     <multiple>false</multiple>
-                    <value></value>
+                    <value>HelloWorld</value>
                     <sort>false</sort>
                     <show>true</show>
                 </parameter>
@@ -167,7 +167,7 @@
                         <value key="Release">Release</value>
                     </possibleValues>
                     <multiple>false</multiple>
-                    <value></value>
+                    <value>Debug</value>
                     <sort>false</sort>
                     <show>true</show>
                 </parameter>
@@ -228,7 +228,7 @@
                         <value key="showDebug">Show Debug</value>
                     </possibleValues>
                     <multiple>false</multiple>
-                    <value></value>
+                    <value>showErrors</value>
                     <sort>false</sort>
                     <show>true</show>
                 </parameter>
@@ -271,10 +271,10 @@
                         <class>com.photon.phresco.framework.param.impl.IosDeployValidationImpl</class>
                         <dependencies>
                             <dependency>
-								<groupId>com.photon.phresco.framework</groupId>
-								<artifactId>phresco-framework-impl</artifactId>
-								<type>jar</type>
-								<version>2.0.0.25001-SNAPSHOT</version>
+<groupId>com.photon.phresco.framework</groupId>
+<artifactId>phresco-framework-impl</artifactId>
+<type>jar</type>
+<version>2.0.0.25001-SNAPSHOT</version>
                             </dependency>
                         </dependencies>
                     </dynamicParameter>
@@ -283,7 +283,7 @@
                     <description></description>
                     <key>deviceType</key>
                     <multiple>false</multiple>
-                    <value></value>
+                    <value>simulator</value>
                     <sort>false</sort>
                     <show>false</show>
                 </parameter>
@@ -296,10 +296,10 @@
                         <class>com.photon.phresco.framework.param.impl.IosSimSDKVersionsParameterImpl</class>
                         <dependencies>
                             <dependency>
-								<groupId>com.photon.phresco.framework</groupId>
-								<artifactId>phresco-framework-impl</artifactId>
-								<type>jar</type>
-								<version>2.0.0.25001-SNAPSHOT</version>
+<groupId>com.photon.phresco.framework</groupId>
+<artifactId>phresco-framework-impl</artifactId>
+<type>jar</type>
+<version>2.0.0.25001-SNAPSHOT</version>
                             </dependency>
                         </dependencies>
                     </dynamicParameter>
@@ -308,7 +308,7 @@
                     <description></description>
                     <key>sdkVersion</key>
                     <multiple>false</multiple>
-                    <value></value>
+                    <value>6.0</value>
                     <sort>false</sort>
                     <show>false</show>
                 </parameter>
@@ -326,7 +326,7 @@
                         <value key="ipad">ipad</value>
                     </possibleValues>
                     <multiple>false</multiple>
-                    <value></value>
+                    <value>iphone</value>
                     <sort>false</sort>
                     <show>false</show>
                 </parameter>
@@ -359,7 +359,7 @@
                         <value key="showDebug">Show Debug</value>
                     </possibleValues>
                     <multiple>false</multiple>
-                    <value></value>
+                    <value>showErrors</value>
                     <sort>false</sort>
                     <show>false</show>
                 </parameter>
@@ -373,7 +373,7 @@
                     <description></description>
                     <key>buildNumber</key>
                     <multiple>false</multiple>
-                    <value></value>
+                    <value>2</value>
                     <sort>false</sort>
                     <show>false</show>
                 </parameter>
@@ -405,10 +405,10 @@
                         <class>com.photon.phresco.framework.param.impl.IosSdkParameterImpl</class>
                         <dependencies>
                             <dependency>
-								<groupId>com.photon.phresco.framework</groupId>
-								<artifactId>phresco-framework-impl</artifactId>
-								<type>jar</type>
-								<version>2.0.0.25001-SNAPSHOT</version>
+<groupId>com.photon.phresco.framework</groupId>
+<artifactId>phresco-framework-impl</artifactId>
+<type>jar</type>
+<version>2.0.0.25001-SNAPSHOT</version>
                             </dependency>
                         </dependencies>
                     </dynamicParameter>
@@ -417,7 +417,7 @@
                     <description></description>
                     <key>sdk</key>
                     <multiple>false</multiple>
-                    <value></value>
+                    <value>iphonesimulator6.0</value>
                     <sort>false</sort>
                     <show>true</show>
                 </parameter>
@@ -430,10 +430,10 @@
                         <class>com.photon.phresco.framework.param.impl.IosTargetParameterImpl</class>
                         <dependencies>
                             <dependency>
-								<groupId>com.photon.phresco.framework</groupId>
-								<artifactId>phresco-framework-impl</artifactId>
-								<type>jar</type>
-								<version>2.0.0.25001-SNAPSHOT</version>
+<groupId>com.photon.phresco.framework</groupId>
+<artifactId>phresco-framework-impl</artifactId>
+<type>jar</type>
+<version>2.0.0.25001-SNAPSHOT</version>
                             </dependency>
                         </dependencies>
                     </dynamicParameter>
@@ -442,7 +442,7 @@
                     <description></description>
                     <key>target</key>
                     <multiple>false</multiple>
-                    <value></value>
+                    <value>LogicTest</value>
                     <sort>false</sort>
                     <show>true</show>
                 </parameter>
@@ -481,7 +481,7 @@
                     <description></description>
                     <key>unittest</key>
                     <multiple>false</multiple>
-                    <value>true</value>
+                    <value></value>
                     <sort>false</sort>
                     <show>false</show>
                 </parameter>
@@ -513,10 +513,10 @@
                         <class>com.photon.phresco.impl.BuildInfoParameterImpl</class>
                         <dependencies>
                             <dependency>
-								<groupId>com.photon.phresco.commons</groupId>
-								<artifactId>phresco-commons</artifactId>
-								<type>jar</type>
-								<version>2.0.0.25001-SNAPSHOT</version>
+<groupId>com.photon.phresco.commons</groupId>
+<artifactId>phresco-commons</artifactId>
+<type>jar</type>
+<version>2.0.0.25001-SNAPSHOT</version>
                             </dependency>
                         </dependencies>
                     </dynamicParameter>
@@ -582,10 +582,10 @@
                         <class>com.photon.phresco.framework.param.impl.IosTargetParameterImpl</class>
                         <dependencies>
                             <dependency>
-                                <groupId>com.photon.phresco.framework</groupId>
-                                <artifactId>phresco-framework-impl</artifactId>
-                                <type>jar</type>
-                                <version>2.0.0.25001-SNAPSHOT</version>
+<groupId>com.photon.phresco.framework</groupId>
+<artifactId>phresco-framework-impl</artifactId>
+<type>jar</type>
+<version>2.0.0.25001-SNAPSHOT</version>
                             </dependency>
                         </dependencies>
                     </dynamicParameter>
@@ -609,57 +609,6 @@
                     <key>projectType</key>
                     <multiple>false</multiple>
                     <value>xcode</value>
-                    <sort>false</sort>
-                    <show>false</show>
-                </parameter>
-            </parameters>
-        </configuration>
-    </mojo>
-    <mojo>
-        <goal>pdf-report</goal>
-        <description>Goal which generates pdf report for the project</description>
-        <requiresDirectInvocation>false</requiresDirectInvocation>
-        <requiresProject>true</requiresProject>
-        <requiresReports>false</requiresReports>
-        <aggregator>false</aggregator>
-        <requiresOnline>false</requiresOnline>
-        <inheritedByDefault>true</inheritedByDefault>
-        <implementation>com.photon.phresco.plugins.ReportPlugin</implementation>
-        <language>java</language>
-        <instantiationStrategy>per-lookup</instantiationStrategy>
-        <executionStrategy>once-per-session</executionStrategy>
-        <threadSafe>false</threadSafe>
-        <configuration>
-            <parameters>
-                <parameter>
-                    <name>
-                        <value lang="en">Report Type</value>
-                    </name>
-                    <type>List</type>
-                    <required>false</required>
-                    <editable>true</editable>
-                    <description></description>
-                    <key>reportType</key>
-                    <possibleValues>
-                        <value key="overall">Overall</value>
-                        <value key="detailed">Detailed</value>
-                    </possibleValues>
-                    <multiple>false</multiple>
-                    <value></value>
-                    <sort>false</sort>
-                    <show>true</show>
-                </parameter>
-                <parameter>
-                    <name>
-                        <value lang="en">Test Type</value>
-                    </name>
-                    <type>Hidden</type>
-                    <required>false</required>
-                    <editable>true</editable>
-                    <description></description>
-                    <key>testType</key>
-                    <multiple>false</multiple>
-                    <value></value>
                     <sort>false</sort>
                     <show>false</show>
                 </parameter>

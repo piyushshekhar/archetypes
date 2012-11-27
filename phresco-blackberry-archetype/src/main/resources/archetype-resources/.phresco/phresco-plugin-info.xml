@@ -286,8 +286,8 @@
       </configuration>
     </mojo>
 	<mojo>
-		<goal>functional-test</goal>
-		<description>Goal which functionalTest the Blackberry project</description>
+		<goal>functional-test-webdriver</goal>
+		<description>Goal which functional Test-webdriver the Blackberry project</description>
 		<requiresDirectInvocation>false</requiresDirectInvocation>
 		<requiresProject>true</requiresProject>
 		<requiresReports>false</requiresReports>

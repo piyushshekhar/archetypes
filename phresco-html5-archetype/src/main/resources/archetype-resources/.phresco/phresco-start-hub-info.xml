@@ -9,6 +9,7 @@
         <aggregator>false</aggregator>
         <requiresOnline>false</requiresOnline>
         <inheritedByDefault>true</inheritedByDefault>
+        <implementation>com.photon.phresco.plugins.java.JavaPlugin</implementation>
         <language>java</language>
         <instantiationStrategy>per-lookup</instantiationStrategy>
         <executionStrategy>once-per-session</executionStrategy>
@@ -47,13 +48,12 @@
                     <name>
                         <value lang="en">Servlets</value>
                     </name>
-                    <type>String</type>
+                    <type>List</type>
                     <required>false</required>
                     <editable>true</editable>
                     <description></description>
                     <key>servlets</key>
                     <multiple>false</multiple>
-                    <value></value>
                     <sort>false</sort>
                     <show>true</show>
                 </parameter>
@@ -81,7 +81,7 @@
                     <description></description>
                     <key>capabilityMatcher</key>
                     <multiple>false</multiple>
-                    <value>org.openqa.grid.internal.utils.DefaultCapabilityMatcher</value>
+                    <value></value>
                     <sort>false</sort>
                     <show>true</show>
                 </parameter>
@@ -95,7 +95,7 @@
                     <description></description>
                     <key>throwOnCapabilityNotPresent</key>
                     <multiple>false</multiple>
-                    <value>false</value>
+                    <value>true</value>
                     <sort>false</sort>
                     <show>true</show>
                 </parameter>
