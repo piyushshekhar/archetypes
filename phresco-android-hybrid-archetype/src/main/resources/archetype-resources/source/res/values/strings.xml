@@ -16,9 +16,12 @@
   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
   See the License for the specific language governing permissions and
   limitations under the License.
-  ###
-  -->
+  ###
+-->
 
 <resources>
-    <string name="app_name">PhoneGapExample</string>
+
+    <string name="app_name">HelloWorld</string>
+    <string name="hello_world">Hello world!</string>
+
 </resources>

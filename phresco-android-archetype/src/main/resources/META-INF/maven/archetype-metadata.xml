@@ -102,13 +102,6 @@
 			</includes>
 		</fileSet>
 		<fileSet filtered="false" packaged="false"> 
-			<directory>source/src/com/photon/phresco/nativeapp/config</directory> 
-			<includes>
-				<include>ConfigReader.java</include>
-				<include>Configuration.java</include>
-			</includes>
-		</fileSet>
-		<fileSet filtered="false" packaged="false"> 
 			<directory>test/functional</directory> 
 			<includes>
 				<include>AndroidManifest.xml</include>

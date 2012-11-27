@@ -1,135 +1,135 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <mojos>
     <mojo>
-	<goal>start-node</goal>
-	<description>Goal which starts the node</description>
-	<requiresDirectInvocation>false</requiresDirectInvocation>
-	<requiresProject>true</requiresProject>
-	<requiresReports>false</requiresReports>
-	<aggregator>false</aggregator>
-	<requiresOnline>false</requiresOnline>
-	<inheritedByDefault>true</inheritedByDefault>
-	<language>java</language>
-	<instantiationStrategy>per-lookup</instantiationStrategy>
-	<executionStrategy>once-per-session</executionStrategy>
-	<threadSafe>false</threadSafe>
-	<configuration>
-		<parameters>
-			<parameter>
-				<name>
-				<value lang="en">Hub Host</value>
-				</name>
-				<type>String</type>
-				<required>true</required>
-				<editable>true</editable>
-				<description></description>
-				<key>hubHost</key>
-				<multiple>false</multiple>
-				<value></value>
-				<sort>false</sort>
-				<show>true</show>
-			</parameter>
-			<parameter>
-				<name>
-				<value lang="en">Max Session</value>
-				</name>
-				<type>String</type>
-				<required>false</required>
-				<editable>true</editable>
-				<description></description>
-				<key>maxSession</key>
-				<multiple>false</multiple>
-				<value></value>
-				<sort>false</sort>
-				<show>true</show>
-			</parameter>
-			<parameter>
-				<name>
-				<value lang="en">Selenium Protocol</value>
-				</name>
-				<type>String</type>
-				<required>false</required>
-				<editable>true</editable>
-				<description></description>
-				<key>seleniumProtocol</key>
-				<multiple>false</multiple>
-				<value></value>
-				<sort>false</sort>
-				<show>true</show>
-			</parameter>
-			<parameter>
-				<name>
-				<value lang="en">Node port</value>
-				</name>
-				<type>String</type>
-				<required>false</required>
-				<editable>true</editable>
-				<description></description>
-				<key>nodeport</key>
-				<multiple>false</multiple>
-				<value></value>
-				<sort>false</sort>
-				<show>true</show>
-			</parameter>
-			<parameter>
-				<name>
-				<value lang="en">Host</value>
-				</name>
-				<type>String</type>
-				<required>false</required>
-				<editable>true</editable>
-				<description></description>
-				<key>host</key>
-				<multiple>false</multiple>
-				<value></value>
-				<sort>false</sort>
-				<show>true</show>
-			</parameter>
-			<parameter>
-				<name>
-				<value lang="en">Register</value>
-				</name>
-				<type>String</type>
-				<required>false</required>
-				<editable>true</editable>
-				<description></description>
-				<key>register</key>
-				<multiple>false</multiple>
-				<value></value>
-				<sort>false</sort>
-				<show>true</show>
-			</parameter>
-			<parameter>
-				<name>
-				<value lang="en">Register Cycle</value>
-				</name>
-				<type>String</type>
-				<required>false</required>
-				<editable>true</editable>
-				<description></description>
-				<key>registerCycle</key>
-				<multiple>false</multiple>
-				<value></value>
-				<sort>false</sort>
-				<show>true</show>
-			</parameter>
-			<parameter>
-				<name>
-				<value lang="en">Hub Port</value>
-				</name>
-				<type>String</type>
-				<required>false</required>
-				<editable>true</editable>
-				<description></description>
-				<key>hubPort</key>
-				<multiple>false</multiple>
-				<value></value>
-				<sort>false</sort>
-				<show>true</show>
-			</parameter>
+		<goal>start-node</goal>
+		<description>Goal which starts the node</description>
+		<requiresDirectInvocation>false</requiresDirectInvocation>
+		<requiresProject>true</requiresProject>
+		<requiresReports>false</requiresReports>
+		<aggregator>false</aggregator>
+		<requiresOnline>false</requiresOnline>
+		<inheritedByDefault>true</inheritedByDefault>
+		<language>java</language>
+		<instantiationStrategy>per-lookup</instantiationStrategy>
+		<executionStrategy>once-per-session</executionStrategy>
+		<threadSafe>false</threadSafe>
+		<configuration>
+			<parameters>
 				<parameter>
 					<name>
-					<value lang="en">Proxy</value>
+						<value lang="en">Hub Host</value>
+					</name>
+					<type>String</type>
+					<required>true</required>
+					<editable>true</editable>
+					<description></description>
+					<key>hubHost</key>
+					<multiple>false</multiple>
+					<value></value>
+					<sort>false</sort>
+					<show>true</show>
+				</parameter>
+				<parameter>
+					<name>
+						<value lang="en">Max Session</value>
+					</name>
+					<type>String</type>
+					<required>false</required>
+					<editable>true</editable>
+					<description></description>
+					<key>maxSession</key>
+					<multiple>false</multiple>
+					<value></value>
+					<sort>false</sort>
+					<show>true</show>
+				</parameter>
+				<parameter>
+					<name>
+						<value lang="en">Selenium Protocol</value>
+					</name>
+					<type>String</type>
+					<required>false</required>
+					<editable>true</editable>
+					<description></description>
+					<key>seleniumProtocol</key>
+					<multiple>false</multiple>
+					<value></value>
+					<sort>false</sort>
+					<show>true</show>
+				</parameter>
+				<parameter>
+					<name>
+						<value lang="en">Node port</value>
+					</name>
+					<type>String</type>
+					<required>false</required>
+					<editable>true</editable>
+					<description></description>
+					<key>nodeport</key>
+					<multiple>false</multiple>
+					<value></value>
+					<sort>false</sort>
+					<show>true</show>
+				</parameter>
+				<parameter>
+					<name>
+						<value lang="en">Host</value>
+					</name>
+					<type>String</type>
+					<required>false</required>
+					<editable>true</editable>
+					<description></description>
+					<key>host</key>
+					<multiple>false</multiple>
+					<value></value>
+					<sort>false</sort>
+					<show>true</show>
+				</parameter>
+				<parameter>
+					<name>
+						<value lang="en">Register</value>
+					</name>
+					<type>String</type>
+					<required>false</required>
+					<editable>true</editable>
+					<description></description>
+					<key>register</key>
+					<multiple>false</multiple>
+					<value></value>
+					<sort>false</sort>
+					<show>true</show>
+				</parameter>
+				<parameter>
+					<name>
+						<value lang="en">Register Cycle</value>
+					</name>
+					<type>String</type>
+					<required>false</required>
+					<editable>true</editable>
+					<description></description>
+					<key>registerCycle</key>
+					<multiple>false</multiple>
+					<value></value>
+					<sort>false</sort>
+					<show>true</show>
+				</parameter>
+				<parameter>
+					<name>
+						<value lang="en">Hub Port</value>
+					</name>
+					<type>String</type>
+					<required>false</required>
+					<editable>true</editable>
+					<description></description>
+					<key>hubPort</key>
+					<multiple>false</multiple>
+					<value></value>
+					<sort>false</sort>
+					<show>true</show>
+				</parameter>
+				<parameter>
+					<name>
+						<value lang="en">Proxy</value>
 					</name>
 					<type>String</type>
 					<required>false</required>
@@ -140,31 +140,31 @@
 					<value></value>
 					<sort>false</sort>
 					<show>true</show>
-					</parameter>
-					<parameter>
+				</parameter>
+				<parameter>
 					<name>
-					<value lang="en">Browser Info</value>
+						<value lang="en">Browser Info</value>
 					</name>
 					<type>map</type>
 						<childs>
 							<child>
 								<name>
-								<value lang="en">Browser Name</value>
+									<value lang="en">Browser Name</value>
 								</name>
 								<type>List</type>
 								<key>browserName</key>
 								<possibleValues>
-								<value key="firefox">Firefox</value>
-								<value key="chrome">Google Chrome</value>
-								<value key="ie">Internet Explorer</value>
-								<value key="safari">Safari</value>
+									<value key="firefox">Firefox</value>
+									<value key="chrome">Google Chrome</value>
+									<value key="ie">Internet Explorer</value>
+									<value key="safari">Safari</value>
 								</possibleValues>
 								<required>true</required>
 								<description>Name of the browsers</description>
-								</child>
+							</child>
 							<child>
 								<name>
-								<value lang="en">Max Instances</value>
+									<value lang="en">Max Instances</value>
 								</name>
 								<type>String</type>
 								<key>maxInstances</key>
@@ -177,14 +177,11 @@
 					<description></description>
 					<key>browserInfo</key>
 					<multiple>false</multiple>
-					<value>#&#xD;
-					#Wed Nov 21 00:00:21 IST 2012&#xD;
-					firefox=1&#xD;
-					</value>
+					<value></value>
 					<sort>false</sort>
 					<show>true</show>
-			</parameter>
-		</parameters>
-	</configuration>
+				</parameter>
+			</parameters>
+		</configuration>
 	</mojo>
 </mojos>
