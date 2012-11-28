@@ -63,29 +63,14 @@
 			<directory>source/assets/www</directory> 
 			<includes>
 				<include>index.html</include>
-				<include>main.js</include>
 				<include>master.css</include>
 				<include>cordova-2.1.0.js</include>
 			</includes>
 		</fileSet>
         <fileSet filtered="false" packaged="false"> 
-			<directory>source/gen/com/photon/phresco/hybrid</directory> 
-			<includes>
-				<include>BuildConfig.java</include>
-				<include>R.java</include>
-			</includes>
-		</fileSet>
-		<fileSet filtered="false" packaged="false"> 
 			<directory>source/src/com/photon/phresco/hybrid/activity</directory> 
 			<includes>
 				<include>MainActivity.java</include>
-			</includes>
-		</fileSet>
-         <fileSet filtered="false" packaged="false"> 
-			<directory>source/src/com/photon/phresco/hybrid/config</directory> 
-			<includes>
-				<include>ConfigReader.java</include>
-                <include>Configuration.java</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="false" packaged="false"> 
@@ -139,7 +124,7 @@
 		<fileSet filtered="false" packaged="false"> 
 			<directory>source/libs</directory> 
 			<includes>
-				<include>cordova-2.1.0.jar</include>
+				<include>**/*</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="false" packaged="false"> 
