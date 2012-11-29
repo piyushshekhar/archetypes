@@ -55,6 +55,13 @@
 			</includes>
 		</fileSet>
 		<fileSet filtered="false" packaged="false"> 
+			<directory>src/main/webapp</directory> 
+			<includes>
+				<include>environment.jsp</include>
+				<include>index.jsp</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="false" packaged="false"> 
 			<directory>src/main/js/HelloWorld/widgets</directory> 
 			<includes>
 				<include>HelloWorldWidget.js</include>
@@ -87,27 +94,52 @@
 			</includes>
 		</fileSet>
 		<fileSet filtered="false" packaged="false"> 
+			<directory>src/main/webapp/js/Framework</directory> 
+			<includes>
+				<include>Base.js</include>
+				<include>LoginWidget.js</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="false" packaged="false"> 
+			<directory>src/main/webapp/images</directory> 
+			<includes>
+				<include>**/*</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="false" packaged="false"> 
+			<directory>src/main/webapp/css</directory> 
+			<includes>
+				<include>**/*</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="false" packaged="false"> 
 			<directory>src/main/webapp/WEB-INF/resources</directory> 
 			<includes>
 				<include>phresco-env-config.xml</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="false" packaged="false"> 
-			<directory>src/test/java/com/photon/phresco</directory> 
+			<directory>src/test/java/com/photon/phresco/service</directory> 
 			<includes>
 				<include>TestCase.java</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="false" packaged="false"> 
-			<directory>src/test/js</directory> 
+			<directory>src/test/webapp/js/Framework</directory> 
 			<includes>
-				<include>**/*</include>
+				<include>LoginTest.js</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="false" packaged="false"> 
-			<directory>src/test/resources</directory> 
+			<directory>src/test/webapp/resources/css</directory> 
 			<includes>
-				<include>**/*</include>
+				<include>qunit.css</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="false" packaged="false"> 
+			<directory>src/test/webapp/resources/Framework</directory> 
+			<includes>
+				<include>LoginTest.html</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="false" encoding="UTF-8">
