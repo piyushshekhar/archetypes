@@ -17,23 +17,26 @@
  * limitations under the License.
  * ###
  */
-YUI.add("appAPI", function(Y) {
-    function AppAPI(config) {
-        AppAPI.superclass.constructor.apply(this, arguments);
+ 
+		 
+YUI.add("eshopAPI", function(Y) {
+			
+	function EshopAPI(config) {
+        EshopAPI.superclass.constructor.apply(this, arguments);
     }
-
-    AppAPI.NAME = "appAPI";
+	
+    EshopAPI.NAME = "EshopAPI";
     
     var callbackData = 'callbackData';  
-
-    AppAPI.ATTRS = {
+	
+    EshopAPI.ATTRS = {
         config : {
             value : null
         },
         
     };
-
-    Y.extend(AppAPI, Y.Base, {
+				
+    Y.extend(EshopAPI, Y.Base, {
         
         initializer: function() {},
         destructor : function() {},
@@ -220,10 +223,12 @@ YUI.add("appAPI", function(Y) {
         },
         
     });
-    
-    Y.namespace("Base").AppAPI = AppAPI;
+						
+						
+    Y.namespace("Base").EshopAPI = EshopAPI;
     
                     
-}, "3.4.1", {
+}, "3.3.0", {
     requires:["base", "io", "json", "node", "substitute"]
 });
+

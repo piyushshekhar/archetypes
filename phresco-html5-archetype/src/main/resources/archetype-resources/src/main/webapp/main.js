@@ -1,10 +1,10 @@
 /*
  * ###
- * Archetype - phresco-html5-archetype
- * 
+ * PHR_HTML5MobileWidget
+ * %%
  * Copyright (C) 1999 - 2012 Photon Infotech Inc.
- * 
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * %%
+ * Licensed under the Apache License, Version 2.0 (the "License")
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  * 
@@ -17,15 +17,11 @@
  * limitations under the License.
  * ###
  */
-package com.photon.phresco.service;
-
-import static org.junit.Assert.assertTrue;
-
-import org.junit.Test;
-
-public class TestCase {
-	@Test
-	public void hello() {		
-		assertTrue(true);
-	}
-}
+$(document).ready(function(){
+    //If the User resizes the window, adjust the #container height
+    $(window).bind("resize", resizeWindow);
+    function resizeWindow( e ) {
+        var newWindowHeight = $(window).height();
+            $(".cat_lister").css("height", newWindowHeight - 140);
+    }
+});

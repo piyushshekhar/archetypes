@@ -1,7 +1,7 @@
 /*
  * ###
- * Archetype - phresco-html5-archetype
- * 
+ * PHR_HTML5MobileWidget
+ * %%
  * Copyright (C) 1999 - 2012 Photon Infotech Inc.
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");

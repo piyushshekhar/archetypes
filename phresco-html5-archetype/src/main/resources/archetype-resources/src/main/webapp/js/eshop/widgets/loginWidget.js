@@ -18,20 +18,22 @@
  * ###
  */
 //Event = YUI.event,
-YUI.add("helloWidget", function(Y) {
-    function HelloWidget(config) {
-        HelloWidget.superclass.constructor.apply(this, arguments);
+
+ 
+YUI.add("loginWidget", function(Y) {
+    function LoginWidget(config) {
+        LoginWidget.superclass.constructor.apply(this, arguments);
     }
 
-    HelloWidget.NAME = "helloWidget";
+    LoginWidget.NAME = "LoginWidget";
 
-    HelloWidget.ATTRS = {
+    LoginWidget.ATTRS = {
         targetNode : {
             value : []
         },
     };
 
-    Y.extend(HelloWidget, Y.Base.BaseWidget, {
+    Y.extend(LoginWidget, Y.Base.HeaderWidget, {
         initializer: function() {
             /*
              * initializer is part of the lifecycle introduced by 
@@ -117,7 +119,7 @@ YUI.add("helloWidget", function(Y) {
                 var url = apiRef.get("wsURLWithoutContext");
                 var config = apiRef._getConfigData();
 				var hWorldText = 'Hello World';
-                targetNode.appendChild(hWorldText);  
+                targetNode.appendChild(hWorldText);
               } else {
                 var loading = this.createElement('<label>Loading...</label>');
                 targetNode.appendChild(loading);
@@ -142,7 +144,9 @@ YUI.add("helloWidget", function(Y) {
         }
     });
 
-    Y.namespace("Base").HelloWidget = HelloWidget;
+    Y.namespace("Base").LoginWidget = LoginWidget;
 }, "3.3.0", {
     requires:["widget", "node", "substitute"]
 });
+
+

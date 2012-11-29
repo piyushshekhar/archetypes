@@ -20,13 +20,15 @@
 /** 
  * Base widget, All widgets should extends this Phresco widget and implement captureData and createContent methods.
  */
-YUI.add("baseWidget", function(Y) {
-    function BaseWidget(config) {
-        BaseWidget.superclass.constructor.apply(this, arguments);
+
+    
+YUI.add("phrescoWidget", function(Y) {
+    function PhrescoWidget(config) {
+        PhrescoWidget.superclass.constructor.apply(this, arguments);
     }
  
-    BaseWidget.NAME = "baseWidget";
-    BaseWidget.ATTRS = {
+    PhrescoWidget.NAME = "PhrescoWidget";
+    PhrescoWidget.ATTRS = {
         targetNode : {
             value : Y.Node.one(document.body)
         },
@@ -43,7 +45,7 @@ YUI.add("baseWidget", function(Y) {
             value : []
         },
     };
-    Y.extend(BaseWidget, Y.Widget, {
+    Y.extend(PhrescoWidget, Y.Widget, {
         
         initializer: function() {},
         
@@ -157,7 +159,8 @@ YUI.add("baseWidget", function(Y) {
         }
     }); 
 
-    Y.namespace("Base").BaseWidget = BaseWidget;
+    Y.namespace("Base").PhrescoWidget = PhrescoWidget;
 }, "3.3.0", {
     requires:["widget", "io", "json", "node", "substitute"]
 });
+
