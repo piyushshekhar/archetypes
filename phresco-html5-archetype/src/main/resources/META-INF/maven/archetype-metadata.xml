@@ -58,14 +58,13 @@
 			<includes>
 				<include>index.jsp</include>
 				<include>environment.jsp</include>
+				<include>html5.js</include>
+				<include>jquery.loadmask.js</include>
+				<include>main.js</include>
+				<include>phrescoWidget.js</include>
 			</includes>
 		</fileSet>
-		<fileSet filtered="false" packaged="false"> 
-			<directory>src/main/webapp/css</directory> 
-			<includes>
-				<include>**/*</include>
-			</includes>
-		</fileSet>
+		
 		<fileSet filtered="false" packaged="false"> 
 			<directory>src/main/webapp/html</directory> 
 			<includes>
@@ -73,16 +72,16 @@
 			</includes>
 		</fileSet>
 		<fileSet filtered="false" packaged="false"> 
-			<directory>src/main/webapp/js/controller</directory> 
+			<directory>src/main/webapp/js/eshop/controller</directory> 
 			<includes>
-				<include>AppAPI.js</include>
+				<include>eshopAPI.js</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="false" packaged="false"> 
-			<directory>src/main/webapp/js/widgets</directory> 
+			<directory>src/main/webapp/js/eshop/widgets</directory> 
 			<includes>
-				<include>BaseWidget.js</include>
-				<include>HelloWidget.js</include>
+				<include>headerWidget.js</include>
+				<include>loginWidget.js</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="false" packaged="false"> 
@@ -103,12 +102,8 @@
 				<include>phresco-env-config.xml</include>
 			</includes>
 		</fileSet>
-		<fileSet filtered="false" packaged="false"> 
-			<directory>src/main/webapp/images</directory> 
-			<includes>
-				<include>**/*</include>
-			</includes>
-		</fileSet>
+        
+		
 		<fileSet filtered="false" packaged="false"> 
 			<directory>src/test/java/com/photon/phresco</directory> 
 			<includes>
