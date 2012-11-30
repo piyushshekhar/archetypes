@@ -80,7 +80,7 @@
                     <key>environmentName</key>
 					<multiple>true</multiple>
 					<sort>false</sort>
-					<show>false</show>
+					<show>true</show>
                     <value></value>
                 </parameter>
 				<parameter>
@@ -141,6 +141,31 @@
 					<show>true</show>
                     <value></value>
                 </parameter>
+				<parameter>
+					<pluginParameter>framework</pluginParameter>
+						<mavenCommands>
+							<mavenCommand>
+								<key>true</key>
+								<value>-Dmaven.yuicompressor.skip=true</value>
+							</mavenCommand>
+						<mavenCommand>
+							<key>false</key>
+							<value>-Dmaven.yuicompressor.skip=false</value>
+						</mavenCommand>
+						</mavenCommands>
+					<name>
+						<value lang="en">Minify</value>
+					</name>
+					<type>Hidden</type>
+					<required>false</required>
+					<editable>true</editable>
+					<description></description>
+					<key>minify</key>
+					<multiple>false</multiple>
+					<value>true</value>
+					<sort>false</sort>
+					<show>false</show>
+				</parameter>
             </parameters>
         </configuration>
     </mojo>

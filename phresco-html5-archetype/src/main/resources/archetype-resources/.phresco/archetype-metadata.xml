@@ -34,8 +34,7 @@
 				<include>phresco-application-handler-info.xml</include>
 				<include>phresco-start-hub-info.xml</include>
 				<include>phresco-start-node-info.xml</include>
-				<include>phresco-start-run-against-source-info.xml</include>
-				<include>phresco-stop-run-against-source-info.xml</include>
+				<include>phresco-run-against-source-info.xml</include>
 			</includes> 
 		</fileSet>
 		<fileSet filtered="false" packaged="false"> 

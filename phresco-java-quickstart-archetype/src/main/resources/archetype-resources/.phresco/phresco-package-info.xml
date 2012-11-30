@@ -93,7 +93,7 @@
                     <key>environmentName</key>
 					<multiple>true</multiple>
 					<sort>false</sort>
-					<show>false</show>
+					<show>true</show>
                     <value>Production</value>
                 </parameter>
                 <parameter>

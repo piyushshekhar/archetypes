@@ -2,7 +2,7 @@
 <mojos>
     <mojo>
       <goal>start</goal>
-      <description>Goal which starts the HTML5-Jquery project</description>
+      <description>Goal which starts the Html-5 Archetype project</description>
       <requiresDirectInvocation>false</requiresDirectInvocation>
       <requiresProject>true</requiresProject>
       <requiresReports>false</requiresReports>
@@ -35,12 +35,27 @@
 			<required>true</required>
 			<editable>true</editable>
 			<key>environmentName</key>
-			<multiple>false</multiple>
+			<multiple>true</multiple>
 			<sort>false</sort>
 			<show>true</show>
 			<value></value>
-		</parameter>
-          </parameters>
-      </configuration>
+        </parameter>
+      </parameters>
+     </configuration>
+    </mojo>
+	<mojo>
+      <goal>stop</goal>
+      <description>Goal which stops the Html-5 Archetype project</description>
+      <requiresDirectInvocation>false</requiresDirectInvocation>
+      <requiresProject>true</requiresProject>
+      <requiresReports>false</requiresReports>
+      <aggregator>false</aggregator>
+      <requiresOnline>false</requiresOnline>
+      <inheritedByDefault>true</inheritedByDefault>
+      <implementation>com.photon.phresco.plugins.java.JavaPlugin</implementation>
+      <language>java</language>
+      <instantiationStrategy>per-lookup</instantiationStrategy>
+      <executionStrategy>once-per-session</executionStrategy>
+      <threadSafe>false</threadSafe>
     </mojo>
 </mojos>
