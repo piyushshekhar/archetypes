@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <mojos>
-    <mojo>
+       <mojo>
       <goal>start</goal>
       <description>Goal which starts the java web project</description>
       <requiresDirectInvocation>false</requiresDirectInvocation>
@@ -109,5 +109,20 @@
                 </parameter>				
             </parameters>
       </configuration>
+    </mojo>
+	 <mojo>
+      <goal>stop</goal>
+      <description>Goal which stops the java web project</description>
+      <requiresDirectInvocation>false</requiresDirectInvocation>
+      <requiresProject>true</requiresProject>
+      <requiresReports>false</requiresReports>
+      <aggregator>false</aggregator>
+      <requiresOnline>false</requiresOnline>
+      <inheritedByDefault>true</inheritedByDefault>
+      <implementation>com.photon.phresco.plugins.java.JavaPlugin</implementation>
+      <language>java</language>
+      <instantiationStrategy>per-lookup</instantiationStrategy>
+      <executionStrategy>once-per-session</executionStrategy>
+      <threadSafe>false</threadSafe>
     </mojo>
 </mojos>
