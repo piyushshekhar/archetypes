@@ -26,8 +26,8 @@
 					<description></description>
 					<key>testAgainst</key>
 					<possibleValues>
-						<value key="Server" dependency="server">Server</value>
-						<value key="WebService" dependency="webservice">WebService</value>
+						<value key="server" dependency="server">Server</value>
+						<value key="webService" dependency="webService">WebService</value>
 					</possibleValues>
 					<value></value>
 					<sort>false</sort>
@@ -71,7 +71,7 @@
 					<value></value>
 					<sort>false</sort>
 					<show>true</show>
-					<dependency>Server,WebService</dependency>
+					<dependency>server,webService</dependency>
 				</parameter>
 				<parameter>
 					<name>
@@ -79,7 +79,7 @@
 					</name>
 					<type>DynamicParameter</type>
 					<dynamicParameter>
-						<class>com.photon.phresco.impl.DynamicServerImpl</class>
+						<class>com.photon.phresco.framework.param.impl.EnvironmentServersImpl</class>
 							<dependencies>
 							<dependency>
 								<groupId>com.photon.phresco.commons</groupId>
@@ -92,7 +92,7 @@
 					<required>true</required>
 					<editable>true</editable>
 					<description></description>
-					<key>Server</key>
+					<key>server</key>
 					<multiple>false</multiple>
 					<value></value>
 					<sort>false</sort>
@@ -104,7 +104,7 @@
 					</name>
 					<type>DynamicParameter</type>
 					<dynamicParameter>
-						<class>com.photon.phresco.impl.DynamicServerImpl</class>
+						<class>com.photon.phresco.framework.param.impl.EnvironmentWebservicesImpl</class>
 						<dependencies>
 							<dependency>
 								<groupId>com.photon.phresco.commons</groupId>
@@ -117,7 +117,7 @@
 					<required>true</required>
 					<editable>true</editable>
 					<description></description>
-					<key>WebService</key>
+					<key>webService</key>
 					<multiple>false</multiple>
 					<value></value>
 					<sort>false</sort>
