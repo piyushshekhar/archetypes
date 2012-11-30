@@ -94,7 +94,7 @@
                     <key>environmentName</key>
 					<multiple>false</multiple>
 					<sort>false</sort>
-                    <show>false</show>
+                    <show>true</show>
                     <value></value>
                 </parameter>
                 <parameter>

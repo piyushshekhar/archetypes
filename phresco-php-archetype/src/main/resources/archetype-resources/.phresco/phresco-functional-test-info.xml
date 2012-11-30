@@ -9,7 +9,6 @@
 		<aggregator>false</aggregator>
 		<requiresOnline>false</requiresOnline>
 		<inheritedByDefault>true</inheritedByDefault>
-		<implementation>com.photon.phresco.plugins.php.PHPPlugin</implementation>
 		<language>java</language>
 		<instantiationStrategy>per-lookup</instantiationStrategy>
 		<executionStrategy>once-per-session</executionStrategy>
@@ -155,7 +154,6 @@
         <aggregator>false</aggregator>
         <requiresOnline>false</requiresOnline>
         <inheritedByDefault>true</inheritedByDefault>
-        <implementation>com.photon.phresco.plugins.php.PHPPlugin</implementation>
         <language>java</language>
         <instantiationStrategy>per-lookup</instantiationStrategy>
         <executionStrategy>once-per-session</executionStrategy>
