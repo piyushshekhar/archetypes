@@ -107,7 +107,7 @@
 				<name>
 					<value lang="en">Resolution</value>
 				</name>
-				<type>List</type>
+				<type>EditableList</type>
 				<required>false</required>
 				<editable>true</editable>
 				<description></description>
