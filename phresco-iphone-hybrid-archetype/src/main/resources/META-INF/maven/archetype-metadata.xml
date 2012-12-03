@@ -49,9 +49,9 @@
 			<directory>source/Phresco</directory> 
 			<includes>
 				<include>main.m</include>
-				<include>PhoneGap.plist</include>
 				<include>Phresco-Info.plist</include>
 				<include>Phresco-Prefix.pch</include>
+                <include>Cordova.plist</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="false" packaged="false"> 
@@ -59,20 +59,9 @@
 			<includes>
 				<include>AppDelegate.h</include>
 				<include>AppDelegate.m</include>
-			</includes>
-		</fileSet>
-		<fileSet filtered="false" packaged="false"> 
-			<directory>source/Phresco/en.lproj</directory> 
-			<includes>
-				<include>InfoPlist.strings</include>
-			</includes>
-		</fileSet>
-		<fileSet filtered="false" packaged="false"> 
-			<directory>source/Phresco/icons</directory> 
-			<includes>
-				<include>icon-72.png</include>
-				<include>icon.png</include>
-				<include>icon@2x.png</include>
+                <include>MainViewController.h</include>
+                <include>MainViewController.m</include>
+                <include>MainViewController.xib</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="false" packaged="false"> 
@@ -99,6 +88,12 @@
 				<include>stop_button.png</include>
 				<include>stop_button@2x.png</include>
 				<include>stop_button~ipad.png</include>
+                <include>controls_bg@2x~ipad.png</include>
+                <include>microphone-568h@2x~iphone.png</include>
+                <include>microphone@2x~ipad.png</include>
+                <include>record_button@2x~ipad.png</include>
+                <include>recording_bg@2x~ipad.png</include>
+                <include>stop_button@2x~ipad.png</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="false" packaged="false"> 
@@ -114,6 +109,43 @@
 			</includes>
 		</fileSet>
 		<fileSet filtered="false" packaged="false"> 
+			<directory>source/Phresco/Resources/de.lproj</directory> 
+			<includes>
+				<include>Localizable.strings</include>
+			</includes>
+		</fileSet>
+        <fileSet filtered="false" packaged="false"> 
+			<directory>source/Phresco/Resources/icons</directory> 
+			<includes>
+				<include>icon-72.png</include>
+                <include>icon-72@2x.png</include>
+                <include>icon.png</include>
+                <include>icon@2x.png</include>
+			</includes>
+		</fileSet>
+		
+        <fileSet filtered="false" packaged="false"> 
+			<directory>source/Phresco/Resources/se.lproj</directory> 
+			<includes>
+				<include>Localizable.strings</include>
+			</includes>
+		</fileSet>
+		
+        <fileSet filtered="false" packaged="false"> 
+			<directory>source/Phresco/Resources/splash</directory> 
+			<includes>
+				<include>Default-568h@2x~iphone.png</include>
+                <include>Default@2x~iphone.png</include>
+                <include>Default~iphone.png</include>
+                <include>Default-Landscape@2x~ipad.png</include>
+                <include>Default-Landscape~ipad.png</include>
+                <include>Default-Portrait@2x~ipad.png</include>
+                <include>Default-Portrait~ipad.png</include>
+			</includes>
+		</fileSet>
+		
+		
+        <fileSet filtered="false" packaged="false"> 
 			<directory>source/Phresco.xcodeproj</directory> 
 			<includes>
 				<include>project.pbxproj</include>
@@ -134,8 +166,6 @@
 		<fileSet filtered="false" packaged="false"> 
 			<directory>source/www</directory> 
 			<includes>
-				<include>index.html</include>
-				<include>phonegap-1.3.0.js</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="false"> 
