@@ -71,7 +71,7 @@
 								<groupId>com.photon.phresco.commons</groupId>
 								<artifactId>phresco-commons</artifactId>
 								<type>jar</type>
-								<version>1.0.0</version>
+								<version>2.0.0.27002-SNAPSHOT</version>
                             </dependency>
                         </dependencies>
                     </dynamicParameter>
@@ -123,7 +123,7 @@
                     <description></description>
                     <key>skipTest</key>
                     <multiple>false</multiple>
-                    <value>true</value>
+                    <value>false</value>
                     <sort>false</sort>
                     <show>true</show>
                 </parameter>
@@ -172,7 +172,7 @@
                     <multiple>false</multiple>
 					<sort>false</sort>
                     <show>true</show>
-                    <value></value>
+                    <value>false</value>
                 </parameter>
 				<parameter>
                     <name>
@@ -186,7 +186,7 @@
                     <multiple>false</multiple>
 					<sort>false</sort>
                     <show>true</show>
-                    <value></value>
+                    <value>false</value>
 					<dependency>keystore,storepass,keypass,alias</dependency>
                 </parameter>
 				<parameter>

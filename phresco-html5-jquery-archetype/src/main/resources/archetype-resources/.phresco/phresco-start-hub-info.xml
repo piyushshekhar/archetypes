@@ -56,6 +56,7 @@
                     <multiple>false</multiple>
                     <sort>false</sort>
                     <show>true</show>
+					<value></value>
                 </parameter>
                 <parameter>
                     <name>
@@ -95,7 +96,7 @@
                     <description></description>
                     <key>throwOnCapabilityNotPresent</key>
                     <multiple>false</multiple>
-                    <value>true</value>
+                    <value>false</value>
                     <sort>false</sort>
                     <show>true</show>
                 </parameter>
