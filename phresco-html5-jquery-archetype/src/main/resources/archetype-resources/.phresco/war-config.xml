@@ -37,7 +37,7 @@
 		</fileSet>
 	
 		<!-- filter to copy the contents from the base directory -->
-		<fileSet>
+		<fileSet id="excludeFile">
 			<directory>src/main/webapp</directory>
 			<outputDirectory>/</outputDirectory>
 		</fileSet>
