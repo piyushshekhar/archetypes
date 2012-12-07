@@ -56,7 +56,7 @@
 			<multiple>false</multiple>
 			<sort>false</sort>
 			<show>false</show>
-			<value></value>
+			<value>false</value>
         </parameter>
     </parameters>
     </configuration>

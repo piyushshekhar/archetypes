@@ -31,7 +31,7 @@
 			<multiple>false</multiple>
 			<sort>false</sort>
 			<show>true</show>
-		  <value></value>
+			<value></value>
         </parameter>
 		<parameter>
 			<pluginParameter>framework</pluginParameter>

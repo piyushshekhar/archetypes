@@ -85,7 +85,7 @@
 			<multiple>false</multiple>
 			<sort>false</sort>
 			<show>false</show>
-			<value>true</value>
+			<value>false</value>
         </parameter>
     </parameters>
     </configuration>
