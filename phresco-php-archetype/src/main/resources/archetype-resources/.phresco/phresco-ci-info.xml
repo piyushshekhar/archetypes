@@ -453,7 +453,7 @@
                     <multiple>false</multiple>
                     <value>1</value>
                     <sort>false</sort>
-                    <show>true</show>
+                    <show>false</show>
                     <dependency>buildEnvironmentName</dependency>
                 </parameter>
                 <parameter>

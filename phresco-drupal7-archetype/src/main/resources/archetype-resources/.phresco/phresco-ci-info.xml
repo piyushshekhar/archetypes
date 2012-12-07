@@ -41,7 +41,7 @@
                     <key>buildNumber</key>
                     <multiple>false</multiple>
                     <sort>false</sort>
-                    <show>true</show>
+                    <show>false</show>
                     <value>1</value>
                 </parameter>
                 <parameter>
@@ -71,7 +71,7 @@
                                 <groupId>com.photon.phresco.commons</groupId>
                                 <artifactId>phresco-commons</artifactId>
                                 <type>jar</type>
-                                <version>1.0.0</version>
+                                <version>2.0.0.27002-SNAPSHOT</version>
                             </dependency>
                         </dependencies>
                     </dynamicParameter>
@@ -137,17 +137,31 @@
             <parameters>
                 <parameter>
                     <name>
+                        <value lang="en">Build Number</value>
+                    </name>
+                    <type>Hidden</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>buildNumber</key>
+                    <multiple>false</multiple>
+                    <sort>false</sort>
+                    <show>false</show>
+                    <value>1</value>
+                </parameter>
+                <parameter>
+                    <name>
                         <value lang="en">Environment</value>
                     </name>
                     <type>DynamicParameter</type>
                     <dynamicParameter>
-                        <class>com.photon.phresco.impl.BuildInfoEnvironmentsImpl</class>
+                        <class>com.photon.phresco.impl.EnvironmentsParameterImpl</class>
                         <dependencies>
                             <dependency>
                                 <groupId>com.photon.phresco.commons</groupId>
                                 <artifactId>phresco-commons</artifactId>
                                 <type>jar</type>
-                                <version>1.0.0</version>
+                                <version>2.0.0.27002-SNAPSHOT</version>
                             </dependency>
                         </dependencies>
                     </dynamicParameter>
@@ -193,20 +207,6 @@
                     <show>true</show>
                     <value></value>
                 </parameter>
-                <parameter>
-                    <name>
-                        <value lang="en">Build Number</value>
-                    </name>
-                    <type>Hidden</type>
-                    <required>false</required>
-                    <editable>true</editable>
-                    <description></description>
-                    <key>buildNumber</key>
-                    <multiple>false</multiple>
-                    <sort>false</sort>
-                    <show>true</show>
-                    <value>1</value>
-                </parameter>
                  <parameter>
                     <name>
                         <value lang="en">Execute Sql</value>
@@ -233,7 +233,7 @@
                                 <groupId>com.photon.phresco.framework</groupId>
                                 <artifactId>phresco-framework-impl</artifactId>
                                 <type>jar</type>
-                                <version>1.0.0</version>
+                                <version>2.0.0.27002-SNAPSHOT</version>
                             </dependency>
                         </dependencies>
                     </dynamicParameter>
@@ -259,7 +259,7 @@
                                 <groupId>com.photon.phresco.framework</groupId>
                                 <artifactId>phresco-framework-impl</artifactId>
                                 <type>jar</type>
-                                <version>1.0.0</version>
+                                <version>2.0.0.27002-SNAPSHOT</version>
                             </dependency>
                         </dependencies>
                     </dynamicParameter>
@@ -300,7 +300,7 @@
                 <description></description>
                 <key>testAgainst</key>
                 <possibleValues>
-                    <value key="build" dependency="buildNumber">Build</value>
+                    <value key="build" dependency="buildEnvironmentName">Build</value>
                     <value key="server" dependency="showSettings">Server</value>
                     </possibleValues>
                 <value></value>
@@ -311,18 +311,7 @@
                 <name>
                     <value lang="en">Build Number</value>
                 </name>
-                <type>DynamicParameter</type>
-                <dynamicParameter>
-                <class>com.photon.phresco.impl.BuildInfoParameterImpl</class>
-                <dependencies>
-                    <dependency>
-                        <groupId>com.photon.phresco.commons</groupId>
-                        <artifactId>phresco-commons</artifactId>
-                        <type>jar</type>
-                        <version>1.0.0</version>
-                    </dependency>
-                </dependencies>
-                </dynamicParameter>
+                <type>Hidden</type>
                 <required>false</required>
                 <editable>true</editable>
                 <description></description>
@@ -330,7 +319,7 @@
                 <multiple>false</multiple>
                 <value>1</value>
                 <sort>false</sort>
-                <show>true</show>
+                <show>false</show>
                 <dependency>buildEnvironmentName</dependency>
             </parameter>
             <parameter>
@@ -360,13 +349,13 @@
                 </name>
                 <type>DynamicParameter</type>
                 <dynamicParameter>
-                <class>com.photon.phresco.impl.BuildInfoEnvironmentsImpl</class>
+                <class>com.photon.phresco.impl.EnvironmentsParameterImpl</class>
                 <dependencies>
                     <dependency>
                         <groupId>com.photon.phresco.commons</groupId>
                         <artifactId>phresco-commons</artifactId>
                         <type>jar</type>
-                        <version>1.0.0</version>
+                        <version>2.0.0.27002-SNAPSHOT</version>
                     </dependency>
                 </dependencies>
                 </dynamicParameter>
@@ -405,7 +394,7 @@
                         <groupId>com.photon.phresco.commons</groupId>
                         <artifactId>phresco-commons</artifactId>
                         <type>jar</type>
-                        <version>1.0.0</version>
+                        <version>2.0.0.27002-SNAPSHOT</version>
                     </dependency>
                 </dependencies>
                 </dynamicParameter>
@@ -446,7 +435,7 @@
                     <description></description>
                     <key>testAgainst</key>
                     <possibleValues>
-                        <value key="build" dependency="buildNumber">Build</value>
+                        <value key="build" dependency="buildEnvironmentName">Build</value>
                         <value key="server" dependency="showSettings">Server</value>
                     </possibleValues>
                     <value>build</value>
@@ -457,18 +446,7 @@
                     <name>
                         <value lang="en">Build Number</value>
                     </name>
-                    <type>DynamicParameter</type>
-                    <dynamicParameter>
-                        <class>com.photon.phresco.impl.BuildInfoParameterImpl</class>
-                        <dependencies>
-                            <dependency>
-                                <groupId>com.photon.phresco.commons</groupId>
-                                <artifactId>phresco-commons</artifactId>
-                                <type>jar</type>
-                                <version>1.0.0</version>
-                            </dependency>
-                        </dependencies>
-                    </dynamicParameter>
+                    <type>Hidden</type>
                     <required>false</required>
                     <editable>true</editable>
                     <description></description>
@@ -485,15 +463,15 @@
                     </name>
                     <type>DynamicParameter</type>
                     <dynamicParameter>
-                        <class>com.photon.phresco.impl.BuildInfoEnvironmentsImpl</class>
-                        <dependencies>
-                            <dependency>
-                                <groupId>com.photon.phresco.commons</groupId>
-                                <artifactId>phresco-commons</artifactId>
-                                <type>jar</type>
-                                <version>1.0.0</version>
-                            </dependency>
-                        </dependencies>
+                    <class>com.photon.phresco.impl.EnvironmentsParameterImpl</class>
+                    <dependencies>
+                        <dependency>
+                            <groupId>com.photon.phresco.commons</groupId>
+                            <artifactId>phresco-commons</artifactId>
+                            <type>jar</type>
+                            <version>2.0.0.27002-SNAPSHOT</version>
+                        </dependency>
+                    </dependencies>
                     </dynamicParameter>
                     <required>true</required>
                     <editable>true</editable>
@@ -529,7 +507,7 @@
                                 <groupId>com.photon.phresco.commons</groupId>
                                 <artifactId>phresco-commons</artifactId>
                                 <type>jar</type>
-                                <version>1.0.0</version>
+                                <version>2.0.0.27002-SNAPSHOT</version>
                             </dependency>
                         </dependencies>
                     </dynamicParameter>
