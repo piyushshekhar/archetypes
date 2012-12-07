@@ -25,8 +25,12 @@
 			<description></description>
 			<key>sonar</key>
 			<possibleValues>
-				<value dependency="src,skipTests">Source</value>
-				<value>Functional Test</value>
+				<value key="src" dependency="src,skipTests">Source</value>
+				<value key="functional">Functional Test</value>
+				<value key="js">js</value>
+				<value key="java">java</value>
+				<value key="html">html</value>
+				<value key="web">jsp/jsf</value>
 			</possibleValues>
 			<multiple>false</multiple>
 			<sort>false</sort>
