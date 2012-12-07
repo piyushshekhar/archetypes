@@ -40,7 +40,7 @@
                     <key>buildNumber</key>
                     <multiple>false</multiple>
                     <sort>false</sort>
-                    <show>true</show>
+                    <show>false</show>
                     <value>1</value>
                 </parameter>
                 <parameter>
@@ -107,7 +107,7 @@
                                 <groupId>com.photon.phresco.commons</groupId>
                                 <artifactId>phresco-commons</artifactId>
                                 <type>jar</type>
-                                <version>1.0.0</version>
+                                <version>2.0.0.27002-SNAPSHOT</version>
                             </dependency>
                         </dependencies>
                     </dynamicParameter>
@@ -198,7 +198,7 @@
                                 <groupId>com.photon.phresco.commons</groupId>
                                 <artifactId>phresco-commons</artifactId>
                                 <type>jar</type>
-                                <version>1.0.0</version>
+                                <version>2.0.0.27002-SNAPSHOT</version>
                             </dependency>
                         </dependencies>
                     </dynamicParameter>
@@ -291,7 +291,7 @@
                         <groupId>com.photon.phresco.commons</groupId>
                         <artifactId>phresco-commons</artifactId>
                         <type>jar</type>
-                        <version>1.0.0</version>
+                        <version>2.0.0.27002-SNAPSHOT</version>
                     </dependency>
                 </dependencies>
                 </dynamicParameter>
@@ -338,7 +338,7 @@
                         <groupId>com.photon.phresco.commons</groupId>
                         <artifactId>phresco-commons</artifactId>
                         <type>jar</type>
-                        <version>1.0.0</version>
+                        <version>2.0.0.27002-SNAPSHOT</version>
                     </dependency>
                 </dependencies>
                 </dynamicParameter>
@@ -377,7 +377,7 @@
                         <groupId>com.photon.phresco.commons</groupId>
                         <artifactId>phresco-commons</artifactId>
                         <type>jar</type>
-                        <version>1.0.0</version>
+                        <version>2.0.0.27002-SNAPSHOT</version>
                     </dependency>
                 </dependencies>
                 </dynamicParameter>

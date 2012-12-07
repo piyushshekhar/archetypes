@@ -41,7 +41,7 @@
                     <key>buildNumber</key>
                     <multiple>false</multiple>
                     <sort>false</sort>
-                    <show>true</show>
+                    <show>false</show>
                     <value>1</value>
                 </parameter>
                 <parameter>
@@ -156,7 +156,7 @@
                     </name>
                     <type>DynamicParameter</type>
                     <dynamicParameter>
-                        <class>com.photon.phresco.impl.BuildInfoEnvironmentsImpl</class>
+                         <class>com.photon.phresco.impl.EnvironmentsParameterImpl</class>
                         <dependencies>
                             <dependency>
                                 <groupId>com.photon.phresco.commons</groupId>
