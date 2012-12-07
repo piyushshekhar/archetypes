@@ -96,7 +96,7 @@
                     <description></description>
                     <key>register</key>
                     <multiple>false</multiple>
-                    <value>true</value>
+                    <value></value>
                     <sort>false</sort>
                     <show>true</show>
                 </parameter>

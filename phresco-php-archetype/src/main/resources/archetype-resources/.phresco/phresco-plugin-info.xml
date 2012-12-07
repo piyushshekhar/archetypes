@@ -62,7 +62,7 @@
                     <multiple>false</multiple>
 					<sort>false</sort>
 					<show>true</show>
-                    <value>true</value>
+                    <value>false</value>
                     <dependency>environmentName</dependency>
                 </parameter>
                 <parameter>
@@ -77,7 +77,7 @@
 								<groupId>com.photon.phresco.commons</groupId>
 								<artifactId>phresco-commons</artifactId>
 								<type>jar</type>
-								<version>1.0.0</version>
+								<version>2.0.0.27002-SNAPSHOT</version>
 							</dependency>
 						</dependencies>
 				</dynamicParameter>
@@ -86,7 +86,7 @@
                     <key>environmentName</key>
 					<multiple>true</multiple>
 					<sort>false</sort>
-					<show>false</show>
+					<show>true</show>
                     <value></value>
                 </parameter>
                 <parameter>
@@ -167,7 +167,7 @@
 								<groupId>com.photon.phresco.commons</groupId>
 								<artifactId>phresco-commons</artifactId>
 								<type>jar</type>
-								<version>1.0.0</version>
+								<version>2.0.0.27002-SNAPSHOT</version>
 							</dependency>
 						</dependencies>
 					</dynamicParameter>
@@ -222,7 +222,7 @@
                     <editable>true</editable>
                     <description></description>
                     <key>executeSql</key>
-                    <value>true</value>
+                    <value>false</value>
                     <sort>false</sort>
                     <show>true</show>
                     <dependency>dataBase</dependency>
@@ -239,7 +239,7 @@
 								<groupId>com.photon.phresco.framework</groupId>
 								<artifactId>phresco-framework-impl</artifactId>
 								<type>jar</type>
-								<version>1.0.0</version>
+								<version>2.0.0.27002-SNAPSHOT</version>
                             </dependency>
                         </dependencies>
                     </dynamicParameter>
@@ -248,7 +248,7 @@
                     <description></description>
                     <key>dataBase</key>
                     <multiple>false</multiple>
-                    <value>mysql</value>
+                    <value></value>
                     <sort>false</sort>
                     <show>false</show>
                     <dependency>fetchSql</dependency>
@@ -265,7 +265,7 @@
 								<groupId>com.photon.phresco.framework</groupId>
 								<artifactId>phresco-framework-impl</artifactId>
 								<type>jar</type>
-								<version>1.0.0</version>
+								<version>2.0.0.27002-SNAPSHOT</version>
                             </dependency>
                         </dependencies>
                     </dynamicParameter>
@@ -387,7 +387,7 @@
 						<groupId>com.photon.phresco.commons</groupId>
 						<artifactId>phresco-commons</artifactId>
 						<type>jar</type>
-						<version>1.0.0</version>
+						<version>2.0.0.27002-SNAPSHOT</version>
 					</dependency>
 				</dependencies>
 				</dynamicParameter>
@@ -434,7 +434,7 @@
 						<groupId>com.photon.phresco.commons</groupId>
 						<artifactId>phresco-commons</artifactId>
 						<type>jar</type>
-						<version>1.0.0</version>
+						<version>2.0.0.27002-SNAPSHOT</version>
 					</dependency>
 				</dependencies>
 				</dynamicParameter>
@@ -473,7 +473,7 @@
 						<groupId>com.photon.phresco.commons</groupId>
 						<artifactId>phresco-commons</artifactId>
 						<type>jar</type>
-						<version>1.0.0</version>
+						<version>2.0.0.27002-SNAPSHOT</version>
 					</dependency>
 				</dependencies>
 				</dynamicParameter>
@@ -483,7 +483,7 @@
 				<multiple>false</multiple>
 				<value></value>
 				<sort>false</sort>
-				<show>false</show>
+				<show>true</show>
 			</parameter>
 		</parameters>
 	</configuration>
@@ -517,7 +517,7 @@
                         <value key="build" dependency="buildNumber">Build</value>
                         <value key="server" dependency="showSettings">Server</value>
                     </possibleValues>
-                    <value>build</value>
+                    <value></value>
                     <sort>false</sort>
                     <show>true</show>
                 </parameter>
@@ -533,7 +533,7 @@
 								<groupId>com.photon.phresco.commons</groupId>
 								<artifactId>phresco-commons</artifactId>
 								<type>jar</type>
-								<version>1.0.0</version>
+								<version>2.0.0.27002-SNAPSHOT</version>
                             </dependency>
                         </dependencies>
                     </dynamicParameter>
@@ -559,7 +559,7 @@
 								<groupId>com.photon.phresco.commons</groupId>
 								<artifactId>phresco-commons</artifactId>
 								<type>jar</type>
-								<version>1.0.0</version>
+								<version>2.0.0.27002-SNAPSHOT</version>
                             </dependency>
                         </dependencies>
                     </dynamicParameter>
@@ -568,7 +568,8 @@
                     <key>buildEnvironmentName</key>
                     <multiple>false</multiple>
                     <sort>false</sort>
-                    <show>false</show>
+                    <show>true</show>
+					<value></value>
                 </parameter>
                 <parameter>
                     <name>
@@ -597,7 +598,7 @@
 								<groupId>com.photon.phresco.commons</groupId>
 								<artifactId>phresco-commons</artifactId>
 								<type>jar</type>
-								<version>1.0.0</version>
+								<version>2.0.0.27002-SNAPSHOT</version>
                             </dependency>
                         </dependencies>
                     </dynamicParameter>
@@ -606,7 +607,8 @@
                     <key>environmentName</key>
                     <multiple>false</multiple>
                     <sort>false</sort>
-                    <show>false</show>
+                    <show>true</show>
+					<value></value>
                 </parameter>
             </parameters>
         </configuration>
