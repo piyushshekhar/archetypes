@@ -180,19 +180,39 @@
 					<show>true</show>
 				</parameter>
 				<parameter>
-					<name>
-						<value lang="en">Add Header</value>
-					</name>
-					<type>map</type>
-					<required>true</required>
-					<editable>true</editable>
-					<description></description>
-					<key>addHeader</key>
-					<multiple>true</multiple>
-					<value></value>
-					<sort>false</sort>
-					<show>true</show>
-				</parameter>
+                    <name>
+                        <value lang="en">Headers</value>
+                    </name>
+                    <type>map</type>
+                    <childs>
+                        <child>
+                            <name>
+								<value lang="en">Key</value>
+                            </name>
+                            <type>String</type>
+                            <key>headerKey</key>
+                            <required>true</required>
+                            <description>add header key</description>
+                        </child>
+                        <child>
+                            <name>
+								<value lang="en">value</value>
+                            </name>
+                            <type>String</type>
+                            <key>headerValue</key>
+                            <required>true</required>
+                            <description>header value</description>
+                        </child>
+                    </childs>
+                    <required>true</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>addHeader</key>
+                    <multiple>false</multiple>
+                    <value></value>
+                    <sort>false</sort>
+                    <show>true</show>
+                </parameter>
 			</parameters>
 		</configuration>
 	</mojo>
