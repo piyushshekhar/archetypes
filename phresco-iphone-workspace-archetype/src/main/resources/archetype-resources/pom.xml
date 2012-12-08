@@ -86,7 +86,7 @@
 		<phresco.module.source.dir>/source/ThirdParty</phresco.module.source.dir>
 		<phresco.jslibs.source.dir>/source/www/JSLibs</phresco.jslibs.source.dir>
 		<phresco.unitTest.report.dir>/source/OCUnitReports</phresco.unitTest.report.dir>
-		<phresco.unitTest.testsuite.xpath>/testsuites/testsuite</phresco.unitTest.testsuite.xpath>
+		<phresco.unitTest.testsuite.xpath>/testsuite</phresco.unitTest.testsuite.xpath>
 		<phresco.unitTest.testcase.path>/testcase</phresco.unitTest.testcase.path>
 		<phresco.functionalTest.selenium.tool>webdriver</phresco.functionalTest.selenium.tool>
 		<phresco.functionalTest.report.dir>/do_not_checkin</phresco.functionalTest.report.dir>

@@ -83,8 +83,11 @@
         </profile>
     </profiles>
     <properties>
-		<phresco.module.source.dir>/source/ThirdParty</phresco.module.source.dir>
-		<phresco.jslibs.source.dir>/source/www/JSLibs</phresco.jslibs.source.dir>
+        <phresco.unitTest.report.dir>/source/OCUnitReports</phresco.unitTest.report.dir>
+        <phresco.unitTest.testsuite.xpath>/testsuite</phresco.unitTest.testsuite.xpath>
+        <phresco.unitTest.testcase.path>/testcase</phresco.unitTest.testcase.path>
+    		<phresco.module.source.dir>/source/ThirdParty</phresco.module.source.dir>
+    		<phresco.jslibs.source.dir>/source/www/JSLibs</phresco.jslibs.source.dir>
         <phresco.code.validate.report>/do_not_checkin/static-analysis-report/</phresco.code.validate.report>
     </properties>
 </project>

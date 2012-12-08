@@ -84,7 +84,7 @@
     </profiles>
 	<properties>
 		<phresco.unitTest.report.dir>/source/OCUnitReports</phresco.unitTest.report.dir>
-		<phresco.unitTest.testsuite.xpath>/testsuites/testsuite</phresco.unitTest.testsuite.xpath>
+		<phresco.unitTest.testsuite.xpath>/testsuite</phresco.unitTest.testsuite.xpath>
 		<phresco.unitTest.testcase.path>/testcase</phresco.unitTest.testcase.path>
 		<phresco.functionalTest.selenium.tool>webdriver</phresco.functionalTest.selenium.tool>
 		<phresco.functionalTest.dir>/test/functional</phresco.functionalTest.dir>
