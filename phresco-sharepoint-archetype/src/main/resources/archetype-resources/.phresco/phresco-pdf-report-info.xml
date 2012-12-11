@@ -26,8 +26,8 @@
                     <description></description>
                     <key>reportType</key>
                     <possibleValues>
-                        <value key="overall">Overall</value>
-                        <value key="detailed">Detailed</value>
+                        <value key="crisp">Overall</value>
+                        <value key="detail">Detailed</value>
                     </possibleValues>
                     <multiple>false</multiple>
                     <value></value>
