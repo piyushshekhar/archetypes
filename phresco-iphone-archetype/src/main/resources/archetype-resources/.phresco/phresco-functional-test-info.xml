@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <mojos>
     <mojo>
-        <goal>functional-test</goal>
+        <goal>functional-test-UIAutomation</goal>
         <description>Goal which Functional Test for Iphone Natice Project</description>
         <requiresDirectInvocation>false</requiresDirectInvocation>
         <requiresProject>true</requiresProject>

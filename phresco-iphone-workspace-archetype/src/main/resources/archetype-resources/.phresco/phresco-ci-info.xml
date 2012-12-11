@@ -363,11 +363,25 @@
                     <sort>false</sort>
                     <show>false</show>
                 </parameter>
+                <parameter>
+                    <name>
+                        <value lang="en">Trigger Simulator</value>
+                    </name>
+                    <type>Boolean</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>triggerSimulator</key>
+                    <multiple>false</multiple>
+                    <value>false</value>
+                    <sort>false</sort>
+                    <show>false</show>
+                </parameter>
             </parameters>
         </configuration>
     </mojo>
     <mojo>
-        <goal>functional-test-webdriver</goal>
+        <goal>functional-test-UIAutomation</goal>
         <description>Goal which Functional Test-webdriver for Iphone Workspace Project</description>
         <requiresDirectInvocation>false</requiresDirectInvocation>
         <requiresProject>true</requiresProject>
