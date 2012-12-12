@@ -166,6 +166,17 @@
 					<sort>false</sort>
 					<show>false</show>
 				</parameter>
+				<parameter>
+                    <type>Boolean</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>packMinifiedFiles</key>
+                    <multiple>false</multiple>
+					<sort>false</sort>
+					<show>true</show>
+                    <value>false</value>
+                </parameter>
             </parameters>
         </configuration>
     </mojo>
