@@ -35,6 +35,12 @@
 				</configuration>
 			</plugin>
 			<plugin>
+                <groupId>com.photon.phresco.plugins</groupId>
+                <artifactId>phresco-maven-plugin</artifactId>
+                <version>2.0.0.27003-SNAPSHOT</version>
+                <extensions>true</extensions>
+            </plugin>
+			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>build-helper-maven-plugin</artifactId>
 				<executions>
