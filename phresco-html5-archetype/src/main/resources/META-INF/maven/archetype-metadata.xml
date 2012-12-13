@@ -35,6 +35,7 @@
 				<include>phresco-start-hub-info.xml</include>
 				<include>phresco-start-node-info.xml</include>
 				<include>phresco-run-against-source-info.xml</include>
+				<include>war-config.xml</include>
 			</includes> 
 		</fileSet>
 		<fileSet filtered="false" packaged="false"> 

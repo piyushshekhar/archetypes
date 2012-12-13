@@ -1,4 +1,4 @@
- <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <mojos>
     <mojo>
         <goal>package</goal>
@@ -25,8 +25,8 @@
                     <editable>true</editable>
                     <description></description>
                     <key>buildName</key>
-					<multiple>false</multiple>
-					<sort>false</sort>
+                    <multiple>false</multiple>
+                    <sort>false</sort>
 					<show>true</show>
                     <value></value>
                 </parameter>
@@ -39,12 +39,12 @@
                     <editable>true</editable>
                     <description></description>
                     <key>buildNumber</key>
-					<multiple>false</multiple>
-					<sort>false</sort>
+                    <multiple>false</multiple>
+                    <sort>false</sort>
 					<show>true</show>
                     <value></value>
                 </parameter>
-				<parameter>
+                <parameter>
                     <name>
                         <value lang="en">Show Settings</value>
                     </name>
@@ -54,9 +54,9 @@
                     <description></description>
                     <key>showSettings</key>
                     <multiple>false</multiple>
-					<sort>false</sort>
+                    <sort>false</sort>
 					<show>true</show>
-                    <value>false</value>
+                    <value></value>
                     <dependency>environmentName</dependency>
                 </parameter>
                 <parameter>
@@ -65,21 +65,21 @@
                     </name>
                     <type>DynamicParameter</type>
                     <dynamicParameter>
-						<class>com.photon.phresco.impl.EnvironmentsParameterImpl</class>
-						<dependencies>
-							<dependency>
-								<groupId>com.photon.phresco.commons</groupId>
-								<artifactId>phresco-commons</artifactId>
-								<type>jar</type>
-								<version>2.0.0.27003-SNAPSHOT</version>
-							</dependency>
-						</dependencies>
-				</dynamicParameter>
+                        <class>com.photon.phresco.impl.EnvironmentsParameterImpl</class>
+                        <dependencies>
+                            <dependency>
+<groupId>com.photon.phresco.commons</groupId>
+<artifactId>phresco-commons</artifactId>
+<type>jar</type>
+<version>2.0.0.27002</version>
+                            </dependency>
+                        </dependencies>
+                    </dynamicParameter>
                     <required>true</required>
                     <editable>true</editable>
                     <key>environmentName</key>
-					<multiple>true</multiple>
-					<sort>false</sort>
+                    <multiple>true</multiple>
+                    <sort>false</sort>
 					<show>true</show>
                     <value></value>
                 </parameter>
@@ -112,7 +112,7 @@
                         <value key="showDebug">Show Debug</value>
                     </possibleValues>
                     <multiple>false</multiple>
-					<sort>false</sort>
+                    <sort>false</sort>
 					<show>true</show>
                     <value></value>
                 </parameter>
