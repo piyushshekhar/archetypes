@@ -291,6 +291,30 @@
                     <show>true</show>
 					<value></value>
                 </parameter>
+				<parameter>
+					<name>
+						<value lang="en">Resolution</value>
+					</name>
+					<type>List</type>
+					<required>false</required>
+					<editable>edit</editable>
+					<description></description>
+					<key>resolution</key>
+					<possibleValues>
+						<value key="320x480">320x480</value>
+						<value key="1024x768">1024x768</value>
+						<value key="1280x800">1280x800</value>
+						<value key="1280x960">1280x960</value>
+						<value key="1280x1024">1280x1024</value>
+						<value key="1360x768">1360x768</value>
+						<value key="1440x900">1440x900</value>
+						<value key="1600x900">1600x900</value>
+					</possibleValues>
+					<multiple>false</multiple>
+					<value></value>
+					<sort>false</sort>
+					<show>true</show>
+				</parameter>
             </parameters>
         </configuration>
     </mojo>
