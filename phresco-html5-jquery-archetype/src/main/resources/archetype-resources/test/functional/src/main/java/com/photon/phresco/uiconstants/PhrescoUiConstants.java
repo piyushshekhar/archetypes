@@ -30,7 +30,7 @@ public class PhrescoUiConstants {
 	public String PORT = "port";
 	public String RESOLUTION = "resolution";
 	// ***************LOGINPAGE*****************
-	public String TEXTCAPTURED = "loginText";
+	//public String TEXTCAPTURED = "loginText";
 
 	// ***************LOGINPAGE*****************
 

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<environment>
+<phresco>
+<drupalnone>
+     	
+         <username>//input[@id='edit-name']</username>
+         <password>//input[@id='edit-pass']</password>
+         <buttonclik>//input[@id='edit-submit']</buttonclik>
+         <logout>//a[contains(text(),'Log out')]</logout>
+         <registerlink>//a[contains(text(),'Create new account')]</registerlink>
+         <newuser>//input[@id='edit-name']</newuser>
+         <newemail>//input[@id='edit-mail']</newemail>
+         
+         <requestlink>//a[contains(text(),'Request new password')]</requestlink>
+         <rmail>//input[@id='edit-name']</rmail>
+</drupalnone>
+</phresco>
+</environment>

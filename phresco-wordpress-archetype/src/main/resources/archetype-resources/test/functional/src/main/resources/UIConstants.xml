@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<environment>
+<phresco>
+
+     	  
+     	 <hellowworld>//aside[2]/ul/li/a</hellowworld>
+     	 <namep>//input[@id='author']</namep>
+     	 <email>//input[@id='email']</email>
+     	 <commentfield>//textarea[@id='comment']</commentfield>
+     	 <postbutton>//input[@id='submit']</postbutton>
+     	 <loginlink>//a[contains(text(),'Log in')]</loginlink>
+         <username>//input[@id='user_login']</username>
+         <password>//input[@id='user_pass']</password>
+         <buttonclik>//p[4]/input</buttonclik>
+         <logoutwait>//li[@id='wp-admin-bar-my-account']/a/img</logoutwait>
+         <logout>//ul[2]/li/div/ul/li[3]/a</logout>
+         <back>//p[@id='backtoblog']/a</back>
+         
+         
+</phresco>
+</environment>
