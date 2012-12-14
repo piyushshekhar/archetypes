@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<environment>
+<phresco>
+    
+        <aname>Mr.Sample</aname>
+        <aemail>sample@gmail.com</aemail>
+        <comment>wordpress1</comment>
+ 		<useremailvalue>admin</useremailvalue>
+  		<passwordvalue>admin</passwordvalue>
+  		
+  		
+  		
+
+</phresco>
+</environment>

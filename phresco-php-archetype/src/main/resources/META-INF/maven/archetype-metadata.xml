@@ -110,62 +110,82 @@
 			<directory>test/functional</directory> 
 			<includes> 
 				<include>pom.xml</include>
-				<include>precondition.ini</include>
-			</includes>
-		</fileSet>
-		<fileSet filtered="false"> 
-			<directory>test/functional/src/main/php/phresco/tests</directory> 
-			<includes> 
-				<include>basescreen.php</include>
+				<include>hubconfig.json</include>
+				<include>nodeconfig.json</include>
 			</includes>
 		</fileSet>
         <fileSet filtered="false"> 
-			<directory>test/functional/src/main/php/phresco/tests/phpwebdriver</directory> 
+			<directory>test/functional/testcases</directory> 
 			<includes> 
-				<include>Keys.php</include>
-				<include>LocatorStrategy.php</include>
-				<include>NoSuchElementException.php</include>
-				<include>RequiredFunction.php</include>
-				<include>WebDriver.php</include>
-				<include>WebDriverBase.php</include>
-				<include>WebDriverException.php</include>
-				<include>WebDriverResponseStatus.php</include>
-				<include>WebElement.php</include>
-			</includes> 
-		</fileSet>
-		<fileSet filtered="false"> 
-			<directory>test/functional/src/site/doxygen</directory> 
-			<includes> 
-				<include>doxygen.config</include>
+				<include>Photon_phresco_PHP_Technology_ManualTestcases.ods</include>
 			</includes>
 		</fileSet>
-		<fileSet filtered="false"> 
-			<directory>test/functional/src/site/phpdoc</directory> 
-			<includes> 
-				<include>phpdoc.config</include>
+        <fileSet filtered="false" encoding="UTF-8">
+			<directory>test/functional/src/main/java/com/photon/phresco/Screens</directory>
+			<includes>
+				<include>BaseScreen.java</include>
+				<include>PhotonAbstractScreen.java</include>
+				<include>WelcomeScreen.java</include>
 			</includes>
 		</fileSet>
-		<fileSet filtered="false"> 
-			<directory>test/functional/src/test/php/phresco</directory> 
-			<includes> 
-				<include>AllTest.php</include>
+        <fileSet filtered="false" encoding="UTF-8">
+			<directory>test/functional/src/main/java/com/photon/phresco/ScreenShots</directory>
+			<includes>
+				<include>**/*</include>
 			</includes>
 		</fileSet>
-		<fileSet filtered="false"> 
-			<directory>test/functional/src/test/php/phresco/tests</directory> 
-			<includes> 
+        <fileSet filtered="false" encoding="UTF-8">
+			<directory>test/functional/src/main/java/com/photon/phresco/selenium/report</directory>
+			<includes>
+				<include>**/*</include>
+			</includes>
+		</fileSet>
+        <fileSet filtered="false" encoding="UTF-8">
+			<directory>test/functional/src/main/java/com/photon/phresco/ScreenShots/report/util</directory>
+			<includes>
+				<include>Constants.java</include>
+				<include>GetCurrentDir.java</include>
+				<include>ScreenActionFailedException.java</include>
+				<include>ScreenException.java</include>
+			</includes>
+		</fileSet>
+        <fileSet filtered="false" encoding="UTF-8">
+			<directory>test/functional/src/main/java/com/photon/phresco/uiconstants</directory>
+			<includes>
+				<include>PhpData.java</include>
+				<include>PhrescoUiConstants.java</include>
+				<include>ReadXMLFile.java</include>
+				<include>UIConstants.java</include>
+				<include>UserInfoConstants.java</include>
+			</includes>
+		</fileSet>
+        <fileSet filtered="false" encoding="UTF-8">
+			<directory>test/functional/src/main/resources</directory>
+			<includes>
+				<include>PhpData.java</include>
+				<include>UIConstants.java</include>
+				<include>UserInfo.xml</include>
 				<include>phresco-env-config.xml</include>
-				<include>PhpCommonFun.php</include>
-				<include>UserModules.php</include>
-				<include>Dashboard_Cat.php</include>
-                <include>PhpData.xml</include>
-                <include>UserInfo.xml</include>
 			</includes>
 		</fileSet>
+        <fileSet filtered="false" encoding="UTF-8">
+			<directory>test/functional/src/test/java/com/photon/phresco/testcases</directory>
+			<includes>
+				<include>WelcomePageTestCase.java</include>
+			</includes>
+		</fileSet>
+        <fileSet filtered="false" encoding="UTF-8">
+			<directory>test/functional/src/test/java/com/photon/phresco/testsuites</directory>
+			<includes>
+				<include>AllTest.xml</include>
+				<include>WelcomePageTestSuite.xml</include>
+			</includes>
+		</fileSet>
+		
 		<fileSet filtered="false"> 
 			<directory>test/functional/testcases</directory> 
 			<includes> 
-				<include>PHTN_Phresco_PHP_TestCases_ExecutionReport.xls</include>
+				<include>Photon_phresco_PHP_Technology_ManualTestcases.ods</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="false"> 

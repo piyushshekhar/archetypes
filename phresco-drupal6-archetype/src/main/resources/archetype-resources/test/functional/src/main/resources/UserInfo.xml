@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<environment>
+<phresco>
+<phpblog>
+ 		<useremailvalue>admin</useremailvalue>
+  		<passwordvalue>admin</passwordvalue>
+  		<newuser>admin</newuser>
+  		<newmail>phresco@photoninfotech.net</newmail>
+  		
+  		
+</phpblog>
+</phresco>
+</environment>
