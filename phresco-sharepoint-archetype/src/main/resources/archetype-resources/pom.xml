@@ -26,7 +26,7 @@
     <name>${artifactId}</name>
     
     <properties>
-		<phresco.module.source.dir>source</phresco.module.source.dir>
+		<phresco.module.source.dir>/source</phresco.module.source.dir>
         <visual.studio.solution>source/Phresco.Sharepoint.sln</visual.studio.solution>
         <visual.test.project.pattern>test/functional/*.Tests;*Test</visual.test.project.pattern>
         <dotnet.tool.version>3.5</dotnet.tool.version>
@@ -77,6 +77,7 @@
 						<goal>unpack</goal>
 					</goals>
 					<configuration>
+					 <markersDirectory>do_not_checkin/markers</markersDirectory>
 						<artifactItems>
 							<artifactItem>
 							   <groupId>binaries.sharepoint</groupId>
@@ -168,16 +169,5 @@
 			</activation>
 		  </profile>
     </profiles>
-	
-	<dependencies>
-		<dependency>
-		  <groupId>binaries.sharepoint</groupId>
-		  <artifactId>CabLib</artifactId>
-		  <version>10.2.0.0</version>
-		  <classifier>${platform}</classifier>
-		  <type>zip</type>
-		</dependency>
-  </dependencies>
-
 	
   </project>
