@@ -35,6 +35,21 @@
 				<include>*.jsp</include>
 			</includes>
 		</fileSet>
+		
+		 <fileSet>
+            <directory>${basedir}/do_not_checkin/target/jstest/overlays</directory>
+            <outputDirectory>/js</outputDirectory>
+            <includes>
+                <include>/jslibraries/**</include>
+            </includes>
+        </fileSet>
+        <fileSet>
+            <directory>${basedir}/do_not_checkin/target/jstest/overlays/net.awired.js</directory>
+            <outputDirectory>/js</outputDirectory>
+            <includes>
+                <include>/almond/*.js</include>
+            </includes>
+        </fileSet>
 	
 		<!-- filter to copy the contents from the base directory -->
 		<fileSet id="excludeFile">
