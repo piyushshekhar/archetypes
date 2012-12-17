@@ -92,13 +92,7 @@
 				<include>**/*</include>
 			</includes> 
 		</fileSet> 
-		<fileSet filtered="false"> 
-			<directory>source/sites/default/</directory> 
-			<includes> 
-				<include>settings.php</include>
-				<include>default.settings.php</include>
-			</includes> 
-		</fileSet>
+		
 		<fileSet filtered="false"> 
 			<directory>test/functional</directory> 
 			<includes> 
