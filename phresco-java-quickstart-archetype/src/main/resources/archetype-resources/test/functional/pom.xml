@@ -23,7 +23,7 @@
 			<artifactId>Javastandalone</artifactId>
 			<version>1.0</version>
 			<scope>system</scope>
-			<systemPath>${project.basedir}/do_not_checkin/target/HelloWorld.jar</systemPath>
+			<systemPath>${Javastandalone.jarPath}</systemPath>
 		</dependency>
     </dependencies>
 
