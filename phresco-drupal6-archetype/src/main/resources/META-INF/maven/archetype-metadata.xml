@@ -37,6 +37,7 @@
 				<include>phresco-application-handler-info.xml</include>
 				<include>phresco-start-hub-info.xml</include>
 				<include>phresco-start-node-info.xml</include>
+				<include>phresco-pdf-report-info.xml</include>
 			</includes> 
 		</fileSet>
 		<fileSet filtered="false" packaged="false"> 
