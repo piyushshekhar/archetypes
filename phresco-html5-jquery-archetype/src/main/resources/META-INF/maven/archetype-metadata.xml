@@ -142,6 +142,16 @@
 				<include>LoginTest.html</include>
 			</includes>
 		</fileSet>
+        
+        <fileSet filtered="false" encoding="UTF-8">
+			<directory>test/functional</directory>
+			<includes>
+				<include>pom.xml</include>
+				<include>hubconfig.json</include>
+				<include>nodeconfig.json</include>
+			</includes>
+		</fileSet>
+        
 		<fileSet filtered="false" encoding="UTF-8">
 			<directory>test/functional/src/main/java/com/photon/phresco/Screens</directory>
 			<includes>
@@ -187,14 +197,7 @@
 				<include>WelcomePageTestSuite.xml</include>
 			</includes>
 		</fileSet>
-		<fileSet filtered="false" encoding="UTF-8">
-			<directory>test/functional</directory>
-			<includes>
-				<include>pom.xml</include>
-				<include>hubconfig.json</include>
-				<include>nodeconfig.json</include>
-			</includes>
-		</fileSet>
+		
 		<fileSet filtered="false" packaged="false"> 
 			<directory>test/load/</directory> 
 			<includes>

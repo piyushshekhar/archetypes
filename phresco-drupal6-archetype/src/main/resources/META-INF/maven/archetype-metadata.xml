@@ -88,12 +88,7 @@
 				<include>nodeconfig.json</include>
 			</includes> 
 		</fileSet>
-        <fileSet filtered="false"> 
-			<directory>test/functional/src/main/php/phresco/tests</directory> 
-			<includes> 
-				<include>basescreen.php</include>
-			</includes> 
-		</fileSet>
+       
 		<fileSet filtered="false"> 
 			<directory>test/functional/src/main/java/com/photon/phresco/Screens</directory> 
 			<includes> 
