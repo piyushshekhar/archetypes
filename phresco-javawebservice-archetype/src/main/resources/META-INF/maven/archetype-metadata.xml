@@ -108,60 +108,59 @@
 		<fileSet filtered="false" encoding="UTF-8">
 			<directory>test/functional/src/main/java/com/photon/phresco/Screens</directory>
 			<includes>
-				<include>AbstractBaseScreen.java</include>
-				<include>AddScreen.java</include>
 				<include>BaseScreen.java</include>
 				<include>PhotonAbstractScreen.java</include>
 				<include>WelcomeScreen.java</include>
 			</includes>
 		</fileSet>
-		<fileSet filtered="false" encoding="UTF-8">
-			<directory>test/functional/src/main/java/com/photon/phresco/ScreenShots</directory>
-			<includes>
-				<include>**/*</include>
-			</includes>
-		</fileSet>
-		<fileSet filtered="false" encoding="UTF-8">
-			<directory>test/functional/src/main/java/com/photon/phresco/selenium/report</directory>
-			<includes>
-				<include>Reporter.java</include>
-			</includes>
-		</fileSet>
+		
+		
 		<fileSet filtered="false" encoding="UTF-8">
 			<directory>test/functional/src/main/java/com/photon/phresco/selenium/util</directory>
 			<includes>
 				<include>Constants.java</include>
-				<include>ExtractExeToLocalMachine.java</include>
-				<include>ProcessWaiter.java</include>
 				<include>ScreenActionFailedException.java</include>
 				<include>ScreenException.java</include>
-				<include>ScreenshottingSelenium.java</include>
+				<include>GetCurrentDir.java</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="false" encoding="UTF-8">
 			<directory>test/functional/src/main/java/com/photon/phresco/uiconstants</directory>
 			<includes>
 				<include>PhrescoUiConstants.java</include>
-				<include>TestProperties.java</include>
+				<include>PhrescoJavaWebserviceUiConstants.java</include>
+				<include>ReadXMLFile.java</include>
+				<include>UserInfoConstants.java</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="false" encoding="UTF-8">
 			<directory>test/functional/src/main/resources</directory>
 			<includes>
-				<include>config.ini</include>
+				<include>JavaWebserviceData.xml</include>
+				<include>phresco-env-config.xml</include>
+				<include>UIConstants.xml</include>
+				<include>UserInfo.xml</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="false" encoding="UTF-8">
 			<directory>test/functional/src/test/java/com/photon/phresco/testcases</directory>
 			<includes>
-				<include>AllTest.java</include>
-				<include>AWelcomePage.java</include>
+				<include>JavaWebServiceHelloWorldTestCase.java</include>
+			</includes>
+		</fileSet>
+        <fileSet filtered="false" encoding="UTF-8">
+			<directory>test/functional/src/test/java/com/photon/phresco/testsuite</directory>
+			<includes>
+				<include>AllTest.xml</include>
+				<include>JavaWebserviceHelloWorldTestCaseSuite.xml</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="false" encoding="UTF-8">
 			<directory>test/functional</directory>
 			<includes>
 				<include>pom.xml</include>
+				<include>hubconfig.json</include>
+				<include>nodeconfig.json</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="false" encoding="UTF-8">

@@ -1,0 +1,11 @@
+  <environment>
+		
+			
+
+<Server appliesTo="tech-java-webservice " desc="" name="server">
+        <context>javawshw</context>
+           <port>1234</port>
+             <protocol>http</protocol>
+        <host>172.16.29.45</host>
+    </Server>
+</environment>

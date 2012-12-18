@@ -19,20 +19,29 @@
  */
 package com.photon.phresco.selenium.util;
 
+import java.io.File;
+
+public class GetCurrentDir {
 
 
+	public  String targetDirectory = "/target" + "/surefire-reports" + "/ScreenShots";
+	public  String currentdir;
+	public  String screenShotFolder;
+	public  File fileName;
+	public  String targetPath;
 
+	public  String getCurrentDirectory() throws Exception {
+		currentdir = System.getProperty("user.dir");
+		screenShotFolder = currentdir + targetDirectory;
+		fileName = new File(screenShotFolder);
+		if(fileName.exists()){
+			System.out.println("folder structure "+fileName+"exists");	
+			}else{
+				fileName.mkdir();
+				System.out.println("folder structure "+fileName+"created");
+			}
+		targetPath = fileName.getAbsolutePath();
+		return targetPath;
+	}
 
-@SuppressWarnings("serial")
-public  class ScreenException extends Exception {
-
-	    public ScreenException(String msg){ 
-	    	
-	      super(msg); 
-	    } 
 }
-		
-		
-
-	
-
