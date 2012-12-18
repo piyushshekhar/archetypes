@@ -35,7 +35,7 @@
 		<phresco.unitTest.report.dir>/source/test/target/nunit-report</phresco.unitTest.report.dir>
 		<phresco.unitTest.testsuite.xpath>/test-results/test-suite/results/test-suite/results/test-suite/results/test-suite</phresco.unitTest.testsuite.xpath>
 		<phresco.unitTest.testcase.path>/results/test-case</phresco.unitTest.testcase.path>
-		<phresco.functionalTest.selenium.tool>webdriver</phresco.functionalTest.selenium.tool>
+		<phresco.functionalTest.selenium.tool>grid</phresco.functionalTest.selenium.tool>
 		<phresco.functionalTest.dir>/test/functional</phresco.functionalTest.dir>
 		<phresco.functionalTest.report.dir>/test/functional/target/nunit-report</phresco.functionalTest.report.dir>
 		<phresco.functionalTest.testsuite.xpath>/test-results/test-suite/results/test-suite/results/test-suite</phresco.functionalTest.testsuite.xpath>
