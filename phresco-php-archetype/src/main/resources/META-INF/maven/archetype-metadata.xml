@@ -142,7 +142,7 @@
 			</includes>
 		</fileSet>
         <fileSet filtered="false" encoding="UTF-8">
-			<directory>test/functional/src/main/java/com/photon/phresco/ScreenShots/report/util</directory>
+			<directory>test/functional/src/main/java/com/photon/phresco/selenium/util</directory>
 			<includes>
 				<include>Constants.java</include>
 				<include>GetCurrentDir.java</include>
@@ -183,12 +183,6 @@
 			</includes>
 		</fileSet>
 		
-		<fileSet filtered="false"> 
-			<directory>test/functional/testcases</directory> 
-			<includes> 
-				<include>Photon_phresco_PHP_Technology_ManualTestcases.ods</include>
-			</includes>
-		</fileSet>
 		<fileSet filtered="false"> 
 			<directory>test/load</directory> 
 			<includes> 
