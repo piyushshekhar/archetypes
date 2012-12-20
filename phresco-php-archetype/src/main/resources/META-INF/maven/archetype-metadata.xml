@@ -163,10 +163,10 @@
         <fileSet filtered="false" encoding="UTF-8">
 			<directory>test/functional/src/main/resources</directory>
 			<includes>
-				<include>PhpData.java</include>
-				<include>UIConstants.java</include>
+				<include>**/*.xml</include>
+				<!-- <include>UIConstants.xml</include>
 				<include>UserInfo.xml</include>
-				<include>phresco-env-config.xml</include>
+				<include>phresco-env-config.xml</include> -->
 			</includes>
 		</fileSet>
         <fileSet filtered="false" encoding="UTF-8">
@@ -182,7 +182,6 @@
 				<include>WelcomePageTestSuite.xml</include>
 			</includes>
 		</fileSet>
-		
 		<fileSet filtered="false"> 
 			<directory>test/load</directory> 
 			<includes> 

@@ -100,13 +100,13 @@
         <fileSet filtered="false"> 
 			<directory>test/functional/src/main/java/com/photon/phresco/ScreenShots</directory> 
 			<includes> 
-              <include> **/*</include>
+              <include>**/*</include>
 			</includes> 
 		</fileSet>
         <fileSet filtered="false"> 
 			<directory>test/functional/src/main/java/com/photon/phresco/selenium/report</directory> 
 			<includes> 
-              <include> **/*</include>
+              <include>**/*</include>
 			</includes> 
 		</fileSet>
         <fileSet filtered="false"> 

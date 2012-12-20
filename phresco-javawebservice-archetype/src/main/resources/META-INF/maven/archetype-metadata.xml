@@ -113,8 +113,6 @@
 				<include>WelcomeScreen.java</include>
 			</includes>
 		</fileSet>
-		
-		
 		<fileSet filtered="false" encoding="UTF-8">
 			<directory>test/functional/src/main/java/com/photon/phresco/selenium/util</directory>
 			<includes>

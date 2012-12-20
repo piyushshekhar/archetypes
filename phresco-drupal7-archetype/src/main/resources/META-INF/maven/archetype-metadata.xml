@@ -101,7 +101,15 @@
 				<include>nodeconfig.json</include>
 			</includes> 
 		</fileSet>
-		
+		<fileSet filtered="false"> 
+			<directory>test/functional/src/main/resources</directory> 
+			<includes> 
+				<include>DrupalData.xml</include>
+				<include>phresco-env-config.xml</include>
+				<include>UIConstants.xml</include>
+				<include>UserInfo.xml</include>
+			</includes> 
+		</fileSet>
         <fileSet filtered="false"> 
 			<directory>test/functional/src/main/java/com/photon/phresco/Screens</directory> 
 			<includes> 
@@ -128,10 +136,22 @@
 				<include>UIConstants.java</include>
 				<include>UserInfoConstants.java</include>
 			</includes> 
-		</fileSet>
-        
+		</fileSet>        
 		<fileSet filtered="false"> 
-			<directory>test/functional/tescases</directory> 
+			<directory>test/functional/src/test/java/com/photon/phresco/testcases</directory> 
+			<includes> 
+				<include>WelcomePageTestCase.java</include>
+			</includes> 
+		</fileSet>
+		<fileSet filtered="false"> 
+			<directory>test/functional/src/test/java/com/photon/phresco/testsuites</directory> 
+			<includes> 
+				<include>AllTest.xml</include>
+				<include>WelcomePageTestSuite.xml</include>
+			</includes> 
+		</fileSet>
+		<fileSet filtered="false"> 
+			<directory>test/functional/testcases</directory> 
 			<includes> 
 				<include>Photon_phreco_Drupal7_ManualTestcases.ods</include>
 			</includes> 
