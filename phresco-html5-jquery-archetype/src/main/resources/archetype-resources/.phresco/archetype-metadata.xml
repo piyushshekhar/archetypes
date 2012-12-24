@@ -94,7 +94,7 @@
 			</includes>
 		</fileSet>
 		<fileSet filtered="false" packaged="false"> 
-			<directory>src/main/webapp/js/Framework</directory> 
+			<directory>src/main/webapp/js/framework</directory> 
 			<includes>
 				<include>Base.js</include>
 				<include>LoginWidget.js</include>
