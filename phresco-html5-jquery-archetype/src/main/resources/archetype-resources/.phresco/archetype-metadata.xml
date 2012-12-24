@@ -159,9 +159,7 @@
 				<include>PhotonAbstractScreen.java</include>
 				<include>WelcomeScreen.java</include>
 			</includes>
-		</fileSet>
-		
-		
+		</fileSet>		
 		<fileSet filtered="false" encoding="UTF-8">
 			<directory>test/functional/src/main/java/com/photon/phresco/selenium/util</directory>
 			<includes>
@@ -197,7 +195,6 @@
 				<include>WelcomePageTestSuite.xml</include>
 			</includes>
 		</fileSet>
-		
 		<fileSet filtered="false" packaged="false"> 
 			<directory>test/load/</directory> 
 			<includes>
