@@ -9,7 +9,6 @@
         <aggregator>false</aggregator>
         <requiresOnline>false</requiresOnline>
         <inheritedByDefault>true</inheritedByDefault>
-        <implementation>com.photon.phresco.plugins.nodejs.NodeJsPlugin</implementation>
         <language>java</language>
         <instantiationStrategy>per-lookup</instantiationStrategy>
         <executionStrategy>once-per-session</executionStrategy>
@@ -18,7 +17,7 @@
             <parameters>
                 <parameter>
                     <name>
-                        <value lang="en">Port</value>
+                        <value lang="en">Hub Port</value>
                     </name>
                     <type>Number</type>
                     <required>false</required>
@@ -26,7 +25,7 @@
                     <description></description>
                     <key>port</key>
                     <multiple>false</multiple>
-                    <value></value>
+                    <value>4444</value>
                     <sort>false</sort>
                     <show>true</show>
                 </parameter>
@@ -40,7 +39,7 @@
                     <description></description>
                     <key>newSessionWaitTimeout</key>
                     <multiple>false</multiple>
-                    <value></value>
+                    <value>-1</value>
                     <sort>false</sort>
                     <show>true</show>
                 </parameter>
@@ -48,15 +47,15 @@
                     <name>
                         <value lang="en">Servlets</value>
                     </name>
-                    <type>List</type>
+                    <type>String</type>
                     <required>false</required>
                     <editable>true</editable>
                     <description></description>
                     <key>servlets</key>
                     <multiple>false</multiple>
+                    <value></value>
                     <sort>false</sort>
                     <show>true</show>
-					<value></value>
                 </parameter>
                 <parameter>
                     <name>
@@ -82,7 +81,7 @@
                     <description></description>
                     <key>capabilityMatcher</key>
                     <multiple>false</multiple>
-                    <value></value>
+                    <value>org.openqa.grid.internal.utils.DefaultCapabilityMatcher</value>
                     <sort>false</sort>
                     <show>true</show>
                 </parameter>
@@ -96,7 +95,7 @@
                     <description></description>
                     <key>throwOnCapabilityNotPresent</key>
                     <multiple>false</multiple>
-                    <value>false</value>
+                    <value>true</value>
                     <sort>false</sort>
                     <show>true</show>
                 </parameter>
@@ -110,7 +109,7 @@
                     <description></description>
                     <key>nodePolling</key>
                     <multiple>false</multiple>
-                    <value></value>
+                    <value>5000</value>
                     <sort>false</sort>
                     <show>true</show>
                 </parameter>
@@ -124,7 +123,7 @@
                     <description></description>
                     <key>cleanUpCycle</key>
                     <multiple>false</multiple>
-                    <value></value>
+                    <value>5000</value>
                     <sort>false</sort>
                     <show>true</show>
                 </parameter>
@@ -138,7 +137,7 @@
                     <description></description>
                     <key>timeout</key>
                     <multiple>false</multiple>
-                    <value></value>
+                    <value>300000</value>
                     <sort>false</sort>
                     <show>true</show>
                 </parameter>
@@ -152,7 +151,7 @@
                     <description></description>
                     <key>browserTimeout</key>
                     <multiple>false</multiple>
-                    <value></value>
+                    <value>0</value>
                     <sort>false</sort>
                     <show>true</show>
                 </parameter>
@@ -166,7 +165,7 @@
                     <description></description>
                     <key>maxSession</key>
                     <multiple>false</multiple>
-                    <value></value>
+                    <value>5</value>
                     <sort>false</sort>
                     <show>true</show>
                 </parameter>

@@ -20,13 +20,13 @@
   -->
 
 <environment>
-		   <Browser>googlechrome</Browser>
+		   <Browser>firefox</Browser>
            <Server>
-               <context>mobilewidgetnone</context>
+               <context>yuimulti15</context>
                <protocol>http</protocol>
                <host>localhost</host>
                <port>8080</port>
-               <resolution>1024x760</resolution>
+               <Resolution></Resolution>
            </Server>
          
            <loginpage>

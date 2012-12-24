@@ -1,7 +1,10 @@
 package com.photon.phresco.selenium.util;
 
 public class Constants {
-
+	
+	
+	public static final String HELLOWORLD_TEXT_MSG = "Hello World";
+	public static final String WRONG_TEXT_MSG = "Nothing present";
 	/**
 	 * Execute tests on internet explorer
 	 */

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="HelloWorldPageTestSuite" parallel="tests"
+	thread-count="5" verbose="3">
+
+  <test name="JavaWebServiceHelloWorldTestOnfirefox" junit="false" preserve-order="true">
+ 		<parameter name="browser" value="firefox" />
+		<parameter name="platform" value="WINDOWS" />
+        <classes>
+            <class name="com.photon.phresco.testcases.JavaWebServiceHelloWorldTestCase"/>     
+        </classes>
+    </test> 
+    
+    <test name="JavaWebServiceHelloWorldTestOnChrome" junit="false"
+		preserve-order="true">
+		<parameter name="browser" value="googlechrome" />
+		<parameter name="platform" value="WINDOWS" />
+		<classes>
+			<class name="com.photon.phresco.testcases.JavaWebServiceHelloWorldTestCase"/>
+		</classes>
+	</test>
+    </suite>

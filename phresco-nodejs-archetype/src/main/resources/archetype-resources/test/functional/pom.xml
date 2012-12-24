@@ -1,154 +1,48 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>Nodejs_EShopjson</groupId>
-  <artifactId>nodejs</artifactId>
-  <version>2.0.0.27003-SNAPSHOT</version>
-  <packaging>jar</packaging>
-  <name>nodejs</name>
-  <url>http://maven.apache.org</url>
-  
-   <repositories>
-    <repository>      
-      <id>seleniumserver</id>
-      <name>seleniumserver</name>
-      <url>http://172.16.18.178:8080/nexus/content/groups/public/</url>
-    </repository>
-  </repositories>
-  
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>NodejsHelloWorld</groupId>
+	<artifactId>nodejs</artifactId>
+	<version>0.0.1</version>
+	<packaging>jar</packaging>
+	<name>NodejsHelloWorld</name>
+	<url>http://maven.apache.org</url>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
+	<repositories>
+		<repository>
+			<id>seleniumserver</id>
+			<name>seleniumserver</name>
+			<url>http://172.16.18.178:8080/nexus/content/groups/public/</url>
+		</repository>
+	</repositories>
 	<dependencies>
 		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.10</version>
-			<scope>test</scope>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>6.5.2</version>
 		</dependency>
-		
+
 		<dependency>
-			<groupId>modules.tech-android-native.files</groupId>
-			<artifactId>mod_googlegson_1.7.1</artifactId>
-			<version>1.7.1</version>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+			<version>2.0</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
-			<artifactId>selenium-server</artifactId>
-			<version>2.21.0</version>
+			<artifactId>selenium-server-standalone</artifactId>
+			<version>2.26.0</version>
 		</dependency>
-        
 		<dependency>
-		   <groupId>org.seleniumhq.selenium</groupId>
-		   <artifactId>chromedriver</artifactId>
-		   <version>19.0.1068.0</version>
-		   <classifier>${platform}</classifier>
-		   <type>zip</type>
+			<groupId>com.opera</groupId>
+			<artifactId>operadriver</artifactId>
+			<version>0.14</version>
 		</dependency>
-		
+
+
 	</dependencies>
-	
-	<profiles>
-		<profile>
-			<id>windows-32bit</id>
-				<properties>
-					<platform>win</platform>
-					<chromedriverdirname>windows</chromedriverdirname>
-				</properties>
-			<activation>
-				<os>
-					<family>Windows</family>
-					<arch>x86</arch>
-				  </os>
-			</activation>
-	    </profile>
-		
-		 <profile>
-			<id>windows-x64bit</id>
-				<properties>
-					<platform>win64</platform>
-					<chromedriverdirname>windows</chromedriverdirname>
-				</properties>
-			<activation>
-			  <os>
-				<family>Windows</family>
-				<arch>amd64</arch>
-			  </os>
-			</activation>
-		  </profile>
-		  
-		  <profile>
-			<id>windows-amd64bit</id>
-				<properties>
-					<platform>Windows64</platform>
-					<chromedriverdirname>windows</chromedriverdirname>
-				</properties>
-			<activation>
-			  <os>
-				<family>Windows</family>
-				<arch>x64</arch>
-			  </os>
-			</activation>
-		  </profile>
-		  
-		   <profile>
-			  <id>macos</id>
-			  <properties>
-					<platform>mac</platform>
-					<chromedriverdirname>mac</chromedriverdirname>
-				</properties>
-			  <activation>
-			   <os>
-				<family>macosx</family>
-				<arch>x86</arch>
-			   </os>
-			  </activation>
-		 </profile>
-		 
-		 <profile>
-            <id>macos64</id>
-			 <properties>
-					<platform>mac</platform>
-					<chromedriverdirname>mac</chromedriverdirname>
-				</properties>
-            <activation>
-                <os>
-					<family>mac</family>
-                    <arch>x86_64</arch>
-                </os>
-            </activation>
-        </profile>
-		
-	    <profile>
-			  <id>linux-x86</id>
-			  <properties>
-				<platform>linux32</platform>
-				<chromedriverdirname>linux-32</chromedriverdirname>
-			  </properties>
-			  <activation>
-				<os>
-				  <name>Linux</name>
-				  <arch>i386</arch>
-				</os>
-			  </activation>
-		</profile>
-		
-		<profile>
-			<id>linux_x86_64</id>
-			<properties>
-				<platform>linux64</platform>
-				<chromedriverdirname>linux-64</chromedriverdirname>
-			  </properties>
-			<activation>
-			  <os>
-				<name>linux</name>
-				<arch>amd64</arch>
-			  </os>
-			</activation>
-	  </profile>
-	</profiles>
-	
 	<build>
 		<plugins>
 			<plugin>
@@ -166,13 +60,13 @@
 				<artifactId>maven-site-plugin</artifactId>
 				<version>2.1</version>
 				<executions>
-		          <execution>
-		            <phase>test</phase>
-		            <goals>
-		              <goal>site</goal>
-		            </goals>
-		          </execution>
-		        </executions>
+					<execution>
+						<phase>test</phase>
+						<goals>
+							<goal>site</goal>
+						</goals>
+					</execution>
+				</executions>
 				<configuration>
 					<skipTests>true</skipTests>
 				</configuration>
@@ -184,74 +78,173 @@
 				<executions>
 					<execution>
 						<id>unpack</id>
-						<phase>compile</phase>
+						<phase>validate</phase>
 						<goals>
 							<goal>unpack</goal>
 						</goals>
 						<configuration>
-							<markersDirectory>chromedriver</markersDirectory>
-						<artifactItems>
+							<markersDirectory>chromedriver/markers</markersDirectory>
+							<artifactItems>
 								<artifactItem>
-									  <groupId>org.seleniumhq.selenium</groupId>
-									   <artifactId>chromedriver</artifactId>
-									   <version>19.0.1068.0</version>
-									   <classifier>${platform}</classifier>
-									   <type>zip</type>
-									   <overWrite>false</overWrite>
-									   <outputDirectory>chromedriver/${chromedriverdirname}</outputDirectory>
-								  </artifactItem>
-						</artifactItems>
+									<groupId>org.seleniumhq.selenium</groupId>
+									<artifactId>chromedriver</artifactId>
+									<version>${driver.version}</version>
+									<classifier>${driver.classifier}</classifier>
+									<type>zip</type>
+									<overWrite>false</overWrite>
+									<outputDirectory>chromedriver</outputDirectory>
+								</artifactItem>
+
+							</artifactItems>
 						</configuration>
 					</execution>
 				</executions>
 			</plugin>
-			<!--  MAVEN ANTRUN PLUGIN -->
-			<plugin>  
-                <artifactId>maven-antrun-plugin</artifactId>  
-                <executions>  
-                  <execution>  
-                  <phase>compile</phase>  
-                    <configuration>  
-                      <tasks>                     
-                        <chmod file="${project.basedir}/chromedriver/mac/chromedriver" perm="777"/>
-                      </tasks>  
-                    </configuration>  
-                    <goals>  
-                      <goal>run</goal>  
-                    </goals>  
-                  </execution>  
-                </executions>  
-              </plugin>  
+
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<version>2.3</version>
+				<executions>
+					<execution>
+						<id>copy</id>
+						<phase>validate</phase>
+						<goals>
+							<goal>copy</goal>
+						</goals>
+						<configuration>
+							<markersDirectory>lib</markersDirectory>
+							<artifactItems>
+								<artifactItem>
+									<groupId>org.seleniumhq.selenium</groupId>
+									<artifactId>selenium-server-standalone</artifactId>
+									<version>2.26.0</version>
+									<overWrite>false</overWrite>
+									<outputDirectory>${project.basedir}/lib</outputDirectory>
+
+								</artifactItem>
+							</artifactItems>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<executions>
+					<execution>
+						<phase>compile</phase>
+						<configuration>
+							<tasks>
+								<chmod file="${project.basedir}/chromedriver/mac/chromedriver"
+									perm="777" />
+							</tasks>
+						</configuration>
+						<goals>
+							<goal>run</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-report-plugin</artifactId>
-				<version>2.8</version>	
+				<version>2.8</version>
 				<executions>
-		          <execution>
-		            <phase>test</phase>
-		            <goals>
-		              <goal>report</goal>
-		            </goals>
-		          </execution>
-		        </executions>
+					<execution>
+						<phase>test</phase>
+						<goals>
+							<goal>report</goal>
+						</goals>
+					</execution>
+				</executions>
 				<configuration>
 					<skipTests>true</skipTests>
 				</configuration>
 			</plugin>
-	</plugins>
+			<!-- TestNG plugin for trigger the testng.xml file -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.12.3</version>
+				<configuration>
+					<suiteXmlFiles>
+						<suiteXmlFile>./src/test/java/com/photon/phresco/testsuite/AllTest.xml</suiteXmlFile>
+					</suiteXmlFiles>
+				</configuration>
+			</plugin>
+		</plugins>
 	</build>
-
 	<reporting>
 		<plugins>
-			
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-report-plugin</artifactId>
-				<version>2.8</version>				
+				<version>2.8</version>
 				<configuration>
 					<skipTests>true</skipTests>
-				</configuration>				
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.testng.xslt</groupId>
+				<artifactId>testng-xslt-plugin</artifactId>
+				<version>1.1.2</version>
 			</plugin>
 		</plugins>
 	</reporting>
+	<profiles>
+		<profile>
+			<id>windows-x86</id>
+			<activation>
+				<os>
+					<family>Windows</family>
+				</os>
+			</activation>
+			<properties>
+				<driver.classifier>win</driver.classifier>
+				<driver.version>23.0.1240.0</driver.version>
+			</properties>
+		</profile>
+		<profile>
+			<id>Linux-32bit</id>
+			<activation>
+				<os>
+					<family>unix</family>
+					<name>Linux</name>
+					<arch>i386</arch>
+				</os>
+			</activation>
+			<properties>
+				<driver.classifier>linux32</driver.classifier>
+				<driver.version>23.0.1240.0</driver.version>
+			</properties>
+		</profile>
+		<profile>
+			<id>Linux-64bit</id>
+			<activation>
+				<os>
+					<family>unix</family>
+					<name>Linux</name>
+					<arch>x64</arch>
+				</os>
+			</activation>
+			<properties>
+				<driver.classifier>linux64</driver.classifier>
+				<driver.version>23.0.1240.0</driver.version>
+			</properties>
+		</profile>
+		<profile>
+			<id>mac</id>
+			<activation>
+				<os>
+					<family>mac</family>
+				</os>
+			</activation>
+			<properties>
+				<driver.classifier>mac</driver.classifier>
+				<driver.version>23.0.1240.0</driver.version>
+			</properties>
+		</profile>
+	</profiles>
 </project>

@@ -1,144 +1,111 @@
-/*
- * ###
- * Archetype - phresco-nodejs-archetype
- * 
- * Copyright (C) 1999 - 2012 Photon Infotech Inc.
- * 
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- * 
- *      http://www.apache.org/licenses/LICENSE-2.0
- * 
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- * ###
- */
 package com.photon.phresco.Screens;
 
 import java.awt.AWTException;
-import java.io.File;
 import java.io.IOException;
-import java.util.concurrent.TimeUnit;
+import java.net.MalformedURLException;
+import java.net.URL;
 
+import org.apache.commons.lang.StringUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.openqa.selenium.Dimension;
-import org.openqa.selenium.Point;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.AssertJUnit;
 
 import com.photon.phresco.selenium.util.Constants;
 import com.photon.phresco.selenium.util.ScreenActionFailedException;
 import com.photon.phresco.selenium.util.ScreenException;
-import com.thoughtworks.selenium.Selenium;
+import com.photon.phresco.uiconstants.PhrescoNodejsUiConstants;
+
+
 
 public class BaseScreen {
 
-	// public static ScreenshottingSelenium selenium;
-	public static Selenium selenium;
-	public static WebDriver driver;
-	private static ChromeDriverService chromeService;
-	private static Log log = LogFactory.getLog("BaseScreen");
+	private WebDriver driver;
+	private ChromeDriverService chromeService;
+	DesiredCapabilities capabilities;
+	private Log log = LogFactory.getLog("BaseScreen");
+
+
+	// private Log log = LogFactory.getLog(getClass());
 
 	public BaseScreen() {
 
 	}
 
-	public BaseScreen(String url, String browser, String speed, String reporter)
-			throws AWTException, IOException, ScreenActionFailedException {
-		/*
-		 * selenium = new ScreenshottingSelenium("localhost", 4444, browser,
-		 * url, reporter); selenium.start(); selenium.setSpeed(speed);
-		 * selenium.open("/");
-		 */
-	}
-
-	public static void initialize(String host, int port, String browser,
-			String url, String speed, String context)
-			throws com.photon.phresco.selenium.util.ScreenActionFailedException {
-		/*
-		 * PhrescoHTML5widgUiConstants phrsc = new
-		 * PhrescoHTML5widgUiConstants(); selenium = new
-		 * ScreenshottingSelenium(host, port, browser, url,context);
-		 * selenium.start(); selenium.setSpeed(speed);
-		 * selenium.open(phrsc.CONTEXT); selenium.waitForPageToLoad("30000");
-		 */
+	public BaseScreen(String selectedBrowser,String selectedPlatform,String applicationURL,String applicatinContext)
+			 throws AWTException, IOException, ScreenActionFailedException {
+	
+	
 		try {
-			instantiateBrowser(browser, url, context, speed);
-		} catch (ScreenException se) {
-			se.printStackTrace();
+			
+			instantiateBrowser(selectedBrowser,selectedPlatform,applicationURL, applicatinContext);
+		} catch (ScreenException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 
 	}
 
-	public static void instantiateBrowser(String browserName, String url,
-			String context, String speed) throws ScreenException {
+	public void instantiateBrowser(String selectedBrowser,String selectedPlatform,
+			String applicationURL, String applicationContext)
+					 throws ScreenException,
+						MalformedURLException {
 
-		if (browserName.equalsIgnoreCase(Constants.BROWSER_CHROME)) {	
+		URL server = new URL("http://localhost:4444/wd/hub/");
+		if (selectedBrowser.equalsIgnoreCase(Constants.BROWSER_CHROME)) {
+			log.info("-------------***LAUNCHING GOOGLECHROME***--------------");
 			try {
-				// "D:/Selenium-jar/chromedriver_win_19.0.1068.0/chromedriver.exe"			
-				chromeService = new ChromeDriverService.Builder()
-						.usingChromeDriverExecutable(
-								new File(getChromeLocation()))
-						.usingAnyFreePort().build();				
-				log.info("-------------***LAUNCHING GOOGLECHROME***--------------");
-				chromeService.start();
-				ChromeOptions chromeOption = new ChromeOptions();
-				chromeOption.addArguments("start-maximized");
-				driver = new ChromeDriver(chromeService, chromeOption);
-				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-				driver.navigate().to(url + context);
-				
-				/*selenium = new WebDriverBackedSelenium(driver, url);
-				selenium.open(context);
-				selenium.windowMaximize();*/
 
+				capabilities = new DesiredCapabilities();
+				capabilities.setBrowserName("chrome");
+				
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
 
-		} else if (browserName.equalsIgnoreCase(Constants.BROWSER_IE)) {
+		} else if (selectedBrowser.equalsIgnoreCase(Constants.BROWSER_IE)) {
 			log.info("---------------***LAUNCHING INTERNET EXPLORE***-----------");
 			driver = new InternetExplorerDriver();
-			driver.navigate().to(url + context);
-			// driver.get(url);
-		/*	selenium = new WebDriverBackedSelenium(driver, url);
-			selenium.open(context);*/
+			capabilities = new DesiredCapabilities();
+			capabilities.setBrowserName("iexplore");
+		
 
-		} else if (browserName.equalsIgnoreCase(Constants.BROWSER_FIREFOX)) {
+		} else if (selectedBrowser.equalsIgnoreCase(Constants.BROWSER_FIREFOX)) {
 			log.info("-------------***LAUNCHING FIREFOX***--------------");
-			driver = new FirefoxDriver();
-			windowMaximizeFirefox();
-			driver.navigate().to(url + context);	
-			// driver.get(url+context);
-
-			/*
-			 * selenium = new WebDriverBackedSelenium(driver, url);
-			 * selenium.open(context);
-			 */
+			capabilities = new DesiredCapabilities();
+			capabilities.setBrowserName("firefox");
+			
+		
 		} else {
 			throw new ScreenException(
 					"------Only FireFox,InternetExplore and Chrome works-----------");
 		}
 
+	
+		if (selectedPlatform.equalsIgnoreCase("WINDOWS")) {
+			capabilities.setCapability(CapabilityType.PLATFORM,Platform.WINDOWS);
+		
+		} else if (selectedPlatform.equalsIgnoreCase("LINUX")) {
+			capabilities.setCapability(CapabilityType.PLATFORM, Platform.LINUX);
+		
+		} else if (selectedPlatform.equalsIgnoreCase("MAC")) {
+			capabilities.setCapability(CapabilityType.PLATFORM, Platform.MAC);
+			
+		}
+		driver = new RemoteWebDriver(server, capabilities);
+		driver.get(applicationURL + applicationContext);
+	
+
 	}
 
-	public static void windowMaximizeFirefox() {
-		driver.manage().window().setPosition(new Point(0, 0));
-		java.awt.Dimension screenSize = java.awt.Toolkit.getDefaultToolkit()
-				.getScreenSize();
-		Dimension dim = new Dimension((int) screenSize.getWidth(),
-				(int) screenSize.getHeight());
-		driver.manage().window().setSize(dim);
-	}
+	
 
 	public void closeBrowser() {
 		log.info("-------------***BROWSER CLOSING***--------------");		
@@ -150,13 +117,10 @@ public class BaseScreen {
 		} else {
 			throw new NullPointerException();
 		}
-		// selenium.stop();
-		/*
-		 * driver.quit(); selenium.stop();
-		 */
+		
 	}
 	
-	public static String  getChromeLocation(){	
+	public  String  getChromeLocation(){	
 		log.info("getChromeLocation:*****CHROME TARGET LOCATION FOUND***");
 		String directory = System.getProperty("user.dir");
 		String targetDirectory = getChromeFile();		
@@ -165,10 +129,9 @@ public class BaseScreen {
 	}
 	
 	
-	public static String getChromeFile(){
+	public  String getChromeFile(){
 	     if(System.getProperty("os.name").startsWith(Constants.WINDOWS_OS)){
 			log.info("*******WINDOWS MACHINE FOUND*************");
-//			getChromeLocation("/chromedriver.exe");
 			return Constants.WINDOWS_DIRECTORY + "/chromedriver.exe" ;			
 		}else if(System.getProperty("os.name").startsWith(Constants.LINUX_OS)){
 			log.info("*******LINUX MACHINE FOUND*************");
@@ -181,6 +144,38 @@ public class BaseScreen {
 		}
 		
 	}
+	public boolean isTextPresent(String text)
+	{
+		if(text!=null)
+		{
+			boolean value=driver.findElement(By.tagName("body")).getText().contains(text);
+			//System.out.println("--------TextCheck value---->"+text+"------------Result is-------------"+value); 
+			AssertJUnit.assertTrue(value);
+			return value;
+		}
+		else
+		{
+			throw new RuntimeException("---- Text not present----");
+		}
+
+	}
+
 	
-	
+	public  void nodejsHelloWorld(String methodName,PhrescoNodejsUiConstants nodejs) throws Exception {
+		if (StringUtils.isEmpty(methodName)) {
+			methodName = Thread.currentThread().getStackTrace()[1]
+					.getMethodName();
+		}
+		log.info("@nodejsHelloWorld::******executing nodejsHelloWorld scenario****");
+		try {
+			Thread.sleep(5000);	
+			isTextPresent(nodejs.ELEMENT);
+
+		} catch (InterruptedException e) {
+
+			e.printStackTrace();
+		}		
+	}
 }
+	
+	

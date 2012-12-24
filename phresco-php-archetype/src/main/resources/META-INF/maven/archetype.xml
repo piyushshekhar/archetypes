@@ -43,7 +43,6 @@
 		<resource>source/sql/mssql/site.sql</resource>
 		<resource>source/sql/oracle/site.sql</resource>
 		<resource>source/sql/db2/site.sql</resource>
-		<resource>source/config.ini</resource>
 	</resources>
 	<testResources>
 		<resource>test/load/build.properties</resource>

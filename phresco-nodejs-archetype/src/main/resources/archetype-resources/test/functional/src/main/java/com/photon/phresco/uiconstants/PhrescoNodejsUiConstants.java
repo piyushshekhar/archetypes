@@ -36,8 +36,7 @@ public class PhrescoNodejsUiConstants {
 		try {
 		    readXml = new ReadXMLFile();
 		    readXml.NodejsData();
-		    System.out.println("*********Reading Data from NodejsData**********");
-			Field[] arrayOfField1 = super.getClass().getFields();
+		   	Field[] arrayOfField1 = super.getClass().getFields();
 			Field[] arrayOfField2 = arrayOfField1;
 			int i = arrayOfField2.length;
 			for (int j = 0; j < i; ++j) {
