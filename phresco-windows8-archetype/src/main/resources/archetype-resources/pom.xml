@@ -41,11 +41,11 @@
 		<sourceDirectory>source</sourceDirectory>
 		<plugins>
             <plugin>
-                <groupId>com.photon.phresco.plugins</groupId>
-                <artifactId>windows-phone-maven-plugin</artifactId>
-                <version>2.0.0.16001-SNAPSHOT</version>
-                <extensions>true</extensions>
-            </plugin>
+				<groupId>com.photon.phresco.plugins</groupId>
+                <artifactId>phresco-maven-plugin</artifactId>
+				<version>2.0.0.29002-SNAPSHOT</version>
+				<extensions>true</extensions>
+			</plugin>
 				<plugin>
                 <groupId>org.codehaus.sonar-plugins.dotnet</groupId>
                 <artifactId>maven-dotnet-plugin</artifactId>
