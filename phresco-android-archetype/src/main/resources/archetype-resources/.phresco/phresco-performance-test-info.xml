@@ -22,7 +22,7 @@
                     </name>
                     <type>DynamicParameter</type>
                     <dynamicParameter>
-                        <class>com.photon.phresco.impl.EnvironmentsParameterImpl</class>
+                        <class>com.photon.phresco.impl.AndroidDevicesParameterImpl</class>
                         <dependencies>
                             <dependency>
                                 <groupId>com.photon.phresco.commons</groupId>
@@ -39,6 +39,20 @@
                     <value></value>
                     <sort>false</sort>
                     <show>true</show>
+                </parameter>
+                <parameter>
+                    <name>
+                        <value lang="en">Signing</value>
+                    </name>
+                    <type>boolean</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>signing</key>
+                    <multiple>false</multiple>
+                    <sort>false</sort>
+                    <show>true</show>
+                    <value>false</value>
                 </parameter>
             </parameters>
         </configuration>
