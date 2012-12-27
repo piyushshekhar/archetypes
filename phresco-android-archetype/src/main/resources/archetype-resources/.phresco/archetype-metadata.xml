@@ -34,6 +34,8 @@
 				<include>phresco-functional-test-info.xml</include>
 				<include>phresco-ci-info.xml</include>
 				<include>phresco-application-handler-info.xml</include>
+				<include>phresco-pdf-report-info.xml</include>
+				<include>phresco-performance-test-info.xml</include>
 			</includes> 
 		</fileSet>
 		<fileSet filtered="false" packaged="false"> 
@@ -230,12 +232,6 @@
 			<directory>test/unit/res/values</directory> 
 			<includes>
 				<include>strings.xml</include>
-			</includes>
-		</fileSet>
-		<fileSet filtered="false" packaged="false"> 
-			<directory>test/load</directory> 
-			<includes>
-				<include>**/*</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="false" packaged="false"> 
