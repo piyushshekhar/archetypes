@@ -44,9 +44,20 @@
                     <value></value>
                 </parameter>
 				<parameter>
-                    <name>
+				     <name>
                         <value lang="en">Configuration</value>
                     </name>
+                    <pluginParameter>framework</pluginParameter>
+                    <mavenCommands>
+                        <mavenCommand>
+                            <key>release</key>
+                            <value>-Dconfiguration=Release</value>
+                        </mavenCommand>
+                        <mavenCommand>
+                            <key>debug</key>
+                            <value>-Dconfiguration=Debug</value>
+                        </mavenCommand>
+                    </mavenCommands>
                     <type>List</type>
                     <required>false</required>
                     <editable>true</editable>
@@ -55,10 +66,69 @@
                         <value key="release">Release</value>
                         <value key="debug">Debug</value>
                     </possibleValues>
-					<multiple>false</multiple>
-					<sort>false</sort>
-					<show>true</show>
+                    <multiple>false</multiple>
                     <value></value>
+                    <sort>false</sort>
+                    <show>true</show>
+                </parameter>
+                <parameter>
+					  <name>
+                        <value lang="en">Platform</value>
+                    </name>
+                    <pluginParameter>framework</pluginParameter>
+                    <mavenCommands>
+                        <mavenCommand>
+                            <key>anyCpu</key>
+                            <value>-Dplatform="Any CPU"</value>
+                        </mavenCommand>
+                        <mavenCommand>
+                            <key>arm</key>
+                            <value>-Dplatform=ARM</value>
+                        </mavenCommand>
+                        <mavenCommand>
+                            <key>x86</key>
+                            <value>-Dplatform=X86</value>
+                        </mavenCommand>
+                        <mavenCommand>
+                            <key>x64</key>
+                            <value>-Dplatform=X64</value>
+                        </mavenCommand>
+                    </mavenCommands>
+                    <type>List</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <key>Platform</key>
+                    <possibleValues>
+                        <value key="anyCpu">Any CPU</value>
+                        <value key="arm">ARM</value>
+                        <value key="x86">X86</value>
+                        <value key="x64">X64</value>
+                    </possibleValues>
+                    <multiple>false</multiple>
+                    <value>arm</value>
+                    <sort>false</sort>
+                    <show>true</show>
+                </parameter>
+                <parameter>
+					<name>
+                        <value lang="en">TYPE</value>
+                    </name>
+                    <pluginParameter>framework</pluginParameter>
+                    <mavenCommands>
+                        <mavenCommand>
+                            <key>wp8</key>
+                            <value>-Dtype=wp8</value>
+                        </mavenCommand>
+                    </mavenCommands>
+                    <type>hidden</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>type</key>
+                    <multiple>false</multiple>
+                    <value>wp8</value>
+                    <sort>false</sort>
+                    <show>true</show>
                 </parameter>
 				<parameter>
                     <name>

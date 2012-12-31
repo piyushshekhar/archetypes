@@ -12,8 +12,8 @@
         <plugins>
             <plugin>
 				<groupId>com.photon.phresco.plugins</groupId>
-				<artifactId>blackberry-maven-plugin</artifactId>
-				<version>2.0.0.30002-SNAPSHOT</version>
+				<artifactId>blackberry-phresco-plugin</artifactId>
+  				<version>2.0.0.30002-SNAPSHOT</version>
 				<extensions>true</extensions>
 			</plugin>         
         </plugins>
