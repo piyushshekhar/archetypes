@@ -79,6 +79,13 @@
 				<include>README.txt</include>
 			</includes> 
 		</fileSet> 
+        <fileSet filtered="false" encoding="UTF-8"> 
+			<directory>source/sites/default</directory> 
+			<includes> 
+				<include>default.settings.php</include>
+				<include>settings.php</include>
+			</includes> 
+		</fileSet>
 		<fileSet filtered="false" encoding="UTF-8"> 
 			<directory>source/sites/default/config</directory> 
 			<includes> 
