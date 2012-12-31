@@ -44,22 +44,54 @@
 					<show>true</show>
                     <value></value>
                 </parameter>
-				<parameter>
-                    <name>
+				 <parameter>
+				     <name>
                         <value lang="en">Configuration</value>
                     </name>
+                    <pluginParameter>framework</pluginParameter>
+                    <mavenCommands>
+                        <mavenCommand>
+                            <key>release</key>
+                            <value>-Dconfiguration=Release</value>
+                        </mavenCommand>
+                        <mavenCommand>
+                            <key>debug</key>
+                            <value>-Dconfiguration=Debug</value>
+                        </mavenCommand>
+                    </mavenCommands>
                     <type>List</type>
                     <required>false</required>
                     <editable>true</editable>
                     <key>configuration</key>
                     <possibleValues>
-                        <value>Release</value>
-                        <value>Debug</value>
+                        <value key="release">Release</value>
+                        <value key="debug">Debug</value>
                     </possibleValues>
-					<multiple>false</multiple>
-					<sort>false</sort>
-					<show>true</show>
+                    <multiple>false</multiple>
                     <value></value>
+                    <sort>false</sort>
+                    <show>true</show>
+                </parameter>
+                <parameter>
+					 <name>
+                        <value lang="en">TYPE</value>
+                    </name>
+                    <pluginParameter>framework</pluginParameter>
+                    <mavenCommands>
+                        <mavenCommand>
+                            <key>wp7</key>
+                            <value>-Dtype=wp7</value>
+                        </mavenCommand>
+                    </mavenCommands>
+                    <type>hidden</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>type</key>
+                    <multiple>false</multiple>
+                    <value>wp7</value>
+                    <sort>false</sort>
+                    <show>true</show>
                 </parameter>
 				<parameter>
                     <name>
