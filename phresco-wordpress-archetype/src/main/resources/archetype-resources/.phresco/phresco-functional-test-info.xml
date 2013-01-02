@@ -31,6 +31,7 @@
 				<value></value>
 				<sort>false</sort>
 				<show>true</show>
+				<dependency>environmentName</dependency>
 			</parameter>
 			<parameter>
 				<name>
@@ -56,52 +57,7 @@
 				<value></value>
 				<sort>false</sort>
 				<show>true</show>
-				<dependency>buildEnvironmentName</dependency>
-			</parameter>
-			<parameter>
-				<name>
-				<value lang="en">Browser</value>
-				</name>
-				<type>List</type>
-				<required>false</required>
-				<editable>true</editable>
-				<description></description>
-				<key>browser</key>
-				<possibleValues>
-					<value key="firefox">Firefox</value>
-					<value key="safari">Safari</value>
-					<value key="opera">Opera</value>
-					<value key="internetExplorer">Internet Explorer</value>
-					<value key="chrome">Chrome</value>
-				</possibleValues>
-				<multiple>false</multiple>
-				<value></value>
-				<sort>false</sort>
-				<show>true</show>
-			</parameter>
-			<parameter>
-				<name>
-					<value lang="en">Environment</value>
-				</name>
-				<type>DynamicParameter</type>
-				<dynamicParameter>
-				<class>com.photon.phresco.impl.BuildInfoEnvironmentsImpl</class>
-				<dependencies>
-					<dependency>
-						<groupId>com.photon.phresco.commons</groupId>
-						<artifactId>phresco-commons</artifactId>
-						<type>jar</type>
-						<version>2.0.0.31001-SNAPSHOT</version>
-					</dependency>
-				</dependencies>
-				</dynamicParameter>
-				<required>true</required>
-				<editable>true</editable>
-				<key>buildEnvironmentName</key>
-				<multiple>false</multiple>
-				<value></value>
-				<sort>false</sort>
-				<show>true</show>
+				<dependency>environmentName</dependency>
 			</parameter>
 			<parameter>
 				<name>
@@ -124,19 +80,40 @@
 				</name>
 				<type>DynamicParameter</type>
 				<dynamicParameter>
-				<class>com.photon.phresco.impl.EnvironmentsParameterImpl</class>
-				<dependencies>
-				<dependency>
-				<groupId>com.photon.phresco.commons</groupId>
-				<artifactId>phresco-commons</artifactId>
-				<type>jar</type>
-				<version>2.0.0.31001-SNAPSHOT</version>
-				</dependency>
-				</dependencies>
+					<class>com.photon.phresco.impl.FunctionalTestEnvironmentImpl</class>
+					<dependencies>
+						<dependency>
+							<groupId>com.photon.phresco.commons</groupId>
+							<artifactId>phresco-commons</artifactId>
+							<type>jar</type>
+							<version>2.0.0.31001-SNAPSHOT</version>
+						</dependency>
+					</dependencies>
 				</dynamicParameter>
 				<required>true</required>
 				<editable>true</editable>
 				<key>environmentName</key>
+				<multiple>false</multiple>
+				<value></value>
+				<sort>false</sort>
+				<show>true</show>
+			</parameter>
+			<parameter>
+				<name>
+				<value lang="en">Browser</value>
+				</name>
+				<type>List</type>
+				<required>false</required>
+				<editable>true</editable>
+				<description></description>
+				<key>browser</key>
+				<possibleValues>
+					<value key="firefox">Firefox</value>
+					<value key="safari">Safari</value>
+					<value key="opera">Opera</value>
+					<value key="internetExplorer">Internet Explorer</value>
+					<value key="chrome">Chrome</value>
+				</possibleValues>
 				<multiple>false</multiple>
 				<value></value>
 				<sort>false</sort>
@@ -176,6 +153,7 @@
                     <value></value>
                     <sort>false</sort>
                     <show>true</show>
+					<dependency>environmentName</dependency>
                 </parameter>
                 <parameter>
                     <name>
@@ -201,30 +179,7 @@
                     <value></value>
                     <sort>false</sort>
                     <show>false</show>
-                    <dependency>buildEnvironmentName</dependency>
-                </parameter>
-                <parameter>
-                    <name>
-                        <value lang="en">Environment</value>
-                    </name>
-                    <type>DynamicParameter</type>
-                    <dynamicParameter>
-                        <class>com.photon.phresco.impl.BuildInfoEnvironmentsImpl</class>
-                        <dependencies>
-                            <dependency>
-								<groupId>com.photon.phresco.commons</groupId>
-								<artifactId>phresco-commons</artifactId>
-								<type>jar</type>
-								<version>2.0.0.31001-SNAPSHOT</version>
-                            </dependency>
-                        </dependencies>
-                    </dynamicParameter>
-                    <required>true</required>
-                    <editable>true</editable>
-                    <key>buildEnvironmentName</key>
-                    <multiple>false</multiple>
-                    <sort>false</sort>
-                    <show>true</show>
+                    <dependency>environmentName</dependency>
                 </parameter>
                 <parameter>
                     <name>
@@ -247,7 +202,7 @@
                     </name>
                     <type>DynamicParameter</type>
                     <dynamicParameter>
-                        <class>com.photon.phresco.impl.EnvironmentsParameterImpl</class>
+                        <class>com.photon.phresco.impl.FunctionalTestEnvironmentImpl</class>
                         <dependencies>
                             <dependency>
 								<groupId>com.photon.phresco.commons</groupId>
