@@ -48,6 +48,20 @@
                     <sort>false</sort>
                     <show>false</show>
                 </parameter>
+				<parameter>
+                    <name>
+                        <value lang="en">Sonar Url</value>
+                    </name>
+                    <type>Hidden</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>sonarUrl</key>
+                    <multiple>false</multiple>
+                    <value></value>
+                    <sort>false</sort>
+                    <show>false</show>
+                </parameter>
             </parameters>
         </configuration>
     </mojo>
