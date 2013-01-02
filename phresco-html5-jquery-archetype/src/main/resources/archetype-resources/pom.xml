@@ -15,6 +15,24 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-dependency-plugin</artifactId>
 				<executions>
+                  <execution>
+						<id>unpack</id>
+						<phase>validate</phase>
+						<goals>
+							<goal>unpack</goal>
+						</goals>
+						<configuration>
+							<artifactItems>
+								<artifactItem>
+                                    <groupId>net.awired.js</groupId>
+                                    <artifactId>qunit</artifactId>
+                                    <version>1.5.0</version>
+                                    <type>zip</type>
+                                    <scope>test</scope>
+									<overWrite>false</overWrite>
+									<outputDirectory>../workspace/tools</outputDirectory>
+								</artifactItem>
+					</execution>
 				  <execution>
 					<id>copy-dependencies</id>
 					<phase>package</phase>
@@ -243,14 +261,14 @@
 		  <artifactId>gson</artifactId>
 		  <version>1.7.2</version>
 		</dependency>
-		<dependency>
+		<!-- <dependency>
 			<groupId>net.awired.js</groupId>
 			<artifactId>qunit</artifactId>
 			<version>1.5.0</version>
 			<type>war</type>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
+		 --><dependency>
 			<groupId>net.awired.js</groupId>
 			<artifactId>almond</artifactId>
 			<version>0.1.4</version>
