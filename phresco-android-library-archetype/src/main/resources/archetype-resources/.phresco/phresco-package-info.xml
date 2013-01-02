@@ -244,6 +244,20 @@
                     <show>false</show>
                     <value></value>
                 </parameter>
+				 <parameter>
+                    <name>
+                        <value lang="en">TechnologyId</value>
+                    </name>
+                    <type>hidden</type>
+                    <required>false</required>
+                    <editable>false</editable>
+                    <description></description>
+                    <key>techId</key>
+                    <multiple>false</multiple>
+                    <value>tech-android-library</value>
+                    <sort>false</sort>
+                    <show>false</show>
+                </parameter>
             </parameters>
         </configuration>
     </mojo>
