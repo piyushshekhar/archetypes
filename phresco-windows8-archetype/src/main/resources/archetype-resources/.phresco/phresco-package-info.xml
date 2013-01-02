@@ -133,26 +133,6 @@
                 </parameter>
 				<parameter>
                     <name>
-                        <value lang="en">Platform</value>
-                    </name>
-                    <type>List</type>
-                    <required>false</required>
-                    <editable>true</editable>
-                    <key>Platform</key>
-                    <possibleValues>
-                        <value key="anyCpu">Any CPU</value>
-                        <value key="arm">ARM</value>
-						<value key="x86">X86</value>
-						<value key="x64">X64</value>
-                    </possibleValues>
-					<multiple>false</multiple>
-					<multiple>false</multiple>
-					<sort>false</sort>
-					<show>true</show>
-                    <value></value>
-                </parameter>
-				<parameter>
-                    <name>
                         <value lang="en">Show Settings</value>
                     </name>
                     <type>Boolean</type>
