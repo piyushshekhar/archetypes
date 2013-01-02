@@ -74,20 +74,6 @@
 					<show>true</show>
                     <value></value>
                 </parameter>
-                <parameter>
-                    <name>
-                        <value lang="en">Build Number</value>
-                    </name>
-                    <type>Hidden</type>
-                    <required>false</required>
-                    <editable>true</editable>
-                    <description></description>
-                    <key>buildNumber</key>
-					<multiple>false</multiple>
-					<sort>false</sort>
-					<show>true</show>
-                    <value></value>
-                </parameter>
 				 <parameter>
                     <name>
                         <value lang="en">Execute Sql</value>
@@ -97,7 +83,7 @@
                     <editable>true</editable>
                     <description></description>
                     <key>executeSql</key>
-                    <value>false</value>
+                    <value>true</value>
                     <sort>false</sort>
                     <show>true</show>
                     <dependency>dataBase</dependency>
@@ -152,7 +138,21 @@
                     <value></value>
                     <sort>true</sort>
                     <show>false</show>
-                </parameter>				
+                </parameter>
+				<parameter>
+                    <name>
+                        <value lang="en">Build Number</value>
+                    </name>
+                    <type>Hidden</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>buildNumber</key>
+					<multiple>false</multiple>
+					<sort>false</sort>
+					<show>true</show>
+                    <value></value>
+                </parameter>
             </parameters>
         </configuration>
     </mojo>
