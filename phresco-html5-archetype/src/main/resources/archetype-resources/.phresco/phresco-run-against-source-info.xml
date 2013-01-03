@@ -35,7 +35,7 @@
 			<required>true</required>
 			<editable>true</editable>
 			<key>environmentName</key>
-			<multiple>true</multiple>
+			<multiple>false</multiple>
 			<sort>false</sort>
 			<show>true</show>
 			<value></value>
