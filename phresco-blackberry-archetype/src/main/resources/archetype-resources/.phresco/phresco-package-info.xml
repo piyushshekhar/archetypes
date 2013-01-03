@@ -45,11 +45,29 @@
                     <value></value>
                 </parameter>
 				<parameter>
+					<name>
+						<value lang="en">Target</value>
+					</name>
+					<type>List</type>
+					<required>false</required>
+					<editable>true</editable>
+					<description></description>
+					<key>testAgainst</key>
+					<possibleValues>
+						<value key="build" dependency="keyPassword">Device</value>
+						<value key="server">Simulator</value>
+						</possibleValues>
+					<value></value>
+					<sort>false</sort>
+					<show>true</show>
+					<dependency>environmentName</dependency>
+				</parameter>
+				<parameter>
                     <name>
                         <value lang="en">Key Password</value>
                     </name>
                     <type>password</type>
-                    <required>false</required>
+                    <required>true</required>
                     <editable>true</editable>
                     <description></description>
                     <key>keyPassword</key>
