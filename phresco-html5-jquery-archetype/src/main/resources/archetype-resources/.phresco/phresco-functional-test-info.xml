@@ -113,8 +113,6 @@
 					<value key="opera">Opera</value>
 					<value key="internetExplorer">Internet Explorer</value>
 					<value key="chrome">Chrome</value>
-					<value key="androidhybrid">Android Mobile Browser</value>
-					<value key="iphonehybrid">IPhone Mobile Browser</value>
 				</possibleValues>
 				<multiple>false</multiple>
 				<value></value>
