@@ -9,6 +9,6 @@
     <div class="helloworld-widget"></div>
     <script type="text/javascript" src="js/almond/almond.js"></script>
     <script type="text/javascript" src="js/jslibraries/files/jslib_jquery-amd/1.7.1-alpha-1/jslib_jquery-amd-1.7.1-alpha-1.js"></script>
-   <script type="text/javascript" src="js/Framework/LoginWidget.js"></script>
-    <script type="text/javascript" src="js/Framework/Base.js"></script>
+   <script type="text/javascript" src="js/framework/LoginWidget.js"></script>
+    <script type="text/javascript" src="js/framework/Base.js"></script>
 </html>

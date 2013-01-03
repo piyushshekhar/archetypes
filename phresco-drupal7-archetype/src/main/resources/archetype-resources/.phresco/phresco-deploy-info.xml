@@ -28,7 +28,7 @@
 								<groupId>com.photon.phresco.commons</groupId>
 								<artifactId>phresco-commons</artifactId>
 								<type>jar</type>
-								<version>2.0.0.31001-SNAPSHOT</version>
+								<version>2.0.0.31002-SNAPSHOT</version>
                             </dependency>
                         </dependencies>
                     </dynamicParameter>
@@ -74,20 +74,6 @@
 					<show>true</show>
                     <value></value>
                 </parameter>
-                <parameter>
-                    <name>
-                        <value lang="en">Build Number</value>
-                    </name>
-                    <type>Hidden</type>
-                    <required>false</required>
-                    <editable>true</editable>
-                    <description></description>
-                    <key>buildNumber</key>
-					<multiple>false</multiple>
-					<sort>false</sort>
-					<show>true</show>
-                    <value></value>
-                </parameter>
 				 <parameter>
                     <name>
                         <value lang="en">Execute Sql</value>
@@ -97,7 +83,7 @@
                     <editable>true</editable>
                     <description></description>
                     <key>executeSql</key>
-                    <value>false</value>
+                    <value>true</value>
                     <sort>false</sort>
                     <show>true</show>
                     <dependency>dataBase</dependency>
@@ -114,7 +100,7 @@
 								<groupId>com.photon.phresco.framework</groupId>
 								<artifactId>phresco-framework-impl</artifactId>
 								<type>jar</type>
-								<version>2.0.0.31001-SNAPSHOT</version>
+								<version>2.0.0.31002-SNAPSHOT</version>
                             </dependency>
                         </dependencies>
                     </dynamicParameter>
@@ -140,7 +126,7 @@
 								<groupId>com.photon.phresco.framework</groupId>
 								<artifactId>phresco-framework-impl</artifactId>
 								<type>jar</type>
-								<version>2.0.0.31001-SNAPSHOT</version>
+								<version>2.0.0.31002-SNAPSHOT</version>
                             </dependency>
                         </dependencies>
                     </dynamicParameter>
@@ -152,6 +138,20 @@
                     <value></value>
                     <sort>true</sort>
                     <show>false</show>
+                </parameter>	
+				<parameter>
+                    <name>
+                        <value lang="en">Build Number</value>
+                    </name>
+                    <type>Hidden</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>buildNumber</key>
+					<multiple>false</multiple>
+					<sort>false</sort>
+					<show>true</show>
+                    <value></value>
                 </parameter>				
             </parameters>
         </configuration>
