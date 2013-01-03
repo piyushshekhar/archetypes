@@ -170,6 +170,12 @@
 			</includes>
 		</fileSet>
         <fileSet filtered="false" packaged="false"> 
+			<directory>test/functional/libs</directory> 
+			<includes>
+				<include>**/*</include>
+			</includes>
+		</fileSet>
+        <fileSet filtered="false" packaged="false"> 
 			<directory>test/functional/res/raw</directory> 
 			<includes>
 				<include>android_native_data.xml</include>
@@ -223,6 +229,12 @@
 			</includes>
 		</fileSet>
 		<fileSet filtered="false" packaged="false"> 
+			<directory>test/unit/libs</directory> 
+			<includes>
+				<include>**/*</include>
+			</includes>
+		</fileSet>
+        <fileSet filtered="false" packaged="false"> 
 			<directory>test/unit/res/layout</directory> 
 			<includes>
 				<include>main.xml</include>
@@ -251,7 +263,7 @@
 		<fileSet filtered="false" packaged="false"> 
 			<directory>test/performance/libs</directory> 
 			<includes>
-				<include>robotium-solo-3.0.jar</include>
+				<include>**/*</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="false" packaged="false"> 
