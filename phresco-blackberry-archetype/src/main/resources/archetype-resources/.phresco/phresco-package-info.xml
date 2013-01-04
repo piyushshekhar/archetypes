@@ -52,10 +52,10 @@
 					<required>false</required>
 					<editable>true</editable>
 					<description></description>
-					<key>testAgainst</key>
+					<key>target</key>
 					<possibleValues>
-						<value key="build" dependency="keyPassword">Device</value>
-						<value key="server">Simulator</value>
+						<value key="device" dependency="DeviceKeyPassword">Device</value>
+						<value key="emulator" dependency="EmulatorKeyPassword">Emulator</value>
 						</possibleValues>
 					<value></value>
 					<sort>false</sort>
@@ -67,10 +67,24 @@
                         <value lang="en">Key Password</value>
                     </name>
                     <type>password</type>
-                    <required>true</required>
+                    <required>false</required>
                     <editable>true</editable>
                     <description></description>
-                    <key>keyPassword</key>
+                    <key>DeviceKeyPassword</key>
+					<multiple>false</multiple>
+					<sort>false</sort>
+                    <show>true</show>
+                    <value></value>
+                </parameter>
+				<parameter>
+                    <name>
+                        <value lang="en">Key Password</value>
+                    </name>
+                    <type>hidden</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>EmulatorKeyPassword</key>
 					<multiple>false</multiple>
 					<sort>false</sort>
                     <show>true</show>
