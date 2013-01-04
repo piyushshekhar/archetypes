@@ -144,6 +144,21 @@
 			</includes>
 		</fileSet>
 		<fileSet filtered="false" packaged="false"> 
+			<directory>test/functional/src/main/com/photon/phresco/util</directory> 
+			<includes>
+				<include>MainActivity.js</include>
+				<include>UIElements.js</include>
+			</includes>
+		</fileSet>
+		
+		<fileSet filtered="false" packaged="false"> 
+			<directory>test/functional/src/test/com/photon/phresco/testcase</directory> 
+			<includes>
+				<include>HelloWorld.js</include>
+			</includes>
+		</fileSet>
+		
+		<fileSet filtered="false" packaged="false"> 
 			<directory>test/performance</directory> 
 			<includes>
 				<include>**/*</include>

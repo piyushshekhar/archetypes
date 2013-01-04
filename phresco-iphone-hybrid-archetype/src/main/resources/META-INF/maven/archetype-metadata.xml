@@ -164,9 +164,20 @@
 				<include>**/*</include>
 			</includes>
 		</fileSet>
-		<fileSet filtered="false" packaged="false"> 
-			<directory>source/www</directory> 
+		
+        <fileSet filtered="false" packaged="false"> 
+			<directory>source/UnitTest</directory> 
 			<includes>
+                 <include>UnitTest.h</include>
+                 <include>UnitTest.m</include>
+                 <include>UnitTest-Info.plist</include>
+                 <include>UnitTest-Prefix.pch</include>
+			</includes>
+		</fileSet>
+        <fileSet filtered="false" packaged="false"> 
+			<directory>source/UnitTest/en.lproj</directory> 
+			<includes>
+                 <include>InfoPlist.strings</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="false"> 
