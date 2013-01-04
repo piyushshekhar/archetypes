@@ -76,13 +76,6 @@
 					 <name>
                         <value lang="en">TYPE</value>
                     </name>
-                    <pluginParameter>framework</pluginParameter>
-                    <mavenCommands>
-                        <mavenCommand>
-                            <key>wp7</key>
-                            <value>-Dtype=wp7</value>
-                        </mavenCommand>
-                    </mavenCommands>
                     <type>hidden</type>
                     <required>false</required>
                     <editable>true</editable>
