@@ -95,13 +95,6 @@
 					<name>
                         <value lang="en">TYPE</value>
                     </name>
-                    <pluginParameter>framework</pluginParameter>
-                    <mavenCommands>
-                        <mavenCommand>
-                            <key>wp8</key>
-                            <value>-Dtype=wp8</value>
-                        </mavenCommand>
-                    </mavenCommands>
                     <type>hidden</type>
                     <required>false</required>
                     <editable>true</editable>
