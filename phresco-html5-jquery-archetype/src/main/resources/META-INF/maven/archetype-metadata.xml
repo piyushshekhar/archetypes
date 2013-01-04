@@ -61,14 +61,7 @@
 				<include>index.jsp</include>
 			</includes>
 		</fileSet>
-		<fileSet filtered="false" packaged="false"> 
-			<directory>src/main/js/HelloWorld/widgets</directory> 
-			<includes>
-				<include>HelloWorldWidget.js</include>
-				<include>Init.js</include>
-			</includes>
-		</fileSet>
-		<fileSet filtered="false" packaged="false"> 
+        <fileSet filtered="false" packaged="false"> 
 			<directory>src/main/resources</directory> 
 			<includes>
 				<include>environment.jsp</include>
