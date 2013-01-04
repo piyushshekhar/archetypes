@@ -117,7 +117,7 @@
 			<plugin>
 				<groupId>com.photon.phresco.plugins</groupId>
 				<artifactId>phresco-maven-plugin</artifactId>
-				<version>2.0.0.31003-SNAPSHOT</version>
+				<version>2.0.0.31002-SNAPSHOT</version>
 				<extensions>true</extensions>
 			</plugin>
 			<plugin>
@@ -231,6 +231,19 @@
 				<sonar.exclusions>**/lib/**</sonar.exclusions>
 				</properties> 
 		</profile>
+		
+		<profile>
+            <id>html</id>
+             <properties>
+				<sonar.language>web</sonar.language>
+				<sonar.branch>html</sonar.branch>
+				<sonar.dynamicAnalysis>false</sonar.dynamicAnalysis>
+				<phresco.source.directory>src/main/webapp/</phresco.source.directory>
+				<sonar.profile>W3C Markup Validation</sonar.profile>
+				<sonar.w3cmarkup.url>http://127.0.0.2</sonar.w3cmarkup.url>
+				<sonar.web.fileExtensions>html</sonar.web.fileExtensions>
+			  </properties>
+        </profile>
 		
     </profiles>
 </project>

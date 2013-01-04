@@ -17,7 +17,7 @@
       <parameters>
         <parameter>
 			<name>
-               <value lang="en">Validate Against</value>
+                <value lang="en">Validate Against</value>
             </name>
 			<type>List</type>
 			<required>false</required>
@@ -25,13 +25,52 @@
 			<description></description>
 			<key>sonar</key>
 			<possibleValues>
-				<value key="src" dependency="skipTests">Source</value>
+				<value key="src" dependency="src,skipTests">Source</value>
 				<value key="functional">Functional Test</value>
 			</possibleValues>
 			<multiple>false</multiple>
 			<sort>false</sort>
 			<show>true</show>
 		  <value></value>
+        </parameter>
+		<parameter>
+			<pluginParameter>plugin</pluginParameter>
+			<name>
+                <value lang="en">Technology</value>
+            </name>
+			<mavenCommands>
+				<mavenCommand>
+					<key>js</key>
+					<value>-Pjs</value>
+				</mavenCommand>
+				<mavenCommand>
+					<key>java</key>
+					<value>-Pjava</value>
+				</mavenCommand>
+				<mavenCommand>
+					<key>html</key>
+					<value>-Phtml</value>
+				</mavenCommand>
+				<mavenCommand>
+					<key>web</key>
+					<value>-Pweb</value>
+				</mavenCommand>
+			</mavenCommands>
+			<type>List</type>
+			<required>false</required>
+			<editable>true</editable>
+			<description></description>
+			<key>src</key>
+			<possibleValues>
+				<value key="js">js</value>
+				<value key="java">java</value>
+				<value key="html">html</value>
+				<value key="web">jsp/jsf</value>
+			</possibleValues>
+			<multiple>false</multiple>
+			<sort>false</sort>
+			<show>false</show>
+			<value></value>
         </parameter>
 		<parameter>
 			<pluginParameter>framework</pluginParameter>
