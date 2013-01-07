@@ -52,7 +52,7 @@
 					<value>-Phtml</value>
 				</mavenCommand>
 				<mavenCommand>
-					<key>jsp/jsf</key>
+					<key>web</key>
 					<value>-Pweb</value>
 				</mavenCommand>
 			</mavenCommands>
@@ -65,7 +65,7 @@
 				<value key="js">js</value>
 				<value key="java">java</value>
 				<value key="html">html</value>
-				<value key="jsp/jsf">jsp/jsf</value>
+				<value key="web">jsp/jsf</value>
 			</possibleValues>
 			<multiple>false</multiple>
 			<sort>false</sort>
