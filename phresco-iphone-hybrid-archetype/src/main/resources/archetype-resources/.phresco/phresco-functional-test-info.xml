@@ -41,6 +41,20 @@
                     <sort>false</sort>
                     <show>true</show>
                 </parameter>
+                <parameter>
+                    <name>
+                        <value lang="en">Device Id</value>
+                    </name>
+                    <type>String</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>deviceId</key>
+                    <multiple>false</multiple>
+                    <value></value>
+                    <sort>false</sort>
+                    <show>true</show>
+                </parameter>
             </parameters>
         </configuration>
     </mojo>
