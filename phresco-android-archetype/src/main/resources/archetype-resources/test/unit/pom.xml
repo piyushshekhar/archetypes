@@ -27,7 +27,7 @@
     <version>1.0.2001-SNAPSHOT</version>
         <relativePath>../../</relativePath>
     </parent>-->
-    <groupId>com.photon.phresco.eShop</groupId>
+    <groupId>com.photon.phresco.unit</groupId>
     <artifactId>phresco-test</artifactId>
     <packaging>apk</packaging>
 	<version>2.0.0.32001-SNAPSHOT</version>
