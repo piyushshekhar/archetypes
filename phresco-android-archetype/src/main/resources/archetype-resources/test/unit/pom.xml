@@ -59,6 +59,8 @@
     
     <build>
 		<sourceDirectory>src</sourceDirectory>
+		<outputDirectory>do_not_checkin/target/android-classes</outputDirectory>
+		<directory>do_not_checkin/target</directory>
 		<plugins>
 			<plugin>
 				<groupId>com.photon.maven.plugins.android.generation2</groupId>
