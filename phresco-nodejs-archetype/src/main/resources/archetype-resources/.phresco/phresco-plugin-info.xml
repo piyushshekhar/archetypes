@@ -15,7 +15,15 @@
       <aggregator>false</aggregator>
       <requiresOnline>false</requiresOnline>
       <inheritedByDefault>true</inheritedByDefault>
-      <implementation>com.photon.phresco.plugins.nodejs.NodeJsPlugin</implementation>
+      <implementation>
+           <dependency>
+               <groupId>com.photon.phresco.plugins</groupId>
+               <artifactId>nodejs-phresco-plugin</artifactId>
+               <type>jar</type>
+               <version>2.0.0.32001-SNAPSHOT</version>
+               <class>com.photon.phresco.plugins.nodejs.NodeJsPlugin</class>
+           </dependency>
+       </implementation>
       <language>java</language>
       <instantiationStrategy>per-lookup</instantiationStrategy>
       <executionStrategy>once-per-session</executionStrategy>
@@ -125,7 +133,15 @@
       <aggregator>false</aggregator>
       <requiresOnline>false</requiresOnline>
       <inheritedByDefault>true</inheritedByDefault>
-      <implementation>com.photon.phresco.plugins.nodejs.NodeJsPlugin</implementation>
+      <implementation>
+           <dependency>
+               <groupId>com.photon.phresco.plugins</groupId>
+               <artifactId>nodejs-phresco-plugin</artifactId>
+               <type>jar</type>
+               <version>2.0.0.32001-SNAPSHOT</version>
+               <class>com.photon.phresco.plugins.nodejs.NodeJsPlugin</class>
+           </dependency>
+       </implementation>
       <language>java</language>
       <instantiationStrategy>per-lookup</instantiationStrategy>
       <executionStrategy>once-per-session</executionStrategy>
@@ -140,7 +156,15 @@
         <aggregator>false</aggregator>
         <requiresOnline>false</requiresOnline>
         <inheritedByDefault>true</inheritedByDefault>
-        <implementation>com.photon.phresco.plugins.nodejs.NodeJsPlugin</implementation>
+        <implementation>
+           <dependency>
+               <groupId>com.photon.phresco.plugins</groupId>
+               <artifactId>nodejs-phresco-plugin</artifactId>
+               <type>jar</type>
+               <version>2.0.0.32001-SNAPSHOT</version>
+               <class>com.photon.phresco.plugins.nodejs.NodeJsPlugin</class>
+           </dependency>
+       </implementation>
         <language>java</language>
         <instantiationStrategy>per-lookup</instantiationStrategy>
         <executionStrategy>once-per-session</executionStrategy>
@@ -320,7 +344,15 @@
 		<aggregator>false</aggregator>
 		<requiresOnline>false</requiresOnline>
 		<inheritedByDefault>true</inheritedByDefault>
-		<implementation>com.photon.phresco.plugins.nodejs.NodeJsPlugin</implementation>
+		<implementation>
+           <dependency>
+               <groupId>com.photon.phresco.plugins</groupId>
+               <artifactId>nodejs-phresco-plugin</artifactId>
+               <type>jar</type>
+               <version>2.0.0.32001-SNAPSHOT</version>
+               <class>com.photon.phresco.plugins.nodejs.NodeJsPlugin</class>
+           </dependency>
+       </implementation>
 		<language>java</language>
 		<instantiationStrategy>per-lookup</instantiationStrategy>
 		<executionStrategy>once-per-session</executionStrategy>
@@ -466,7 +498,15 @@
         <aggregator>false</aggregator>
         <requiresOnline>false</requiresOnline>
         <inheritedByDefault>true</inheritedByDefault>
-        <implementation>com.photon.phresco.plugins.nodejs.NodeJsPlugin</implementation>
+        <implementation>
+           <dependency>
+               <groupId>com.photon.phresco.plugins</groupId>
+               <artifactId>nodejs-phresco-plugin</artifactId>
+               <type>jar</type>
+               <version>2.0.0.32001-SNAPSHOT</version>
+               <class>com.photon.phresco.plugins.nodejs.NodeJsPlugin</class>
+           </dependency>
+       </implementation>
         <language>java</language>
         <instantiationStrategy>per-lookup</instantiationStrategy>
         <executionStrategy>once-per-session</executionStrategy>
@@ -784,7 +824,15 @@
         <aggregator>false</aggregator>
         <requiresOnline>false</requiresOnline>
         <inheritedByDefault>true</inheritedByDefault>
-        <implementation>com.photon.phresco.plugins.nodejs.NodeJsPlugin</implementation>
+        <implementation>
+           <dependency>
+               <groupId>com.photon.phresco.plugins</groupId>
+               <artifactId>nodejs-phresco-plugin</artifactId>
+               <type>jar</type>
+               <version>2.0.0.32001-SNAPSHOT</version>
+               <class>com.photon.phresco.plugins.nodejs.NodeJsPlugin</class>
+           </dependency>
+       </implementation>
         <language>java</language>
         <instantiationStrategy>per-lookup</instantiationStrategy>
         <executionStrategy>once-per-session</executionStrategy>
@@ -1141,7 +1189,15 @@
         <aggregator>false</aggregator>
         <requiresOnline>false</requiresOnline>
         <inheritedByDefault>true</inheritedByDefault>
-        <implementation>com.photon.phresco.plugins.ReportPlugin</implementation>
+        <implementation>
+           <dependency>
+               <groupId>com.photon.phresco.plugins</groupId>
+               <artifactId>report-phresco-plugin</artifactId>
+               <type>jar</type>
+               <version>2.0.0.32001-SNAPSHOT</version>
+               <class>com.photon.phresco.plugins.ReportPlugin</class>
+           </dependency>
+       </implementation>
         <language>java</language>
         <instantiationStrategy>per-lookup</instantiationStrategy>
         <executionStrategy>once-per-session</executionStrategy>
@@ -1192,7 +1248,15 @@
         <aggregator>false</aggregator>
         <requiresOnline>false</requiresOnline>
         <inheritedByDefault>true</inheritedByDefault>
-        <implementation>com.photon.phresco.plugins.CIPlugin</implementation>
+        <implementation>
+           <dependency>
+               <groupId>com.photon.phresco.plugins</groupId>
+               <artifactId>ci-phresco-plugin</artifactId>
+               <type>jar</type>
+               <version>2.0.0.32001-SNAPSHOT</version>
+               <class>com.photon.phresco.plugins.CIPlugin</class>
+           </dependency>
+       </implementation>
         <language>java</language>
         <instantiationStrategy>per-lookup</instantiationStrategy>
         <executionStrategy>once-per-session</executionStrategy>

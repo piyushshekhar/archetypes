@@ -9,7 +9,15 @@
         <aggregator>false</aggregator>
         <requiresOnline>false</requiresOnline>
         <inheritedByDefault>true</inheritedByDefault>
-        <implementation>com.photon.phresco.plugins.php.PHPPlugin</implementation>
+        <implementation>
+           <dependency>
+               <groupId>com.photon.phresco.plugins</groupId>
+               <artifactId>php-phresco-plugin</artifactId>
+               <type>jar</type>
+               <version>2.0.0.32001-SNAPSHOT</version>
+               <class>com.photon.phresco.plugins.php.PHPPlugin</class>
+           </dependency>
+       </implementation>
         <language>java</language>
         <instantiationStrategy>per-lookup</instantiationStrategy>
         <executionStrategy>once-per-session</executionStrategy>
