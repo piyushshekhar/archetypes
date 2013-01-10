@@ -29,16 +29,16 @@
     <properties>
     	<android.version>2.3.3</android.version>
 		<phresco.unitTest.dir>/test/unit</phresco.unitTest.dir>
-		<phresco.unitTest.report.dir>/test/unit/target/surefire-reports</phresco.unitTest.report.dir>
-		<phresco.unitTest.testsuite.xpath>/testsuites/testsuite</phresco.unitTest.testsuite.xpath>
-		<phresco.unitTest.testcase.path>/testcase</phresco.unitTest.testcase.path>
-		<phresco.functionalTest.selenium.tool>webdriver</phresco.functionalTest.selenium.tool>
-		<phresco.functionalTest.dir>/test/functional</phresco.functionalTest.dir>
-		<phresco.functionalTest.report.dir>/test/functional/target/surefire-reports</phresco.functionalTest.report.dir>
-		<phresco.functionalTest.testsuite.xpath>/testsuites/testsuite</phresco.functionalTest.testsuite.xpath>
-		<phresco.functionalTest.testcase.path>/testcase</phresco.functionalTest.testcase.path>
-		<phresco.performanceTest.dir>/test/performance</phresco.performanceTest.dir>
-		<phresco.performanceTest.report.dir>/test/performance/target/surefire-reports</phresco.performanceTest.report.dir>
+        <phresco.unitTest.report.dir>/test/unit/do_not_checkin/target/surefire-reports</phresco.unitTest.report.dir>
+        <phresco.unitTest.testsuite.xpath>/testsuites/testsuite</phresco.unitTest.testsuite.xpath>
+        <phresco.unitTest.testcase.path>/testcase</phresco.unitTest.testcase.path>
+        <phresco.functionalTest.selenium.tool>webdriver</phresco.functionalTest.selenium.tool>
+        <phresco.functionalTest.dir>/test/functional</phresco.functionalTest.dir>
+        <phresco.functionalTest.report.dir>/test/functional/do_not_checkin/target/surefire-reports</phresco.functionalTest.report.dir>
+        <phresco.functionalTest.testsuite.xpath>/testsuites/testsuite</phresco.functionalTest.testsuite.xpath>
+        <phresco.functionalTest.testcase.path>/testcase</phresco.functionalTest.testcase.path>
+        <phresco.performanceTest.dir>/test/performance</phresco.performanceTest.dir>
+        <phresco.performanceTest.report.dir>/test/performance/do_not_checkin/target/surefire-reports</phresco.performanceTest.report.dir>
     </properties>
     
     <dependencies>
