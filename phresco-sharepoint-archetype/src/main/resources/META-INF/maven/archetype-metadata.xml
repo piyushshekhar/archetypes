@@ -87,106 +87,78 @@
 		<fileSet filtered="false" encoding="UTF-8"> 
 			<directory>test/functional</directory> 
 			<includes> 
-				<include>pom.xml</include> 
-				<include>AllTest.sln</include> 
-				<include>AllTest.suo</include> 
-			</includes> 
-		</fileSet> 
-		<fileSet filtered="false" encoding="UTF-8"> 
-			<directory>test/functional/AllTest</directory> 
-			<includes> 
-				<include>AllTest.cs</include> 
-				<include>AllTest.csproj</include> 
-				<include>App.config</include> 
-				<include>phresco-env-config.xml</include> 
-			</includes> 
-		</fileSet> 
-		<fileSet filtered="false" encoding="UTF-8"> 
-			<directory>test/functional/AllTest/bin/Debug</directory> 
-			<includes> 
-				<include>AllTest.dll</include> 
-				<include>AllTest.dll.config</include> 
-				<include>AllTest.pdb</include> 
-				<include>nmock.dll</include> 
-				<include>nunit.core.dll</include> 
-				<include>nunit.framework.dll</include> 
-				<include>ThoughtWorks.Selenium.Core.dll</include> 
-				<include>ThoughtWorks.Selenium.Core.pdb</include> 
-				<include>ThoughtWorks.Selenium.IntegrationTests.dll</include> 
-				<include>ThoughtWorks.Selenium.IntegrationTests.pdb</include> 
-				<include>Ionic.Zip.dll</include> 
-				<include>Newtonsoft.Json.dll</include> 
-				<include>Selenium.WebDriverBackedSelenium.dll</include> 
-				<include>Selenium.WebDriverBackedSelenium.pdb</include> 
-				<include>WebDriver.xml</include> 
-				<include>WebDriver.pdb</include> 
-				<include>WebDriver.dll</include> 
-				<include>ThoughtWorks.Selenium.Core.xml</include> 
-				<include>System.Drawing.dll</include> 
-				<include>Selenium.WebDriverBackedSelenium.xml</include> 
+				<include>pom.xml</include>
 			</includes> 
 		</fileSet>
 		<fileSet filtered="false" encoding="UTF-8"> 
-			<directory>test/functional/AllTest/bin/Release</directory> 
+			<directory>test/functional/src/main/java/com/photon/phresco/Screens</directory> 
 			<includes> 
-				<include>AllTest.dll</include> 
-				<include>AllTest.dll.config</include> 
-				<include>AllTest.dll.VisualState.xml</include> 
-				<include>AllTest.pdb</include> 
-				<include>nmock.dll</include> 
-				<include>nunit.core.dll</include> 
-				<include>nunit.framework.dll</include> 
-				<include>TestResult.xml</include> 
-				<include>ThoughtWorks.Selenium.Core.dll</include> 
-				<include>ThoughtWorks.Selenium.Core.pdb</include> 
-				<include>ThoughtWorks.Selenium.IntegrationTests.dll</include> 
-				<include>ThoughtWorks.Selenium.IntegrationTests.pdb</include> 
-				<include>Ionic.Zip.dll</include> 
-				<include>Newtonsoft.Json.dll</include> 
-				<include>Selenium.WebDriverBackedSelenium.dll</include> 
-				<include>Selenium.WebDriverBackedSelenium.pdb</include> 
-				<include>Selenium.WebDriverBackedSelenium.xml</include> 
-				<include>WebDriver.xml</include> 
-				<include>WebDriver.pdb</include> 
-				<include>WebDriver.dll</include> 
-				<include>ThoughtWorks.Selenium.Core.xml</include> 
-				<include>System.Drawing.dll</include> 
-			</includes> 
-		</fileSet> 
-		<fileSet filtered="false" encoding="UTF-8"> 
-			<directory>test/functional/AllTest/obj/Debug</directory> 
-			<includes> 
-				<include>AllTest.csproj.FileListAbsolute.txt</include> 
-				<include>AllTest.dll</include> 
-				<include>AllTest.pdb</include> 
-				<include>ResolveAssemblyReference.cache</include> 
+				<include>BaseScreen.java</include> 
+				<include>PhotonAbstractScreen.java</include> 
+				<include>WelcomeScreen.java</include> 
 			</includes> 
 		</fileSet>
 		<fileSet filtered="false" encoding="UTF-8"> 
-			<directory>test/functional/AllTest/obj/Debug/TempPE</directory> 
+			<directory>test/functional/src/main/java/com/photon/phresco/selenium/util</directory> 
+			<includes> 
+				<include>Constants.java</include> 
+				<include>GetCurrentDir.java</include> 
+				<include>ScreenActionFailedException.java</include> 
+				<include>ScreenException.java</include>
+			</includes> 
+		</fileSet> 
+		<fileSet filtered="false" encoding="UTF-8"> 
+			<directory>test/functional/src/main/java/com/photon/phresco/uiconstants</directory> 
+			<includes> 
+				<include>PhrescoUiConstants.java</include> 
+				<include>ReadXMLFile.java</include> 
+				<include>SharepointData.java</include> 
+				<include>UIConstants.java</include>
+				<include>UserInfoConstants.java</include>
+			</includes> 
+		</fileSet>
+		<fileSet filtered="false" encoding="UTF-8"> 
+			<directory>test/functional/src/main/java/com/photon/phresco/ScreenShots</directory> 
 			<includes> 
 				<include>**/*</include>
 			</includes> 
 		</fileSet>
 		<fileSet filtered="false" encoding="UTF-8"> 
-			<directory>test/functional/AllTest/obj/Release</directory> 
-			<includes> 
-				<include>AllTest.csproj.FileListAbsolute.txt</include>
-				<include>AllTest.dll</include>
-				<include>AllTest.pdb</include>
-				<include>ResolveAssemblyReference.cache</include>
-			</includes> 
-		</fileSet>
-		<fileSet filtered="false" encoding="UTF-8"> 
-			<directory>test/functional/AllTest/obj/Release/TempPE</directory> 
+			<directory>test/functional/src/main/java/com/photon/phresco/selenium/report</directory> 
 			<includes> 
 				<include>**/*</include>
 			</includes> 
 		</fileSet>
 		<fileSet filtered="false" encoding="UTF-8"> 
-			<directory>test/functional/AllTest/Properties</directory> 
+			<directory>test/functional/src/main/resources</directory> 
 			<includes> 
-				<include>AssemblyInfo.cs</include>
+				<include>phresco-env-config.xml</include>
+				<include>Sharepoint.xml</include>
+				<include>UIConstants.xml</include>
+				<include>UserInfo.xml</include>
+			</includes> 
+		</fileSet>
+		<fileSet filtered="false" encoding="UTF-8"> 
+			<directory>test/functional/src/test/java/com/photon/phresco/testcases</directory> 
+			<includes> 
+				<include>SharepointAllTest.java</include>
+				<include>WelcomePageTestCase.java</include>
+			</includes> 
+		</fileSet>
+		<fileSet filtered="false" encoding="UTF-8"> 
+			<directory>test/functional/src/test/java/com/photon/phresco/testsuites</directory> 
+			<includes> 
+				<include>AllTest.xml</include>
+				<include>SharepointAllTest.xml</include>
+				<include>WelcomePageTestSuite.xml</include>
+			</includes> 
+		</fileSet>
+		<fileSet filtered="false" encoding="UTF-8"> 
+			<directory>test/functional/src/test/resources</directory> 
+			<includes> 
+				<include>AllTest.xml</include>
+				<include>SuiteTest1.xml</include>
+				<include>SuiteTest2.xml</include>
 			</includes> 
 		</fileSet>
 		<fileSet filtered="false" encoding="UTF-8"> 
@@ -194,7 +166,7 @@
 			<includes> 
 				<include>build.properties</include> 
 				<include>build.xml</include> 
-				<include>pom.xml</include> 
+				<include>pom.xml</include>
 			</includes> 
 		</fileSet> 
 		<fileSet filtered="false" encoding="UTF-8"> 
