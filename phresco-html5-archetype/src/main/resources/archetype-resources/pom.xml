@@ -237,6 +237,7 @@
 		<sonar.language>js</sonar.language>
 		<sonar.javascript.jstest.reportsfolder>do_not_checkin/target/jstest/report/emulator-0</sonar.javascript.jstest.reportsfolder>
         <sonar.javascript.testframework>jstest</sonar.javascript.testframework>
+		<phresco.jslibs.source.dir>/src/main/webapp/lib</phresco.jslibs.source.dir>
 		<phresco.source.resource.dir>/src/main/webapp/WEB-INF/resources</phresco.source.resource.dir>
 		<phresco.components.source.dir>/src/main/webapp/components</phresco.components.source.dir>
 		<!-- Test, Test Report and Test Suite Directories -->
