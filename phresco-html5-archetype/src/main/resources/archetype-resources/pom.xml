@@ -241,7 +241,7 @@
 		<phresco.source.resource.dir>/src/main/webapp/WEB-INF/resources</phresco.source.resource.dir>
 		<phresco.components.source.dir>/src/main/webapp/components</phresco.components.source.dir>
 		<!-- Test, Test Report and Test Suite Directories -->
-		<phresco.unitTest.report.dir>/do_not_checkin/target/surefire-reports</phresco.unitTest.report.dir>
+		<phresco.unitTest.report.dir>/do_not_checkin/target/jstest/report</phresco.unitTest.report.dir>
 		<phresco.unitTest.testsuite.xpath>/testsuite</phresco.unitTest.testsuite.xpath>
 		<phresco.unitTest.testcase.path>/testcase</phresco.unitTest.testcase.path>
 		<phresco.functionalTest.selenium.tool>grid</phresco.functionalTest.selenium.tool>
