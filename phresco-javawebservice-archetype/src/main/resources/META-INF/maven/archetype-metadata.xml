@@ -212,7 +212,7 @@
 			</includes>
 		</fileSet>
 		<fileSet filtered="false" encoding="UTF-8">
-			<directory>test/performance/webservices</directory>
+			<directory>test/performance/webservice</directory>
 			<includes>
 				<include>build.properties</include>
 				<include>build.xml</include>
@@ -220,7 +220,7 @@
 			</includes>
 		</fileSet>
 		<fileSet filtered="false" encoding="UTF-8">
-			<directory>test/performance/webservices/tests</directory>
+			<directory>test/performance/webservice/tests</directory>
 			<includes>
 				<include>phresco-env-config.csv</include>
 				<include>PhrescoFrameWork_TestPlan.jmx</include>
