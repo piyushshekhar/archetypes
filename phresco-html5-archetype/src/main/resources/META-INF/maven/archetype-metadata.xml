@@ -228,5 +228,12 @@
 				<include>TestCase.java</include>
 			</includes>
 		</fileSet>
+        
+        <fileSet filtered="false" packaged="false"> 
+			<directory>src/test/webapp/js/HelloWorld/widgets/</directory> 
+			<includes>
+				<include>helloworldTest.js</include>
+			</includes>
+		</fileSet>
 	</fileSets>
 </archetype-descriptor>
