@@ -25,7 +25,6 @@
 				<description></description>
 				<key>testAgainst</key>
 				<possibleValues>
-					<value key="build" dependency="buildNumber">Build</value>
 					<value key="server" dependency="showSettings">Server</value>
 					</possibleValues>
 				<value></value>
