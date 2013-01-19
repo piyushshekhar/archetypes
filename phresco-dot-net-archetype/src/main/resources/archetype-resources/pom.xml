@@ -39,7 +39,7 @@
 		<phresco.functionalTest.report.dir>/test/functional/target/nunit-report</phresco.functionalTest.report.dir>
 		<phresco.functionalTest.testsuite.xpath>/test-results/test-suite/results/test-suite/results/test-suite</phresco.functionalTest.testsuite.xpath>
 		<phresco.functionalTest.testcase.path>/results/test-case</phresco.functionalTest.testcase.path>
-		<phresco.functionalTest.adapt.config>/test/functional/src/test/sharepoint/phresco/tests/phresco-env-config.xml</phresco.functionalTest.adapt.config>
+		<phresco.functionalTest.adapt.config>/test/functional/AllTest/phresco-env-config.xml</phresco.functionalTest.adapt.config>
 		<phresco.performanceTest.dir>/test/performance</phresco.performanceTest.dir>
 		<phresco.performanceTest.report.dir>/test/performance/dir_type/results/jmeter</phresco.performanceTest.report.dir>
 		<phresco.loadTest.dir>/test/load</phresco.loadTest.dir>
