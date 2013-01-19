@@ -34,32 +34,6 @@
 			</parameter>
 			<parameter>
 				<name>
-					<value lang="en">Build Number</value>
-				</name>
-				<type>DynamicParameter</type>
-				<dynamicParameter>
-				<class>com.photon.phresco.impl.BuildInfoParameterImpl</class>
-				<dependencies>
-					<dependency>
-						<groupId>com.photon.phresco.commons</groupId>
-						<artifactId>phresco-commons</artifactId>
-						<type>jar</type>
-						<version>2.0.0.33001-SNAPSHOT</version>
-					</dependency>
-				</dependencies>
-				</dynamicParameter>
-				<required>false</required>
-				<editable>true</editable>
-				<description></description>
-				<key>buildNumber</key>
-				<multiple>false</multiple>
-				<value></value>
-				<sort>false</sort>
-				<show>true</show>
-				<dependency>environmentName</dependency>
-			</parameter>
-			<parameter>
-				<name>
 					<value lang="en">Show Settings</value>
 				</name>
 				<type>Boolean</type>
@@ -185,32 +159,6 @@
                     <sort>false</sort>
                     <show>true</show>
 					<dependency>environmentName</dependency>
-                </parameter>
-                <parameter>
-                    <name>
-                        <value lang="en">Build Number</value>
-                    </name>
-                    <type>DynamicParameter</type>
-                    <dynamicParameter>
-                        <class>com.photon.phresco.impl.BuildInfoParameterImpl</class>
-                        <dependencies>
-                            <dependency>
-								<groupId>com.photon.phresco.commons</groupId>
-								<artifactId>phresco-commons</artifactId>
-								<type>jar</type>
-								<version>2.0.0.33001-SNAPSHOT</version>
-                            </dependency>
-                        </dependencies>
-                    </dynamicParameter>
-                    <required>false</required>
-                    <editable>true</editable>
-                    <description></description>
-                    <key>buildNumber</key>
-                    <multiple>false</multiple>
-                    <value></value>
-                    <sort>false</sort>
-                    <show>false</show>
-                    <dependency>environmentName</dependency>
                 </parameter>
                 <parameter>
                     <name>
