@@ -54,13 +54,45 @@
                 </parameter>
                 <parameter>
                     <name>
+                        <value lang="en">Target</value>
+                    </name>
+                    <type>List</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>target</key>
+                    <possibleValues>
+                        <value key="device" dependency="deviceKeyPassword">Device</value>
+                        <value key="emulator" dependency="emulatorKeyPassword">Emulator</value>
+                        </possibleValues>
+                    <value></value>
+                    <sort>false</sort>
+                    <show>true</show>
+                    <dependency>environmentName</dependency>
+                </parameter>
+                <parameter>
+                    <name>
                         <value lang="en">Key Password</value>
                     </name>
                     <type>password</type>
                     <required>false</required>
                     <editable>true</editable>
                     <description></description>
-                    <key>keyPassword</key>
+                    <key>deviceKeyPassword</key>
+                    <multiple>false</multiple>
+                    <sort>false</sort>
+                    <show>true</show>
+                    <value></value>
+                </parameter>
+                <parameter>
+                    <name>
+                        <value lang="en">Key Password</value>
+                    </name>
+                    <type>hidden</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>emulatorKeyPassword</key>
                     <multiple>false</multiple>
                     <sort>false</sort>
                     <show>true</show>

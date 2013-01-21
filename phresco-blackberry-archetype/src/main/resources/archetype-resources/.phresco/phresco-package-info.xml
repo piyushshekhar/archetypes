@@ -62,8 +62,8 @@
 					<description></description>
 					<key>target</key>
 					<possibleValues>
-						<value key="device" dependency="DeviceKeyPassword">Device</value>
-						<value key="emulator" dependency="EmulatorKeyPassword">Emulator</value>
+						<value key="device" dependency="deviceKeyPassword">Device</value>
+						<value key="emulator" dependency="emulatorKeyPassword">Emulator</value>
 						</possibleValues>
 					<value></value>
 					<sort>false</sort>
@@ -78,7 +78,7 @@
                     <required>false</required>
                     <editable>true</editable>
                     <description></description>
-                    <key>DeviceKeyPassword</key>
+                    <key>deviceKeyPassword</key>
 					<multiple>false</multiple>
 					<sort>false</sort>
                     <show>true</show>
@@ -92,7 +92,7 @@
                     <required>false</required>
                     <editable>true</editable>
                     <description></description>
-                    <key>EmulatorKeyPassword</key>
+                    <key>emulatorKeyPassword</key>
 					<multiple>false</multiple>
 					<sort>false</sort>
                     <show>true</show>
