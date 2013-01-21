@@ -26,7 +26,6 @@
                    <key>testAgainst</key>
                    <possibleValues>
                        <value key="server">Server</value>
-                       <value key="webservice">Web Services</value>
                    </possibleValues>
                    <multiple>false</multiple>
                    <value></value>
