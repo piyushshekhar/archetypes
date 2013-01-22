@@ -30,31 +30,6 @@
                     </name>
                     <type>DynamicParameter</type>
                     <dynamicParameter>
-                        <class>com.photon.phresco.impl.BuildInfoParameterImpl</class>
-                        <dependencies>
-                            <dependency>
-                                <groupId>com.photon.phresco.commons</groupId>
-                                <artifactId>phresco-commons</artifactId>
-                                <type>jar</type>
-                                <version>2.0.0.33001-SNAPSHOT</version>
-                            </dependency>
-                        </dependencies>
-                    </dynamicParameter>
-                    <required>false</required>
-                    <editable>true</editable>
-                    <description></description>
-                    <key>buildNumber</key>
-                    <multiple>false</multiple>
-                    <value></value>
-                    <sort>false</sort>
-                    <show>true</show>
-                </parameter>
-                <parameter>
-                    <name>
-                        <value lang="en">Device Id</value>
-                    </name>
-                    <type>DynamicParameter</type>
-                    <dynamicParameter>
                         <class>com.photon.phresco.framework.param.impl.IosShowFunctionalDeviceIdValidationImpl</class>
                         <dependencies>
                             <dependency>
@@ -65,14 +40,28 @@
                             </dependency>
                         </dependencies>
                     </dynamicParameter>
-                    <required>true</required>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>buildNumber</key>
+                    <multiple>false</multiple>
+                    <value>1</value>
+                    <sort>false</sort>
+                    <show>true</show>
+                </parameter>
+                <parameter>
+                    <name>
+                        <value lang="en">Device Id</value>
+                    </name>
+                    <type>String</type>
+                    <required>false</required>
                     <editable>true</editable>
                     <description></description>
                     <key>deviceId</key>
                     <multiple>false</multiple>
                     <value></value>
                     <sort>false</sort>
-                    <show>true</show>
+                    <show>false</show>
                 </parameter>
             </parameters>
         </configuration>
