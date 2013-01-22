@@ -17,20 +17,17 @@
  * limitations under the License.
  * ###
  */
-var nodeunit = require('nodeunit');
-var reporter = nodeunit.reporters.junit;
+/* exports.testHelloWorld = function(test) {
+    test.expect(1);
+    test.ok(true, "Hello World");
+    test.done();
+}; */
 
-var opts = {
-    "error_prefix": "\u001B[31m",
-    "error_suffix": "\u001B[39m",
-    "ok_prefix": "\u001B[32m",
-    "ok_suffix": "\u001B[39m",
-    "bold_prefix": "\u001B[1m",
-    "bold_suffix": "\u001B[22m",
-    "assertion_prefix": "\u001B[35m",
-    "assertion_suffix": "\u001B[39m"
-}
+assert = require("assert");
 
-opts.output = "do_not_checkin/target/surefire";
-
-reporter.run(['source/test/unit'], opts);
+describe("sample test", function() {
+	it("HelloWorld", function(done){
+		setTimeout(done, 100);
+		assert.equal("helloworld","helloworld","success for HelloWorld");
+	}); 
+}); 

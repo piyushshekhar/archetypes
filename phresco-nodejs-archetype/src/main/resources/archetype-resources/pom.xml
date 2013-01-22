@@ -45,6 +45,9 @@
 		<phresco.performanceTest.report.dir>/test/performance/results/jmeter</phresco.performanceTest.report.dir>
 		<phresco.loadTest.dir>/test/load</phresco.loadTest.dir>
 		<phresco.loadTest.report.dir>/test/load/results/jmeter</phresco.loadTest.report.dir>
+		<sonar.javascript.jstestdriver.reportsfolder>do_not_checkin/target/surefire</sonar.javascript.jstestdriver.reportsfolder>
+		<sonar.javascript.jstestdriver.coveragefile>coverage.dat</sonar.javascript.jstestdriver.coveragefile>  
+		<sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
 	</properties>
 
 	<build>
@@ -52,33 +55,12 @@
 			<plugin>
 				<groupId>com.photon.phresco.plugins</groupId>
 				<artifactId>phresco-maven-plugin</artifactId>
-				<version>2.0.0.33001-SNAPSHOT</version>
+				<version>2.0.0.34001-SNAPSHOT</version>
 				<extensions>true</extensions>
 			</plugin>
-
-			<plugin>
-               <groupId>org.codehaus.mojo</groupId>
-               <artifactId>exec-maven-plugin</artifactId>
-               <version>1.1.1</version>
-               <executions>
-                   <execution>
-                       <phase>test</phase>
-                       <goals>
-                            <goal>exec</goal>
-                       </goals>
-                       </execution>
-               </executions>
-               <configuration>
-                   <executable>node</executable>
-                   <workingDirectory>./</workingDirectory>
-                   <arguments>
-                        <argument>source/test/AllTest.js</argument>
-                   </arguments>
-               </configuration>
-            </plugin>
-            
 		</plugins>
 		<sourceDirectory>source</sourceDirectory>
+		<testSourceDirectory>source/test</testSourceDirectory>
 		<directory>do_not_checkin/target</directory>
 	</build>
 	<profiles>
@@ -116,5 +98,89 @@
 		        </plugins>
             </build>
         </profile>
+		<profile>
+			<id>windows</id>
+			<activation>
+			<os>
+			<family>Windows</family>
+			</os>
+			</activation>
+			<build>
+				<plugins>
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>exec-maven-plugin</artifactId>
+					<version>1.1.1</version>
+				<executions>
+					<execution>
+						<phase>test</phase>
+					<goals>
+						<goal>exec</goal>
+					</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<executable>${basedir}/source/test.bat</executable>
+				</configuration>
+				</plugin>	
+			</plugins>
+			</build>
+			</profile>
+			<profile>
+				<id>Unix</id>
+				<activation>
+					<os>
+						<family>unix</family>
+					</os>
+				</activation>
+				<build>
+					<plugins>
+						<plugin>
+							<groupId>org.codehaus.mojo</groupId>
+							<artifactId>exec-maven-plugin</artifactId>
+							<version>1.1.1</version>
+						<executions>
+							<execution>
+							<phase>test</phase>
+							<goals>
+							<goal>exec</goal>
+							</goals>
+							</execution>
+						</executions>
+						<configuration>
+							<executable>${basedir}/source/test.sh</executable>
+							</configuration>
+						</plugin>
+				</plugins>
+				</build>
+				</profile>
+				<profile>
+					<id>Mac</id>
+					<activation>
+						<os>
+							<family>mac</family>
+						</os>
+					</activation>
+					<build>
+					<plugins>
+						<plugin>
+							<groupId>org.codehaus.mojo</groupId>
+							<artifactId>exec-maven-plugin</artifactId>
+							<version>1.1.1</version>
+						<executions>
+							<execution>
+							<phase>test</phase>
+							<goals>
+								<goal>exec</goal>
+							</goals>
+							</execution>
+						</executions>
+						<configuration>
+						<executable>${basedir}/source/test.sh</executable>
+						</configuration>
+						</plugin>
+					</plugins>
+					</build>
+				</profile>
     </profiles>
 </project>

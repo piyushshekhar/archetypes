@@ -59,7 +59,7 @@
 						<groupId>com.photon.phresco.commons</groupId>
 						<artifactId>phresco-commons</artifactId>
 						<type>jar</type>
-						<version>2.0.0.33001-SNAPSHOT</version>
+						<version>2.0.0.34001-SNAPSHOT</version>
 					</dependency>
 				</dependencies>
 				</dynamicParameter>
@@ -109,7 +109,7 @@
                <groupId>com.photon.phresco.plugins</groupId>
                <artifactId>drupal-phresco-plugin</artifactId>
                <type>jar</type>
-               <version>2.0.0.33001-SNAPSHOT</version>
+               <version>2.0.0.34001-SNAPSHOT</version>
                <class>com.photon.phresco.plugins.drupal.DrupalPlugin</class>
            </dependency>
        </implementation>
@@ -163,7 +163,7 @@
 								<groupId>com.photon.phresco.commons</groupId>
 								<artifactId>phresco-commons</artifactId>
 								<type>jar</type>
-								<version>2.0.0.33001-SNAPSHOT</version>
+								<version>2.0.0.34001-SNAPSHOT</version>
                             </dependency>
                         </dependencies>
                     </dynamicParameter>
