@@ -206,12 +206,6 @@
 			</includes>
 		</fileSet>
 		<fileSet filtered="false" encoding="UTF-8">
-			<directory>test/unit</directory>
-			<includes>
-				<include>**/*</include>
-			</includes>
-		</fileSet>
-		<fileSet filtered="false" encoding="UTF-8">
 			<directory>test/performance/webservices</directory>
 			<includes>
 				<include>build.properties</include>

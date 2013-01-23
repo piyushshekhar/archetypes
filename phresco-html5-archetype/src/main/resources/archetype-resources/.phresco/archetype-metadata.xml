@@ -37,6 +37,7 @@
 				<include>phresco-run-against-source-info.xml</include>
 				<include>war-config.xml</include>
 				<include>phresco-pdf-report-info.xml</include>
+				<include>phresco-performance-test-info.xml</include>
 			</includes> 
 		</fileSet>
 		<fileSet filtered="false" packaged="false"> 
@@ -59,10 +60,6 @@
 			<includes>
 				<include>index.jsp</include>
 				<include>environment.jsp</include>
-				<include>html5.js</include>
-				<include>jquery.loadmask.js</include>
-				<include>main.js</include>
-				<include>phrescoWidget.js</include>
 			</includes>
 		</fileSet>
 		
@@ -75,7 +72,7 @@
 		<fileSet filtered="false" packaged="false"> 
 			<directory>src/main/webapp/js/eshop/controller</directory> 
 			<includes>
-				<include>eshopAPI.js</include>
+				<include>appAPI.js</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="false" packaged="false"> 
@@ -103,12 +100,11 @@
 				<include>phresco-env-config.xml</include>
 			</includes>
 		</fileSet>
-        
-		
-		<fileSet filtered="false" packaged="false"> 
-			<directory>src/test/java/com/photon/phresco</directory> 
+
+        <fileSet filtered="false" packaged="false"> 
+			<directory>src/test/webapp/js/eshop/widgets/</directory> 
 			<includes>
-				<include>TestCase.java</include>
+				<include>loginTest.js</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="false" encoding="UTF-8">
@@ -208,7 +204,7 @@
 			</includes>
 		</fileSet>
 		<fileSet filtered="false" packaged="false"> 
-			<directory>test/performance/webservices</directory> 
+			<directory>test/performance/webservice</directory> 
 			<includes>
 				<include>build.properties</include>
 				<include>build.xml</include>
@@ -216,17 +212,12 @@
 			</includes>
 		</fileSet>
 		<fileSet filtered="false" packaged="false"> 
-			<directory>test/performance/webservices/tests</directory> 
+			<directory>test/performance/webservice/tests</directory> 
 			<includes>
 				<include>phresco-env-config.csv</include>
 				<include>PhrescoFrameWork_TestPlan.jmx</include>
 			</includes>
 		</fileSet>		
-		<fileSet filtered="false" packaged="false"> 
-			<directory>src/test/java/com/photon/phresco/</directory> 
-			<includes>
-				<include>TestCase.java</include>
-			</includes>
-		</fileSet>
+		
 	</fileSets>
 </archetype-descriptor>
