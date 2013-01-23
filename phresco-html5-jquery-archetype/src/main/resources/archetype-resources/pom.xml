@@ -307,6 +307,7 @@
     </plugins>
   </reporting>
   <properties>
+		<phresco.env.config.xml>/src/main/webapp/WEB-INF/resources/phresco-env-config.xml</phresco.env.config.xml>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <sonar.language>js</sonar.language>
 		<sonar.javascript.jstest.reportsfolder>do_not_checkin/target/jstest/report/emulator-0</sonar.javascript.jstest.reportsfolder>

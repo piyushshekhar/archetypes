@@ -44,6 +44,7 @@
 	</build>
 	
 	<properties>
+		<phresco.env.config.xml>/source/config/phresco-env-config.xml</phresco.env.config.xml>
 		<phresco.module.source.dir>/source</phresco.module.source.dir>
 		<phresco.jslibs.source.dir>/source/public_html/js</phresco.jslibs.source.dir>
 		<phresco.sql.path>/source/sql/</phresco.sql.path>

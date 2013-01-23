@@ -234,6 +234,7 @@
 		</profile>
     </profiles>
 	<properties>
+		<phresco.env.config.xml>/src/main/webapp/WEB-INF/resources/phresco-env-config.xml</phresco.env.config.xml>
 		<sonar.language>js</sonar.language>
 		<sonar.javascript.jstest.reportsfolder>do_not_checkin/target/jstest/report/emulator-0</sonar.javascript.jstest.reportsfolder>
         <sonar.javascript.testframework>jstest</sonar.javascript.testframework>
