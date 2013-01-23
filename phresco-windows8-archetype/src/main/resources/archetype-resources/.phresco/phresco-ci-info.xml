@@ -116,7 +116,7 @@
                     <key>environmentName</key>
                     <multiple>true</multiple>
                     <sort>false</sort>
-                    <show>false</show>
+                    <show>true</show>
                     <value></value>
                 </parameter>
                 <parameter>
@@ -288,27 +288,11 @@
                 <description></description>
                 <key>testAgainst</key>
                 <possibleValues>
-                    <value key="build" dependency="buildEnvironmentName">Build</value>
                     <value key="server" dependency="showSettings">Server</value>
-                    </possibleValues>
+				</possibleValues>
                 <value></value>
                 <sort>false</sort>
                 <show>true</show>
-            </parameter>
-            <parameter>
-                <name>
-                    <value lang="en">Build Number</value>
-                </name>
-                <type>Hidden</type>
-                <required>false</required>
-                <editable>true</editable>
-                <description></description>
-                <key>buildNumber</key>
-                <multiple>false</multiple>
-                <value>1</value>
-                <sort>false</sort>
-                <show>false</show>
-                <dependency>buildEnvironmentName</dependency>
             </parameter>
             <parameter>
                 <name>
@@ -326,30 +310,6 @@
                     <value key="internetExplorer">Internet Explorer</value>
                     <value key="chrome">Chrome</value>
                 </possibleValues>
-                <multiple>false</multiple>
-                <value></value>
-                <sort>false</sort>
-                <show>true</show>
-            </parameter>
-            <parameter>
-                <name>
-                    <value lang="en">Environment</value>
-                </name>
-                <type>DynamicParameter</type>
-                <dynamicParameter>
-                <class>com.photon.phresco.impl.EnvironmentsParameterImpl</class>
-                <dependencies>
-                    <dependency>
-                        <groupId>com.photon.phresco.commons</groupId>
-                        <artifactId>phresco-commons</artifactId>
-                        <type>jar</type>
-                        <version>2.0.0.34001-SNAPSHOT</version>
-                    </dependency>
-                </dependencies>
-                </dynamicParameter>
-                <required>true</required>
-                <editable>true</editable>
-                <key>buildEnvironmentName</key>
                 <multiple>false</multiple>
                 <value></value>
                 <sort>false</sort>
@@ -392,7 +352,7 @@
                 <multiple>false</multiple>
                 <value></value>
                 <sort>false</sort>
-                <show>false</show>
+                <show>true</show>
             </parameter>
         </parameters>
     </configuration>

@@ -1,15 +1,15 @@
-YUI.add('helloworldTest', function(Y) {
+YUI.add('loginTest', function(Y) {
 		
 		//create the test suite
-		var suite = new Y.Test.Suite("HelloworldTest");
+		var suite = new Y.Test.Suite("LoginTest");
 
 		//add test cases
 		var testCase = new Y.Test.Case({
 
-			name: "HelloworldTest",
-			"HelloworldTest test": function () {
+			name: "LoginTest",
+			"LoginTest test": function () {
 				var helloNode = Y.Node.create('<div></div>');
-				var appAPI = new Y.Base.EshopAPI();
+				var appAPI = new Y.Base.AppAPI();
 				
 				// instantiate NavigationWidget with the HTML
 				/*var loginWidget = new Y.Base.LoginWidget({

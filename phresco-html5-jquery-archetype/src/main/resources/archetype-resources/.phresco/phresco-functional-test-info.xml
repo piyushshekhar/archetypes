@@ -155,7 +155,7 @@
                     <possibleValues>
                         <value key="server" dependency="showSettings">Server</value>
                     </possibleValues>
-                    <value>build</value>
+                    <value></value>
                     <sort>false</sort>
                     <show>true</show>
 					<dependency>environmentName</dependency>
@@ -197,6 +197,7 @@
                     <multiple>false</multiple>
                     <sort>false</sort>
                     <show>true</show>
+					<value></value>
                 </parameter>
 				<parameter>
 					<name>
