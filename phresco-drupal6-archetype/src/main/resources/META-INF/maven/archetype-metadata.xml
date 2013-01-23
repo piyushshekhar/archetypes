@@ -191,6 +191,7 @@
 			<directory>test/performance/server/tests</directory> 
 			<includes> 
 				<include>PhrescoFrameWork_TestPlan.jmx</include>
+				<include>phresco-env-config.csv</include>
 			</includes> 
 		</fileSet>
 		<fileSet filtered="false"> 
