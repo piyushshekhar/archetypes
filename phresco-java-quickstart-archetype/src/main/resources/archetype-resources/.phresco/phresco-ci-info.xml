@@ -205,26 +205,11 @@
                 <description></description>
                 <key>testAgainst</key>
                 <possibleValues>
-                    <value key="build" dependency="buildNumber">Build</value>
                     <value key="jar" dependency="jarLocation">Jar</value>
-                    </possibleValues>
+				</possibleValues>
                 <value></value>
                 <sort>false</sort>
                 <show>true</show>
-            </parameter>
-            <parameter>
-                <name>
-                    <value lang="en">Build Number</value>
-                </name>
-                <type>Hidden</type>
-                <required>false</required>
-                <editable>true</editable>
-                <description></description>
-                <key>buildNumber</key>
-                <multiple>false</multiple>
-                <value>1</value>
-                <sort>false</sort>
-                <show>false</show>
             </parameter>
             <parameter>
                 <name>
