@@ -14,7 +14,7 @@
     </organization>
     <build>
 		<sourceDirectory>${basedir}/src/main/webapp/js</sourceDirectory>		
-		<testSourceDirectory>src/test/webapp/js</testSourceDirectory>
+		<testSourceDirectory>src/test</testSourceDirectory>
         <directory>do_not_checkin/target</directory>
         <finalName>service</finalName>
         <plugins>
@@ -236,15 +236,19 @@
 	<properties>
 		<phresco.env.config.xml>/src/main/webapp/WEB-INF/resources/phresco-env-config.xml</phresco.env.config.xml>
 		<sonar.language>js</sonar.language>
+		<phresco.unitTest>js,java</phresco.unitTest>
+		<phresco.unitTest.js.report.dir>/do_not_checkin/target/jstest/report</phresco.unitTest.js.report.dir>
+        <phresco.unitTest.js.testsuite.xpath>/testsuite</phresco.unitTest.js.testsuite.xpath>
+        <phresco.unitTest.js.testcase.path>/testcase</phresco.unitTest.js.testcase.path> 
+		<phresco.unitTest.java.report.dir>/do_not_checkin/target/surefire-reports</phresco.unitTest.java.report.dir>
+        <phresco.unitTest.java.testsuite.xpath>/testsuite</phresco.unitTest.java.testsuite.xpath>
+        <phresco.unitTest.java.testcase.path>/testcase</phresco.unitTest.java.testcase.path> 	
 		<sonar.javascript.jstest.reportsfolder>do_not_checkin/target/jstest/report/emulator-0</sonar.javascript.jstest.reportsfolder>
         <sonar.javascript.testframework>jstest</sonar.javascript.testframework>
 		<phresco.jslibs.source.dir>/src/main/webapp/lib</phresco.jslibs.source.dir>
 		<phresco.source.resource.dir>/src/main/webapp/WEB-INF/resources</phresco.source.resource.dir>
 		<phresco.components.source.dir>/src/main/webapp/components</phresco.components.source.dir>
 		<!-- Test, Test Report and Test Suite Directories -->
-		<phresco.unitTest.report.dir>/do_not_checkin/target/jstest/report</phresco.unitTest.report.dir>
-		<phresco.unitTest.testsuite.xpath>/testsuite</phresco.unitTest.testsuite.xpath>
-		<phresco.unitTest.testcase.path>/testcase</phresco.unitTest.testcase.path>
 		<phresco.functionalTest.selenium.tool>grid</phresco.functionalTest.selenium.tool>
 		<phresco.functionalTest.dir>/test/functional</phresco.functionalTest.dir>
 		<phresco.functionalTest.report.dir>/test/functional/target/surefire-reports</phresco.functionalTest.report.dir>

@@ -49,7 +49,7 @@
 		%>
 
 		
-        <script type="text/javascript" src="js/eshop/controller/eshopAPI.js"></script>
+        <script type="text/javascript" src="js/eshop/controller/appAPI.js"></script>
 
         <script type="text/javascript" src="js/eshop/widgets/headerWidget.js"></script>
         <script type="text/javascript" src="js/eshop/widgets/loginWidget.js"></script>
@@ -57,16 +57,16 @@
         <script type="text/javascript">
 			var configJson = '<%= configJson %>';
 			var currentEnv = '<%= currentEnv %>';
-            YUI().use('node', 'widget', 'eshopAPI', 'headerWidget', 'loginWidget', function(Y) {
+            YUI().use('node', 'widget', 'appAPI', 'headerWidget', 'loginWidget', function(Y) {
 
                 Y.on("domready", function () {
-                    var eshopAPI = new Y.Base.EshopAPI(($.parseJSON(configJson)),currentEnv);
+                    var appAPI = new Y.Base.AppAPI(($.parseJSON(configJson)),currentEnv);
 
                    // instantiate NavigationWidget with the HTML
                     var LoginWidget = new Y.Base.LoginWidget({
                         // place holder can be decided by specifying the attribute
                         targetNode : "#helloworld",
-						apiReference : eshopAPI
+						apiReference : appAPI
                    });
 
                   //  appAPI.getWSConfig();
