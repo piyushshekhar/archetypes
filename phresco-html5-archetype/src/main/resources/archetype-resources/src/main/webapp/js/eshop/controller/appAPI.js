@@ -18,25 +18,23 @@
  * ###
  */
  
-		 
-YUI.add("eshopAPI", function(Y) {
-			
-	function EshopAPI(config) {
-        EshopAPI.superclass.constructor.apply(this, arguments);
+YUI.add("appAPI", function(Y) {
+    function AppAPI(config) {
+        AppAPI.superclass.constructor.apply(this, arguments);
     }
-	
-    EshopAPI.NAME = "EshopAPI";
+
+    AppAPI.NAME = "AppAPI";
     
     var callbackData = 'callbackData';  
-	
-    EshopAPI.ATTRS = {
+
+    AppAPI.ATTRS = {
         config : {
             value : null
         },
         
     };
-				
-    Y.extend(EshopAPI, Y.Base, {
+
+    Y.extend(AppAPI, Y.Base, {
         
         initializer: function() {},
         destructor : function() {},
@@ -223,12 +221,11 @@ YUI.add("eshopAPI", function(Y) {
         },
         
     });
-						
-						
-    Y.namespace("Base").EshopAPI = EshopAPI;
+    
+    Y.namespace("Base").AppAPI = AppAPI;
     
                     
-}, "3.3.0", {
+}, "3.4.1", {
     requires:["base", "io", "json", "node", "substitute"]
 });
 
