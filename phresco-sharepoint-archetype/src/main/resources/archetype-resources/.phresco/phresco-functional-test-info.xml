@@ -84,8 +84,8 @@
 					<value key="firefox">Firefox</value>
 					<value key="safari">Safari</value>
 					<value key="opera">Opera</value>
-					<value key="internetExplorer">Internet Explorer</value>
-					<value key="chrome">Chrome</value>
+					<value key="iexplore">Internet Explorer</value>
+					<value key="googlechrome">Chrome</value>
 				</possibleValues>
 				<multiple>false</multiple>
 				<value></value>
