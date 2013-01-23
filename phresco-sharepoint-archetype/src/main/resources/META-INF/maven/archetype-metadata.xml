@@ -36,6 +36,7 @@
 				<include>phresco-start-node-info.xml</include>
 				<include>phresco-pdf-report-info.xml</include>
 				<include>phresco-performance-test-info.xml</include>
+				<include>phresco-unit-test-info.xml</include>
 			</includes> 
 		</fileSet>
 		<fileSet filtered="false" packaged="false"> 

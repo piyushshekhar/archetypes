@@ -34,6 +34,7 @@
 				<include>phresco-application-handler-info.xml</include>
 				<include>phresco-start-hub-info.xml</include>
 				<include>phresco-start-node-info.xml</include>
+				<include>phresco-unit-test-info.xml</include>
 			</includes> 
 		</fileSet>
 		<fileSet filtered="false" packaged="false"> 
