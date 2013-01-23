@@ -36,6 +36,8 @@ name="nodejs">
 				<include>phresco-start-hub-info.xml</include>
 				<include>phresco-start-node-info.xml</include>
 				<include>phresco-run-against-source-info.xml</include>
+				<include>phresco-pdf-report-info.xml</include>
+				<include>phresco-performance-test-info.xml</include>
 			</includes> 
 		</fileSet>
 		<fileSet filtered="false" packaged="false"> 
@@ -110,6 +112,8 @@ name="nodejs">
 			<directory>test/functional</directory> 
 			<includes> 
 				<include>pom.xml</include> 
+				<include>hubconfig.json</include> 
+				<include>nodeconfig.json</include> 
 			</includes> 
 		</fileSet>
 		<fileSet filtered="false" encoding="UTF-8"> 
@@ -149,13 +153,13 @@ name="nodejs">
 			</includes> 
 		</fileSet>
 		<fileSet filtered="false" encoding="UTF-8"> 
-			<directory>test/functional/src/test/java/photon/phresco/nodejs/testcases</directory> 
+			<directory>test/functional/src/test/java/com/photon/phresco/nodejs/testcases</directory> 
 			<includes> 
 				<include>NodejsHelloWorldTestCase.java</include>
 			</includes> 
 		</fileSet>
         <fileSet filtered="false" encoding="UTF-8"> 
-			<directory>test/functional/src/test/java/photon/phresco/nodejs/testsuite</directory> 
+			<directory>test/functional/src/test/java/com/photon/phresco/nodejs/testsuite</directory> 
 			<includes> 
 				<include>AllTest.xml</include>
 				<include>NodejsHelloWorldTestCaseSuite.xml</include>
