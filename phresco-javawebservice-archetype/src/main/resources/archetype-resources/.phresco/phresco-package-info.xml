@@ -91,6 +91,31 @@
 					<show>true</show>
                     <value></value>
                 </parameter>
+				<parameter>
+                    <pluginParameter>framework</pluginParameter>
+                    <mavenCommands>
+                        <mavenCommand>
+                            <key>true</key>
+                            <value>-DskipTests=true</value>
+                        </mavenCommand>
+                        <mavenCommand>
+                            <key>false</key>
+                            <value>-DskipTests=false</value>
+                        </mavenCommand>
+                    </mavenCommands>
+                    <name>
+                        <value lang="en">Skip Unit Test</value>
+                    </name>
+                    <type>Boolean</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>skipTest</key>
+					<multiple>false</multiple>
+					<sort>false</sort>
+					<show>true</show>
+                    <value>false</value>
+                </parameter>
                 <parameter>
                     <pluginParameter>framework</pluginParameter>
                     <mavenCommands>
