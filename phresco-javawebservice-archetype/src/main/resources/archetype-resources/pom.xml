@@ -27,6 +27,7 @@
 	<description>Sample Web Service(REST)</description>
        
     <properties>
+		<phresco.env.config.xml>/src/main/resources/phresco-env-config.xml</phresco.env.config.xml>
 		<phresco.sql.path>/src/sql/</phresco.sql.path>
         <jersey-version>1.9-ea07</jersey-version>
 		<phresco.source.resource.dir>/src/main/resources</phresco.source.resource.dir>

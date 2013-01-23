@@ -26,6 +26,7 @@
   <name>${artifactId}</name>
     
 	<properties>
+		<phresco.env.config.xml>/source/sites/default/config/phresco-env-config.xml</phresco.env.config.xml>
 		<phresco.module.source.dir>/source/sites/all/modules</phresco.module.source.dir>
 		<phresco.jslibs.source.dir>/sites/all/themes/jslib</phresco.jslibs.source.dir>
 		<phresco.sql.path>/source/sql/</phresco.sql.path>
