@@ -27,7 +27,7 @@
 	<packaging>apk</packaging>
     
     <properties>
-		<phresco.env.config.xml>source/assets/phresco-env-config.xml</phresco.env.config.xml>
+		<phresco.env.config.xml>/source/assets/phresco-env-config.xml</phresco.env.config.xml>
     	<android.version>2.3.3</android.version>
 		<phresco.unitTest.dir>/test/unit</phresco.unitTest.dir>
         <phresco.unitTest.report.dir>/test/unit/do_not_checkin/target/surefire-reports</phresco.unitTest.report.dir>
