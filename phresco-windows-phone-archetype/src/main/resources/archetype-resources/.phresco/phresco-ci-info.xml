@@ -70,6 +70,20 @@
                     <value></value>
                 </parameter>
                 <parameter>
+                     <name>
+                        <value lang="en">TYPE</value>
+                    </name>
+                    <type>hidden</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>type</key>
+                    <multiple>false</multiple>
+                    <value>wp7</value>
+                    <sort>false</sort>
+                    <show>true</show>
+                </parameter>
+                <parameter>
                     <name>
                         <value lang="en">Show Settings</value>
                     </name>
@@ -191,6 +205,20 @@
                     <sort>false</sort>
                     <show>true</show>
                     <value></value>
+                </parameter>
+                <parameter>
+                     <name>
+                        <value lang="en">TYPE</value>
+                    </name>
+                    <type>hidden</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>type</key>
+                    <multiple>false</multiple>
+                    <value>wp7</value>
+                    <sort>false</sort>
+                    <show>true</show>
                 </parameter>
                 <parameter>
                     <name>

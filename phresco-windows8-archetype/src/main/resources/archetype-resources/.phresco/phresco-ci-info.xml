@@ -67,7 +67,7 @@
                     <type>List</type>
                     <required>false</required>
                     <editable>true</editable>
-                    <key>Platform</key>
+                    <key>platform</key>
                     <possibleValues>
                         <value key="anyCpu">Any CPU</value>
                         <value key="arm">ARM</value>
@@ -79,6 +79,20 @@
                     <sort>false</sort>
                     <show>true</show>
                     <value></value>
+                </parameter>
+                <parameter>
+                    <name>
+                        <value lang="en">TYPE</value>
+                    </name>
+                    <type>hidden</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>type</key>
+                    <multiple>false</multiple>
+                    <value>wp8</value>
+                    <sort>false</sort>
+                    <show>true</show>
                 </parameter>
                 <parameter>
                     <name>
@@ -195,8 +209,21 @@
                 </parameter>
                 <parameter>
                     <name>
+                        <value lang="en">TYPE</value>
+                    </name>
+                    <type>hidden</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>type</key>
+                    <multiple>false</multiple>
+                    <value>wp8</value>
+                    <sort>false</sort>
+                    <show>true</show>
+                </parameter>
+                <parameter>
+                    <name>
                         <value lang="en">Environment</value>
-                        <value lang="cv">Envit</value>
                     </name>
                     <type>DynamicParameter</type>
                     <dynamicParameter>
@@ -296,27 +323,6 @@
             </parameter>
             <parameter>
                 <name>
-                    <value lang="en">Browser</value>
-                </name>
-                <type>List</type>
-                <required>false</required>
-                <editable>true</editable>
-                <description></description>
-                <key>browser</key>
-                <possibleValues>
-                    <value key="firefox">Firefox</value>
-                    <value key="safari">Safari</value>
-                    <value key="opera">Opera</value>
-                    <value key="internetExplorer">Internet Explorer</value>
-                    <value key="chrome">Chrome</value>
-                </possibleValues>
-                <multiple>false</multiple>
-                <value></value>
-                <sort>false</sort>
-                <show>true</show>
-            </parameter>
-            <parameter>
-                <name>
                     <value lang="en">Show Settings</value>
                 </name>
                 <type>Boolean</type>
@@ -349,6 +355,27 @@
                 <required>true</required>
                 <editable>true</editable>
                 <key>environmentName</key>
+                <multiple>false</multiple>
+                <value></value>
+                <sort>false</sort>
+                <show>true</show>
+            </parameter>
+            <parameter>
+                <name>
+                    <value lang="en">Browser</value>
+                </name>
+                <type>List</type>
+                <required>false</required>
+                <editable>true</editable>
+                <description></description>
+                <key>browser</key>
+                <possibleValues>
+                    <value key="firefox">Firefox</value>
+                    <value key="safari">Safari</value>
+                    <value key="opera">Opera</value>
+                    <value key="internetExplorer">Internet Explorer</value>
+                    <value key="chrome">Chrome</value>
+                </possibleValues>
                 <multiple>false</multiple>
                 <value></value>
                 <sort>false</sort>
