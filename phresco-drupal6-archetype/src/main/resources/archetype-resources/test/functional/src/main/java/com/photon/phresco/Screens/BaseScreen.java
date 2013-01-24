@@ -81,20 +81,9 @@ public class BaseScreen {
 			log.info("-------------***LAUNCHING GOOGLECHROME***--------------");
 			try {
 
-				/*
-				 * chromeService = new ChromeDriverService.Builder()
-				 * .usingChromeDriverExecutable( new File(getChromeLocation()))
-				 * .usingAnyFreePort().build(); log.info(
-				 * "-------------***LAUNCHING GOOGLECHROME***--------------");
-				 * chromeService.start();
-				 */
 				capabilities = new DesiredCapabilities();
 				capabilities.setBrowserName("chrome");
-				/*
-				 * break; capabilities.setPlatform(Platform)
-				 * capabilities.setPlatform(selectedPlatform); driver = new
-				 * RemoteWebDriver(server, capabilities);
-				 */
+				
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
@@ -104,16 +93,14 @@ public class BaseScreen {
 			driver = new InternetExplorerDriver();
 			capabilities = new DesiredCapabilities();
 			capabilities.setBrowserName("iexplore");
-			// break;
-			// capabilities.setPlatform(selectedPlatform);
+			
 
 		} else if (selectedBrowser.equalsIgnoreCase(Constants.BROWSER_FIREFOX)) {
 			log.info("-------------***LAUNCHING FIREFOX***--------------");
 			capabilities = new DesiredCapabilities();
 			capabilities.setBrowserName("firefox");
 			System.out.println("-----------checking the firefox-------");
-			// break;
-			// driver = new RemoteWebDriver(server, capabilities);
+			
 
 		} else {
 			throw new ScreenException(
@@ -139,37 +126,8 @@ public class BaseScreen {
 		}
 		driver = new RemoteWebDriver(server, capabilities);
 		driver.get(applicationURL + applicationContext);
-		// driver.manage().window().maximize();
-		// driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
 	}
-	
-	public  void windowResize()
-	{
-		phrsc = new PhrescoUiConstants();
-		String resolution = phrsc.RESOLUTION;		
-		if(resolution!=null)
-		{
-		String[] tokens = resolution.split("x");
-		String resolutionX=tokens[0];
-		String resolutionY=tokens[1];		
-		int x= Integer.parseInt(resolutionX);
-		int y= Integer.parseInt(resolutionY);
-		Dimension screenResolution = new Dimension(x,y);
-		driver.manage().window().setSize(screenResolution);
-		}
-		else{
-			driver.manage().window().maximize();
-		}
-	}
-
-	/*
-	 * public static void windowMaximizeFirefox() {
-	 * driver.manage().window().setPosition(new Point(0, 0)); java.awt.Dimension
-	 * screenSize = java.awt.Toolkit.getDefaultToolkit() .getScreenSize();
-	 * Dimension dim = new Dimension((int) screenSize.getWidth(), (int)
-	 * screenSize.getHeight()); driver.manage().window().setSize(dim); }
-	 */
 
 	public void closeBrowser() {
 		log.info("-------------***BROWSER CLOSING***--------------");
