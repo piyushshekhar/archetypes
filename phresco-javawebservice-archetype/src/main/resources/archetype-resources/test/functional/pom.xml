@@ -10,13 +10,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
-	<repositories>
-		<repository>
-			<id>seleniumserver</id>
-			<name>seleniumserver</name>
-			<url>http://172.16.18.178:8080/nexus/content/groups/public/</url>
-		</repository>
-	</repositories>
+	
 	<dependencies>
 		<dependency>
 			<groupId>org.testng</groupId>
@@ -98,16 +92,8 @@
 							</artifactItems>
 						</configuration>
 					</execution>
-				</executions>
-			</plugin>
-
-
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-dependency-plugin</artifactId>
-				<version>2.3</version>
-				<executions>
-					<execution>
+                    
+                    <execution>
 						<id>copy</id>
 						<phase>validate</phase>
 						<goals>
@@ -136,7 +122,7 @@
 						<phase>compile</phase>
 						<configuration>
 							<tasks>
-								<chmod file="${project.basedir}/chromedriver/mac/chromedriver"
+								<chmod file="${project.basedir}/chromedriver/chromedriver"
 									perm="777" />
 							</tasks>
 						</configuration>
@@ -169,7 +155,7 @@
 				<version>2.12.3</version>
 				<configuration>
 					<suiteXmlFiles>
-						<suiteXmlFile>./src/test/java/com/photon/phresco/testsuite/AllTest.xml</suiteXmlFile>
+						<suiteXmlFile>./src/test/java/com/photon/phresco/testsuites/AllTest.xml</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>

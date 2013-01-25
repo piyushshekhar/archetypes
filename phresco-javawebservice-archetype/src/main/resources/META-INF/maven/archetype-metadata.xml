@@ -148,7 +148,7 @@
 			</includes>
 		</fileSet>
         <fileSet filtered="false" encoding="UTF-8">
-			<directory>test/functional/src/test/java/com/photon/phresco/testsuite</directory>
+			<directory>test/functional/src/test/java/com/photon/phresco/testsuites</directory>
 			<includes>
 				<include>AllTest.xml</include>
 				<include>JavaWebserviceHelloWorldTestCaseSuite.xml</include>
@@ -204,12 +204,6 @@
 			<directory>test/performance/database/tests</directory>
 			<includes>
 				<include>PhrescoFrameWork_TestPlan.jmx</include>				
-			</includes>
-		</fileSet>
-		<fileSet filtered="false" encoding="UTF-8">
-			<directory>test/unit</directory>
-			<includes>
-				<include>**/*</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="false" encoding="UTF-8">

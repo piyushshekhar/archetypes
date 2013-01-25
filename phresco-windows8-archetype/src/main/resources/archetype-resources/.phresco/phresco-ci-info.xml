@@ -67,7 +67,7 @@
                     <type>List</type>
                     <required>false</required>
                     <editable>true</editable>
-                    <key>Platform</key>
+                    <key>platform</key>
                     <possibleValues>
                         <value key="anyCpu">Any CPU</value>
                         <value key="arm">ARM</value>
@@ -79,6 +79,20 @@
                     <sort>false</sort>
                     <show>true</show>
                     <value></value>
+                </parameter>
+                <parameter>
+                    <name>
+                        <value lang="en">TYPE</value>
+                    </name>
+                    <type>hidden</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>type</key>
+                    <multiple>false</multiple>
+                    <value>wp8</value>
+                    <sort>false</sort>
+                    <show>true</show>
                 </parameter>
                 <parameter>
                     <name>
@@ -107,7 +121,7 @@
                                 <groupId>com.photon.phresco.commons</groupId>
                                 <artifactId>phresco-commons</artifactId>
                                 <type>jar</type>
-                                <version>2.0.0.34001-SNAPSHOT</version>
+                                <version>2.0.0.34002-SNAPSHOT</version>
                             </dependency>
                         </dependencies>
                     </dynamicParameter>
@@ -169,7 +183,7 @@
                <groupId>com.photon.phresco.plugins</groupId>
                <artifactId>windows-phone-phresco-plugin</artifactId>
                <type>jar</type>
-               <version>2.0.0.34001-SNAPSHOT</version>
+               <version>2.0.0.34002-SNAPSHOT</version>
                <class>com.photon.phresco.plugins.windows.WPPlugin</class>
            </dependency>
        </implementation>
@@ -195,8 +209,21 @@
                 </parameter>
                 <parameter>
                     <name>
+                        <value lang="en">TYPE</value>
+                    </name>
+                    <type>hidden</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>type</key>
+                    <multiple>false</multiple>
+                    <value>wp8</value>
+                    <sort>false</sort>
+                    <show>true</show>
+                </parameter>
+                <parameter>
+                    <name>
                         <value lang="en">Environment</value>
-                        <value lang="cv">Envit</value>
                     </name>
                     <type>DynamicParameter</type>
                     <dynamicParameter>
@@ -206,7 +233,7 @@
                                 <groupId>com.photon.phresco.commons</groupId>
                                 <artifactId>phresco-commons</artifactId>
                                 <type>jar</type>
-                                <version>2.0.0.34001-SNAPSHOT</version>
+                                <version>2.0.0.34002-SNAPSHOT</version>
                             </dependency>
                         </dependencies>
                     </dynamicParameter>
@@ -268,7 +295,7 @@
                <groupId>com.photon.phresco.plugins</groupId>
                <artifactId>windows-phone-phresco-plugin</artifactId>
                <type>jar</type>
-               <version>2.0.0.34001-SNAPSHOT</version>
+               <version>2.0.0.34002-SNAPSHOT</version>
                <class>com.photon.phresco.plugins.windows.WPPlugin</class>
            </dependency>
        </implementation>
@@ -290,27 +317,6 @@
                 <possibleValues>
                     <value key="server" dependency="showSettings">Server</value>
 				</possibleValues>
-                <value></value>
-                <sort>false</sort>
-                <show>true</show>
-            </parameter>
-            <parameter>
-                <name>
-                    <value lang="en">Browser</value>
-                </name>
-                <type>List</type>
-                <required>false</required>
-                <editable>true</editable>
-                <description></description>
-                <key>browser</key>
-                <possibleValues>
-                    <value key="firefox">Firefox</value>
-                    <value key="safari">Safari</value>
-                    <value key="opera">Opera</value>
-                    <value key="internetExplorer">Internet Explorer</value>
-                    <value key="chrome">Chrome</value>
-                </possibleValues>
-                <multiple>false</multiple>
                 <value></value>
                 <sort>false</sort>
                 <show>true</show>
@@ -342,13 +348,34 @@
                         <groupId>com.photon.phresco.commons</groupId>
                         <artifactId>phresco-commons</artifactId>
                         <type>jar</type>
-                        <version>2.0.0.34001-SNAPSHOT</version>
+                        <version>2.0.0.34002-SNAPSHOT</version>
                     </dependency>
                 </dependencies>
                 </dynamicParameter>
                 <required>true</required>
                 <editable>true</editable>
                 <key>environmentName</key>
+                <multiple>false</multiple>
+                <value></value>
+                <sort>false</sort>
+                <show>true</show>
+            </parameter>
+            <parameter>
+                <name>
+                    <value lang="en">Browser</value>
+                </name>
+                <type>List</type>
+                <required>false</required>
+                <editable>true</editable>
+                <description></description>
+                <key>browser</key>
+                <possibleValues>
+                    <value key="firefox">Firefox</value>
+                    <value key="safari">Safari</value>
+                    <value key="opera">Opera</value>
+                    <value key="internetExplorer">Internet Explorer</value>
+                    <value key="chrome">Chrome</value>
+                </possibleValues>
                 <multiple>false</multiple>
                 <value></value>
                 <sort>false</sort>
@@ -371,7 +398,7 @@
                <groupId>com.photon.phresco.plugins</groupId>
                <artifactId>ci-phresco-plugin</artifactId>
                <type>jar</type>
-               <version>2.0.0.34001-SNAPSHOT</version>
+               <version>2.0.0.34002-SNAPSHOT</version>
                <class>com.photon.phresco.plugins.CIPlugin</class>
            </dependency>
        </implementation>
