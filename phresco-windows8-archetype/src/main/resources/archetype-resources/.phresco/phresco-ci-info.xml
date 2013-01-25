@@ -69,7 +69,7 @@
                     <editable>true</editable>
                     <key>platform</key>
                     <possibleValues>
-                        <value key="anyCpu">Any CPU</value>
+                        <value key="Any CPU">Any CPU</value>
                         <value key="arm">ARM</value>
                         <value key="x86">X86</value>
                         <value key="x64">X64</value>
