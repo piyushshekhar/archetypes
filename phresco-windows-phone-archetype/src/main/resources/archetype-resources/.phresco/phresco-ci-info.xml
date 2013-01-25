@@ -320,27 +320,6 @@
             </parameter>
             <parameter>
                 <name>
-                    <value lang="en">Browser</value>
-                </name>
-                <type>List</type>
-                <required>false</required>
-                <editable>true</editable>
-                <description></description>
-                <key>browser</key>
-                <possibleValues>
-                    <value key="firefox">Firefox</value>
-                    <value key="safari">Safari</value>
-                    <value key="opera">Opera</value>
-                    <value key="internetExplorer">Internet Explorer</value>
-                    <value key="chrome">Chrome</value>
-                </possibleValues>
-                <multiple>false</multiple>
-                <value></value>
-                <sort>false</sort>
-                <show>true</show>
-            </parameter>
-            <parameter>
-                <name>
                     <value lang="en">Show Settings</value>
                 </name>
                 <type>Boolean</type>
@@ -373,6 +352,27 @@
                 <required>true</required>
                 <editable>true</editable>
                 <key>environmentName</key>
+                <multiple>false</multiple>
+                <value></value>
+                <sort>false</sort>
+                <show>true</show>
+            </parameter>
+            <parameter>
+                <name>
+                    <value lang="en">Browser</value>
+                </name>
+                <type>List</type>
+                <required>false</required>
+                <editable>true</editable>
+                <description></description>
+                <key>browser</key>
+                <possibleValues>
+                    <value key="firefox">Firefox</value>
+                    <value key="safari">Safari</value>
+                    <value key="opera">Opera</value>
+                    <value key="internetExplorer">Internet Explorer</value>
+                    <value key="chrome">Chrome</value>
+                </possibleValues>
                 <multiple>false</multiple>
                 <value></value>
                 <sort>false</sort>
