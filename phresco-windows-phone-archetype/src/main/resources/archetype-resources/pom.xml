@@ -40,7 +40,7 @@
             <plugin>
                 <groupId>com.photon.phresco.plugins</groupId>
 				<artifactId>phresco-maven-plugin</artifactId>
-                <version>2.0.0.34002-SNAPSHOT</version>
+                <version>2.0.0.34003-SNAPSHOT</version>
             </plugin>
 			<plugin>
                 <groupId>org.codehaus.sonar-plugins.dotnet</groupId>
