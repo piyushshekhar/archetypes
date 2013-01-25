@@ -43,7 +43,7 @@
 		<phresco.functionalTest.testcase.path>/testcase</phresco.functionalTest.testcase.path>
 		<phresco.functionalTest.adapt.config>/test/functional/src/main/resources/phresco-env-config.xml</phresco.functionalTest.adapt.config>
 		<phresco.performanceTest.dir>/test/performance</phresco.performanceTest.dir>
-		<phresco.performanceTest.report.dir>/test/performance/results/jmeter</phresco.performanceTest.report.dir>
+		<phresco.performanceTest.report.dir>/test/performance/dir_type/results/jmeter</phresco.performanceTest.report.dir>
 		<phresco.loadTest.dir>/test/load</phresco.loadTest.dir>
 		<phresco.loadTest.report.dir>/test/load/results/jmeter</phresco.loadTest.report.dir>
 		<sonar.javascript.jstestdriver.reportsfolder>do_not_checkin/target/surefire</sonar.javascript.jstestdriver.reportsfolder>
