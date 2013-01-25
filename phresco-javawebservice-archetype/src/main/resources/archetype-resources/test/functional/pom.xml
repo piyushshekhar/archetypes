@@ -155,7 +155,7 @@
 				<version>2.12.3</version>
 				<configuration>
 					<suiteXmlFiles>
-						<suiteXmlFile>./src/test/java/com/photon/phresco/testsuite/AllTest.xml</suiteXmlFile>
+						<suiteXmlFile>./src/test/java/com/photon/phresco/testsuites/AllTest.xml</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>
