@@ -172,7 +172,7 @@
                         </child>
                         <child>
                             <name>
-								<value lang="en">value</value>
+								<value lang="en">Value</value>
                             </name>
                             <type>String</type>
                             <key>headerValue</key>
