@@ -100,6 +100,12 @@
 				<include>nodeconfig.json</include>
 			</includes> 
 		</fileSet>
+        <fileSet filtered="false" packaged="false"> 
+			<directory>test/functional/testcases</directory> 
+			<includes> 
+				<include>Photon_Phresco_Wordpress_Manual _TestCases.ods</include>
+			</includes> 
+		</fileSet>
 		
              <fileSet filtered="false" encoding="UTF-8">
 			<directory>test/functional/src/main/java/com/photon/phresco/Screens</directory>

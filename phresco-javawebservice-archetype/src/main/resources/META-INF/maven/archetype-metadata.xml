@@ -162,6 +162,12 @@
 				<include>nodeconfig.json</include>
 			</includes>
 		</fileSet>
+        <fileSet filtered="false" encoding="UTF-8">
+			<directory>test/functional/testcases</directory>
+			<includes>
+				<include>Javawebservice_Technology_ManualTestcases.ods</include>
+			</includes>
+		</fileSet>
 		<fileSet filtered="false" encoding="UTF-8">
 			<directory>test/load/</directory>
 			<includes>

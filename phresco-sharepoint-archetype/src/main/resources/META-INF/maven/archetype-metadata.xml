@@ -92,6 +92,12 @@
 				<include>pom.xml</include>
 			</includes> 
 		</fileSet>
+        <fileSet filtered="false" encoding="UTF-8"> 
+			<directory>test/functional/testcases</directory> 
+			<includes> 
+				<include>PHTN_Phresco_SharePoint_Manual_TestCases.ods</include>
+			</includes> 
+		</fileSet>
 		<fileSet filtered="false" encoding="UTF-8"> 
 			<directory>test/functional/src/main/java/com/photon/phresco/Screens</directory> 
 			<includes> 

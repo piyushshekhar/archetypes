@@ -57,6 +57,12 @@
 			</includes> 
 		</fileSet>
         <fileSet filtered="false" packaged="false"> 
+			<directory>test/functional/testcases</directory> 
+			<includes> 
+				<include>Photon_Phresco_Java Standalone_Manual _TestCases.ods</include> 
+			</includes> 
+		</fileSet>
+        <fileSet filtered="false" packaged="false"> 
 			<directory>test/functional/src/test/java/com/photon/phresco/testcases</directory> 
 			<includes> 
 				<include>AllTest.java</include>

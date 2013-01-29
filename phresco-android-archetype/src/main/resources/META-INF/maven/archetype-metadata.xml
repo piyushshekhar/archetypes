@@ -181,6 +181,13 @@
 				<include>android_native_data.xml</include>
 			</includes>
 		</fileSet>
+        <fileSet filtered="false" packaged="false"> 
+			<directory>test/functional/testcases</directory> 
+			<includes>
+				<include>Photon_Phresco_Android_Native_Manual_TestCases.ods</include>
+			</includes>
+		</fileSet>
+        
 		
 		<fileSet filtered="false" packaged="false"> 
 			<directory>test/unit</directory> 

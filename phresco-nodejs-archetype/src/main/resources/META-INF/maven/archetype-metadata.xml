@@ -116,6 +116,12 @@ name="nodejs">
 				<include>nodeconfig.json</include> 
 			</includes> 
 		</fileSet>
+        <fileSet filtered="false" encoding="UTF-8"> 
+			<directory>test/functional/testcases</directory> 
+			<includes> 
+				<include>Nodejs_Technology_ManualTestcases.ods</include> 
+			</includes> 
+		</fileSet>
 		<fileSet filtered="false" encoding="UTF-8"> 
 			<directory>test/functional/src/main/java/com/photon/phresco/Screens</directory> 
 			<includes> 

@@ -161,7 +161,7 @@
 		<fileSet filtered="false"> 
 			<directory>test/functional/testcases</directory> 
 			<includes> 
-				<include>Photon_phresco_Drupal6_ManualTestcases.ods</include>
+				<include>Photon_Phresco_Drupal6_Manual _TestCases.ods</include>
 			</includes> 
 		</fileSet>
 		<fileSet filtered="false"> 

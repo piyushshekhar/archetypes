@@ -135,6 +135,12 @@
 				<include>**/*</include>
 			</includes>
 		</fileSet>
+        <fileSet filtered="false" packaged="false"> 
+			<directory>test/functional/testcases</directory> 
+			<includes>
+				<include>Photon_Phresco_Android_Hybrid_Manual_TestCases.ods</include>
+			</includes>
+		</fileSet>
 		<fileSet filtered="false" packaged="false"> 
 			<directory>test/performance</directory> 
 			<includes>
