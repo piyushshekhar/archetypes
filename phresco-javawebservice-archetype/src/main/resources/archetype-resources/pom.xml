@@ -31,9 +31,10 @@
 		<phresco.sql.path>/src/sql/</phresco.sql.path>
         <jersey-version>1.9-ea07</jersey-version>
 		<phresco.source.resource.dir>/src/main/resources</phresco.source.resource.dir>
-		<phresco.unitTest.report.dir>/do_not_checkin/target/surefire-reports</phresco.unitTest.report.dir>
-		<phresco.unitTest.testsuite.xpath>/testsuite</phresco.unitTest.testsuite.xpath>
-		<phresco.unitTest.testcase.path>/testcase</phresco.unitTest.testcase.path>
+		<phresco.unitTest>java</phresco.unitTest>
+		<phresco.unitTest.java.report.dir>/do_not_checkin/target/surefire-reports</phresco.unitTest.java.report.dir>
+        <phresco.unitTest.java.testsuite.xpath>/testsuite</phresco.unitTest.java.testsuite.xpath>
+        <phresco.unitTest.java.testcase.path>/testcase</phresco.unitTest.java.testcase.path> 	
 		<phresco.functionalTest.selenium.tool>grid</phresco.functionalTest.selenium.tool>
 		<phresco.functionalTest.dir>/test/functional</phresco.functionalTest.dir>
 		<phresco.functionalTest.report.dir>/test/functional/target/surefire-reports</phresco.functionalTest.report.dir>
@@ -113,6 +114,8 @@
 
     <build>
 		<directory>do_not_checkin/target</directory>
+		 <sourceDirectory>${phresco.source.directory}</sourceDirectory>
+        <testSourceDirectory>${testSourceDirectory}</testSourceDirectory>
 		<finalName>service</finalName>
 		<plugins>
 			<plugin>
@@ -220,6 +223,7 @@
 				<sonar.branch>java</sonar.branch>
 				<sonar.language>java</sonar.language>
 				<phresco.source.directory>src/main/java</phresco.source.directory>
+				<testSourceDirectory>src/test/java</testSourceDirectory>
 				</properties> 
 		</profile>
 		
@@ -228,7 +232,8 @@
 			<properties>
 				<sonar.branch>js</sonar.branch>
 				<sonar.language>js</sonar.language>
-				<phresco.source.directory>src/main/webapp</phresco.source.directory>
+				<phresco.source.directory>src/main/webapp/js</phresco.source.directory>
+				<testSourceDirectory>src/main/webapp/js</testSourceDirectory>
 				<sonar.exclusions>**/lib/**</sonar.exclusions>
 				</properties> 
 		</profile>
