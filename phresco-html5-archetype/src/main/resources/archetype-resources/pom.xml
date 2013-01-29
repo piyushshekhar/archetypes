@@ -13,8 +13,8 @@
         <name>Photon Infotech Inc.</name>
     </organization>
     <build>
-		<sourceDirectory>${basedir}/src/main/webapp/js</sourceDirectory>		
-		<testSourceDirectory>src/test</testSourceDirectory>
+		<sourceDirectory>${phresco.source.directory}</sourceDirectory>
+        <testSourceDirectory>${testSourceDirectory}</testSourceDirectory>
         <directory>do_not_checkin/target</directory>
         <finalName>service</finalName>
         <plugins>
@@ -31,6 +31,7 @@
 				</executions>
 				<configuration>
 					<runnerType>YUI</runnerType>
+					<skipTests>${js.skipTest}</skipTests>
 					<coverage>true</coverage>
 				</configuration>
 			</plugin>
@@ -207,6 +208,8 @@
                 <sonar.branch>js</sonar.branch>
                 <phresco.source.directory>src/main/webapp/</phresco.source.directory>
                 <sonar.exclusions>**/lib/**</sonar.exclusions>
+				<testSourceDirectory>src/test/webapp/js</testSourceDirectory>
+				<js.skipTest>false</js.skipTest>
             </properties>
         </profile>
         <profile>
@@ -218,6 +221,8 @@
                 <sonar.language>java</sonar.language>
                 <sonar.branch>java</sonar.branch>
                 <phresco.source.directory>src/main/java</phresco.source.directory>
+				<testSourceDirectory>src/test/java</testSourceDirectory>
+				<js.skipTest>true</js.skipTest>
             </properties>
         </profile>
 		<profile>
