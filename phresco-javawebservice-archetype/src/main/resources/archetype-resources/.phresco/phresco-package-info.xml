@@ -92,7 +92,7 @@
                     <value></value>
                 </parameter>
 				<parameter>
-                    <pluginParameter>framework</pluginParameter>
+                    <pluginParameter>plugin</pluginParameter>
                     <mavenCommands>
                         <mavenCommand>
                             <key>true</key>
