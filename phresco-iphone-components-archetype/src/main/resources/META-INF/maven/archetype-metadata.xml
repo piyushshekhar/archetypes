@@ -27,17 +27,8 @@
 			<includes> 
 				<include>archetype-metadata.xml</include>
 				<include>excludefiles.txt</include> 	
-				<include>phresco-plugin-info.xml</include>
-				<include>phresco-package-info.xml</include>
-				<include>phresco-deploy-info.xml</include>
-				<include>phresco-validate-code-info.xml</include>
-				<include>phresco-unit-test-info.xml</include>
-				<include>phresco-functional-test-info.xml</include>
-				<include>phresco-ci-info.xml</include>
-				<include>phresco-application-handler-info.xml</include>
 				<include>phresco-env-config.xml</include>
 				<include>project.info</include>
-				<include>phresco-pdf-report-info.xml</include>
 			</includes> 
 		</fileSet>
 		<fileSet filtered="false" packaged="false"> 
@@ -46,6 +37,7 @@
 				<include>PHTN_Reference_Guide.doc</include> 
 				<include>PHTN_Release_Notes.doc</include>
 				<include>README.txt</include> 	
+				<include>index.html</include> 	
 			</includes> 
 		</fileSet>
 		<fileSet filtered="false" packaged="false"> 
@@ -57,70 +49,54 @@
 				<include>Phresco-Info.plist</include>
 				<include>phresco-env-config.xml</include>
 				<include>path.txt</include>
+				<include>AppDelegate.h</include>
+				<include>AppDelegate.m</include>
+				<include>Constants.h</include>
+				<include>Manifest.plist</include>
+				<include>ViewController.h</include>
+				<include>ViewController.m</include>
+				<include>ViewController_iPad.xib</include>
+				<include>ViewController_iPhone.xib</include>
 			</includes>
 		</fileSet>
+        </fileSet>
 			<fileSet filtered="false" packaged="false"> 
-			<directory>source/Classes</directory> 
+			<directory>source/ApplicationTest</directory> 
 			<includes>
-				<include>PhrescoAppDelegate.h</include>
-				<include>PhrescoAppDelegate.m</include>
-				<include>RootViewController.h</include>
-				<include>RootViewController.m</include>
-				<include>RootViewController.xib</include>
-			</includes>
-		</fileSet>
-		<fileSet filtered="false" packaged="false"> 
-			<directory>source/Images</directory> 
-			<includes>
-				<include>Icon.png</include>
-			</includes>
-		</fileSet>
-		<fileSet filtered="false" packaged="false"> 
-			<directory>source/Phresco.xcodeproj</directory> 
-			<includes>
-				<include>esfdsnat.pbxuser</include>
-				<include>esfdsnat.perspectivev3</include>
-				<include>mac.pbxuser</include>
-				<include>mac.perspectivev3</include>
-				<include>photon.pbxuser</include>
-				<include>photon.perspectivev3</include>
-				<include>project.pbxproj</include>
-			</includes>
-		</fileSet>
-		<fileSet filtered="false" packaged="false"> 
-			<directory>source/Phresco.xcodeproj/project.xcworkspace</directory> 
-			<includes>
-				<include>contents.xcworkspacedata</include>
-			</includes>
-		</fileSet>
-		<fileSet filtered="false" packaged="false"> 
-			<directory>source/NativeControllers</directory> 
-			<includes>
-				<include>**/*</include>
-			</includes>
-		</fileSet>
-		<fileSet filtered="false" packaged="false"> 
-			<directory>source/ThirdParty/ConfigurationReader</directory> 
-			<includes>
-				<include>ConfigurationReader.h</include>
-				<include>ConfigurationReader.m</include>
-			</includes>
-		</fileSet>
-        <fileSet filtered="false" packaged="false"> 
-			<directory>source/ThirdParty/OCUnitReportLogger-1.0</directory> 
-			<includes>
-				<include>GDataXMLNode.h</include>
-				<include>GDataXMLNode.m</include>
+				<include>ApplicationTest.h</include>
+				<include>ApplicationTest.m</include>
+				<include>ApplicationTest-Info.plist</include>
+				<include>ApplicationTest-Prefix.pch</include>
 				<include>OCUnitToJUnitLogger.m</include>
 			</includes>
 		</fileSet>
-		<fileSet filtered="false" packaged="false"> 
-			<directory>source/OCUnitReports</directory> 
+			<fileSet filtered="false" packaged="false"> 
+			<directory>source/ApplicationTest/en.lproj</directory> 
 			<includes>
-				<include>**/*</include>
+				<include>InfoPlist.strings</include>
 			</includes>
 		</fileSet>
-        <fileSet filtered="false" packaged="false"> 
+        </fileSet>
+			<fileSet filtered="false" packaged="false"> 
+			<directory>source/DataLayer</directory> 
+			<includes>
+				<include>DataModelEntities.h</include>
+				<include>DataModelEntities.m</include>
+				<include>SharedObjects.h</include>
+				<include>SharedObjects.m</include>
+				<include>UIImage-NSCoding.h</include>
+				<include>UIImage-NSCoding.m</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="false" packaged="false"> 
+			<directory>source/en.lproj</directory> 
+			<includes>
+				<include>InfoPlist.strings</include>
+				<include>ViewController_iPad.xib</include>
+				<include>ViewController_iPhone.xib</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="false" packaged="false"> 
 			<directory>source/LogicTest</directory> 
 			<includes>
 				<include>LogicTest.h</include>
@@ -135,20 +111,270 @@
 				<include>InfoPlist.strings</include>
 			</includes>
 		</fileSet>
-		
-		
-		<fileSet filtered="false" packaged="false"> 
-			<directory>test/functional/src</directory> 
+        <fileSet filtered="false" packaged="false"> 
+			<directory>source/Network</directory> 
 			<includes>
-				<include>AllTests.js</include>
+				<include>AsyncImageView.h</include>
+				<include>AsyncImageView.m</include>
+				<include>ConnectionManager.h</include>
+				<include>ConnectionManager.m</include>
+				<include>Reachability.h</include>
+				<include>Reachability.m</include>
+				<include>ServiceHandler.h</include>
+				<include>ServiceHandler.m</include>
+			</includes>
+		</fileSet>
+        
+        <fileSet filtered="false" packaged="false"> 
+			<directory>source/ThemeReader</directory> 
+			<includes>
+				<include>ThemeReader.h</include>
+				<include>ThemeReader.m</include>
 			</includes>
 		</fileSet>
         <fileSet filtered="false" packaged="false"> 
-			<directory>test/functional/testcases</directory> 
+			<directory>source/Phresco.xcodeproj</directory> 
 			<includes>
-				<include>Photon_Phresco_iPhone_Native_Manual_TestCases.ods</include>
+				<include>project.pbxproj</include>
 			</includes>
 		</fileSet>
+        <fileSet filtered="false" packaged="false"> 
+			<directory>source/Phresco.xcodeproj/project.xcworkspace</directory> 
+			<includes>
+				<include>contents.xcworkspacedata</include>
+			</includes>
+		</fileSet>
+        <fileSet filtered="false" packaged="false"> 
+			<directory>source/Phresco.xcodeproj/project.xcworkspace/xcuserdata/photon.xcuserdatad</directory> 
+			<includes>
+				<include>Breakpoints.xcbkptlist</include>
+			</includes>
+		</fileSet>
+        <fileSet filtered="false" packaged="false"> 
+			<directory>source/Phresco.xcodeproj/project.xcworkspace/xcuserdata/photon.xcuserdatad/xcschemes</directory> 
+			<includes>
+				<include>LogicTest.xcscheme</include>
+				<include>Phresco.xcscheme</include>
+				<include>xcschememanagement.plist</include>
+			</includes>
+		</fileSet>
+        <fileSet filtered="false" packaged="false"> 
+			<directory>source/Phresco.xcodeproj/project.xcworkspace/xcuserdata/photon.xcuserdatad/xcdebugger</directory> 
+			<includes>
+				<include>Breakpoints.xcbkptlist</include>
+			</includes>
+		</fileSet>
+        <fileSet filtered="false" packaged="false"> 
+			<directory>source/WebviewContainer</directory> 
+			<includes>
+				<include>NavigationBar.h</include>
+				<include>NavigationBar.m</include>
+				<include>WebContainer.h</include>
+				<include>WebContainer.m</include>
+				<include>WebContainer.xib</include>
+				<include>Webview.h</include>
+				<include>Webview.m</include>
+			</includes>
+		</fileSet>
+        <fileSet filtered="false" packaged="false"> 
+			<directory>source/Utils</directory> 
+			<includes>
+				<include>DebugOutput.h</include>
+				<include>DebugOutput.m</include>
+				<include>DictionaryUtils.h</include>
+				<include>DictionaryUtils.m</include>
+				<include>FileManager.h</include>
+				<include>FileManager.m</include>
+				<include>Tabbar.h</include>
+				<include>Tabbar.m</include>
+				<include>UIUtils.h</include>
+				<include>UIUtils.m</include>
+				<include>UIWebView_PageTransition.h</include>
+				<include>UIWebView_PageTransition.m</include>
+				<include>WebUtils.h</include>
+				<include>WebUtils.m</include>
+			</includes>
+		</fileSet>
+        <fileSet filtered="false" packaged="false"> 
+			<directory>source/ThirdParty/Components</directory> 
+			<includes>
+				<include>**/*</include>
+			</includes>
+		</fileSet>
+        <fileSet filtered="false" packaged="false"> 
+			<directory>source/ThirdParty/ConfigurationReader</directory> 
+			<includes>
+				<include>ConfigurationReader.h</include>
+				<include>ConfigurationReader.m</include>
+			</includes>
+		</fileSet>
+        <fileSet filtered="false" packaged="false"> 
+			<directory>source/ThirdParty/OCUnitReportLogger-1.0</directory> 
+			<includes>
+				<include>GDataXMLNode.h</include>
+				<include>GDataXMLNode.m</include>
+				<include>OCUnitToJUnitLogger.m</include>
+			</includes>
+		</fileSet>
+        <fileSet filtered="false" packaged="false"> 
+			<directory>source/NativeController/AddToBag</directory> 
+			<includes>
+				<include>AddToBagCustomCell.h</include>
+				<include>AddToBagCustomCell.m</include>
+				<include>AddToBagViewController.h</include>
+				<include>AddToBagViewController.m</include>
+				<include>AddToBagViewController.xib</include>
+				<include>AddtoBagViewController-iPAd.xib</include>
+			</includes>
+		</fileSet>
+        <fileSet filtered="false" packaged="false"> 
+			<directory>source/NativeController/Browse</directory> 
+			<includes>
+				<include>BrowseViewController.h</include>
+				<include>BrowseViewController.m</include>
+				<include>BrowseViewController.xib</include>
+				<include>BrowseViewController-iPad.xib</include>
+				<include>BrowseViewCustomCell.h</include>
+				<include>BrowseViewCustomCell.m</include>
+			</includes>
+		</fileSet>
+        <fileSet filtered="false" packaged="false"> 
+			<directory>source/NativeController/CardIO</directory> 
+			<includes>
+				<include>CardIO.h</include>
+				<include>CardIOCreditCardInfo.h</include>
+				<include>CardIOPaymentViewController.h</include>
+				<include>CardIOPaymentViewControllerDelegate.h</include>
+				<include>libCardIO.a</include>
+			</includes>
+		</fileSet>
+        <fileSet filtered="false" packaged="false"> 
+			<directory>source/NativeController/Checkout</directory> 
+			<includes>
+				<include>CheckoutOverAllViewController.h</include>
+				<include>CheckoutOverAllViewController.m</include>
+				<include>CheckoutOverAllViewController.xib</include>
+				<include>CheckoutOverAllViewController-iPad.xib</include>
+				<include>CheckOutViewController.h</include>
+				<include>CheckOutViewController.m</include>
+				<include>CheckOutViewController.xib</include>
+				<include>CheckOutViewController-iPad.xib</include>
+				<include>DTCustomColoredAccessory.h</include>
+				<include>DTCustomColoredAccessory.m</include>
+			</includes>
+		</fileSet>
+        <fileSet filtered="false" packaged="false"> 
+			<directory>source/NativeController/Home</directory> 
+			<includes>
+				<include>HomeViewController.h</include>
+				<include>HomeViewController.m</include>
+				<include>HomeViewController.xib</include>
+				<include>HomeViewController-iPAd.xib</include>
+			</includes>
+		</fileSet>
+        <fileSet filtered="false" packaged="false"> 
+			<directory>source/NativeController/Login</directory> 
+			<includes>
+				<include>LoginViewController.h</include>
+				<include>LoginViewController.m</include>
+				<include>LoginViewController.xib</include>
+				<include>LoginViewController-iPad.xib</include>
+			</includes>
+		</fileSet>
+        <fileSet filtered="false" packaged="false"> 
+			<directory>source/NativeController/MoreOption</directory> 
+			<includes>
+				<include>MoreViewController.h</include>
+				<include>MoreViewController.m</include>
+				<include>MoreViewController.xib</include>
+				<include>MoreViewController-iPad.xib</include>
+			</includes>
+		</fileSet>
+        <fileSet filtered="false" packaged="false"> 
+			<directory>source/NativeController/OrderStatus</directory> 
+			<includes>
+				<include>OrderStatusViewController.h</include>
+				<include>OrderStatusViewController.m</include>
+				<include>OrderStatusViewController.xib</include>
+				<include>OrderStatusViewController-iPad.xib</include>
+			</includes>
+		</fileSet>
+        <fileSet filtered="false" packaged="false"> 
+			<directory>source/NativeController/ProductDetails</directory> 
+			<includes>
+				<include>ProductDetailsViewController.h</include>
+				<include>ProductDetailsViewController.m </include>
+				<include>ProductDetailsViewController.xib</include>
+				<include>ProductDetailsViewController-iPAd.xib</include>
+			</includes>
+		</fileSet>
+        <fileSet filtered="false" packaged="false"> 
+			<directory>source/NativeController/ProductResults</directory> 
+			<includes>
+				<include>ResultsViewController-iPAd.xib</include>
+				<include>ResultViewController.h</include>
+				<include>ResultViewController.m</include>
+				<include>ResultViewController.xib</include>
+				<include>ResultViewCustomCell.h</include>
+				<include>ResultViewCustomCell.m</include>
+			</includes>
+		</fileSet>
+        <fileSet filtered="false" packaged="false"> 
+			<directory>source/NativeController/Registration</directory> 
+			<includes>
+				<include>RegistrationViewController.h</include>
+				<include>RegistrationViewController.m</include>
+				<include>RegistrationViewController.xib</include>
+				<include>RegistrationViewController-iPAd.xib</include>
+			</includes>
+		</fileSet>
+        <fileSet filtered="false" packaged="false"> 
+			<directory>source/NativeController/ReviewView</directory> 
+			<includes>
+				<include>ReviewCommentsViewController.h</include>
+				<include>ReviewCommentsViewController.m</include>
+				<include>ReviewCommentsViewController.xib</include>
+				<include>ReviewCommentsViewController-iPad.xib</include>
+				<include>ReviewCustomCell.h</include>
+				<include>ReviewCustomCell.m</include>
+				<include>ReviewViewController.h</include>
+				<include>ReviewViewController.m</include>
+				<include>ReviewViewController.xib</include>
+				<include>ReviewViewController-iPAd.xib</include>
+				<include>SubmitReviewViewController.h</include>
+				<include>SubmitReviewViewController.m</include>
+				<include>SubmitReviewViewController.xib</include>
+				<include>SubmitReviewViewController-iPad.xib</include>
+			</includes>
+		</fileSet>
+        <fileSet filtered="false" packaged="false"> 
+			<directory>source/NativeController/SpecialOffer</directory> 
+			<includes>
+				<include>SpecialOfferCustomCell.h</include>
+				<include>SpecialOfferCustomCell.m</include>
+				<include>SpecialOffersViewController.h</include>
+				<include>SpecialOffersViewController.m</include>
+				<include>SpecialOffersViewController.xib</include>
+				<include>SpecialOffersViewController-iPad.xib</include>
+			</includes>
+		</fileSet>
+        <fileSet filtered="false" packaged="false"> 
+			<directory>source/NativeController/ViewCart</directory> 
+			<includes>
+				<include>ViewCartController-iPad.xib</include>
+				<include>ViewCartViewController.h</include>
+				<include>ViewCartViewController.m</include>
+				<include>ViewCartViewController.xib</include>
+			</includes>
+		</fileSet>
+        <fileSet filtered="false" packaged="false"> 
+			<directory>source/Images</directory> 
+			<includes>
+				<include>**/*</include>
+			</includes>
+		</fileSet>
+		
+		
 		<fileSet filtered="false" packaged="false"> 
 			<directory>test/functional/src/main/com/photon/phresco/util</directory> 
 			<includes>
@@ -156,18 +382,19 @@
 				<include>UIElements.js</include>
 			</includes>
 		</fileSet>
-		
+        
 		<fileSet filtered="false" packaged="false"> 
 			<directory>test/functional/src/test/com/photon/phresco/testcase</directory> 
 			<includes>
-				<include>HelloWorld.js</include>
+				<include>Login_TestSuite.js</include>
+				<include>Mycart_TestSuite.js</include>
+				<include>Registration_Testsuite.js</include>
 			</includes>
 		</fileSet>
-		
-		<fileSet filtered="false" packaged="false"> 
-			<directory>test/performance</directory> 
+        <fileSet filtered="false" packaged="false"> 
+			<directory>test/functional/src</directory> 
 			<includes>
-				<include>**/*</include>
+				<include>AllTests.js</include>
 			</includes>
 		</fileSet>
 	</fileSets>
