@@ -15,7 +15,7 @@ import com.photon.phresco.uiconstants.PhrescoUiConstants;
 
 
 
-public class NodejsHelloWorldTestCase {
+public class NodejsTestCase {
 
 
 	private  PhrescoUiConstants phrscEnv;

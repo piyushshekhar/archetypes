@@ -161,14 +161,14 @@ name="nodejs">
 		<fileSet filtered="false" encoding="UTF-8"> 
 			<directory>test/functional/src/test/java/com/photon/phresco/nodejs/testcases</directory> 
 			<includes> 
-				<include>NodejsHelloWorldTestCase.java</include>
+				<include>NodejsTestCase.java</include>
 			</includes> 
 		</fileSet>
         <fileSet filtered="false" encoding="UTF-8"> 
-			<directory>test/functional/src/test/java/com/photon/phresco/nodejs/testsuite</directory> 
+			<directory>test/functional/src/test/java/com/photon/phresco/nodejs/testsuites</directory> 
 			<includes> 
 				<include>AllTest.xml</include>
-				<include>NodejsHelloWorldTestCaseSuite.xml</include>
+				<include>NodejsTestCaseSuite.xml</include>
 			</includes> 
 		</fileSet>
 		<fileSet filtered="false" encoding="UTF-8"> 

@@ -3,7 +3,7 @@
 <suite name="AllTest"  parallel="tests" thread-count="10">
 
     <suite-files>
-        <suite-file path="./NodejsHelloWorldTestCaseSuite.xml" />
+        <suite-file path="./NodejsTestCaseSuite.xml" />
     </suite-files>
 
 </suite>
