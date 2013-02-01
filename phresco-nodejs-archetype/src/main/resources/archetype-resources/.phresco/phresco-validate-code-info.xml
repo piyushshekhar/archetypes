@@ -14,7 +14,7 @@
                 <groupId>com.photon.phresco.plugins</groupId>
                 <artifactId>nodejs-phresco-plugin</artifactId>
                 <type>jar</type>
-                <version>2.0.0.35002-SNAPSHOT</version>
+                <version>2.0.0.35003-SNAPSHOT</version>
                 <class>com.photon.phresco.plugins.nodejs.NodeJsPlugin</class>
             </dependency>
         </implementation>
