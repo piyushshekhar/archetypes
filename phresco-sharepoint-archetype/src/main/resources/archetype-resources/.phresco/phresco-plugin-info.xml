@@ -3,7 +3,7 @@
 	<applicationHandler>
 		<groupId>com.photon.phresco.commons</groupId>
 		<artifactId>phresco-commons</artifactId>
-		<version>2.0.0.35003-SNAPSHOT</version>
+		<version>2.0.0.35004-SNAPSHOT</version>
 		<class>com.photon.phresco.impl.SharepointApplicationProcessor</class>
 	</applicationHandler>
     <mojo>
@@ -20,7 +20,7 @@
                <groupId>com.photon.phresco.plugins</groupId>
                <artifactId>sharepoint-phresco-plugin</artifactId>
                <type>jar</type>
-               <version>2.0.0.35003-SNAPSHOT</version>
+               <version>2.0.0.35004-SNAPSHOT</version>
                <class>com.photon.phresco.plugins.sharepoint.SharePointPlugin</class>
            </dependency>
        </implementation>
@@ -147,7 +147,7 @@
                <groupId>com.photon.phresco.plugins</groupId>
                <artifactId>sharepoint-phresco-plugin</artifactId>
                <type>jar</type>
-               <version>2.0.0.35003-SNAPSHOT</version>
+               <version>2.0.0.35004-SNAPSHOT</version>
                <class>com.photon.phresco.plugins.sharepoint.SharePointPlugin</class>
            </dependency>
        </implementation>
@@ -306,7 +306,7 @@
                <groupId>com.photon.phresco.plugins</groupId>
                <artifactId>sharepoint-phresco-plugin</artifactId>
                <type>jar</type>
-               <version>2.0.0.35003-SNAPSHOT</version>
+               <version>2.0.0.35004-SNAPSHOT</version>
                <class>com.photon.phresco.plugins.sharepoint.SharePointPlugin</class>
            </dependency>
        </implementation>
@@ -460,7 +460,7 @@
                <groupId>com.photon.phresco.plugins</groupId>
                <artifactId>sharepoint-phresco-plugin</artifactId>
                <type>jar</type>
-               <version>2.0.0.35003-SNAPSHOT</version>
+               <version>2.0.0.35004-SNAPSHOT</version>
                <class>com.photon.phresco.plugins.sharepoint.SharePointPlugin</class>
            </dependency>
        </implementation>
@@ -786,7 +786,7 @@
                <groupId>com.photon.phresco.plugins</groupId>
                <artifactId>sharepoint-phresco-plugin</artifactId>
                <type>jar</type>
-               <version>2.0.0.35003-SNAPSHOT</version>
+               <version>2.0.0.35004-SNAPSHOT</version>
                <class>com.photon.phresco.plugins.sharepoint.SharePointPlugin</class>
            </dependency>
        </implementation>
@@ -1150,7 +1150,7 @@
                <groupId>com.photon.phresco.plugins</groupId>
                <artifactId>report-phresco-plugin</artifactId>
                <type>jar</type>
-               <version>2.0.0.35003-SNAPSHOT</version>
+               <version>2.0.0.35004-SNAPSHOT</version>
                <class>com.photon.phresco.plugins.ReportPlugin</class>
            </dependency>
        </implementation>
@@ -1209,7 +1209,7 @@
                <groupId>com.photon.phresco.plugins</groupId>
                <artifactId>ci-phresco-plugin</artifactId>
                <type>jar</type>
-               <version>2.0.0.35003-SNAPSHOT</version>
+               <version>2.0.0.35004-SNAPSHOT</version>
                <class>com.photon.phresco.plugins.CIPlugin</class>
            </dependency>
        </implementation>
