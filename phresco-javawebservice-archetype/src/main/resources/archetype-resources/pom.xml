@@ -44,7 +44,7 @@
 		<phresco.performanceTest.dir>/test/performance</phresco.performanceTest.dir>
 		<phresco.performanceTest.report.dir>/test/performance/dir_type/results/jmeter</phresco.performanceTest.report.dir>
 		<phresco.loadTest.dir>/test/load</phresco.loadTest.dir>
-		<phresco.loadTest.report.dir>/test/load/results/jmeter</phresco.loadTest.report.dir>
+		<phresco.loadTest.report.dir>/test/load/dir_type/results/jmeter</phresco.loadTest.report.dir>
     </properties>
 	
 	<dependencies>

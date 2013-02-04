@@ -45,7 +45,7 @@
 		<phresco.performanceTest.dir>/test/performance</phresco.performanceTest.dir>
 		<phresco.performanceTest.report.dir>/test/performance/dir_type/results/jmeter</phresco.performanceTest.report.dir>
 		<phresco.loadTest.dir>/test/load</phresco.loadTest.dir>
-		<phresco.loadTest.report.dir>/test/load/results/jmeter</phresco.loadTest.report.dir>
+		<phresco.loadTest.report.dir>/test/load/dir_type/results/jmeter</phresco.loadTest.report.dir>
 		<sonar.javascript.jstestdriver.reportsfolder>do_not_checkin/target/surefire</sonar.javascript.jstestdriver.reportsfolder>
 		<sonar.javascript.jstestdriver.coveragefile>coverage.dat</sonar.javascript.jstestdriver.coveragefile>  
 		<sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
