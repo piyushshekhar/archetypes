@@ -40,6 +40,7 @@
         <phresco.functionalTest.testcase.path>/testcase</phresco.functionalTest.testcase.path>
         <phresco.performanceTest.dir>/test/performance</phresco.performanceTest.dir>
         <phresco.performanceTest.report.dir>/test/performance/do_not_checkin/target/surefire-reports</phresco.performanceTest.report.dir>
+		<phresco.performance.device.report>true</phresco.performance.device.report>
     </properties>
     
     <dependencies>
