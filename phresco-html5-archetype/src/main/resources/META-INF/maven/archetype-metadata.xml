@@ -166,20 +166,35 @@
 				<include>WelcomePageTestSuite.xml</include>
 			</includes>
 		</fileSet>		
-		<fileSet filtered="false" packaged="false"> 
-			<directory>test/load/</directory> 
-			<includes>
+		<fileSet filtered="false"> 
+			<directory>test/load/server</directory> 
+			<includes> 
 				<include>build.properties</include>
 				<include>build.xml</include>
 				<include>pom.xml</include>
-			</includes>
+			</includes> 
 		</fileSet>
-		<fileSet filtered="false" packaged="false"> 
-			<directory>test/load/tests</directory> 
-			<includes>
+		<fileSet filtered="false"> 
+			<directory>test/load/webservice</directory> 
+			<includes> 
+				<include>build.properties</include>
+				<include>build.xml</include>
+				<include>pom.xml</include>
+			</includes> 
+		</fileSet>
+        <fileSet filtered="false"> 
+			<directory>test/load/server/tests</directory> 
+			<includes> 
 				<include>phresco-env-config.csv</include>
 				<include>PhrescoFrameWork_TestPlan.jmx</include>
-			</includes>
+			</includes> 
+		</fileSet>
+        <fileSet filtered="false"> 
+			<directory>test/load/webservice/tests</directory> 
+			<includes> 
+				<include>phresco-env-config.csv</include>
+				<include>PhrescoFrameWork_TestPlan.jmx</include>
+			</includes> 
 		</fileSet>
 		<fileSet filtered="false" encoding="UTF-8"> 
 			<directory>test/performance/database</directory> 
@@ -225,6 +240,23 @@
 				<include>PhrescoFrameWork_TestPlan.jmx</include>
 			</includes>
 		</fileSet>		
-		
+		<fileSet filtered="false"> 
+			<directory>test/performance/server/json</directory> 
+			<includes> 
+				<include>**/*</include>
+			</includes> 
+		</fileSet>
+        <fileSet filtered="false"> 
+			<directory>test/performance/database/json</directory> 
+			<includes> 
+				<include>**/*</include>
+			</includes> 
+		</fileSet>
+        <fileSet filtered="false"> 
+			<directory>test/performance/webservice/json</directory> 
+			<includes> 
+				<include>**/*</include>
+			</includes> 
+		</fileSet>
 	</fileSets>
 </archetype-descriptor>
