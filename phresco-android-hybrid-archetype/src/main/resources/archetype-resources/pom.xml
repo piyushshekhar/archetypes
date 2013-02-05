@@ -55,7 +55,7 @@
         
         <!-- monkey talk dependencies      START-->
         
-        <!-- <dependency>
+        <dependency>
 			<groupId>com.gorillalogic.monkeytalk</groupId>
 			<artifactId>monkeytalk-agent</artifactId>
 			<version>1.0.30</version>
@@ -70,7 +70,7 @@
 			<groupId>org.aspectj</groupId>
 			<artifactId>aspectjrt</artifactId>
 			<version>1.6.11</version>
-		</dependency> -->
+		</dependency>
         
         <!-- monkey talk dependencies      END-->
     </dependencies>
@@ -100,7 +100,7 @@
                 
                 <!-- monkey talk PluginManagement      START-->
 				
-				<!-- <plugin>
+				<plugin>
 					<groupId>org.eclipse.m2e</groupId>
 					<artifactId>lifecycle-mapping</artifactId>
 					<version>1.0.0</version>
@@ -124,7 +124,7 @@
 							</pluginExecutions>
 						</lifecycleMappingMetadata>
 					</configuration>
-				</plugin> -->
+				</plugin>
 				
 				<!-- monkey talk PluginManagement      END-->
 			</plugins>
@@ -152,7 +152,7 @@
             </plugin>
             
             <!-- monkey talk Plugins    START-->
-			<!-- <plugin>
+			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>2.0.2</version>
@@ -199,7 +199,7 @@
 						</goals>
 					</execution>
 				</executions>
-			</plugin> -->
+			</plugin>
 			
 			<!-- monkey talk Plugins      END-->
         </plugins>
