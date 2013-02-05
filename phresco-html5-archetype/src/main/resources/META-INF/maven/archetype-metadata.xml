@@ -119,7 +119,7 @@
         <fileSet filtered="false" encoding="UTF-8">
 			<directory>test/functional/testcases</directory>
 			<includes>
-				<include>Photon_phresco_HTML5_YUI Multichannel-widget.ods</include>
+				<include>Photon_phresco_HTML5_YUI Multichannel or Mobile-widget.ods</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="false" encoding="UTF-8">

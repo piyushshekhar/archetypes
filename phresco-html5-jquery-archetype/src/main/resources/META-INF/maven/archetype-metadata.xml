@@ -132,7 +132,7 @@
         <fileSet filtered="false" encoding="UTF-8">
 			<directory>test/functional/testcases</directory>
 			<includes>
-				<include>Photon_phresco_HTML5_MultichannelJquerywidget_ManualTestcases.ods</include>
+				<include>Photon_phresco_HTML5_Jquery Multichannel or Mobile widget_ManualTestcases.ods</include>
 			</includes>
 		</fileSet>
         
