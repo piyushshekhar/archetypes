@@ -71,7 +71,7 @@
 		<phresco.functionalTest.selenium.tool>grid</phresco.functionalTest.selenium.tool>
 		<phresco.functionalTest.dir>/test/functional</phresco.functionalTest.dir>
 		<phresco.functionalTest.report.dir>/test/functional/target/surefire-reports</phresco.functionalTest.report.dir>
-		<phresco.functionalTest.testsuite.xpath>/testsuites/testsuite/testsuite</phresco.functionalTest.testsuite.xpath>
+		<phresco.functionalTest.testsuite.xpath>/testsuite</phresco.functionalTest.testsuite.xpath>
 		<phresco.functionalTest.testcase.path>/testcase</phresco.functionalTest.testcase.path>
 		<phresco.functionalTest.adapt.config>/test/functional/src/main/resources/phresco-env-config.xml</phresco.functionalTest.adapt.config>
 		<phresco.performanceTest.dir>/test/performance</phresco.performanceTest.dir>
