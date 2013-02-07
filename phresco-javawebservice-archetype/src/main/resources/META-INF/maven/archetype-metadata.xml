@@ -145,14 +145,14 @@
 		<fileSet filtered="false" encoding="UTF-8">
 			<directory>test/functional/src/test/java/com/photon/phresco/testcases</directory>
 			<includes>
-				<include>JavaWebServiceHelloWorldTestCase.java</include>
+				<include>JavaWebServiceTest.java</include>
 			</includes>
 		</fileSet>
         <fileSet filtered="false" encoding="UTF-8">
 			<directory>test/functional/src/test/java/com/photon/phresco/testsuites</directory>
 			<includes>
 				<include>AllTest.xml</include>
-				<include>JavaWebserviceHelloWorldTestCaseSuite.xml</include>
+				<include>JavaWebserviceTestSuite.xml</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="false" encoding="UTF-8">
