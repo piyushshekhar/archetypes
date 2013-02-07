@@ -238,7 +238,7 @@
             <properties>
                 <sonar.language>js</sonar.language>
                 <sonar.branch>js</sonar.branch>
-                <phresco.source.directory>src/main/webapp/</phresco.source.directory>
+                <phresco.source.directory>src/main/webapp/js</phresco.source.directory>
                 <sonar.exclusions>**/lib/**</sonar.exclusions>
 				<testSourceDirectory>src/test/webapp/js</testSourceDirectory>
 				<js.skipTest>false</js.skipTest>
