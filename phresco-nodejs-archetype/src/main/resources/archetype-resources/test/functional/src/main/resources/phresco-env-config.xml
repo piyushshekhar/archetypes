@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
   <environment>
-
+  <Server>
 
 	         <context>nodejshw</context>
                <protocol>http</protocol>
                 <host>172.16.29.45</host>
                <port>9876</port>
-               
+           </Server>     
 </environment>

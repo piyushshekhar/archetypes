@@ -2,6 +2,6 @@
 
 <suite name="AllTest"  parallel="tests" thread-count="10">
    <suite-files>
-        <suite-file path="./JavaWebserviceHelloWorldTestCaseSuite.xml" />
+        <suite-file path="./JavaWebserviceTestSuite.xml" />
     </suite-files>
 </suite>
