@@ -3,7 +3,7 @@
 	<applicationHandler>
 		<groupId>com.photon.phresco.commons</groupId>
 		<artifactId>phresco-commons</artifactId>
-		<version>2.0.0.36003-SNAPSHOT</version>
+		<version>2.0.0.36004-SNAPSHOT</version>
 		<class>com.photon.phresco.impl.DotNetApplicationProcessor</class>
 	</applicationHandler>
     <mojo>
@@ -20,7 +20,7 @@
                <groupId>com.photon.phresco.plugins</groupId>
                <artifactId>dotnet-phresco-plugin</artifactId>
                <type>jar</type>
-               <version>2.0.0.36003-SNAPSHOT</version>
+               <version>2.0.0.36004-SNAPSHOT</version>
                <class>com.photon.phresco.plugins.dotnet.DotnetPlugin</class>
            </dependency>
        </implementation>
@@ -85,7 +85,7 @@
 								<groupId>com.photon.phresco.commons</groupId>
 								<artifactId>phresco-commons</artifactId>
 								<type>jar</type>
-								<version>2.0.0.36003-SNAPSHOT</version>
+								<version>2.0.0.36004-SNAPSHOT</version>
                             </dependency>
                         </dependencies>
                     </dynamicParameter>
@@ -147,7 +147,7 @@
                <groupId>com.photon.phresco.plugins</groupId>
                <artifactId>dotnet-phresco-plugin</artifactId>
                <type>jar</type>
-               <version>2.0.0.36003-SNAPSHOT</version>
+               <version>2.0.0.36004-SNAPSHOT</version>
                <class>com.photon.phresco.plugins.dotnet.DotnetPlugin</class>
            </dependency>
        </implementation>
@@ -169,7 +169,7 @@
 								<groupId>com.photon.phresco.commons</groupId>
 								<artifactId>phresco-commons</artifactId>
 								<type>jar</type>
-								<version>2.0.0.36003-SNAPSHOT</version>
+								<version>2.0.0.36004-SNAPSHOT</version>
                             </dependency>
                         </dependencies>
                     </dynamicParameter>
@@ -306,7 +306,7 @@
                <groupId>com.photon.phresco.plugins</groupId>
                <artifactId>dotnet-phresco-plugin</artifactId>
                <type>jar</type>
-               <version>2.0.0.36003-SNAPSHOT</version>
+               <version>2.0.0.36004-SNAPSHOT</version>
                <class>com.photon.phresco.plugins.dotnet.DotnetPlugin</class>
            </dependency>
        </implementation>
@@ -345,7 +345,7 @@
 						<groupId>com.photon.phresco.commons</groupId>
 						<artifactId>phresco-commons</artifactId>
 						<type>jar</type>
-						<version>2.0.0.36003-SNAPSHOT</version>
+						<version>2.0.0.36004-SNAPSHOT</version>
 					</dependency>
 				</dependencies>
 				</dynamicParameter>
@@ -392,7 +392,7 @@
 						<groupId>com.photon.phresco.commons</groupId>
 						<artifactId>phresco-commons</artifactId>
 						<type>jar</type>
-						<version>2.0.0.36003-SNAPSHOT</version>
+						<version>2.0.0.36004-SNAPSHOT</version>
 					</dependency>
 				</dependencies>
 				</dynamicParameter>
@@ -431,7 +431,7 @@
 						<groupId>com.photon.phresco.commons</groupId>
 						<artifactId>phresco-commons</artifactId>
 						<type>jar</type>
-						<version>2.0.0.36003-SNAPSHOT</version>
+						<version>2.0.0.36004-SNAPSHOT</version>
 					</dependency>
 				</dependencies>
 				</dynamicParameter>
@@ -505,7 +505,7 @@
 								<groupId>com.photon.phresco.commons</groupId>
 								<artifactId>phresco-commons</artifactId>
 								<type>jar</type>
-								<version>2.0.0.36003-SNAPSHOT</version>
+								<version>2.0.0.36004-SNAPSHOT</version>
 							</dependency>
 						</dependencies>
 					</dynamicParameter>
@@ -530,7 +530,7 @@
 								<groupId>com.photon.phresco.commons</groupId>
 								<artifactId>phresco-commons</artifactId>
 								<type>jar</type>
-								<version>2.0.0.36003-SNAPSHOT</version>
+								<version>2.0.0.36004-SNAPSHOT</version>
 							</dependency>
 						</dependencies>
 					</dynamicParameter>
@@ -555,7 +555,7 @@
 								<groupId>com.photon.phresco.commons</groupId>
 								<artifactId>phresco-commons</artifactId>
 								<type>jar</type>
-								<version>2.0.0.36003-SNAPSHOT</version>
+								<version>2.0.0.36004-SNAPSHOT</version>
 							</dependency>
 						</dependencies>
 					</dynamicParameter>
@@ -655,7 +655,7 @@
                <groupId>com.photon.phresco.plugins</groupId>
                <artifactId>report-phresco-plugin</artifactId>
                <type>jar</type>
-               <version>2.0.0.36003-SNAPSHOT</version>
+               <version>2.0.0.36004-SNAPSHOT</version>
                <class>com.photon.phresco.plugins.ReportPlugin</class>
            </dependency>
        </implementation>
@@ -714,7 +714,7 @@
                <groupId>com.photon.phresco.plugins</groupId>
                <artifactId>ci-phresco-plugin</artifactId>
                <type>jar</type>
-               <version>2.0.0.36003-SNAPSHOT</version>
+               <version>2.0.0.36004-SNAPSHOT</version>
                <class>com.photon.phresco.plugins.CIPlugin</class>
            </dependency>
        </implementation>

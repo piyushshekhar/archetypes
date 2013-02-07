@@ -40,6 +40,7 @@
 				<include>phresco-start-node-info.xml</include>
 				<include>phresco-run-against-source-info.xml</include>
 				<include>phresco-pdf-report-info.xml</include>
+				<include>phresco-performance-test-info.xml</include>
 				<include>phresco-unit-test-info.xml</include>
 			</includes> 
 		</fileSet>
@@ -144,14 +145,14 @@
 		<fileSet filtered="false" encoding="UTF-8">
 			<directory>test/functional/src/test/java/com/photon/phresco/testcases</directory>
 			<includes>
-				<include>JavaWebServiceHelloWorldTestCase.java</include>
+				<include>JavaWebServiceTest.java</include>
 			</includes>
 		</fileSet>
         <fileSet filtered="false" encoding="UTF-8">
-			<directory>test/functional/src/test/java/com/photon/phresco/testsuite</directory>
+			<directory>test/functional/src/test/java/com/photon/phresco/testsuites</directory>
 			<includes>
 				<include>AllTest.xml</include>
-				<include>JavaWebserviceHelloWorldTestCaseSuite.xml</include>
+				<include>JavaWebserviceTestSuite.xml</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="false" encoding="UTF-8">
@@ -162,20 +163,41 @@
 				<include>nodeconfig.json</include>
 			</includes>
 		</fileSet>
-		<fileSet filtered="false" encoding="UTF-8">
-			<directory>test/load/</directory>
+        <fileSet filtered="false" encoding="UTF-8">
+			<directory>test/functional/testcases</directory>
 			<includes>
+				<include>Javawebservice_Technology_ManualTestcases.ods</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="false"> 
+			<directory>test/load/server</directory> 
+			<includes> 
 				<include>build.properties</include>
 				<include>build.xml</include>
 				<include>pom.xml</include>
-			</includes>
+			</includes> 
 		</fileSet>
-		<fileSet filtered="false" encoding="UTF-8">
-			<directory>test/load/tests</directory>
-			<includes>
+		<fileSet filtered="false"> 
+			<directory>test/load/webservice</directory> 
+			<includes> 
+				<include>build.properties</include>
+				<include>build.xml</include>
+				<include>pom.xml</include>
+			</includes> 
+		</fileSet>
+        <fileSet filtered="false"> 
+			<directory>test/load/server/tests</directory> 
+			<includes> 
 				<include>phresco-env-config.csv</include>
 				<include>PhrescoFrameWork_TestPlan.jmx</include>
-			</includes>
+			</includes> 
+		</fileSet>
+        <fileSet filtered="false"> 
+			<directory>test/load/webservice/tests</directory> 
+			<includes> 
+				<include>phresco-env-config.csv</include>
+				<include>PhrescoFrameWork_TestPlan.jmx</include>
+			</includes> 
 		</fileSet>
 		<fileSet filtered="false" encoding="UTF-8">
 			<directory>test/performance/server</directory>
@@ -207,15 +229,33 @@
 			</includes>
 		</fileSet>
 		<fileSet filtered="false" encoding="UTF-8">
-			<directory>test/performance/webservices</directory>
+			<directory>test/performance/webservice</directory>
 			<includes>
 				<include>build.properties</include>
 				<include>build.xml</include>
 				<include>pom.xml</include>
 			</includes>
 		</fileSet>
+        <fileSet filtered="false"> 
+			<directory>test/performance/server/json</directory> 
+			<includes> 
+				<include>**/*</include>
+			</includes> 
+		</fileSet>
+        <fileSet filtered="false"> 
+			<directory>test/performance/database/json</directory> 
+			<includes> 
+				<include>**/*</include>
+			</includes> 
+		</fileSet>
+        <fileSet filtered="false"> 
+			<directory>test/performance/webservice/json</directory> 
+			<includes> 
+				<include>**/*</include>
+			</includes> 
+		</fileSet>
 		<fileSet filtered="false" encoding="UTF-8">
-			<directory>test/performance/webservices/tests</directory>
+			<directory>test/performance/webservice/tests</directory>
 			<includes>
 				<include>phresco-env-config.csv</include>
 				<include>PhrescoFrameWork_TestPlan.jmx</include>
