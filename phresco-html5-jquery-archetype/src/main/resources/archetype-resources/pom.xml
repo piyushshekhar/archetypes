@@ -189,9 +189,6 @@
         </profile>
         <profile>
             <id>js</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
             <properties>
                 <sonar.branch>js</sonar.branch>
                 <sonar.language>js</sonar.language>
@@ -203,9 +200,9 @@
         </profile>
         <profile>
             <id>java</id>
-            <!--<activation>
+            <activation>
                 <activeByDefault>true</activeByDefault>
-            </activation>-->
+            </activation>
             <properties>
                 <sonar.branch>java</sonar.branch>
                 <sonar.language>java</sonar.language>
