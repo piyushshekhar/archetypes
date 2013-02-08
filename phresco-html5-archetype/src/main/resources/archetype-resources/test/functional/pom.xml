@@ -109,7 +109,7 @@
 				<executions>
 					<execution>
 						<id>copy</id>
-						<phase>compile</phase>
+						<phase>validate</phase>
 						<goals>
 							<goal>copy</goal>
 						</goals>
