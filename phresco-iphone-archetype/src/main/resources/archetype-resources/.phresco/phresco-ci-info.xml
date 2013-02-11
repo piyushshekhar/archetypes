@@ -283,6 +283,7 @@
                     <key>deviceType</key>
                     <possibleValues>
                         <value key="simulator" dependency="sdkVersion,family">Simulator</value>
+                        <value key="device">Device</value>
                     </possibleValues>
                     <multiple>false</multiple>
                     <value>simulator</value>
@@ -433,6 +434,20 @@
                     <value>1</value>
                     <sort>false</sort>
                     <show>false</show>
+                </parameter>
+                <parameter>
+                    <name>
+                        <value lang="en">Device Id</value>
+                    </name>
+                    <type>String</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>deviceId</key>
+                    <multiple>false</multiple>
+                    <value></value>
+                    <sort>false</sort>
+                    <show>true</show>
                 </parameter>
             </parameters>
         </configuration>

@@ -160,7 +160,7 @@
                     <description></description>
                     <key>triggerSimulator</key>
                     <multiple>false</multiple>
-                    <value>true</value>
+                    <value>false</value>
                     <sort>false</sort>
                     <show>false</show>
                 </parameter>
