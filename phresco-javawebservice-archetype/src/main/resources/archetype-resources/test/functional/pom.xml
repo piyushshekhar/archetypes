@@ -94,7 +94,7 @@
                         </goals>
                         <configuration>
                             <tasks xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-<chmod file="${project.basedir}/chromedriver/mac/chromedriver" perm="777"/>
+<chmod file="${project.basedir}/chromedriver/chromedriver" perm="777"/>
 							</tasks>
                         </configuration>
                     </execution>

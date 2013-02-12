@@ -138,7 +138,7 @@
                   <phase>validate</phase>  
                     <configuration>  
                       <tasks>                     
-                        <chmod file="${project.basedir}/chromedriver/mac/chromedriver" perm="777"/>
+                        <chmod file="${project.basedir}/chromedriver/chromedriver" perm="777"/>
                       </tasks>  
                     </configuration>  
                     <goals>  
