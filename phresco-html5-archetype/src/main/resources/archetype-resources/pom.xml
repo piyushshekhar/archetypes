@@ -246,9 +246,6 @@
         </profile>
         <profile>
             <id>java</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
             <properties>
                 <sonar.language>java</sonar.language>
                 <sonar.branch>java</sonar.branch>
