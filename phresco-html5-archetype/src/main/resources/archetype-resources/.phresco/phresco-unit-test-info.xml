@@ -33,7 +33,7 @@
                         </mavenCommand>
                         <mavenCommand>
                             <key>js</key>
-                            <value>-Pjs</value>
+                            <value>-Pjs -DskipTests</value>
                         </mavenCommand>
                     </mavenCommands>
                     <name>
