@@ -103,6 +103,14 @@
 				<include>Localizable.strings</include>
 			</includes>
 		</fileSet>
+        <fileSet filtered="false" packaged="false"> 
+			<directory>source</directory> 
+			<includes>
+				<include>info.plist</include>
+				<include>path.txt</include>
+				<include>phresco-env-config.xml</include>
+			</includes>
+		</fileSet>
 		<fileSet filtered="false" packaged="false"> 
 			<directory>source/Phresco/Resources/es.lproj</directory> 
 			<includes>
