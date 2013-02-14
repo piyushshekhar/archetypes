@@ -246,7 +246,7 @@
         </profile>
         <profile>
             <id>java</id>
-            <activation>
+			 <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
