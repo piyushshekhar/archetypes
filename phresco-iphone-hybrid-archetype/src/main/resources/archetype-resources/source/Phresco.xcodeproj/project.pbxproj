@@ -7,11 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0656FEF71696C0280007B7F9 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0656FEF61696C0280007B7F9 /* SenTestingKit.framework */; };
-		0656FEF81696C0280007B7F9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
-		0656FEF91696C0280007B7F9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
-		0656FEFF1696C0280007B7F9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0656FEFD1696C0280007B7F9 /* InfoPlist.strings */; };
-		0656FF021696C0280007B7F9 /* UnitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0656FF011696C0280007B7F9 /* UnitTest.m */; };
 		1D3623260D0F684500981E51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* AppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -46,16 +41,33 @@
 		30E1352710E2C1420031B30D /* Cordova.plist in Resources */ = {isa = PBXBuildFile; fileRef = 30E1352610E2C1420031B30D /* Cordova.plist */; };
 		30E5649213A7FCAF007403D8 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30E5649113A7FCAF007403D8 /* CoreMedia.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		D4A0D8761607E02300AEF8BB /* Default-568h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */; };
+		EA624DBE16CCF5BC00D000B2 /* www in Resources */ = {isa = PBXBuildFile; fileRef = EA624DBD16CCF5BC00D000B2 /* www */; };
+		EA624DC116CCF5ED00D000B2 /* libCordova.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA624DB916CCF5AA00D000B2 /* libCordova.a */; };
+		EA624DDC16CCF6C600D000B2 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA624DDB16CCF6C600D000B2 /* SenTestingKit.framework */; };
+		EA624DDD16CCF6C600D000B2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		EA624DDE16CCF6C600D000B2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		EA624DE416CCF6C700D000B2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA624DE216CCF6C700D000B2 /* InfoPlist.strings */; };
+		EA624DE716CCF6C700D000B2 /* UnitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EA624DE616CCF6C700D000B2 /* UnitTest.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		EA624DB816CCF5AA00D000B2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA624DB116CCF5AA00D000B2 /* CordovaLib.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 68A32D7114102E1C006B237C;
+			remoteInfo = CordovaLib;
+		};
+		EA624DBF16CCF5E600D000B2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA624DB116CCF5AA00D000B2 /* CordovaLib.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = CordovaLib;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		0656FEF51696C0280007B7F9 /* UnitTest.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTest.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0656FEF61696C0280007B7F9 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		0656FEFC1696C0280007B7F9 /* UnitTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UnitTest-Info.plist"; sourceTree = "<group>"; };
-		0656FEFE1696C0280007B7F9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		0656FF001696C0280007B7F9 /* UnitTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnitTest.h; sourceTree = "<group>"; };
-		0656FF011696C0280007B7F9 /* UnitTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UnitTest.m; sourceTree = "<group>"; };
-		0656FF031696C0280007B7F9 /* UnitTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UnitTest-Prefix.pch"; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -95,23 +107,23 @@
 		32CA4F630368D1EE00C91783 /* Phresco-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Phresco-Prefix.pch"; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Phresco-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Phresco-Info.plist"; path = "../Phresco-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x~iphone.png"; sourceTree = "<group>"; };
+		EA624DB116CCF5AA00D000B2 /* CordovaLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CordovaLib.xcodeproj; path = ThirdParty/Cordova/CordovaLib/CordovaLib.xcodeproj; sourceTree = SOURCE_ROOT; };
+		EA624DBD16CCF5BC00D000B2 /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; name = www; path = ThirdParty/Cordova/www; sourceTree = "<group>"; };
+		EA624DDA16CCF6C600D000B2 /* UnitTest.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTest.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA624DDB16CCF6C600D000B2 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		EA624DE116CCF6C700D000B2 /* UnitTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UnitTest-Info.plist"; sourceTree = "<group>"; };
+		EA624DE316CCF6C700D000B2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EA624DE516CCF6C700D000B2 /* UnitTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnitTest.h; sourceTree = "<group>"; };
+		EA624DE616CCF6C700D000B2 /* UnitTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UnitTest.m; sourceTree = "<group>"; };
+		EA624DE816CCF6C700D000B2 /* UnitTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UnitTest-Prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0656FEF11696C0280007B7F9 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0656FEF71696C0280007B7F9 /* SenTestingKit.framework in Frameworks */,
-				0656FEF81696C0280007B7F9 /* UIKit.framework in Frameworks */,
-				0656FEF91696C0280007B7F9 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA624DC116CCF5ED00D000B2 /* libCordova.a in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
@@ -129,29 +141,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EA624DD616CCF6C600D000B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA624DDC16CCF6C600D000B2 /* SenTestingKit.framework in Frameworks */,
+				EA624DDD16CCF6C600D000B2 /* UIKit.framework in Frameworks */,
+				EA624DDE16CCF6C600D000B2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0656FEFA1696C0280007B7F9 /* UnitTest */ = {
-			isa = PBXGroup;
-			children = (
-				0656FF001696C0280007B7F9 /* UnitTest.h */,
-				0656FF011696C0280007B7F9 /* UnitTest.m */,
-				0656FEFB1696C0280007B7F9 /* Supporting Files */,
-			);
-			path = UnitTest;
-			sourceTree = "<group>";
-		};
-		0656FEFB1696C0280007B7F9 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				0656FEFC1696C0280007B7F9 /* UnitTest-Info.plist */,
-				0656FEFD1696C0280007B7F9 /* InfoPlist.strings */,
-				0656FF031696C0280007B7F9 /* UnitTest-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,7 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				1D6058910D05DD3D006BFB54 /* Phresco.app */,
-				0656FEF51696C0280007B7F9 /* UnitTest.octest */,
+				EA624DDA16CCF6C600D000B2 /* UnitTest.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -193,11 +195,13 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				EA624DBD16CCF5BC00D000B2 /* www */,
+				EA624DB116CCF5AA00D000B2 /* CordovaLib.xcodeproj */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				307C750510C5A3420062BCA9 /* Plugins */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
-				0656FEFA1696C0280007B7F9 /* UnitTest */,
+				EA624DDF16CCF6C600D000B2 /* UnitTest */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 			);
@@ -248,7 +252,7 @@
 				301BF5C4109A6A2B0062928A /* SystemConfiguration.framework */,
 				305D5FD0115AB8F900A74A75 /* MobileCoreServices.framework */,
 				30E5649113A7FCAF007403D8 /* CoreMedia.framework */,
-				0656FEF61696C0280007B7F9 /* SenTestingKit.framework */,
+				EA624DDB16CCF6C600D000B2 /* SenTestingKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -301,27 +305,37 @@
 			path = se.lproj;
 			sourceTree = "<group>";
 		};
+		EA624DB216CCF5AA00D000B2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EA624DB916CCF5AA00D000B2 /* libCordova.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EA624DDF16CCF6C600D000B2 /* UnitTest */ = {
+			isa = PBXGroup;
+			children = (
+				EA624DE516CCF6C700D000B2 /* UnitTest.h */,
+				EA624DE616CCF6C700D000B2 /* UnitTest.m */,
+				EA624DE016CCF6C700D000B2 /* Supporting Files */,
+			);
+			path = UnitTest;
+			sourceTree = "<group>";
+		};
+		EA624DE016CCF6C700D000B2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EA624DE116CCF6C700D000B2 /* UnitTest-Info.plist */,
+				EA624DE216CCF6C700D000B2 /* InfoPlist.strings */,
+				EA624DE816CCF6C700D000B2 /* UnitTest-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0656FEF41696C0280007B7F9 /* UnitTest */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0656FF061696C0280007B7F9 /* Build configuration list for PBXNativeTarget "UnitTest" */;
-			buildPhases = (
-				0656FEF01696C0280007B7F9 /* Sources */,
-				0656FEF11696C0280007B7F9 /* Frameworks */,
-				0656FEF21696C0280007B7F9 /* Resources */,
-				0656FEF31696C0280007B7F9 /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = UnitTest;
-			productName = UnitTest;
-			productReference = 0656FEF51696C0280007B7F9 /* UnitTest.octest */;
-			productType = "com.apple.product-type.bundle";
-		};
 		1D6058900D05DD3D006BFB54 /* Phresco */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Phresco" */;
@@ -334,11 +348,30 @@
 			buildRules = (
 			);
 			dependencies = (
+				EA624DC016CCF5E600D000B2 /* PBXTargetDependency */,
 			);
 			name = Phresco;
 			productName = Phresco;
 			productReference = 1D6058910D05DD3D006BFB54 /* Phresco.app */;
 			productType = "com.apple.product-type.application";
+		};
+		EA624DD916CCF6C600D000B2 /* UnitTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA624DE916CCF6C700D000B2 /* Build configuration list for PBXNativeTarget "UnitTest" */;
+			buildPhases = (
+				EA624DD516CCF6C600D000B2 /* Sources */,
+				EA624DD616CCF6C600D000B2 /* Frameworks */,
+				EA624DD716CCF6C600D000B2 /* Resources */,
+				EA624DD816CCF6C600D000B2 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UnitTest;
+			productName = UnitTest;
+			productReference = EA624DDA16CCF6C600D000B2 /* UnitTest.octest */;
+			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
@@ -364,23 +397,31 @@
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = EA624DB216CCF5AA00D000B2 /* Products */;
+					ProjectRef = EA624DB116CCF5AA00D000B2 /* CordovaLib.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				1D6058900D05DD3D006BFB54 /* Phresco */,
-				0656FEF41696C0280007B7F9 /* UnitTest */,
+				EA624DD916CCF6C600D000B2 /* UnitTest */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXResourcesBuildPhase section */
-		0656FEF21696C0280007B7F9 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0656FEFF1696C0280007B7F9 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
+/* Begin PBXReferenceProxy section */
+		EA624DB916CCF5AA00D000B2 /* libCordova.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libCordova.a;
+			remoteRef = EA624DB816CCF5AA00D000B2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
 		1D60588D0D05DD3D006BFB54 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -402,25 +443,21 @@
 				3088BBC1154F3926009F9C59 /* Default@2x~iphone.png in Resources */,
 				3088BBC2154F3926009F9C59 /* Default~iphone.png in Resources */,
 				D4A0D8761607E02300AEF8BB /* Default-568h@2x~iphone.png in Resources */,
+				EA624DBE16CCF5BC00D000B2 /* www in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA624DD716CCF6C600D000B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA624DE416CCF6C700D000B2 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0656FEF31696C0280007B7F9 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
-		};
 		304B58A110DAC018002A0835 /* Touch www folder */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -435,17 +472,22 @@
 			shellPath = /bin/sh;
 			shellScript = "touch -cm ${PROJECT_DIR}/www";
 		};
+		EA624DD816CCF6C600D000B2 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0656FEF01696C0280007B7F9 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0656FF021696C0280007B7F9 /* UnitTest.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		1D60588E0D05DD3D006BFB54 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -456,17 +498,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EA624DD516CCF6C600D000B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA624DE716CCF6C700D000B2 /* UnitTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		0656FEFD1696C0280007B7F9 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0656FEFE1696C0280007B7F9 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
+/* Begin PBXTargetDependency section */
+		EA624DC016CCF5E600D000B2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CordovaLib;
+			targetProxy = EA624DBF16CCF5E600D000B2 /* PBXContainerItemProxy */;
 		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
 		1F766FDC13BBADB100FB74C0 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -499,76 +549,23 @@
 			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
+		EA624DE216CCF6C700D000B2 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA624DE316CCF6C700D000B2 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		0656FF041696C0280007B7F9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "UnitTest/UnitTest-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				INFOPLIST_FILE = "UnitTest/UnitTest-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Debug;
-		};
-		0656FF051696C0280007B7F9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "UnitTest/UnitTest-Prefix.pch";
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				INFOPLIST_FILE = "UnitTest/UnitTest-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				VALIDATE_PRODUCT = YES;
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Release;
-		};
 		1D6058940D05DD3E006BFB54 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_WARN_OBJCPP_ARC_ABI = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Mukund Balasubramanian (JJ5TQ44E7M)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Mukund Balasubramanian (JJ5TQ44E7M)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -579,10 +576,7 @@
 				INFOPLIST_FILE = "Phresco/Phresco-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = Phresco;
-				PROVISIONING_PROFILE = "3071A581-86C7-41D4-87C4-8EEB9FC545AC";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "3071A581-86C7-41D4-87C4-8EEB9FC545AC";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALID_ARCHS = "i386 armv6 armv7";
 			};
 			name = Debug;
 		};
@@ -592,8 +586,6 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_WARN_OBJCPP_ARC_ABI = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Mukund Balasubramanian (JJ5TQ44E7M)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Mukund Balasubramanian (JJ5TQ44E7M)";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Phresco/Phresco-Prefix.pch";
@@ -602,10 +594,7 @@
 				INFOPLIST_FILE = "Phresco/Phresco-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = Phresco;
-				PROVISIONING_PROFILE = "3071A581-86C7-41D4-87C4-8EEB9FC545AC";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "3071A581-86C7-41D4-87C4-8EEB9FC545AC";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALID_ARCHS = "i386 armv6 armv7";
 			};
 			name = Release;
 		};
@@ -641,7 +630,6 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				USER_HEADER_SEARCH_PATHS = "";
-				VALID_ARCHS = "i386 armv6 armv7";
 			};
 			name = Debug;
 		};
@@ -677,21 +665,69 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				USER_HEADER_SEARCH_PATHS = "";
-				VALID_ARCHS = "i386 armv6 armv7";
+			};
+			name = Release;
+		};
+		EA624DEA16CCF6C700D000B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UnitTest/UnitTest-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				INFOPLIST_FILE = "UnitTest/UnitTest-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		EA624DEB16CCF6C700D000B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UnitTest/UnitTest-Prefix.pch";
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				INFOPLIST_FILE = "UnitTest/UnitTest-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0656FF061696C0280007B7F9 /* Build configuration list for PBXNativeTarget "UnitTest" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0656FF041696C0280007B7F9 /* Debug */,
-				0656FF051696C0280007B7F9 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
 		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Phresco" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -706,6 +742,15 @@
 			buildConfigurations = (
 				C01FCF4F08A954540054247B /* Debug */,
 				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA624DE916CCF6C700D000B2 /* Build configuration list for PBXNativeTarget "UnitTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA624DEA16CCF6C700D000B2 /* Debug */,
+				EA624DEB16CCF6C700D000B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
