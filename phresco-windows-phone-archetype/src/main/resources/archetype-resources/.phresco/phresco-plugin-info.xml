@@ -3,7 +3,7 @@
 	<applicationHandler>
 		<groupId>com.photon.phresco.commons</groupId>
 		<artifactId>phresco-commons</artifactId>
-		<version>2.0.0.37001-SNAPSHOT</version>
+		<version>2.1.0.1001-SNAPSHOT</version>
 		<class>com.photon.phresco.impl.WindowsApplicationProcessor</class>
 	</applicationHandler>
     <mojo>
@@ -20,7 +20,7 @@
                <groupId>com.photon.phresco.plugins</groupId>
                <artifactId>windows-phone-phresco-plugin</artifactId>
                <type>jar</type>
-               <version>2.0.0.37001-SNAPSHOT</version>
+               <version>2.1.0.1001-SNAPSHOT</version>
                <class>com.photon.phresco.plugins.windows.WPPlugin</class>
            </dependency>
        </implementation>
@@ -164,7 +164,7 @@
                <groupId>com.photon.phresco.plugins</groupId>
                <artifactId>windows-phone-phresco-plugin</artifactId>
                <type>jar</type>
-               <version>2.0.0.37001-SNAPSHOT</version>
+               <version>2.1.0.1001-SNAPSHOT</version>
                <class>com.photon.phresco.plugins.windows.WPPlugin</class>
            </dependency>
        </implementation>
@@ -340,7 +340,7 @@
                <groupId>com.photon.phresco.plugins</groupId>
                <artifactId>windows-phone-phresco-plugin</artifactId>
                <type>jar</type>
-               <version>2.0.0.37001-SNAPSHOT</version>
+               <version>2.1.0.1001-SNAPSHOT</version>
                <class>com.photon.phresco.plugins.windows.WPPlugin</class>
            </dependency>
        </implementation>
@@ -689,7 +689,7 @@
                <groupId>com.photon.phresco.plugins</groupId>
                <artifactId>report-phresco-plugin</artifactId>
                <type>jar</type>
-               <version>2.0.0.37001-SNAPSHOT</version>
+               <version>2.1.0.1001-SNAPSHOT</version>
                <class>com.photon.phresco.plugins.ReportPlugin</class>
            </dependency>
        </implementation>
@@ -748,7 +748,7 @@
                <groupId>com.photon.phresco.plugins</groupId>
                <artifactId>ci-phresco-plugin</artifactId>
                <type>jar</type>
-               <version>2.0.0.37001-SNAPSHOT</version>
+               <version>2.1.0.1001-SNAPSHOT</version>
                <class>com.photon.phresco.plugins.CIPlugin</class>
            </dependency>
        </implementation>
