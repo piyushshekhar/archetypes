@@ -25,7 +25,6 @@
 			<directory>.phresco</directory> 
 			<includes>
 				<include>archetype-metadata.xml</include>
-				<include>phresco-plugin-info.xml</include>
 				<include>phresco-package-info.xml</include>
 				<include>phresco-deploy-info.xml</include>
 				<include>phresco-validate-code-info.xml</include>
