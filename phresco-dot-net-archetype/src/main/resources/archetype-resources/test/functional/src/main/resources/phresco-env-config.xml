@@ -1,0 +1,25 @@
+<environment>
+           <Browser>chrome</Browser>
+		   
+           
+           
+           
+<resolution>1024x768</resolution>
+    
+<Server desc="" name="Server">
+        <context>release/Pages/Default.aspx</context>
+        <admin_username/>
+        <deploy_dir>C:\inetpub\wwwroot</deploy_dir>
+        <additional_context/>
+        <port>1967</port>
+        <admin_password/>
+        <certificate/>
+        <siteName>latest</siteName>
+        <version>7.5</version>
+        <type>IIS</type>
+        <remoteDeployment>false</remoteDeployment>
+        <applicationName>release</applicationName>
+        <host>localhost</host>
+        <protocol>http</protocol>
+    </Server>
+</environment>

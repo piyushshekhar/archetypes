@@ -1,0 +1,123 @@
+[0.005][INFO]:      ChromeDriver 23.0.1240.0 C:\phresco-framework\workspace\projects\latest-asp.net\test\functional\chromedriver\windows\chromedriver.exe
+[0.944][FINE]:      Initializing session with capabilities {
+   "browserName": "chrome",
+   "chrome.switches": [  ],
+   "chromeOptions": {
+      "args": [  ],
+      "extensions": [  ]
+   },
+   "platform": "ANY",
+   "version": ""
+}
+
+[0.945][INFO]:      Launching chrome: "C:\Users\phresco\AppData\Local\Google\Chrome\Application\chrome.exe" --enable-logging --log-level=1 --disable-hang-monitor --disable-prompt-on-repost --dom-automation --full-memory-crash-report --no-default-browser-check --no-first-run --disable-background-networking --disable-sync --disable-translate --disable-web-resources --safebrowsing-disable-auto-update --safebrowsing-disable-download-protection --disable-client-side-phishing-detection --disable-component-update --disable-default-apps --ignore-certificate-errors about:blank
+[4.398][INFO]:      Connected to Chrome successfully. Version: 24.0.1312.57
+[4.413][FINE]:      Command received (/session/37891286d274f3b1762c2c94ec608b29)
+[4.413][FINE]:      Command finished (/session/37891286d274f3b1762c2c94ec608b29) with response {
+   "sessionId": "37891286d274f3b1762c2c94ec608b29",
+   "status": 0,
+   "value": {
+      "acceptSslCerts": false,
+      "applicationCacheEnabled": false,
+      "browserConnectionEnabled": false,
+      "browserName": "chrome",
+      "chrome.chromedriverVersion": "23.0.1240.0",
+      "chrome.nativeEvents": false,
+      "cssSelectorsEnabled": true,
+      "databaseEnabled": false,
+      "handlesAlerts": true,
+      "javascriptEnabled": true,
+      "locationContextEnabled": false,
+      "nativeEvents": true,
+      "platform": "windows",
+      "rotatable": false,
+      "takesScreenshot": true,
+      "version": "24.0.1312.57",
+      "webStorageEnabled": true
+   }
+}
+
+[4.441][FINE]:      Command received (/session/37891286d274f3b1762c2c94ec608b29/window/current/maximize) with params {
+   "windowHandle": "current"
+}
+
+[4.441][FINER]:     Waiting for all views to stop loading...
+[4.442][FINER]:     Done waiting for all views to stop loading
+[4.524][FINER]:     Waiting for all views to stop loading...
+[4.607][FINER]:     Done waiting for all views to stop loading
+[4.607][FINE]:      Command finished (/session/37891286d274f3b1762c2c94ec608b29/window/current/maximize) with response {
+   "sessionId": "37891286d274f3b1762c2c94ec608b29",
+   "status": 0,
+   "value": {
+
+   }
+}
+
+[4.612][FINE]:      Command received (/session/37891286d274f3b1762c2c94ec608b29/url) with params {
+   "url": "http://localhost:1967/release/Pages/Default.aspx"
+}
+
+[4.612][FINER]:     Waiting for all views to stop loading...
+[4.612][FINER]:     Done waiting for all views to stop loading
+[4.890][FINER]:     Waiting for all views to stop loading...
+[4.890][FINER]:     Done waiting for all views to stop loading
+[4.890][FINE]:      Command finished (/session/37891286d274f3b1762c2c94ec608b29/url) with response {
+   "sessionId": "37891286d274f3b1762c2c94ec608b29",
+   "status": 0,
+   "value": {
+
+   }
+}
+
+[12.978][FINE]:     Command received (/session/37891286d274f3b1762c2c94ec608b29/element) with params {
+   "using": "xpath",
+   "value": "//input[@id='btnClickMe']"
+}
+
+[12.978][FINER]:    Waiting for all views to stop loading...
+[12.980][FINER]:    Done waiting for all views to stop loading
+[13.025][FINER]:    Waiting for all views to stop loading...
+[13.025][FINER]:    Done waiting for all views to stop loading
+[13.025][FINE]:     Command finished (/session/37891286d274f3b1762c2c94ec608b29/element) with response {
+   "sessionId": "37891286d274f3b1762c2c94ec608b29",
+   "status": 0,
+   "value": {
+      "ELEMENT": ":wdc:1361522667176"
+   }
+}
+
+[13.050][FINE]:     Command received (/session/37891286d274f3b1762c2c94ec608b29/element) with params {
+   "using": "xpath",
+   "value": "//input[@id='btnClickMe']"
+}
+
+[13.050][FINER]:    Waiting for all views to stop loading...
+[13.051][FINER]:    Done waiting for all views to stop loading
+[13.076][FINER]:    Waiting for all views to stop loading...
+[13.077][FINER]:    Done waiting for all views to stop loading
+[13.077][FINE]:     Command finished (/session/37891286d274f3b1762c2c94ec608b29/element) with response {
+   "sessionId": "37891286d274f3b1762c2c94ec608b29",
+   "status": 0,
+   "value": {
+      "ELEMENT": ":wdc:1361522667176"
+   }
+}
+
+[13.083][FINE]:     Command received (/session/37891286d274f3b1762c2c94ec608b29/element/:wdc:1361522667176/click) with params {
+   "id": ":wdc:1361522667176"
+}
+
+[13.083][FINER]:    Waiting for all views to stop loading...
+[13.084][FINER]:    Done waiting for all views to stop loading
+[13.159][FINER]:    Waiting for all views to stop loading...
+[13.159][FINER]:    Done waiting for all views to stop loading
+[13.160][FINE]:     Command finished (/session/37891286d274f3b1762c2c94ec608b29/element/:wdc:1361522667176/click) with response {
+   "sessionId": "37891286d274f3b1762c2c94ec608b29",
+   "status": 0,
+   "value": {
+
+   }
+}
+
+[18.183][FINE]:     Command received (/session/37891286d274f3b1762c2c94ec608b29)
+[18.574][INFO]:     Chrome shutdown

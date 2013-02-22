@@ -154,112 +154,93 @@
 			<directory>test/functional</directory> 
 			<includes> 
 				<include>pom.xml</include> 
-				<include>AllTest.sln</include> 
-				<include>AllTest.suo</include> 
+				<include>chromedriver.log</include> 
+				<include>.project</include>
+				<include>.classpath</include> 
 			</includes> 
 		</fileSet> 
 		<fileSet filtered="false" encoding="UTF-8"> 
-			<directory>test/functional/AllTest</directory> 
+			<directory>test/functional/.settings</directory> 
 			<includes> 
-				<include>AllTest.cs</include> 
-				<include>AllTest.csproj</include> 
-				<include>App.config</include> 
-				<include>phresco-env-config.xml</include> 
+				<include>org.eclipse.core.resources.prefs</include> 
+				<include>org.eclipse.jdt.core.prefs</include> 
+				<include>org.eclipse.m2e.core.prefs</include> 
 			</includes> 
 		</fileSet> 
 		<fileSet filtered="false" encoding="UTF-8"> 
-			<directory>test/functional/AllTest/bin/Debug</directory> 
+			<directory>test/functional/chromedriver</directory> 
 			<includes> 
-				<include>AllTest.dll</include> 
-				<include>AllTest.dll.config</include> 
-				<include>AllTest.pdb</include> 
-				<include>nmock.dll</include> 
-				<include>nunit.core.dll</include> 
-				<include>nunit.framework.dll</include> 
-				<include>ThoughtWorks.Selenium.Core.dll</include> 
-				<include>ThoughtWorks.Selenium.Core.pdb</include> 
-				<include>ThoughtWorks.Selenium.IntegrationTests.dll</include> 
-				<include>ThoughtWorks.Selenium.IntegrationTests.pdb</include> 
-				<include>Castle.Core.dll</include> 
-				<include>Ionic.Zip.dll</include> 
-				<include>Newtonsoft.Json.dll</include> 
-				<include>Selenium.WebDriverBackedSelenium.dll</include> 
-				<include>Selenium.WebDriverBackedSelenium.pdb</include> 
-				<include>Selenium.WebDriverBackedSelenium.xml</include> 
-				<include>WebDriver.xml</include> 
-				<include>WebDriver.Support.xml</include> 
-				<include>WebDriver.Support.pdb</include> 
-				<include>WebDriver.Support.dll</include> 
-				<include>WebDriver.pdb</include> 
-				<include>WebDriver.dll</include> 
-				<include>ThoughtWorks.Selenium.Core.xml</include> 
-				<include>System.Drawing.dll</include> 
+				<include>org.seleniumhq.selenium-chromedriver-zip-linux32-23.0.1240.0.marker</include> 
+				<include>org.seleniumhq.selenium-chromedriver-zip-linux64-23.0.1240.0.marker</include> 
+				<include>org.seleniumhq.selenium-chromedriver-zip-mac-23.0.1240.0.marker</include> 
+				<include>org.seleniumhq.selenium-chromedriver-zip-win-23.0.1240.0.marker</include> 
 			</includes> 
 		</fileSet>
 		<fileSet filtered="false" encoding="UTF-8"> 
-			<directory>test/functional/AllTest/bin/Release</directory> 
+			<directory>test/functional/chromedriver/linux-32</directory> 
 			<includes> 
-				<include>AllTest.dll</include> 
-				<include>AllTest.dll.config</include> 
-				<include>AllTest.dll.VisualState.xml</include> 
-				<include>AllTest.pdb</include> 
-				<include>nmock.dll</include> 
-				<include>nunit.core.dll</include> 
-				<include>nunit.framework.dll</include> 
-				<include>TestResult.xml</include> 
-				<include>ThoughtWorks.Selenium.Core.dll</include> 
-				<include>ThoughtWorks.Selenium.Core.pdb</include> 
-				<include>ThoughtWorks.Selenium.IntegrationTests.dll</include> 
-				<include>ThoughtWorks.Selenium.IntegrationTests.pdb</include> 
-				<include>Castle.Core.dll</include> 
-				<include>WebDriver.xml</include> 
-				<include>WebDriver.Support.xml</include> 
-				<include>WebDriver.Support.pdb</include> 
-				<include>WebDriver.Support.dll</include> 
-				<include>WebDriver.pdb</include> 
-				<include>WebDriver.dll</include> 
-				<include>ThoughtWorks.Selenium.Core.xml</include> 
-				<include>System.Drawing.dll</include> 
-				<include>Selenium.WebDriverBackedSelenium.xml</include> 
-				<include>Selenium.WebDriverBackedSelenium.pdb</include> 
-				<include>Selenium.WebDriverBackedSelenium.dll</include> 
-				<include>Newtonsoft.Json.dll</include> 
-				<include>Ionic.Zip.dll</include> 
+				<include>chromedriver</include> 
 			</includes> 
 		</fileSet> 
 		<fileSet filtered="false" encoding="UTF-8"> 
-			<directory>test/functional/AllTest/obj/Debug</directory> 
+			<directory>test/functional/chromedriver/linux-64</directory> 
 			<includes> 
-				<include>AllTest.csproj.FileListAbsolute.txt</include> 
-				<include>AllTest.dll</include> 
-				<include>AllTest.pdb</include> 
-				<include>ResolveAssemblyReference.cache</include> 
+				<include>chromedriver</include> 
 			</includes> 
 		</fileSet>
 		<fileSet filtered="false" encoding="UTF-8"> 
-			<directory>test/functional/AllTest/obj/Debug/TempPE</directory> 
+			<directory>test/functional/chromedriver/mac</directory> 
 			<includes> 
-				<include>**/*</include>
+				<include>chromedriver</include>
 			</includes> 
 		</fileSet>
 		<fileSet filtered="false" encoding="UTF-8"> 
-			<directory>test/functional/AllTest/obj/Release</directory> 
+			<directory>test/functional/chromedriver/windows</directory> 
 			<includes> 
-				<include>AllTest.csproj.FileListAbsolute.txt</include>
-				<include>AllTest.dll</include>
-				<include>AllTest.pdb</include>
+				<include>chromedriver.exe</include>
 			</includes> 
 		</fileSet>
 		<fileSet filtered="false" encoding="UTF-8"> 
-			<directory>test/functional/AllTest/obj/Release/TempPE</directory> 
+			<directory>test/functional/src/main/java/com/photon/phresco/Screens</directory> 
 			<includes> 
-				<include>**/*</include>
+				<include>BaseScreen.java</include>
+				<include>PhotonAbstractScreen.java</include>
+				<include>WelcomeScreen.java</include>
 			</includes> 
 		</fileSet>
 		<fileSet filtered="false" encoding="UTF-8"> 
-			<directory>test/functional/AllTest/Properties</directory> 
+			<directory>test/functional/src/main/java/com/photon/phresco/selenium/util</directory> 
 			<includes> 
-				<include>AssemblyInfo.cs</include>
+				<include>Constants.java</include>
+				<include>GetCurrentDir.java</include>
+				<include>ScreenActionFailedException.java</include>
+				<include>ScreenException.java</include>
+			</includes> 
+		</fileSet>
+		<fileSet filtered="false" encoding="UTF-8"> 
+			<directory>test/functional/src/main/java/com/photon/phresco/uiconstants</directory> 
+			<includes> 
+				<include>PhotonData.java</include>
+				<include>PhrescoUiConstants.java</include>
+				<include>ReadXMLFile.java</include>
+				<include>UIConstants.java</include>
+				<include>UserInfoConstants.java</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="false" encoding="UTF-8"> 
+			<directory>test/functional/src/main/resources</directory>
+			<includes> 
+				<include>PhotonData.java</include>
+				<include>phresco-env-config.xml</include>
+				<include>UIConstants.out.xml</include>
+				<include>UIConstants.xml</include>
+				<include>UserInfo.xml</include>
+			</includes> 
+		</fileSet>
+		<fileSet filtered="false" encoding="UTF-8"> 
+			<directory>test/functional/src/test/java/com/photon/phresco/testcases</directory> 
+			<includes> 
+				<include>PhotonTestCase.java</include>
 			</includes> 
 		</fileSet>
 		<fileSet filtered="false" encoding="UTF-8"> 
