@@ -230,7 +230,7 @@
 		<fileSet filtered="false" encoding="UTF-8"> 
 			<directory>test/functional/src/main/resources</directory>
 			<includes> 
-				<include>PhotonData.java</include>
+				<include>PhotonData.xml</include>
 				<include>phresco-env-config.xml</include>
 				<include>UIConstants.out.xml</include>
 				<include>UIConstants.xml</include>
