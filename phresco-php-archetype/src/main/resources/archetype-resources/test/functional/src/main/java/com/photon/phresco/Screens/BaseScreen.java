@@ -12,7 +12,6 @@ import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.OutputType;
@@ -28,15 +27,19 @@ import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import com.google.common.base.Function;
 import com.photon.phresco.selenium.util.Constants;
 import com.photon.phresco.selenium.util.GetCurrentDir;
+import com.photon.phresco.selenium.util.ScreenActionFailedException;
 import com.photon.phresco.selenium.util.ScreenException;
-import com.photon.phresco.uiconstants.PhpData;
+import com.photon.phresco.uiconstants.DrupalData;
 import com.photon.phresco.uiconstants.PhrescoUiConstants;
 import com.photon.phresco.uiconstants.UIConstants;
 import com.photon.phresco.uiconstants.UserInfoConstants;
+
+
 
 public class BaseScreen {
 
@@ -44,36 +47,43 @@ public class BaseScreen {
 	private ChromeDriverService chromeService;
 	private  Log log = LogFactory.getLog("BaseScreen");
 	private WebElement element;
-	private PhpData phpConstants;
+	private DrupalData phpConstants;
 	private UIConstants uiConstants;
 	private UserInfoConstants userInfo;
 	private  PhrescoUiConstants phrsc;
 	DesiredCapabilities capabilities;
 	
+
+
 	public BaseScreen() {
 
 	}
-
-	public BaseScreen(String selectedBrowser,String selectedPlatform, String applicationURL,
-			String applicationContext, PhpData drupalConstants,
-			UIConstants uiConstants,UserInfoConstants userInfo) throws ScreenException {
+	
+	/**
+	 * Invoking the super class method through passing the vale of Browser,URL, Context, then PhpData,UIConstants,UserInfoConstants Xml Values
+	 * Then triggering instantiateBrowser
+	 * @throws ScreenException
+	 */
+	public BaseScreen(String selectedBrowser,String selectedPlatform , String applicationURL,
+			String applicationContext, DrupalData phpConstants,
+			UIConstants uiConstants, UserInfoConstants userInfo)  throws AWTException, IOException, ScreenActionFailedException {
 
 		this.phpConstants = phpConstants;
 		this.uiConstants = uiConstants;
 		this.userInfo=userInfo;
 		try {
-			instantiateBrowser(selectedBrowser,selectedPlatform, applicationURL, applicationContext);
-		} catch (MalformedURLException e) {
+			instantiateBrowser(selectedBrowser, selectedPlatform, applicationURL, applicationContext);
+		} catch (ScreenException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
 
-	public void instantiateBrowser(String selectedBrowser,String selectedPlatform,
+	public void instantiateBrowser(String selectedBrowser,String selectedPlatform, 
 			String applicationURL, String applicationContext)
-					throws ScreenException,
-					MalformedURLException {
-		
+					 throws ScreenException,
+						MalformedURLException {
+
 		URL server = new URL("http://localhost:4444/wd/hub/");
 		if (selectedBrowser.equalsIgnoreCase(Constants.BROWSER_CHROME)) {
 			log.info("-------------***LAUNCHING GOOGLECHROME***--------------");
@@ -87,10 +97,39 @@ public class BaseScreen {
 
 		} else if (selectedBrowser.equalsIgnoreCase(Constants.BROWSER_IE)) {
 			log.info("---------------***LAUNCHING INTERNET EXPLORE***-----------");
-			driver = new InternetExplorerDriver();
-			capabilities = new DesiredCapabilities();
-			capabilities.setBrowserName("iexplore");
-			
+			try {
+				capabilities = new DesiredCapabilities();
+				capabilities.setJavascriptEnabled(true);
+				capabilities.setBrowserName("iexplorer");
+				} catch (Exception e) {
+					e.printStackTrace();
+			}
+		}
+			else if (selectedBrowser.equalsIgnoreCase(Constants.BROWSER_OPERA)) {
+				log.info("-------------***LAUNCHING OPERA***--------------");
+				try {
+					
+				capabilities = new DesiredCapabilities();
+				capabilities.setBrowserName("opera");
+				capabilities.setCapability("opera.autostart ",true);
+
+				System.out.println("-----------checking the OPERA-------");
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+				else if (selectedBrowser.equalsIgnoreCase(Constants.BROWSER_SAFARI)) {
+					log.info("-------------***LAUNCHING SAFARI***--------------");
+					try {
+						
+				    capabilities = new DesiredCapabilities();
+					capabilities.setBrowserName("safari");
+					capabilities.setCapability("safari.autostart ", true);
+					System.out.println("-----------checking the SAFARI-------");
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+
 
 		} else if (selectedBrowser.equalsIgnoreCase(Constants.BROWSER_FIREFOX)) {
 			log.info("-------------***LAUNCHING FIREFOX***--------------");
@@ -124,7 +163,10 @@ public class BaseScreen {
 		}
 		driver = new RemoteWebDriver(server, capabilities);
 		driver.get(applicationURL + applicationContext);
+		
+
 	}
+	
 
 	public void closeBrowser() {
 		log.info("-------------***BROWSER CLOSING***--------------");
@@ -215,15 +257,7 @@ public class BaseScreen {
 		}
 
 		catch (Exception e) {
-			File scrFile = ((TakesScreenshot) driver)
-					.getScreenshotAs(OutputType.FILE);
-			FileUtils.copyFile(scrFile,
-					new File(GetCurrentDir.getCurrentDirectory() + "\\"
-							+ methodName + ".png"));
-			/*throw new RuntimeException("waitForElementPresent"
-					+ super.getClass().getSimpleName() + " failed", e);*/
-			Assert.assertNull(scrFile);
-                         
+			Assert.assertNull(e);
 		}
 	}
 
@@ -240,35 +274,105 @@ public class BaseScreen {
 
 	}
 	
-	public void VerifyTextPresent(String methodName) throws Exception {
+	public void createAccount(String methodName) throws Exception {
 		if (StringUtils.isEmpty(methodName)) {
 			methodName = Thread.currentThread().getStackTrace()[1]
 					.getMethodName();
 			;
 		
-		}
-		Thread.sleep(4000);
-		
-		isTextPresent(uiConstants.TEXT);
-	   
-	   
+        
+		} 
+		waitForElementPresent(this.uiConstants.CREATENEWACC, methodName);
+		getXpathWebElement(this.uiConstants.CREATENEWACC);
+		click();
+		Thread.sleep(3000);
+		waitForElementPresent(this.uiConstants.NAME, methodName);
+		getXpathWebElement(this.uiConstants.NAME);
+		sendKeys(this.userInfo.NAME);
+		waitForElementPresent(this.uiConstants.EMAIL, methodName);
+		getXpathWebElement(this.uiConstants.EMAIL);
+		sendKeys(this.userInfo.EMAIL);
+		waitForElementPresent(this.uiConstants.SUBMIT, methodName);
+		getXpathWebElement(this.uiConstants.SUBMIT);
+		click();
+		waitForElementPresent(this.phpConstants.TEXTVALUE, methodName);
+		isTextPresent(phpConstants.TEXTVALUE);
+		Thread.sleep(5000);
 	}
-	public void VerifyTextNotPresent(String methodName) throws Exception {
+	
+	
+	public void loginDrupal(String methodName) throws Exception {
 		if (StringUtils.isEmpty(methodName)) {
 			methodName = Thread.currentThread().getStackTrace()[1]
 					.getMethodName();
 			;
 		
-		}
-		Thread.sleep(4000);
+        
+		} 
 		
-		isTextPresent(uiConstants.WRONG_TEXT_MSG);
-	   
-	   
+		waitForElementPresent(this.uiConstants.LOGIN, methodName);
+		getXpathWebElement(uiConstants.LOGIN);
+		click();
+		Thread.sleep(3000);
+		waitForElementPresent(this.uiConstants.NAME, methodName);
+		getXpathWebElement(this.uiConstants.NAME);
+		sendKeys(this.userInfo.NAME);
+		waitForElementPresent(this.uiConstants.LOGINPASSWORD, methodName);
+		getXpathWebElement(this.uiConstants.LOGINPASSWORD);
+		sendKeys(this.userInfo.LOGINPASSWORD);
+		waitForElementPresent(this.uiConstants.SUBMIT, methodName);
+		getXpathWebElement(this.uiConstants.SUBMIT);
+		click();
+		Thread.sleep(3000);
+		waitForElementPresent(this.uiConstants.LOGOUT, methodName);
+		getXpathWebElement(this.uiConstants.LOGOUT);
+		click();
+		Thread.sleep(3000);
+		
+		
+	    }
+	
+	public void searchDrupal(String methodName) throws Exception {
+		if (StringUtils.isEmpty(methodName)) {
+			methodName = Thread.currentThread().getStackTrace()[1]
+					.getMethodName();
+			;
+
+		} 
+		
+		waitForElementPresent(this.uiConstants.SEARCH, methodName);
+		getXpathWebElement(this.uiConstants.SEARCH);
+		sendKeys(this.phpConstants.SEARCH);
+		waitForElementPresent(this.uiConstants.SUBMIT, methodName);
+		getXpathWebElement(this.uiConstants.SUBMIT);
+		click();
+		Thread.sleep(3000);
+		
+		
 	}
 	
+
+	public void myAccount(String methodName) throws Exception {
+		if (StringUtils.isEmpty(methodName)) {
+			methodName = Thread.currentThread().getStackTrace()[1]
+					.getMethodName();
+			;
+
+		} 
+		
+		waitForElementPresent(this.uiConstants.MYACC, methodName);
+		getXpathWebElement(this.uiConstants.MYACC);
+		click();
+		Thread.sleep(3000);
+		
+		
+	}
+
+	    
+	 
+	    
 	
-	
+
 	public void click() throws ScreenException {
 		log.info("Entering:********click operation start********");
 		try {
@@ -314,16 +418,7 @@ public class BaseScreen {
 
 	}
 
-	/*public void isTextPresent(String textValue) {
-		if (textValue != null) {
-			Boolean textCheck = driver.getPageSource().contains(textValue);
-			Assert.assertTrue("Text present", textCheck);
-		} else {
-			System.out.println("Text not present");
-			throw new RuntimeException("----HelloWorld Text is not existed----");
-
-		}
-	}*/
+	
 
 	public void isElementPresent(String element) throws Exception {
 
@@ -338,7 +433,10 @@ public class BaseScreen {
 		}
 
 	}
-	
+	/**
+	 *  
+	 * @param text
+	 */
 	public void isTextPresent(String text) {
 		if (text!= null){
 		boolean value=driver.findElement(By.tagName("body")).getText().contains(text);	
@@ -350,7 +448,12 @@ public class BaseScreen {
 			throw new RuntimeException("---- Text not existed----");
 		}
 	    
+	    
+	    
 	}	
 	
+	
+
 
 }
+

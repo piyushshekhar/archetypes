@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <environment>
-
-     	<wrong_text_msg>SDR?w345dsfds</wrong_text_msg>
-        <text1>helloworld</text1> 
-
+<phresco>
+<phpblog>
+     	
+     <createnewacc>//a[contains(text(),'Create new account')]</createnewacc>
+     <name>//input[@id='edit-name']</name>
+     <email>//input[@id='edit-mail']</email>
+     <submit>//input[@id='edit-submit']</submit>
+     <login>//div[@id='content']/div/div/ul/li[2]/a</login>
+     <loginpassword>//input[@id='edit-pass']</loginpassword>
+     <search>//input[@id='edit-search-block-form--2']</search>
+     <myacc>//a[contains(text(),'My account')]</myacc>
+     <logout>//div[3]/ul/li[2]/a</logout>
+               
+               
+           
+ 
+	           
+</phpblog>
+</phresco>
 </environment>

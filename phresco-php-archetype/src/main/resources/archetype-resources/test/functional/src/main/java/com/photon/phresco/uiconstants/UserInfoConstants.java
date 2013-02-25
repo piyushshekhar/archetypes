@@ -3,23 +3,16 @@ package com.photon.phresco.uiconstants;
 import java.lang.reflect.Field;
 
 public class UserInfoConstants {
-	public class launchingBrowser {
-
-	}
-
-
-
-
-
-
-	private ReadXMLFile readXml;
 	
 	
-	
-	
-
-	
-
+	private ReadXMLFile readXml;	
+	public String NAME="name";
+    public String EMAIL="email";
+    public String LOGINPASSWORD="loginpassword";
+   
+	/**
+	 * Reading the UserInfoConstants xml files through UserInfoConstants() Constructor 
+	 */
     public UserInfoConstants() {
 		try {
 			readXml = new ReadXMLFile();

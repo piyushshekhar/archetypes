@@ -3,12 +3,12 @@ package com.photon.phresco.selenium.util;
 public class Constants {
 	
 	
-	public static final String  HELLOWORLD_TEXT_MSG = "Hello World";
-	public static final String  WRONG_TEXT_MSG = "bce7ty487bcwe7c";
+	public static final String HELLOWORLD_TEXT_MSG = "Hello World";
+	public static final String WRONG_TEXT_MSG = "Nothing present";
 	/**
 	 * Execute tests on internet explorer
 	 */
-	public static final String BROWSER_IE = "iexplore";
+	public static final String BROWSER_IE = "iexplorer";
 
 	/**
 	 * Execute tests on firefox browser

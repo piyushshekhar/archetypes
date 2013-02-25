@@ -10,7 +10,8 @@
 			<class name="com.photon.phresco.testcases.WelcomePageTestCase" />
 		</classes>
 	</test>
- <test name="VerifyWelcomePageOnChrome" junit="false"
+
+	<test name="VerifyWelcomePageOnChrome" junit="false"
 		preserve-order="true">
 		<parameter name="browser" value="googlechrome" />
 		<parameter name="platform" value="WINDOWS" />

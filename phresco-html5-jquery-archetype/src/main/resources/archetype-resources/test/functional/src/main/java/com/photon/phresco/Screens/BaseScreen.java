@@ -7,10 +7,12 @@ import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
+
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.OutputType;
@@ -43,7 +45,6 @@ public class BaseScreen {
 	private WebElement element = null;
 	private PhrescoUiConstants phrescoUiConstants = null;
 	private String resolution = null;
-
 	DesiredCapabilities capabilities;
 
 	public BaseScreen() {
@@ -52,7 +53,7 @@ public class BaseScreen {
 
 	public BaseScreen(String selectedBrowser,String selectedPlatform, String applicationURL,
 			String applicatinContext, PhrescoUiConstants phrescoUiConstants)
-					throws AWTException, IOException, ScreenActionFailedException{
+					 throws AWTException, IOException, ScreenActionFailedException {
 
 		this.phrescoUiConstants = phrescoUiConstants;
 		try {
@@ -94,11 +95,39 @@ public class BaseScreen {
 
 		} else if (selectedBrowser.equalsIgnoreCase(Constants.BROWSER_IE)) {
 			log.info("---------------***LAUNCHING INTERNET EXPLORE***-----------");
-			driver = new InternetExplorerDriver();
-			capabilities = new DesiredCapabilities();
-			capabilities.setBrowserName("iexplore");
-			// break;
-			// capabilities.setPlatform(selectedPlatform);
+			try {
+				capabilities = new DesiredCapabilities();
+				capabilities.setJavascriptEnabled(true);
+				capabilities.setBrowserName("iexplorer");
+				} catch (Exception e) {
+					e.printStackTrace();
+			}
+		}
+			else if (selectedBrowser.equalsIgnoreCase(Constants.BROWSER_OPERA)) {
+				log.info("-------------***LAUNCHING OPERA***--------------");
+				try {
+					
+				capabilities = new DesiredCapabilities();
+				capabilities.setBrowserName("opera");
+				capabilities.setCapability("opera.autostart ",true);
+
+				System.out.println("-----------checking the OPERA-------");
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+		
+		} 
+			else if (selectedBrowser.equalsIgnoreCase(Constants.BROWSER_SAFARI)) {
+				log.info("-------------***LAUNCHING SAFARI***--------------");
+				try {
+					
+			    capabilities = new DesiredCapabilities();
+				capabilities.setBrowserName("safari");
+				capabilities.setCapability("safari.autostart ", true);
+				System.out.println("-----------checking the SAFARI-------");
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 
 		} else if (selectedBrowser.equalsIgnoreCase(Constants.BROWSER_FIREFOX)) {
 			log.info("-------------***LAUNCHING FIREFOX***--------------");
@@ -136,6 +165,7 @@ public class BaseScreen {
 		// driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
 	}
+
 	public void setBrowserResolution() {
 		resolution = this.phrescoUiConstants.RESOLUTION;
 		if (resolution != null) {
@@ -187,41 +217,6 @@ public class BaseScreen {
 
 	}
 
-	//test methods
-	
-	 
-   public void testHellow_world_text(String methodName) throws Exception {
-
-		if (StringUtils.isEmpty(methodName)) {
-			methodName = Thread.currentThread().getStackTrace()[1]
-					.getMethodName();
-			;
-		}
-		log.info("Entering:******Hellow world test*********");
-		Thread.sleep(5000);
-		isTextPresent(Constants.HELLOWORLD_TEXT_MSG);
-	    //stem.out.println(consts.HELLOWORLD_TEXT_MSG);
-		
-		
-		
-    }
-	
-    public void testFailureCase(String methodName) throws Exception {
-
-		if (StringUtils.isEmpty(methodName)) {
-			methodName = Thread.currentThread().getStackTrace()[1]
-					.getMethodName();
-			;
-		}
-		log.info("Entering:******Hellow world test*********");
-		Thread.sleep(5000);
-		isTextPresent(Constants.WRONG_TEXT_MSG);
-	
-		
-    }
-	
-	
-	
 	public void getXpathWebElement(String xpath) throws Exception {
 		log.info("Entering:-----getXpathWebElement-------");
 		try {
@@ -274,17 +269,31 @@ public class BaseScreen {
 		}
 
 		catch (Exception e) {
-			File scrFile = ((TakesScreenshot) driver)
+			/*File scrFile = ((TakesScreenshot) driver)
 					.getScreenshotAs(OutputType.FILE);
 			FileUtils.copyFile(scrFile,
 					new File(GetCurrentDir.getCurrentDirectory() + "\\"
 							+ methodName + ".png"));
 			throw new RuntimeException("waitForElementPresent"
-					+ super.getClass().getSimpleName() + " failed", e);
+					+ super.getClass().getSimpleName() + " failed", e);*/
+			Assert.assertNull(e);
 
 		}
 	}
-
+	public void isTextPresent(String text) {
+		if (text!= null){
+		boolean value=driver.findElement(By.tagName("body")).getText().contains(text);	
+		Assert.assertTrue(value);   
+	    
+	    }
+		else
+		{
+			throw new RuntimeException("---- Text not existed----");
+		}
+	    
+	    
+	    
+	}	
 	Function<WebDriver, WebElement> presenceOfElementLocated(final By locator) {
 		log.info("Entering:------presenceOfElementLocated()-----Start");
 		return new Function<WebDriver, WebElement>() {
@@ -297,7 +306,37 @@ public class BaseScreen {
 		};
 
 	}
+	
+	// test methods
+	public void testHellow_world_text(String methodName) throws Exception {
 
+		if (StringUtils.isEmpty(methodName)) {
+			methodName = Thread.currentThread().getStackTrace()[1]
+					.getMethodName();
+			;
+		}
+		log.info("Entering:******Hellow world test*********");
+		isTextPresent(Constants.HELLOWORLD_TEXT_MSG);
+		
+		
+    }
+	
+    public void testFailureCase(String methodName) throws Exception {
+
+		if (StringUtils.isEmpty(methodName)) {
+			methodName = Thread.currentThread().getStackTrace()[1]
+					.getMethodName();
+			;
+		}
+		log.info("Entering:******Hellow world test*********");
+		isTextPresent(Constants.WRONG_TEXT_MSG);
+		
+		
+    }
+	
+	
+	
+	
 	public void click() throws ScreenException {
 		log.info("Entering:********click operation start********");
 		try {
@@ -319,21 +358,6 @@ public class BaseScreen {
 		log.info("Entering:********clear operation end********");
 
 	}
-	
-	public void isTextPresent(String text) {
-		if (text!= null){
-		boolean value=driver.findElement(By.tagName("body")).getText().contains(text);	
-		Assert.assertTrue(value);   
-	    
-	    }
-		else
-		{
-			throw new RuntimeException("---- Text not existed----");
-		}
-	    
-	    
-	    
-	}	
 
 	public void sendKeys(String text) throws ScreenException {
 		log.info("Entering:********enterText operation start********");
