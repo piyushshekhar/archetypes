@@ -1,5 +1,5 @@
-[0.005][INFO]:      ChromeDriver 23.0.1240.0 C:\phresco-framework\workspace\projects\latest-asp.net\test\functional\chromedriver\windows\chromedriver.exe
-[0.944][FINE]:      Initializing session with capabilities {
+[0.005][INFO]:      ChromeDriver 23.0.1240.0 D:\archetypes\archetypes\phresco-dot-net-archetype\src\main\resources\archetype-resources\test\functional\chromedriver\windows\chromedriver.exe
+[0.858][FINE]:      Initializing session with capabilities {
    "browserName": "chrome",
    "chrome.switches": [  ],
    "chromeOptions": {
@@ -10,11 +10,11 @@
    "version": ""
 }
 
-[0.945][INFO]:      Launching chrome: "C:\Users\phresco\AppData\Local\Google\Chrome\Application\chrome.exe" --enable-logging --log-level=1 --disable-hang-monitor --disable-prompt-on-repost --dom-automation --full-memory-crash-report --no-default-browser-check --no-first-run --disable-background-networking --disable-sync --disable-translate --disable-web-resources --safebrowsing-disable-auto-update --safebrowsing-disable-download-protection --disable-client-side-phishing-detection --disable-component-update --disable-default-apps --ignore-certificate-errors about:blank
-[4.398][INFO]:      Connected to Chrome successfully. Version: 24.0.1312.57
-[4.413][FINE]:      Command received (/session/37891286d274f3b1762c2c94ec608b29)
-[4.413][FINE]:      Command finished (/session/37891286d274f3b1762c2c94ec608b29) with response {
-   "sessionId": "37891286d274f3b1762c2c94ec608b29",
+[0.859][INFO]:      Launching chrome: "C:\Program Files\Google\Chrome\Application\chrome.exe" --enable-logging --log-level=1 --disable-hang-monitor --disable-prompt-on-repost --dom-automation --full-memory-crash-report --no-default-browser-check --no-first-run --disable-background-networking --disable-sync --disable-translate --disable-web-resources --safebrowsing-disable-auto-update --safebrowsing-disable-download-protection --disable-client-side-phishing-detection --disable-component-update --disable-default-apps --ignore-certificate-errors about:blank
+[9.057][INFO]:      Connected to Chrome successfully. Version: 25.0.1364.97
+[9.151][FINE]:      Command received (/session/e9d850581bfa9cb23d3c86d8f8719b13)
+[9.151][FINE]:      Command finished (/session/e9d850581bfa9cb23d3c86d8f8719b13) with response {
+   "sessionId": "e9d850581bfa9cb23d3c86d8f8719b13",
    "status": 0,
    "value": {
       "acceptSslCerts": false,
@@ -32,92 +32,240 @@
       "platform": "windows",
       "rotatable": false,
       "takesScreenshot": true,
-      "version": "24.0.1312.57",
+      "version": "25.0.1364.97",
       "webStorageEnabled": true
    }
 }
 
-[4.441][FINE]:      Command received (/session/37891286d274f3b1762c2c94ec608b29/window/current/maximize) with params {
+[9.327][FINE]:      Command received (/session/e9d850581bfa9cb23d3c86d8f8719b13/window/current/maximize) with params {
    "windowHandle": "current"
 }
 
-[4.441][FINER]:     Waiting for all views to stop loading...
-[4.442][FINER]:     Done waiting for all views to stop loading
-[4.524][FINER]:     Waiting for all views to stop loading...
-[4.607][FINER]:     Done waiting for all views to stop loading
-[4.607][FINE]:      Command finished (/session/37891286d274f3b1762c2c94ec608b29/window/current/maximize) with response {
-   "sessionId": "37891286d274f3b1762c2c94ec608b29",
+[9.327][FINER]:     Waiting for all views to stop loading...
+[9.328][FINER]:     Done waiting for all views to stop loading
+[9.606][FINER]:     Waiting for all views to stop loading...
+[9.623][FINER]:     Done waiting for all views to stop loading
+[9.624][FINE]:      Command finished (/session/e9d850581bfa9cb23d3c86d8f8719b13/window/current/maximize) with response {
+   "sessionId": "e9d850581bfa9cb23d3c86d8f8719b13",
    "status": 0,
    "value": {
 
    }
 }
 
-[4.612][FINE]:      Command received (/session/37891286d274f3b1762c2c94ec608b29/url) with params {
-   "url": "http://localhost:1967/release/Pages/Default.aspx"
+[9.628][FINE]:      Command received (/session/e9d850581bfa9cb23d3c86d8f8719b13/url) with params {
+   "url": "http://localhost:1291/unit1/Pages/Default.aspx"
 }
 
-[4.612][FINER]:     Waiting for all views to stop loading...
-[4.612][FINER]:     Done waiting for all views to stop loading
-[4.890][FINER]:     Waiting for all views to stop loading...
-[4.890][FINER]:     Done waiting for all views to stop loading
-[4.890][FINE]:      Command finished (/session/37891286d274f3b1762c2c94ec608b29/url) with response {
-   "sessionId": "37891286d274f3b1762c2c94ec608b29",
+[9.628][FINER]:     Waiting for all views to stop loading...
+[9.629][FINER]:     Done waiting for all views to stop loading
+[13.187][FINER]:    Waiting for all views to stop loading...
+[13.194][FINER]:    Done waiting for all views to stop loading
+[13.194][FINE]:     Command finished (/session/e9d850581bfa9cb23d3c86d8f8719b13/url) with response {
+   "sessionId": "e9d850581bfa9cb23d3c86d8f8719b13",
    "status": 0,
    "value": {
 
    }
 }
 
-[12.978][FINE]:     Command received (/session/37891286d274f3b1762c2c94ec608b29/element) with params {
+[21.282][FINE]:     Command received (/session/e9d850581bfa9cb23d3c86d8f8719b13/element) with params {
    "using": "xpath",
    "value": "//input[@id='btnClickMe']"
 }
 
-[12.978][FINER]:    Waiting for all views to stop loading...
-[12.980][FINER]:    Done waiting for all views to stop loading
-[13.025][FINER]:    Waiting for all views to stop loading...
-[13.025][FINER]:    Done waiting for all views to stop loading
-[13.025][FINE]:     Command finished (/session/37891286d274f3b1762c2c94ec608b29/element) with response {
-   "sessionId": "37891286d274f3b1762c2c94ec608b29",
-   "status": 0,
+[21.282][FINER]:    Waiting for all views to stop loading...
+[21.283][FINER]:    Done waiting for all views to stop loading
+[21.428][FINER]:    Waiting for all views to stop loading...
+[21.438][FINER]:    Done waiting for all views to stop loading
+[21.438][WARNING]:  Command finished (/session/e9d850581bfa9cb23d3c86d8f8719b13/element) with response {
+   "sessionId": "e9d850581bfa9cb23d3c86d8f8719b13",
+   "status": 7,
    "value": {
-      "ELEMENT": ":wdc:1361522667176"
+      "message": "The element could not be found"
    }
 }
 
-[13.050][FINE]:     Command received (/session/37891286d274f3b1762c2c94ec608b29/element) with params {
+[21.943][FINE]:     Command received (/session/e9d850581bfa9cb23d3c86d8f8719b13/element) with params {
    "using": "xpath",
    "value": "//input[@id='btnClickMe']"
 }
 
-[13.050][FINER]:    Waiting for all views to stop loading...
-[13.051][FINER]:    Done waiting for all views to stop loading
-[13.076][FINER]:    Waiting for all views to stop loading...
-[13.077][FINER]:    Done waiting for all views to stop loading
-[13.077][FINE]:     Command finished (/session/37891286d274f3b1762c2c94ec608b29/element) with response {
-   "sessionId": "37891286d274f3b1762c2c94ec608b29",
-   "status": 0,
+[21.943][FINER]:    Waiting for all views to stop loading...
+[21.943][FINER]:    Done waiting for all views to stop loading
+[21.953][FINER]:    Waiting for all views to stop loading...
+[21.953][FINER]:    Done waiting for all views to stop loading
+[21.953][WARNING]:  Command finished (/session/e9d850581bfa9cb23d3c86d8f8719b13/element) with response {
+   "sessionId": "e9d850581bfa9cb23d3c86d8f8719b13",
+   "status": 7,
    "value": {
-      "ELEMENT": ":wdc:1361522667176"
+      "message": "The element could not be found"
    }
 }
 
-[13.083][FINE]:     Command received (/session/37891286d274f3b1762c2c94ec608b29/element/:wdc:1361522667176/click) with params {
-   "id": ":wdc:1361522667176"
+[22.458][FINE]:     Command received (/session/e9d850581bfa9cb23d3c86d8f8719b13/element) with params {
+   "using": "xpath",
+   "value": "//input[@id='btnClickMe']"
 }
 
-[13.083][FINER]:    Waiting for all views to stop loading...
-[13.084][FINER]:    Done waiting for all views to stop loading
-[13.159][FINER]:    Waiting for all views to stop loading...
-[13.159][FINER]:    Done waiting for all views to stop loading
-[13.160][FINE]:     Command finished (/session/37891286d274f3b1762c2c94ec608b29/element/:wdc:1361522667176/click) with response {
-   "sessionId": "37891286d274f3b1762c2c94ec608b29",
-   "status": 0,
+[22.458][FINER]:    Waiting for all views to stop loading...
+[22.458][FINER]:    Done waiting for all views to stop loading
+[22.468][FINER]:    Waiting for all views to stop loading...
+[22.469][FINER]:    Done waiting for all views to stop loading
+[22.469][WARNING]:  Command finished (/session/e9d850581bfa9cb23d3c86d8f8719b13/element) with response {
+   "sessionId": "e9d850581bfa9cb23d3c86d8f8719b13",
+   "status": 7,
    "value": {
-
+      "message": "The element could not be found"
    }
 }
 
-[18.183][FINE]:     Command received (/session/37891286d274f3b1762c2c94ec608b29)
-[18.574][INFO]:     Chrome shutdown
+[22.972][FINE]:     Command received (/session/e9d850581bfa9cb23d3c86d8f8719b13/element) with params {
+   "using": "xpath",
+   "value": "//input[@id='btnClickMe']"
+}
+
+[22.973][FINER]:    Waiting for all views to stop loading...
+[22.973][FINER]:    Done waiting for all views to stop loading
+[22.983][FINER]:    Waiting for all views to stop loading...
+[22.983][FINER]:    Done waiting for all views to stop loading
+[22.984][WARNING]:  Command finished (/session/e9d850581bfa9cb23d3c86d8f8719b13/element) with response {
+   "sessionId": "e9d850581bfa9cb23d3c86d8f8719b13",
+   "status": 7,
+   "value": {
+      "message": "The element could not be found"
+   }
+}
+
+[23.488][FINE]:     Command received (/session/e9d850581bfa9cb23d3c86d8f8719b13/element) with params {
+   "using": "xpath",
+   "value": "//input[@id='btnClickMe']"
+}
+
+[23.488][FINER]:    Waiting for all views to stop loading...
+[23.488][FINER]:    Done waiting for all views to stop loading
+[23.497][FINER]:    Waiting for all views to stop loading...
+[23.497][FINER]:    Done waiting for all views to stop loading
+[23.497][WARNING]:  Command finished (/session/e9d850581bfa9cb23d3c86d8f8719b13/element) with response {
+   "sessionId": "e9d850581bfa9cb23d3c86d8f8719b13",
+   "status": 7,
+   "value": {
+      "message": "The element could not be found"
+   }
+}
+
+[24.001][FINE]:     Command received (/session/e9d850581bfa9cb23d3c86d8f8719b13/element) with params {
+   "using": "xpath",
+   "value": "//input[@id='btnClickMe']"
+}
+
+[24.001][FINER]:    Waiting for all views to stop loading...
+[24.001][FINER]:    Done waiting for all views to stop loading
+[24.012][FINER]:    Waiting for all views to stop loading...
+[24.012][FINER]:    Done waiting for all views to stop loading
+[24.012][WARNING]:  Command finished (/session/e9d850581bfa9cb23d3c86d8f8719b13/element) with response {
+   "sessionId": "e9d850581bfa9cb23d3c86d8f8719b13",
+   "status": 7,
+   "value": {
+      "message": "The element could not be found"
+   }
+}
+
+[24.517][FINE]:     Command received (/session/e9d850581bfa9cb23d3c86d8f8719b13/element) with params {
+   "using": "xpath",
+   "value": "//input[@id='btnClickMe']"
+}
+
+[24.517][FINER]:    Waiting for all views to stop loading...
+[24.517][FINER]:    Done waiting for all views to stop loading
+[24.528][FINER]:    Waiting for all views to stop loading...
+[24.528][FINER]:    Done waiting for all views to stop loading
+[24.529][WARNING]:  Command finished (/session/e9d850581bfa9cb23d3c86d8f8719b13/element) with response {
+   "sessionId": "e9d850581bfa9cb23d3c86d8f8719b13",
+   "status": 7,
+   "value": {
+      "message": "The element could not be found"
+   }
+}
+
+[25.033][FINE]:     Command received (/session/e9d850581bfa9cb23d3c86d8f8719b13/element) with params {
+   "using": "xpath",
+   "value": "//input[@id='btnClickMe']"
+}
+
+[25.033][FINER]:    Waiting for all views to stop loading...
+[25.033][FINER]:    Done waiting for all views to stop loading
+[25.042][FINER]:    Waiting for all views to stop loading...
+[25.042][FINER]:    Done waiting for all views to stop loading
+[25.043][WARNING]:  Command finished (/session/e9d850581bfa9cb23d3c86d8f8719b13/element) with response {
+   "sessionId": "e9d850581bfa9cb23d3c86d8f8719b13",
+   "status": 7,
+   "value": {
+      "message": "The element could not be found"
+   }
+}
+
+[25.546][FINE]:     Command received (/session/e9d850581bfa9cb23d3c86d8f8719b13/element) with params {
+   "using": "xpath",
+   "value": "//input[@id='btnClickMe']"
+}
+
+[25.546][FINER]:    Waiting for all views to stop loading...
+[25.547][FINER]:    Done waiting for all views to stop loading
+[25.556][FINER]:    Waiting for all views to stop loading...
+[25.557][FINER]:    Done waiting for all views to stop loading
+[25.557][WARNING]:  Command finished (/session/e9d850581bfa9cb23d3c86d8f8719b13/element) with response {
+   "sessionId": "e9d850581bfa9cb23d3c86d8f8719b13",
+   "status": 7,
+   "value": {
+      "message": "The element could not be found"
+   }
+}
+
+[26.061][FINE]:     Command received (/session/e9d850581bfa9cb23d3c86d8f8719b13/element) with params {
+   "using": "xpath",
+   "value": "//input[@id='btnClickMe']"
+}
+
+[26.061][FINER]:    Waiting for all views to stop loading...
+[26.061][FINER]:    Done waiting for all views to stop loading
+[26.070][FINER]:    Waiting for all views to stop loading...
+[26.071][FINER]:    Done waiting for all views to stop loading
+[26.071][WARNING]:  Command finished (/session/e9d850581bfa9cb23d3c86d8f8719b13/element) with response {
+   "sessionId": "e9d850581bfa9cb23d3c86d8f8719b13",
+   "status": 7,
+   "value": {
+      "message": "The element could not be found"
+   }
+}
+
+[26.575][FINE]:     Command received (/session/e9d850581bfa9cb23d3c86d8f8719b13/element) with params {
+   "using": "xpath",
+   "value": "//input[@id='btnClickMe']"
+}
+
+[26.576][FINER]:    Waiting for all views to stop loading...
+[26.576][FINER]:    Done waiting for all views to stop loading
+[26.587][FINER]:    Waiting for all views to stop loading...
+[26.587][FINER]:    Done waiting for all views to stop loading
+[26.587][WARNING]:  Command finished (/session/e9d850581bfa9cb23d3c86d8f8719b13/element) with response {
+   "sessionId": "e9d850581bfa9cb23d3c86d8f8719b13",
+   "status": 7,
+   "value": {
+      "message": "The element could not be found"
+   }
+}
+
+[26.598][FINE]:     Command received (/session/e9d850581bfa9cb23d3c86d8f8719b13/screenshot)
+[26.598][FINER]:    Waiting for all views to stop loading...
+[26.598][FINER]:    Done waiting for all views to stop loading
+[27.328][FINER]:    Waiting for all views to stop loading...
+[27.331][FINER]:    Done waiting for all views to stop loading
+[27.331][FINE]:     Command finished (/session/e9d850581bfa9cb23d3c86d8f8719b13/screenshot) with response {
+   "sessionId": "e9d850581bfa9cb23d3c86d8f8719b13",
+   "status": 0,
+   "value": "iVBORw0KGgoAAAANSUhEUgAABQAAAAOlCAIAAAC9h93HAAAgAElEQVR4nOzde/Bk2X0Q9nv79/vN7OxD8o6QhDVy7LAjIEHrg..."
+}
+
+[27.416][FINE]:     Command received (/session/e9d850581bfa9cb23d3c86d8f8719b13)
+[28.255][INFO]:     Chrome shutdown
