@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="1" total="2" passed="1">
+  <reporter-output>
+    <line>
+      <![CDATA[Selected Browser to execute testcases--->>safari]]>
+    </line>
+    <line>
+      <![CDATA[Selected Browser to execute testcases--->>opera]]>
+    </line>
+  </reporter-output>
+  <suite name="HelloWorldPageTestSuite" duration-ms="195188" started-at="2013-02-26T11:52:01Z" finished-at="2013-02-26T11:55:16Z">
+    <groups>
+    </groups>
+    <test name="NodejsOnChrome" duration-ms="16454" started-at="2013-02-26T11:52:01Z" finished-at="2013-02-26T11:52:17Z">
+      <class name="com.photon.phresco.nodejs.testcases.NodejsTestCase">
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.String)[pri:0, instance:com.photon.phresco.nodejs.testcases.NodejsTestCase@1bca5f1]" name="setUp" is-config="true" duration-ms="10203" started-at="2013-02-26T11:52:01Z" finished-at="2013-02-26T11:52:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[opera]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[WINDOWS]]>
+              </value>
+            </param>
+          </params>
+        </test-method> <!-- setUp -->
+        <test-method status="FAIL" signature="testHelloWorldPage()[pri:0, instance:com.photon.phresco.nodejs.testcases.NodejsTestCase@1bca5f1]" name="testHelloWorldPage" duration-ms="5172" started-at="2013-02-26T11:52:11Z" finished-at="2013-02-26T11:52:16Z">
+          <exception class="java.lang.AssertionError">
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: 
+	at org.testng.AssertJUnit.fail(AssertJUnit.java:59)
+	at org.testng.AssertJUnit.assertTrue(AssertJUnit.java:24)
+	at org.testng.AssertJUnit.assertTrue(AssertJUnit.java:33)
+	at com.photon.phresco.Screens.BaseScreen.isTextPresent(BaseScreen.java:180)
+	at com.photon.phresco.Screens.BaseScreen.nodejsHelloWorld(BaseScreen.java:199)
+	at com.photon.phresco.nodejs.testcases.NodejsTestCase.testHelloWorldPage(NodejsTestCase.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:702)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:894)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1219)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:37)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:368)
+	at org.testng.internal.thread.ThreadUtil$2.call(ThreadUtil.java:64)
+	at java.util.concurrent.FutureTask$Sync.innerRun(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+        </test-method> <!-- testHelloWorldPage -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.photon.phresco.nodejs.testcases.NodejsTestCase@1bca5f1]" name="tearDown" is-config="true" duration-ms="1047" started-at="2013-02-26T11:52:16Z" finished-at="2013-02-26T11:52:17Z">
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.photon.phresco.nodejs.testcases.NodejsTestCase -->
+    </test> <!-- NodejsOnChrome -->
+    <test name="NodejsTestOnfirefox" duration-ms="195188" started-at="2013-02-26T11:52:01Z" finished-at="2013-02-26T11:55:16Z">
+      <class name="com.photon.phresco.nodejs.testcases.NodejsTestCase">
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.String)[pri:0, instance:com.photon.phresco.nodejs.testcases.NodejsTestCase@1cb25f1]" name="setUp" is-config="true" duration-ms="188734" started-at="2013-02-26T11:52:01Z" finished-at="2013-02-26T11:55:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[safari]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[WINDOWS]]>
+              </value>
+            </param>
+          </params>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testHelloWorldPage()[pri:0, instance:com.photon.phresco.nodejs.testcases.NodejsTestCase@1cb25f1]" name="testHelloWorldPage" duration-ms="5719" started-at="2013-02-26T11:55:09Z" finished-at="2013-02-26T11:55:15Z">
+        </test-method> <!-- testHelloWorldPage -->
+        <test-method status="FAIL" signature="tearDown()[pri:0, instance:com.photon.phresco.nodejs.testcases.NodejsTestCase@1cb25f1]" name="tearDown" is-config="true" duration-ms="0" started-at="2013-02-26T11:55:15Z" finished-at="2013-02-26T11:55:15Z">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[Error communicating with the remote browser. It may have died.
+Build info: version: '2.30.0', revision: 'dc1ef9c', time: '2013-02-19 00:15:27'
+System info: os.name: 'Windows XP', os.arch: 'x86', os.version: '5.1', java.version: '1.6.0_31'
+Driver info: driver.version: EventFiringWebDriver
+Command duration or timeout: 703 milliseconds
+Build info: version: '2.30.0', revision: 'dc1ef9c', time: '2013-02-19 00:15:27'
+System info: os.name: 'Windows XP', os.arch: 'x86', os.version: '5.1', java.version: '1.6.0_31'
+Session ID: 19f87805-7c35-4bb3-b0fd-669cfbf43258
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities [{platform=WINDOWS, javascriptEnabled=true, cssSelectorsEnabled=true, secureSsl=true, browserName=safari, webdriver.remote.sessionid=19f87805-7c35-4bb3-b0fd-669cfbf43258, takesScreenshot=true, version=5.1.7}]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: Error communicating with the remote browser. It may have died.
+Build info: version: '2.30.0', revision: 'dc1ef9c', time: '2013-02-19 00:15:27'
+System info: os.name: 'Windows XP', os.arch: 'x86', os.version: '5.1', java.version: '1.6.0_31'
+Driver info: driver.version: EventFiringWebDriver
+Command duration or timeout: 703 milliseconds
+Build info: version: '2.30.0', revision: 'dc1ef9c', time: '2013-02-19 00:15:27'
+System info: os.name: 'Windows XP', os.arch: 'x86', os.version: '5.1', java.version: '1.6.0_31'
+Session ID: 19f87805-7c35-4bb3-b0fd-669cfbf43258
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities [{platform=WINDOWS, javascriptEnabled=true, cssSelectorsEnabled=true, secureSsl=true, browserName=safari, webdriver.remote.sessionid=19f87805-7c35-4bb3-b0fd-669cfbf43258, takesScreenshot=true, version=5.1.7}]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:187)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:554)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:423)
+	at com.photon.phresco.Screens.BaseScreen.closeBrowser(BaseScreen.java:140)
+	at com.photon.phresco.nodejs.testcases.NodejsTestCase.tearDown(NodejsTestCase.java:69)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:551)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
+	at org.testng.TestRunner.afterRun(TestRunner.java:1021)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:37)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:368)
+	at org.testng.internal.thread.ThreadUtil$2.call(ThreadUtil.java:64)
+	at java.util.concurrent.FutureTask$Sync.innerRun(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.openqa.selenium.remote.ErrorHandler$UnknownServerException: Error communicating with the remote browser. It may have died.
+Build info: version: '2.30.0', revision: 'dc1ef9c', time: '2013-02-19 00:15:27'
+System info: os.name: 'Windows XP', os.arch: 'x86', os.version: '5.1', java.version: '1.6.0_31'
+Driver info: driver.version: EventFiringWebDriver
+Build info: version: '2.30.0', revision: 'dc1ef9c', time: '2013-02-19 00:15:27'
+System info: os.name: 'Windows XP', os.arch: 'x86', os.version: '5.1', java.version: '1.6.0_31'
+Driver info: driver.version: EventFiringWebDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:423)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:101)
+	at $Proxy4.quit(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.quit(EventFiringWebDriver.java:194)
+	at org.openqa.selenium.remote.server.handler.DeleteSession.call(DeleteSession.java:49)
+	at org.openqa.selenium.remote.server.handler.DeleteSession.call(DeleteSession.java:1)
+	at java.util.concurrent.FutureTask$Sync.innerRun(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:167)
+	... 3 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.photon.phresco.nodejs.testcases.NodejsTestCase -->
+    </test> <!-- NodejsTestOnfirefox -->
+  </suite> <!-- HelloWorldPageTestSuite -->
+</testng-results>

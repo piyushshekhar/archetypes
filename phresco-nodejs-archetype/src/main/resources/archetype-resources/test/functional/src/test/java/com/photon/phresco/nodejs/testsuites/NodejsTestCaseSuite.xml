@@ -5,7 +5,7 @@
  		<parameter name="browser" value="firefox" />
 		<parameter name="platform" value="WINDOWS" />
         <classes>
-            <class name="com.photon.phresco.testcases.NodejsTestCase"/>     
+            <class name="com.photon.phresco.nodejs.testcases.NodejsTestCase"/>     
         </classes>
     </test> 
    <test name="NodejsOnChrome" junit="false"
@@ -13,7 +13,8 @@
 		<parameter name="browser" value="googlechrome" />
 		<parameter name="platform" value="WINDOWS" />
 		<classes>
-			<class name="com.photon.phresco.testcases.NodejsTestCase"/>
+			<class name="com.photon.phresco.nodejs.testcases.NodejsTestCase"/>
 		</classes>
 	</test> 
     </suite>
+    
