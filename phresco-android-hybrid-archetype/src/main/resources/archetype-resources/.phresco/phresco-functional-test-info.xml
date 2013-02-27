@@ -25,48 +25,28 @@
         <configuration>
             <parameters>
                 <parameter>
-                    <pluginParameter>plugin</pluginParameter>
-                    <mavenCommands>
-                        <mavenCommand>
-                            <key>usb</key>
-                            <value>-Dandroid.device="usb"</value>
-                        </mavenCommand>
-                        <mavenCommand>
-                            <key>emulator</key>
-                            <value>-Dandroid.device="emulator"</value>
-                        </mavenCommand>
-                    </mavenCommands>
                     <name>
-                        <value lang="en">Devices</value>
+                        <value lang="en">Device List</value>
                     </name>
-                    <type>List</type>
-                    <required>false</required>
+                    <type>DynamicParameter</type>
+                    <dynamicParameter>
+                        <class>com.photon.phresco.impl.AndroidDevicesParameterImpl</class>
+                        <dependencies>
+                            <dependency>
+								<groupId>com.photon.phresco.commons</groupId>
+								<artifactId>phresco-commons</artifactId>
+								<type>jar</type>
+								<version>2.1.0.1004-SNAPSHOT</version>
+                            </dependency>
+                        </dependencies>
+                    </dynamicParameter>
+                    <required>true</required>
                     <editable>true</editable>
-                    <description></description>
-                    <key>devices</key>
-                    <possibleValues>
-                        <value key="usb">USB</value>
-                        <value key="emulator">Emulator</value>
-                        <value key="serialNumber" dependency="serialNumber">Serial Number</value>
-                    </possibleValues>
+                    <key>deviceList</key>
                     <multiple>false</multiple>
+                    <value></value>
                     <sort>false</sort>
                     <show>true</show>
-                    <value></value>
-                </parameter>
-				<parameter>
-                    <name>
-                        <value lang="en">Serial Number</value>
-                    </name>
-                    <type>String</type>
-                    <required>false</required>
-                    <editable>true</editable>
-                    <description></description>
-                    <key>serialNumber</key>
-					<multiple>false</multiple>
-					<sort>false</sort>
-                    <show>false</show>
-                    <value></value>
                 </parameter>
                 <parameter>
                     <name>
@@ -78,9 +58,9 @@
                     <description></description>
                     <key>signing</key>
                     <multiple>false</multiple>
+                    <value>false</value>
                     <sort>false</sort>
                     <show>true</show>
-                    <value>false</value>
                 </parameter>
             </parameters>
         </configuration>

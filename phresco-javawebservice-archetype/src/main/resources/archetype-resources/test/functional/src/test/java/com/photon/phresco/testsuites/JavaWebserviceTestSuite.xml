@@ -9,7 +9,6 @@
             <class name="com.photon.phresco.testcases.JavaWebServiceTest"/>     
         </classes>
     </test> 
-    
     <test name="JavaWebServiceHelloWorldTestOnChrome" junit="false"
 		preserve-order="true">
 		<parameter name="browser" value="googlechrome" />
@@ -17,5 +16,7 @@
 		<classes>
 			<class name="com.photon.phresco.testcases.JavaWebServiceTest"/>
 		</classes>
-	</test>
-    </suite>
+	</test> 
+   </suite>
+    
+    

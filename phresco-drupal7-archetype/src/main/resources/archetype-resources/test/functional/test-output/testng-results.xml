@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="2" total="4" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="WelcomePageTestSuite" duration-ms="46344" started-at="2013-02-25T12:57:53Z" finished-at="2013-02-25T12:58:39Z">
+    <groups>
+    </groups>
+    <test name="VerifyWelcomePageOnFirefox" duration-ms="16265" started-at="2013-02-25T12:57:53Z" finished-at="2013-02-25T12:58:09Z">
+      <class name="com.photon.phresco.testcases.WelcomePageTestCase">
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.String)[pri:0, instance:com.photon.phresco.testcases.WelcomePageTestCase@535b58]" name="setUp" is-config="true" duration-ms="8438" started-at="2013-02-25T12:57:53Z" finished-at="2013-02-25T12:58:01Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[opera]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[WINDOWS]]>
+              </value>
+            </param>
+          </params>
+        </test-method> <!-- setUp -->
+        <test-method status="FAIL" signature="testToCreateAccount()[pri:0, instance:com.photon.phresco.testcases.WelcomePageTestCase@535b58]" name="testToCreateAccount" duration-ms="1265" started-at="2013-02-25T12:58:01Z" finished-at="2013-02-25T12:58:02Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected:<null> but was:<org.openqa.selenium.TimeoutException: Timed out after 0 seconds waiting for com.photon.phresco.Screens.BaseScreen$1@1cb52ae
+Build info: version: '2.30.0', revision: 'dc1ef9c', time: '2013-02-19 00:15:27'
+System info: os.name: 'Windows XP', os.arch: 'x86', os.version: '5.1', java.version: '1.6.0_31'
+Driver info: driver.version: unknown>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected:<null> but was:<org.openqa.selenium.TimeoutException: Timed out after 0 seconds waiting for com.photon.phresco.Screens.BaseScreen$1@1cb52ae
+Build info: version: '2.30.0', revision: 'dc1ef9c', time: '2013-02-19 00:15:27'
+System info: os.name: 'Windows XP', os.arch: 'x86', os.version: '5.1', java.version: '1.6.0_31'
+Driver info: driver.version: unknown>
+	at org.testng.Assert.fail(Assert.java:89)
+	at org.testng.Assert.failNotSame(Assert.java:485)
+	at org.testng.Assert.assertNull(Assert.java:421)
+	at org.testng.Assert.assertNull(Assert.java:410)
+	at com.photon.phresco.Screens.BaseScreen.waitForElementPresent(BaseScreen.java:260)
+	at com.photon.phresco.Screens.BaseScreen.createAccount(BaseScreen.java:285)
+	at com.photon.phresco.testcases.WelcomePageTestCase.testToCreateAccount(WelcomePageTestCase.java:95)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:702)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:894)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1219)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:37)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:368)
+	at org.testng.internal.thread.ThreadUtil$2.call(ThreadUtil.java:64)
+	at java.util.concurrent.FutureTask$Sync.innerRun(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+        </test-method> <!-- testToCreateAccount -->
+        <test-method status="FAIL" signature="testToLogin()[pri:0, instance:com.photon.phresco.testcases.WelcomePageTestCase@535b58]" name="testToLogin" duration-ms="860" started-at="2013-02-25T12:58:02Z" finished-at="2013-02-25T12:58:03Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected:<null> but was:<org.openqa.selenium.TimeoutException: Timed out after 0 seconds waiting for com.photon.phresco.Screens.BaseScreen$1@2c35e
+Build info: version: '2.30.0', revision: 'dc1ef9c', time: '2013-02-19 00:15:27'
+System info: os.name: 'Windows XP', os.arch: 'x86', os.version: '5.1', java.version: '1.6.0_31'
+Driver info: driver.version: unknown>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected:<null> but was:<org.openqa.selenium.TimeoutException: Timed out after 0 seconds waiting for com.photon.phresco.Screens.BaseScreen$1@2c35e
+Build info: version: '2.30.0', revision: 'dc1ef9c', time: '2013-02-19 00:15:27'
+System info: os.name: 'Windows XP', os.arch: 'x86', os.version: '5.1', java.version: '1.6.0_31'
+Driver info: driver.version: unknown>
+	at org.testng.Assert.fail(Assert.java:89)
+	at org.testng.Assert.failNotSame(Assert.java:485)
+	at org.testng.Assert.assertNull(Assert.java:421)
+	at org.testng.Assert.assertNull(Assert.java:410)
+	at com.photon.phresco.Screens.BaseScreen.waitForElementPresent(BaseScreen.java:260)
+	at com.photon.phresco.Screens.BaseScreen.loginDrupal(BaseScreen.java:313)
+	at com.photon.phresco.testcases.WelcomePageTestCase.testToLogin(WelcomePageTestCase.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:702)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:894)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1219)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:37)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:368)
+	at org.testng.internal.thread.ThreadUtil$2.call(ThreadUtil.java:64)
+	at java.util.concurrent.FutureTask$Sync.innerRun(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+        </test-method> <!-- testToLogin -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.photon.phresco.testcases.WelcomePageTestCase@535b58]" name="tearDown" is-config="true" duration-ms="5656" started-at="2013-02-25T12:58:03Z" finished-at="2013-02-25T12:58:09Z">
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.photon.phresco.testcases.WelcomePageTestCase -->
+    </test> <!-- VerifyWelcomePageOnFirefox -->
+    <test name="VerifyWelcomePageOnChrome" duration-ms="46344" started-at="2013-02-25T12:57:53Z" finished-at="2013-02-25T12:58:39Z">
+      <class name="com.photon.phresco.testcases.WelcomePageTestCase">
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.String)[pri:0, instance:com.photon.phresco.testcases.WelcomePageTestCase@1749757]" name="setUp" is-config="true" duration-ms="46328" started-at="2013-02-25T12:57:53Z" finished-at="2013-02-25T12:58:39Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[safari]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[WINDOWS]]>
+              </value>
+            </param>
+          </params>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testToCreateAccount()[pri:0, instance:com.photon.phresco.testcases.WelcomePageTestCase@1749757]" name="testToCreateAccount" duration-ms="16" started-at="2013-02-25T12:58:39Z" finished-at="2013-02-25T12:58:39Z">
+        </test-method> <!-- testToCreateAccount -->
+        <test-method status="FAIL" signature="tearDown()[pri:0, instance:com.photon.phresco.testcases.WelcomePageTestCase@1749757]" name="tearDown" is-config="true" duration-ms="0" started-at="2013-02-25T12:58:39Z" finished-at="2013-02-25T12:58:39Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.photon.phresco.testcases.WelcomePageTestCase.tearDown(WelcomePageTestCase.java:126)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:551)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
+	at org.testng.TestRunner.afterRun(TestRunner.java:1021)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:37)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:368)
+	at org.testng.internal.thread.ThreadUtil$2.call(ThreadUtil.java:64)
+	at java.util.concurrent.FutureTask$Sync.innerRun(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="testToLogin()[pri:0, instance:com.photon.phresco.testcases.WelcomePageTestCase@1749757]" name="testToLogin" duration-ms="0" started-at="2013-02-25T12:58:39Z" finished-at="2013-02-25T12:58:39Z">
+        </test-method> <!-- testToLogin -->
+      </class> <!-- com.photon.phresco.testcases.WelcomePageTestCase -->
+    </test> <!-- VerifyWelcomePageOnChrome -->
+  </suite> <!-- WelcomePageTestSuite -->
+</testng-results>

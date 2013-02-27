@@ -1,5 +1,5 @@
 
-package com.photon.phresco.testcases;
+package com.photon.phresco.nodejs.testcases;
 
 import java.io.IOException;
 

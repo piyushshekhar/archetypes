@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="3" name="Failed suite [HelloWorldPageTestSuite]" parallel="tests">
+  <parameter name="platform" value="WINDOWS"/>
+  <parameter name="browser" value="opera"/>
+  <test name="NodejsOnChrome(failed)" parallel="tests" preserve-order="true">
+    <parameter name="platform" value="WINDOWS"/>
+    <parameter name="browser" value="opera"/>
+    <classes>
+      <class name="com.photon.phresco.nodejs.testcases.NodejsTestCase">
+        <methods>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="testHelloWorldPage"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.photon.phresco.nodejs.testcases.NodejsTestCase -->
+    </classes>
+  </test> <!-- NodejsOnChrome(failed) -->
+</suite> <!-- Failed suite [HelloWorldPageTestSuite] -->

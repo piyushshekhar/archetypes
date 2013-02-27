@@ -29,7 +29,7 @@
                <Resolution></Resolution>
            </Server>
          
-         <!--   <loginpage>
+           <loginpage>
               <loginText>Hello World</loginText>
-           </loginpage> -->
+           </loginpage>
 </environment>

@@ -25,11 +25,9 @@ public class WelcomePageTestCase {
 			phrescoUIConstants = new PhrescoUiConstants();
 			String selectedBrowser = browser;
 			String selectedPlatform = platform;
-			
-			methodName = Thread.currentThread().getStackTrace()[1]
+						methodName = Thread.currentThread().getStackTrace()[1]
 					.getMethodName();
-	
-			/*Reporter.log("Selected Browser to execute testcases--->>"
+				/*Reporter.log("Selected Browser to execute testcases--->>"
 					+ selectedBrowser);*/
 			System.out
 			.println("Selected Browser to execute testcases--->>"
@@ -51,7 +49,7 @@ public class WelcomePageTestCase {
 					+ phrescoUIConstants.HOST + ":" + phrescoUIConstants.PORT
 					+ "/";
 			selectedBrowser = phrescoUIConstants.BROWSER;
-			welcomeScreen = new WelcomeScreen(selectedBrowser, applicationURL,
+			welcomeScreen = new WelcomeScreen(selectedBrowser,selectedPlatform, applicationURL,
 					phrescoUIConstants.CONTEXT,phrescoUIConstants);
 		} catch (Exception exception) {
 			exception.printStackTrace();
@@ -64,28 +62,29 @@ public class WelcomePageTestCase {
 	public void testWelcomePageScreen() throws InterruptedException,
 			IOException, Exception {
 		try {
-			
+			//Assert.assertNotNull(welcomeScreen);
 			welcomeScreen.testHellow_world_text(methodName);
 			
-			
+			Thread.sleep(5000);
 		} catch (Exception t) {
 			t.printStackTrace();
 
 		}
 	}
 	@Test
-	public void testZFailureScenario() throws InterruptedException,
+	public void testFailureScenario() throws InterruptedException,
 			IOException, Exception {
 		try {
-		
+			//Assert.assertNotNull(welcomeScreen);
 			welcomeScreen.testFailureCase(methodName);
 			
-	
+			Thread.sleep(5000);
 		} catch (Exception t) {
 			t.printStackTrace();
 
 		}
 	}
+
 	@AfterTest
 	public  void tearDown() {
 		welcomeScreen.closeBrowser();

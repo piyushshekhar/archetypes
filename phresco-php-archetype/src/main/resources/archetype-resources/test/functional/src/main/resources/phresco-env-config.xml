@@ -3,12 +3,13 @@
 		   
           
 <Server appliesTo="" desc="" name="server">
-        <context>phpnone_19</context>
+        <context>drupal_none7</context>
         <deploy_dir>C:\wamp\www</deploy_dir>
         <admin_username/>
         <additional_context>/</additional_context>
         <port>80</port>
-        <version>2.3.x</version>
+        <admin_password/>
+        <version>7.0.x</version>
         <certificate/>
         <type>Apache</type>
         <remoteDeployment>false</remoteDeployment>
