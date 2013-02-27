@@ -81,6 +81,25 @@
                     <show>true</show>
                 </parameter>
                 <parameter>
+                    <name>
+                        <value lang="en">Platform</value>
+                    </name>
+                    <type>List</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <key>platform</key>
+                    <possibleValues>
+                        <value key="Any CPU">Any CPU</value>
+                        <value key="ARM">ARM</value>
+                        <value key="X86">X86</value>
+                        <value key="X64">X64</value>
+                    </possibleValues>
+                    <multiple>false</multiple>
+                    <value>Any CPU</value>
+                    <sort>false</sort>
+                    <show>true</show>
+                </parameter>
+                <parameter>
 					 <name>
                         <value lang="en">TYPE</value>
                     </name>
