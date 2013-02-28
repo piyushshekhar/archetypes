@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>${groupId}</groupId>
+    <artifactId>${artifactId}</artifactId>
+    <packaging>xcode</packaging>
+    <name>${artifactId}</name>
+    <version>>${version}</version>
+    <build>
+        <sourceDirectory>/source</sourceDirectory>
+        <directory>do_not_checkin/target</directory>
+        <plugins>
+            <plugin>
+                <groupId>com.photon.phresco.plugins.xcode</groupId>
+                <artifactId>xcode-maven-plugin</artifactId>
+                <version>2.1.0.1004-SNAPSHOT</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <xcodeProject>./source/Phresco.xcodeproj</xcodeProject>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>com.photon.phresco.plugins</groupId>
+                <artifactId>phresco-maven-plugin</artifactId>
+                <version>2.1.0.1004-SNAPSHOT</version>
+                <extensions>true</extensions>
+            </plugin>
+        </plugins>
+    </build>
+    <profiles>
+        <profile>
+            <id>ci</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <artifactId>maven-clean-plugin</artifactId>
+                        <version>2.5</version>
+                        <executions>
+                            <execution>
+<id>default-clean</id>
+<phase>pre-clean</phase>
+<goals>
+    <goal>clean</goal>
+</goals>
+                            </execution>
+                        </executions>
+                        <configuration>
+                            <filesets>
+<fileset>
+    <directory>do_not_checkin/build</directory>
+    <includes>
+        <include>**/*</include>
+							  </includes>
+    <followSymlinks>false</followSymlinks>
+							</fileset>
+						  </filesets>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+    <repositories>
+        <repository>
+            <id>photon</id>
+            <url>http://172.16.17.226:8080/repository/content/groups/public/</url>
+        </repository>
+    </repositories>
+    <properties>
+        <phresco.unitTest.report.dir>/source/OCUnitReports</phresco.unitTest.report.dir>
+        <phresco.unitTest.testsuite.xpath>/testsuite</phresco.unitTest.testsuite.xpath>
+        <phresco.unitTest.testcase.path>/testcase</phresco.unitTest.testcase.path>
+        <phresco.functionalTest.selenium.tool>UIAutomation</phresco.functionalTest.selenium.tool>
+        <phresco.functionalTest.report.dir>/do_not_checkin</phresco.functionalTest.report.dir>
+		<phresco.functionalTest.dir>/test/functional</phresco.functionalTest.dir>
+        <phresco.functionalTest.testsuite.xpath>/testsuites/testsuite</phresco.functionalTest.testsuite.xpath>
+        <phresco.functionalTest.testcase.path>/testcase</phresco.functionalTest.testcase.path>
+        <phresco.module.source.dir>/source/ThirdParty</phresco.module.source.dir>
+        <phresco.code.validate.report>/do_not_checkin/static-analysis-report/</phresco.code.validate.report>
+    </properties>
+</project>
