@@ -31,6 +31,7 @@ public class PhrescoUiConstants {
 	public String RESOLUTION = "Resolution";
 	// ***************LOGINPAGE*****************
 	public String TEXTCAPTURED = "loginText";
+	public String TEXT="textoverify";
 
 	// ***************LOGINPAGE*****************
 

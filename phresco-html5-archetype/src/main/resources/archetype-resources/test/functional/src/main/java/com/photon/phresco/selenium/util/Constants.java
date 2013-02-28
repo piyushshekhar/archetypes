@@ -3,7 +3,8 @@ package com.photon.phresco.selenium.util;
 public class Constants {
 	
 	
-	public static final String HELLOWORLD_TEXT_MSG = "Hello World";
+	public static final String HELLOWORLD_TEXT_MSG = "helloworld";
+	
 	public static final String WRONG_TEXT_MSG = "Nothing present";
 	/**
 	 * Execute tests on internet explorer
@@ -17,6 +18,10 @@ public class Constants {
 
 	/**
 	 * Execute tests on googlechrome browser
+	 */
+	public static final String HTML_UNIT_DRIVER="htmlunit";
+	/**
+	 * Excutes test cases in htmlunit driver 
 	 */
 	public static final String BROWSER_CHROME = "googlechrome";
 

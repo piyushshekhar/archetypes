@@ -86,6 +86,13 @@
     <outputDirectory>${project.basedir}/lib</outputDirectory>
 		
 								  </artifactItem>
+								  <artifactItem>
+	 <groupId>org.seleniumhq.selenium</groupId>
+     <artifactId>selenium-htmlunit-driver</artifactId>
+     <version>2.29.1</version>
+     <overWrite>false</overWrite>
+     <outputDirectory>${project.basedir}/lib</outputDirectory>
+	 </artifactItem>
 								</artifactItems>
                         </configuration>
                     </execution>
@@ -202,16 +209,21 @@
             <artifactId>testng</artifactId>
             <version>6.5.2</version>
         </dependency>
-        <dependency>
+         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-server-standalone</artifactId>
             <version>2.30.0</version>
-        </dependency>
-   <!--      <dependency>
+        </dependency> 
+     <dependency>
+		<groupId>org.seleniumhq.selenium</groupId>
+		<artifactId>selenium-htmlunit-driver</artifactId>
+		<version>2.28.0</version>
+	</dependency>
+        <dependency>
             <groupId>com.opera</groupId>
             <artifactId>operadriver</artifactId>
             <version>0.14</version>
-        </dependency> -->
+        </dependency> 
         <dependency>
             <groupId>commons-lang</groupId>
             <artifactId>commons-lang</artifactId>

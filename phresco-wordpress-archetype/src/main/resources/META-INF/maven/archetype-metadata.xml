@@ -154,12 +154,6 @@
 				<include>phresco-env-config.xml</include>
 			</includes>
 		</fileSet>
-		<fileSet filtered="false" packaged="false"> 
-			<directory>test/functional/testcases</directory> 
-			<includes> 
-				<include>Photon_phresco_Wordpress_Technology_ManualTestcases.ods</include>
-			</includes> 
-		</fileSet>
         <fileSet filtered="false" encoding="UTF-8">
 			<directory>test/functional/src/test/java/com/photon/phresco/testcases</directory>
 			<includes>

@@ -20,9 +20,9 @@
   -->
 
 <environment>
-		   <Browser>firefox</Browser>
+		   <Browser>htmlunit</Browser>
            <Server>
-               <context>yuimulti15</context>
+               <context>MutiyuimoN</context>
                <protocol>http</protocol>
                <host>localhost</host>
                <port>8080</port>
@@ -30,6 +30,7 @@
            </Server>
          
            <loginpage>
-              <loginText>Hello World</loginText>
+           <loginText>helloworld</loginText>
            </loginpage>
+           <textoverify>helloworld</textoverify>
 </environment>

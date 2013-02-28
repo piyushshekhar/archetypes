@@ -1,6 +1,7 @@
 package com.photon.phresco.Screens;
 
 import java.awt.AWTException;
+
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
 import java.io.File;
@@ -137,9 +138,22 @@ public class BaseScreen {
 			// break;
 			// driver = new RemoteWebDriver(server, capabilities);
 
-		} else {
+		} 
+		else if (selectedBrowser.equalsIgnoreCase(Constants.HTML_UNIT_DRIVER)) {
+			log.info("-------------***HTML_UNIT_DRIVER***--------------");
+			capabilities = new DesiredCapabilities();
+			capabilities.setBrowserName("htmlunit"); 
+			/*URL server = new URL("http://testVM:4444/wd/hub");
+			new RemoteWebDriver(new Url("http://testVM:4444/wd/hub");*/
+
+			System.out.println("-----------checking the HTML_UNIT_DRIVER-------");
+			// break;
+			// driver = new RemoteWebDriver(server, capabilities);
+
+		}
+		else {
 			throw new ScreenException(
-					"------Only FireFox,InternetExplore and Chrome works-----------");
+					"------Only FireFox,InternetExplore Chrome and htmlunit works-----------");
 		}
 
 		/**
@@ -160,7 +174,6 @@ public class BaseScreen {
 			// break;
 		}
 		driver = new RemoteWebDriver(server, capabilities);
-        setBrowserResolution();
 		driver.get(applicationURL + applicationContext);
 		// driver.manage().window().maximize();
 		// driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
@@ -309,15 +322,16 @@ public class BaseScreen {
 	}
 	
 	// test methods
-	public void testHellow_world_text(String methodName) throws Exception {
+	public void testHellow_world_text(String methodName,PhrescoUiConstants phrsc) throws Exception {
 
 		if (StringUtils.isEmpty(methodName)) {
 			methodName = Thread.currentThread().getStackTrace()[1]
 					.getMethodName();
 			;
 		}
+		Thread.sleep(4000);
 		log.info("Entering:******Hellow world test*********");
-		isTextPresent(Constants.HELLOWORLD_TEXT_MSG);
+		isTextPresent(phrsc.TEXT);
 		
 		
     }
@@ -329,6 +343,7 @@ public class BaseScreen {
 					.getMethodName();
 			;
 		}
+	    Thread.sleep(4000);
 		log.info("Entering:******Hellow world test*********");
 		isTextPresent(Constants.WRONG_TEXT_MSG);
 		

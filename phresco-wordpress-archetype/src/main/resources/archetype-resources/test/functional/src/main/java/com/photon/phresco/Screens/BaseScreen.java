@@ -7,7 +7,6 @@ import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
-
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.logging.Log;
@@ -131,7 +130,21 @@ public class BaseScreen {
 			System.out.println("-----------checking the firefox-------");
 			
 
-		} else {
+		} 
+		
+		else if (selectedBrowser.equalsIgnoreCase(Constants.HTML_UNIT_DRIVER)) {
+			log.info("-------------***HTML_UNIT_DRIVER***--------------");
+			capabilities = new DesiredCapabilities();
+			capabilities.setBrowserName("htmlunit"); 
+			/*URL server = new URL("http://testVM:4444/wd/hub");
+			new RemoteWebDriver(new Url("http://testVM:4444/wd/hub");*/
+
+			System.out.println("-----------checking the HTML_UNIT_DRIVER-------");
+			// break;
+			// driver = new RemoteWebDriver(server, capabilities);
+
+		}
+		else {
 			throw new ScreenException(
 					"------Only FireFox,InternetExplore and Chrome works-----------");
 		}
@@ -295,7 +308,7 @@ public class BaseScreen {
      getXpathWebElement(uiConstants.LOGOUTWAIT);
      Thread.sleep(3000);
      click();
-     Actions action = new Actions(driver);
+    /* Actions action = new Actions(driver);
      action.moveToElement(driver.findElement(By.xpath("//img")));
      action.perform();
      action.click(driver.findElement(By.xpath("//ul[2]/li/div/ul/li[3]/a"))); 
@@ -304,7 +317,7 @@ public class BaseScreen {
      waitForElementPresent(uiConstants.BACK,methodName);
 	 getXpathWebElement(uiConstants.BACK);
 	 click();
-    
+    */
 }
 	public void PostComent(String methodName) throws Exception {
 		if (StringUtils.isEmpty(methodName)) {

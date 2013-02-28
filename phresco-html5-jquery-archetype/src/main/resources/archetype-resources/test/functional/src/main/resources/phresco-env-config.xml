@@ -20,16 +20,17 @@
   -->
 
 <environment>
-		   <Browser>firefox</Browser>
+		   <Browser>htmlunit</Browser>
            <Server>
-               <context>yuimulti15</context>
+               <context>YUImobileN</context>
                <protocol>http</protocol>
                <host>localhost</host>
                <port>8080</port>
                <Resolution></Resolution>
            </Server>
-         
+        
            <loginpage>
               <loginText>Hello World</loginText>
            </loginpage>
+            <textonpage>helloworld</textonpage>
 </environment>

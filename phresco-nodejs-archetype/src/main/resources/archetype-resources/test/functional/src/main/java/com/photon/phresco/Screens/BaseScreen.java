@@ -110,7 +110,20 @@ public class BaseScreen {
 			capabilities.setBrowserName("firefox");
 			
 		
-		} else {
+		} 
+		else if (selectedBrowser.equalsIgnoreCase(Constants.HTML_UNIT_DRIVER)) {
+			log.info("-------------***HTML_UNIT_DRIVER***--------------");
+			capabilities = new DesiredCapabilities();
+			capabilities.setBrowserName("htmlunit"); 
+			/*URL server = new URL("http://testVM:4444/wd/hub");
+			new RemoteWebDriver(new Url("http://testVM:4444/wd/hub");*/
+
+			System.out.println("-----------checking the HTML_UNIT_DRIVER-------");
+			// break;
+			// driver = new RemoteWebDriver(server, capabilities);
+
+		}
+		else {
 			throw new ScreenException(
 					"------Only FireFox,InternetExplore and Chrome works-----------");
 		}

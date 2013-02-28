@@ -1,8 +1,6 @@
 package com.photon.phresco.uiconstants;
 
 import java.io.File;
-import java.io.IOException;
-
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
@@ -21,23 +19,16 @@ public class ReadXMLFile {
 	private  Element eElement;
 	private Log log = LogFactory.getLog(getClass());
 	private  final String phrsc = "src/main/resources/phresco-env-config.Xml";
-	private  final String drupalblogdata = "src/main/resources/DrupalData.xml";
+	private  final String Phpblogdata = "src/main/resources/PhpData.xml";
 	private  final String constants = "src/main/resources/UIConstants.xml";
 	private  final String UsrInfConst="src/main/resources/UserInfo.xml";
 	
-	/**
-	 * Triggering loadPhrescoConstansts()method in ReadXMLFile Constructor
-	 */
+	
 	public ReadXMLFile() throws ScreenException {
 		log.info("@ReadXMLFile Constructor::loading *****PhrescoUIConstants******");
 		loadPhrescoConstansts(phrsc);
 	}
-	
-	/**
-	 * Loading xml files through loadPhrescoConstansts()method
-	 * @throws ScreenException
-	 */
-	
+
 	public void loadPhrescoConstansts(String properties) throws ScreenException {
 		
 		try {
@@ -66,37 +57,18 @@ public class ReadXMLFile {
 		}
 	}
 	
-	/**
-	 * Loading PhpData xml file through loadPhpData()method
-	 * @throws ScreenException
-	 */
-	public void loaddrupalData() throws ScreenException {
-    	loadPhrescoConstansts(drupalblogdata);
+	public void loadPhpBlogData() throws ScreenException {
+    	loadPhrescoConstansts(Phpblogdata);
 	}
-	
-	/**
-	 * Loading UIConstants xml file through loadUIConstants()method
-	 * @throws ScreenException
-	 */
 	public void loadUIConstants() throws ScreenException {
     	loadPhrescoConstansts(constants);
 	}
-	
-	
-	/**
-	 * Loading UserIfoConstants xml file through loadUserInfoConstants()method
-	 * @throws ScreenException
-	 */
+
 	public void loadUserInfoConstants() throws ScreenException {
 		loadPhrescoConstansts(UsrInfConst);
 		
 	}
 	
-	
-	/**
-	 * Getting the xml values through getValue()method
-	 * @throws ScreenException
-	 */
 	public String getValue(String elementName) {
 
 		NodeList nlList = eElement.getElementsByTagName(elementName).item(0)
@@ -108,7 +80,6 @@ public class ReadXMLFile {
 
 		return nValue.getNodeValue();
 	}
-
 
 
 	

@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <environment>
 <phresco>
-<drupalblog>
- 				<name>admin</name>
-                <email>admin@photoninfotech.net</email>
-                <loginpassword>admin</loginpassword>
-</drupalblog>
+<phpnone>
+ 		
+  		
+</phpnone>
 </phresco>
 </environment>

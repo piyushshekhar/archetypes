@@ -1,7 +1,6 @@
 package com.photon.phresco.uiconstants;
 
 
-import java.io.IOException;
 import java.lang.reflect.Field;
 
 public class PhrescoUiConstants {
@@ -13,9 +12,7 @@ public class PhrescoUiConstants {
 	public String PROTOCOL = "protocol";
 	public String PORT= "port";
 	
-	/**
-	 * Reading the URL values through PhrescoUiConstants Constructor
-	 */
+
     public PhrescoUiConstants() {
 		try {
 			readXml = new ReadXMLFile();
@@ -30,9 +27,9 @@ public class PhrescoUiConstants {
 							.set(this, readXml.getValue((String) localObject));
 
 			}
-		} catch (Exception localException) {
-			throw new RuntimeException("Loading "
-					+ super.getClass().getSimpleName() + " failed",
+		} 
+		catch (Exception localException) {
+			throw new RuntimeException("Loading "+ super.getClass().getSimpleName() + " failed",
 					localException);
 		}
 	}

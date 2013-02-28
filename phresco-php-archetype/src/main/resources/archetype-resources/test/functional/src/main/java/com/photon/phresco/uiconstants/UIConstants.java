@@ -1,33 +1,20 @@
 package com.photon.phresco.uiconstants;
 
 
-import java.io.IOException;
 import java.lang.reflect.Field;
 
 public class UIConstants {
 	
 
 	
-    private ReadXMLFile readXml;
-    public String CREATENEWACC="createnewacc";
-    public String NAME="name";
-    public String EMAIL="email";
-    public String SUBMIT="submit";
-    public String LOGIN="login";
-    public String LOGINPASSWORD="loginpassword";
-    public String SEARCH="search";
-    public String MYACC="myacc";
-    public String LOGOUT="logout";
-    
-
-    
-    /**
-	 * Reading the UIConstants xml files through UIConstants() Constructor 
-	 */
+	private ReadXMLFile readXml;
 	
+   public String WRONG_TEXT_MSG="wrong_text_msg";
+   public String TEXT="text1";
+    
 	public UIConstants() {
 		try {
-			readXml = new ReadXMLFile();
+			readXml = new ReadXMLFile();		
 			readXml.loadUIConstants();
 			Field[] arrayOfField1 = super.getClass().getFields();
 			Field[] arrayOfField2 = arrayOfField1;
@@ -36,8 +23,7 @@ public class UIConstants {
 				Field localField = arrayOfField2[j];
 				Object localObject = localField.get(this);
 				if (localObject instanceof String)
-					localField
-							.set(this, readXml.getValue((String) localObject));
+					localField.set(this, readXml.getValue((String) localObject));
 
 			}
 		} catch (Exception localException) {

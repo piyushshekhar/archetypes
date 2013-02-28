@@ -88,7 +88,7 @@ public class WelcomePageTestCase {
 			throws InterruptedException, IOException, Exception {
 		try {
 
-			System.out.println("---------testToCategory()-------------");
+			System.out.println("---------testToCreateAccount()-------------");
 			methodName = Thread.currentThread().getStackTrace()[1]
 					.getMethodName();
 			
@@ -105,7 +105,7 @@ public class WelcomePageTestCase {
 			throws InterruptedException, IOException, Exception {
 		try {
 
-			System.out.println("---------testToCategory()-------------");
+			System.out.println("---------testToLogin()-------------");
 			methodName = Thread.currentThread().getStackTrace()[1]
 					.getMethodName();
 			

@@ -3,9 +3,9 @@
 			
 
 <Server appliesTo="tech-java-webservice " desc="" name="server">
-        <context>javawshw</context>
-           <port>1234</port>
+        <context>JWSNone</context>
+           <port>8080</port>
              <protocol>http</protocol>
-        <host>172.16.29.45</host>
+        <host>localhost</host>
     </Server>
 </environment>

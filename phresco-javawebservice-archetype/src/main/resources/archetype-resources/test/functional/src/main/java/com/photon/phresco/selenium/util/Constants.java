@@ -35,6 +35,10 @@ public class Constants {
 	/**
 	 * Execute tests on googlechrome browser
 	 */
+	public static final String HTML_UNIT_DRIVER= "htmlunit";
+	/**
+	 * Excute the test cases in html unit driver
+	 */
 	public static final String BROWSER_CHROME = "googlechrome";
 	
 	/**

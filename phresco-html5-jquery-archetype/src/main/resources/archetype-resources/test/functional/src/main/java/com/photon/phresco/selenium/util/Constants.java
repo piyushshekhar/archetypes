@@ -18,6 +18,12 @@ public class Constants {
 	/**
 	 * Execute tests on googlechrome browser
 	 */
+	
+	public static final String HTML_UNIT_DRIVER="htmlunit";
+	/**
+	 * Execute test cases on html Unit driver
+	 */
+			
 	public static final String BROWSER_CHROME = "googlechrome";
 
 	/**

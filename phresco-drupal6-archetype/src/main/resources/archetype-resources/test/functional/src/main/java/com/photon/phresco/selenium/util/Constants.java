@@ -29,8 +29,10 @@ public class Constants {
 	 * Execute tests on opera browser
 	 */
 	public static final String BROWSER_OPERA = "opera";
-
-
+    /**
+     * Execute the test cases in opera browser
+     */
+    public static final String HTML_UNIT_DRIVER="htmlunit";
 
 
 	public static String DEFAULT_TIMEOUT = "180000";

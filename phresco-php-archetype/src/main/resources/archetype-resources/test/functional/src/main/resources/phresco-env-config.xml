@@ -1,15 +1,14 @@
 <environment>
-           <Browser>firefox</Browser>
+           <Browser>htmlunit</Browser>
 		   
           
 <Server appliesTo="" desc="" name="server">
-        <context>drupal_none7</context>
+        <context>phpNone</context>
         <deploy_dir>C:\wamp\www</deploy_dir>
         <admin_username/>
         <additional_context>/</additional_context>
         <port>80</port>
-        <admin_password/>
-        <version>7.0.x</version>
+        <version>2.3.x</version>
         <certificate/>
         <type>Apache</type>
         <remoteDeployment>false</remoteDeployment>

@@ -1,6 +1,12 @@
 package com.photon.phresco.selenium.util;
 
 
+
+
+
+
+
+
 @SuppressWarnings("serial")
 public  class ScreenException extends Exception {
 

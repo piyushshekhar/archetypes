@@ -2,21 +2,21 @@
 <suite name="HelloWorldPageTestSuite" parallel="tests"
 	thread-count="5" verbose="3">
 
-  <test name="JavaWebServiceHelloWorldTestOnfirefox" junit="false" preserve-order="true">
- 		<parameter name="browser" value="firefox" />
+  	<test name="JavaWebServiceHelloWorldTestOnHtmlUnit" junit="false" preserve-order="true">
+ 		<parameter name="browser" value="htmlunit" />
 		<parameter name="platform" value="WINDOWS" />
         <classes>
             <class name="com.photon.phresco.testcases.JavaWebServiceTest"/>     
         </classes>
     </test> 
-    <test name="JavaWebServiceHelloWorldTestOnChrome" junit="false"
+  	<!--  <test name="JavaWebServiceHelloWorldTestOnfirefox" junit="false"
 		preserve-order="true">
-		<parameter name="browser" value="googlechrome" />
+		<parameter name="browser" value="firefox" />
 		<parameter name="platform" value="WINDOWS" />
 		<classes>
 			<class name="com.photon.phresco.testcases.JavaWebServiceTest"/>
 		</classes>
-	</test> 
-   </suite>
+	</test>  -->
+</suite>
     
     

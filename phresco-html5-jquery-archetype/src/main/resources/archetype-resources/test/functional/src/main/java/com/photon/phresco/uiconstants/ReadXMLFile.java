@@ -38,7 +38,6 @@ public class ReadXMLFile {
 	private  Element eElement;
 	private Log log = LogFactory.getLog(getClass());
 	private  final String phrsc = "./src/main/resources/phresco-env-config.xml";
-
 	public ReadXMLFile() throws ScreenException {
 		log.info("@ReadXMLFile Constructor::loading *****PhrescoUIConstants******");
 		loadPhrescoConstansts(phrsc);

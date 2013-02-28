@@ -71,7 +71,7 @@ public class WelcomePageTestCase {
 	}*/
 	
 	
-	@Test
+@Test
 	public void testToLogin()
 			throws InterruptedException, IOException, Exception {
 		try {
@@ -87,7 +87,7 @@ public class WelcomePageTestCase {
 		}
 	}
 	
-	@Test
+@Test
 	public void testToPostComment()
 			throws InterruptedException, IOException, Exception {
 		try {

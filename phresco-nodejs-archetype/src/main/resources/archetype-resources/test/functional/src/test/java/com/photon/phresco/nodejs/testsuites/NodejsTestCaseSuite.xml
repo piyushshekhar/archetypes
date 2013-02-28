@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="HelloWorldPageTestSuite" parallel="tests"
 	thread-count="5" verbose="3">
-      <test name="NodejsTestOnfirefox" junit="false" preserve-order="true">
- 		<parameter name="browser" value="firefox" />
+      <test name="NodejsTestOnHtmlUnit" junit="false" preserve-order="true">
+ 		<parameter name="browser" value="htmlunit" />
 		<parameter name="platform" value="WINDOWS" />
         <classes>
             <class name="com.photon.phresco.nodejs.testcases.NodejsTestCase"/>     
         </classes>
     </test> 
-   <test name="NodejsOnChrome" junit="false"
+  <!--  <test name="NodejsOnChrome" junit="false"
 		preserve-order="true">
 		<parameter name="browser" value="googlechrome" />
 		<parameter name="platform" value="WINDOWS" />
 		<classes>
 			<class name="com.photon.phresco.nodejs.testcases.NodejsTestCase"/>
 		</classes>
-	</test> 
+	</test>  -->
     </suite>
     

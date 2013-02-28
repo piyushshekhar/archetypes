@@ -2,6 +2,8 @@
 package com.photon.phresco.selenium.util;
 
 public class Constants {
+	
+	public static final String BROWSER_HTMLUNITDRIVER = "htmlUnitDriver";
 
 	/**
 	 * Execute tests on internet explorer
@@ -16,6 +18,10 @@ public class Constants {
 	/**
 	 * Execute tests on googlechrome browser
 	 */
+	public static final String HTML_UNIT_DRIVER="htmlunit";
+	/**
+	 * Execute the test cases in HtmlUnit Driver
+	 */
 	public static final String BROWSER_CHROME = "googlechrome";
 	
 	/**
@@ -27,6 +33,8 @@ public class Constants {
 	 * Execute tests on opera browser
 	 */
 	public static final String BROWSER_OPERA = "opera";
+
+
 
 
 	public static String DEFAULT_TIMEOUT = "180000";

@@ -59,32 +59,34 @@ public class WelcomePageTestCase {
 	}*/
 
 	@Test
-	public void testWelcomePageScreen() throws InterruptedException,
-			IOException, Exception {
-		try {
-			//Assert.assertNotNull(welcomeScreen);
-			welcomeScreen.testHellow_world_text(methodName);
-			
-			Thread.sleep(5000);
-		} catch (Exception t) {
-			t.printStackTrace();
-
-		}
-	}
-	@Test
 	public void testFailureScenario() throws InterruptedException,
 			IOException, Exception {
 		try {
 			//Assert.assertNotNull(welcomeScreen);
+			System.out.println("----------testFailureScenario-------");
 			welcomeScreen.testFailureCase(methodName);
 			
-			Thread.sleep(5000);
+			
 		} catch (Exception t) {
 			t.printStackTrace();
 
 		}
 	}
 
+	@Test
+	public void ToVerifyTextPresent() throws InterruptedException,
+			IOException, Exception {
+		try {
+			//Assert.assertNotNull(welcomeScreen);
+			System.out.println("----------ToVerifyTextPresent-------");
+			welcomeScreen.testHellow_world_text(methodName,phrescoUIConstants);
+			
+		
+		} catch (Exception t) {
+			t.printStackTrace();
+
+		}
+	}
 	@AfterTest
 	public  void tearDown() {
 		welcomeScreen.closeBrowser();

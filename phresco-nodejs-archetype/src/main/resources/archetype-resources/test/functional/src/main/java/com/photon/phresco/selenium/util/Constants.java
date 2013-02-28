@@ -37,10 +37,13 @@ public class Constants {
 	 */
 	public static final String BROWSER_CHROME = "googlechrome";
 
-	
-	
 	/**
 	 * Execute tests on opera browser
+	 */
+	public static final String HTML_UNIT_DRIVER="htmlunit";
+
+	/**
+	 * Excute the test caeses on htmlUnitdriver
 	 */
 	public static final String BROWSER_OPERA = "opera";
 	/**

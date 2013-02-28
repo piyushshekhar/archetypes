@@ -1,14 +1,13 @@
 package com.photon.phresco.testcases;
 
 import java.io.IOException;
-
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.photon.phresco.Screens.WelcomeScreen;
-import com.photon.phresco.uiconstants.DrupalData;
+import com.photon.phresco.uiconstants.PhpData;
 import com.photon.phresco.uiconstants.PhrescoUiConstants;
 import com.photon.phresco.uiconstants.UIConstants;
 import com.photon.phresco.uiconstants.UserInfoConstants;
@@ -20,106 +19,90 @@ public class WelcomePageTestCase {
 	private  WelcomeScreen welcomeScreen;
 	private  String methodName;
 	private  String selectedBrowser;
-	private  DrupalData drupalConstants;
+	private  PhpData PhpConstants;
 	private  UserInfoConstants userInfo;
 
-	/**
-	 * Initializing the Object of a class PhrescoUiConstants, UIConstants, PhpData, UserInfoConstants
-	 * @throws Exception
-	 */
-	@Parameters(value ={ "browser", "platform"})
+	@Parameters(value = { "browser", "platform" })
 	@BeforeTest
 	public  void setUp(String browser, String platform) throws Exception {
 		try {
-			
 			phrescoUIConstants = new PhrescoUiConstants();
 			uiConstants = new UIConstants();
-			drupalConstants = new DrupalData();
-			userInfo = new UserInfoConstants();
+			PhpConstants = new PhpData();
+			userInfo= new UserInfoConstants();
 			String selectedBrowser = browser;
 			String selectedPlatform = platform;
 			
 			methodName = Thread.currentThread().getStackTrace()[1]
 					.getMethodName();
+	
+			/*Reporter.log("Selected Browser to execute testcases--->>"
+					+ selectedBrowser);*/
 			System.out
 			.println("Selected Browser to execute testcases--->>"
 					+ selectedBrowser);
+			methodName = Thread.currentThread().getStackTrace()[1]
+					.getMethodName();
 			String applicationURL = phrescoUIConstants.PROTOCOL + "://"
 					+ phrescoUIConstants.HOST + ":" + phrescoUIConstants.PORT
 					+ "/";
-			welcomeScreen = new WelcomeScreen(selectedBrowser,selectedPlatform, applicationURL,
-					phrescoUIConstants.CONTEXT, drupalConstants, uiConstants, userInfo);
+			welcomeScreen = new WelcomeScreen(selectedBrowser, selectedPlatform, applicationURL,
+					phrescoUIConstants.CONTEXT, PhpConstants, uiConstants, userInfo);
 		} catch (Exception exception) {
 			exception.printStackTrace();
 		}
 	}
-	
-	/**
-	 * Capturing the URL values through String & passing those values into WelcomeScreen
-	 * @throws Exception
-	 */
-	
-	/*public  void launchingBrowser() throws Exception {
+
+/*	public  void launchingBrowser() throws Exception {
 		try {
 			String applicationURL = phrescoUIConstants.PROTOCOL + "://"
 					+ phrescoUIConstants.HOST + ":" + phrescoUIConstants.PORT
 					+ "/";
 			selectedBrowser = phrescoUIConstants.BROWSER;
-			
-			welcomeScreen = new WelcomeScreen(selectedBrowser, applicationURL,
-					phrescoUIConstants.CONTEXT, drupalConstants, uiConstants, userInfo);
+			welcomeScreen = new WelcomeScreen(selectedBrowser, selectedPlatform, applicationURL,
+					phrescoUIConstants.CONTEXT, PhpConstants, uiConstants, userInfo);
 		} catch (Exception exception) {
+
 			exception.printStackTrace();
 
 		}
 
 	}*/
-
-	/**
-	 * 
-	 * @throws InterruptedException
-	 * @throws IOException
-	 * @throws Exception
-	 * In this Method just triggering test case against loginPhp,Create, Update, Delete Category BaseScreeen
-	 */
 	
-	@Test
-	public void testToCreateAccount()
+@Test
+	public void testToVerifyTextPresent()
 			throws InterruptedException, IOException, Exception {
 		try {
 
-			System.out.println("---------testToCategory()-------------");
-			methodName = Thread.currentThread().getStackTrace()[1]
-					.getMethodName();
+			System.out
+					.println("---------testToVerifyTextPresent()-------------");
+		
+		     welcomeScreen.VerifyTextPresent(methodName);
 			
-			welcomeScreen.createAccount(methodName);
+			
 		
 		} catch (Exception t) {
 			t.printStackTrace();
 
 		}
 	}
-	
-	@Test
-	public void testToLogin()
-			throws InterruptedException, IOException, Exception {
-		try {
+@Test
+public void testToVerifyTextNotPresent()
+		throws InterruptedException, IOException, Exception {
+	try {
 
-			System.out.println("---------testToCategory()-------------");
-			methodName = Thread.currentThread().getStackTrace()[1]
-					.getMethodName();
-			
-			welcomeScreen.loginDrupal(methodName);
+		System.out
+				.println("---------testToVerifyTextNotPresent()-------------");
+	
+	     welcomeScreen.VerifyTextNotPresent(methodName);
 		
-		} catch (Exception t) {
-			t.printStackTrace();
-
-		}
-	}
+		
 	
-	/**
-	 * 	Triggering close method in BaseScreen 
-	 */
+	} catch (Exception t) {
+		t.printStackTrace();
+
+	}
+}
 	
 	@AfterTest
 	public  void tearDown() {

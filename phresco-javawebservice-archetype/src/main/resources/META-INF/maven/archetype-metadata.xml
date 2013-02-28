@@ -129,7 +129,6 @@
 				<include>PhrescoUiConstants.java</include>
 				<include>PhrescoJavaWebserviceUiConstants.java</include>
 				<include>ReadXMLFile.java</include>
-				<include>UserInfoConstants.java</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="false" encoding="UTF-8">
