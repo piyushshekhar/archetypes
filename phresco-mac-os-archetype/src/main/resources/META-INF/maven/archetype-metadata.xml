@@ -63,7 +63,6 @@
 				<include>ApplicationTest-Prefix.pch</include>
 			</includes>
 		</fileSet>
-        </fileSet>
 			<fileSet filtered="false" packaged="false"> 
 			<directory>source/LogicTest</directory> 
 			<includes>
@@ -73,14 +72,12 @@
 				<include>LogicTest-Prefix.pch</include>
 			</includes>
 		</fileSet>
-        </fileSet>
 			<fileSet filtered="false" packaged="false"> 
 			<directory>source/LogicTest/en.lproj</directory> 
 			<includes>
 				<include>InfoPlist.strings</include>
 			</includes>
 		</fileSet>
-        </fileSet>
 			<fileSet filtered="false" packaged="false"> 
 			<directory>source/Phresco/en.lproj</directory> 
 			<includes>
@@ -89,7 +86,6 @@
 				<include>MainMenu.xib</include>
 			</includes>
 		</fileSet>
-        </fileSet>
 			<fileSet filtered="false" packaged="false"> 
 			<directory>source/Phresco</directory> 
 			<includes>
