@@ -1,6 +1,106 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <mojos>
     <mojo>
+      <goal>validate-code</goal>
+      <description>Goal which validates the Html-5 Archetype project</description>
+      <requiresDirectInvocation>false</requiresDirectInvocation>
+      <requiresProject>true</requiresProject>
+      <requiresReports>false</requiresReports>
+      <aggregator>false</aggregator>
+      <requiresOnline>false</requiresOnline>
+      <inheritedByDefault>true</inheritedByDefault>
+      <language>java</language>
+      <instantiationStrategy>per-lookup</instantiationStrategy>
+      <executionStrategy>once-per-session</executionStrategy>
+      <threadSafe>false</threadSafe>
+      <configuration>
+      <parameters>
+        <parameter>
+            <name>
+                <value lang="en">Validate Against</value>
+            </name>
+            <type>List</type>
+            <required>false</required>
+            <editable>true</editable>
+            <description></description>
+            <key>sonar</key>
+            <possibleValues>
+                <value key="src" dependency="src,skipTests">Source</value>
+                <value key="functional">Functional Test</value>
+            </possibleValues>
+            <multiple>false</multiple>
+            <sort>false</sort>
+            <show>true</show>
+          <value></value>
+        </parameter>
+        <parameter>
+        <pluginParameter>plugin</pluginParameter>
+            <name>
+                <value lang="en">Technology</value>
+            </name>
+            <mavenCommands>
+                <mavenCommand>
+                    <key>js</key>
+                    <value>-Pjs</value>
+                </mavenCommand>
+                <mavenCommand>
+                    <key>java</key>
+                    <value>-Pjava</value>
+                </mavenCommand>
+                <mavenCommand>
+                    <key>html</key>
+                    <value>-Phtml</value>
+                </mavenCommand>
+                <mavenCommand>
+                    <key>web</key>
+                    <value>-Pweb</value>
+                </mavenCommand>
+            </mavenCommands>
+          <type>List</type>
+          <required>false</required>
+          <editable>true</editable>
+          <description></description>
+          <key>src</key>
+            <possibleValues>
+                <value key="js">js</value>
+                <value key="java">java</value>
+                <value key="html">html</value>
+                <value key="web">jsp/jsf</value>
+            </possibleValues>
+            <multiple>false</multiple>
+            <sort>false</sort>
+            <show>false</show>
+          <value></value>
+        </parameter>
+      <parameter>
+            <pluginParameter>plugin</pluginParameter>
+            <mavenCommands>
+                <mavenCommand>
+                    <key>true</key>
+                    <value>-DskipTests=true</value>
+                </mavenCommand>
+                <mavenCommand>
+                    <key>false</key>
+                    <value>-DskipTests=false</value>
+                </mavenCommand>
+            </mavenCommands>
+            <name>
+                <value lang="en">Skip Unit Test</value>
+            </name>
+            <type>Boolean</type>
+            <required>false</required>
+            <editable>true</editable>
+            <description></description>
+            <key>skipTests</key>
+            <multiple>false</multiple>
+            <sort>false</sort>
+            <show>false</show>
+            <value>false</value>
+      </parameter>
+      </parameters>
+      </configuration>
+    </mojo>
+    <mojo>
         <goal>package</goal>
         <description>Goal which packages the Html-5 Archetype project</description>
         <requiresDirectInvocation>false</requiresDirectInvocation>
@@ -277,6 +377,61 @@
         </configuration>
     </mojo>
     <mojo>
+        <goal>unit-test</goal>
+        <description>Goal which packages the HTML5-Jquery project</description>
+        <requiresDirectInvocation>false</requiresDirectInvocation>
+        <requiresProject>true</requiresProject>
+        <requiresReports>false</requiresReports>
+        <aggregator>false</aggregator>
+        <requiresOnline>false</requiresOnline>
+        <inheritedByDefault>true</inheritedByDefault>
+        <implementation>
+            <dependency>
+                <groupId>com.photon.phresco.plugins</groupId>
+                <artifactId>java-phresco-plugin</artifactId>
+                <type>jar</type>
+                <version>2.1.0.2001-SNAPSHOT</version>
+                <class>com.photon.phresco.plugins.java.JavaPlugin</class>
+            </dependency>
+        </implementation>
+        <language>java</language>
+        <instantiationStrategy>per-lookup</instantiationStrategy>
+        <executionStrategy>once-per-session</executionStrategy>
+        <threadSafe>false</threadSafe>
+        <configuration>
+            <parameters>
+                <parameter>
+                    <pluginParameter>plugin</pluginParameter>
+                    <mavenCommands>
+                        <mavenCommand>
+                            <key>java</key>
+                            <value>-Pjava</value>
+                        </mavenCommand>
+                        <mavenCommand>
+                            <key>js</key>
+                            <value>-Pjs -DskipTests</value>
+                        </mavenCommand>
+                    </mavenCommands>
+                    <name>
+                        <value lang="en">Test Against</value>
+                    </name>
+                    <type>List</type>
+                    <required>true</required>
+                    <editable>true</editable>
+                    <key>testAgainst</key>
+                    <possibleValues>
+                        <value key="java">java</value>
+                        <value key="js">js</value>
+                    </possibleValues>
+                    <multiple>false</multiple>
+                    <value></value>
+                    <sort>false</sort>
+                    <show>true</show>
+                </parameter>
+            </parameters>
+        </configuration>
+    </mojo>
+    <mojo>
         <goal>functional-test-webdriver</goal>
         <description>Goal which functionalTest-webdriver the Html-5 Archetype project</description>
         <requiresDirectInvocation>false</requiresDirectInvocation>
@@ -496,6 +651,114 @@
 					<sort>false</sort>
 					<show>true</show>
 				</parameter>
+            </parameters>
+        </configuration>
+    </mojo>
+    <mojo>
+        <goal>pdf-report</goal>
+        <description>Goal which generates pdf report for the project</description>
+        <requiresDirectInvocation>false</requiresDirectInvocation>
+        <requiresProject>true</requiresProject>
+        <requiresReports>false</requiresReports>
+        <aggregator>false</aggregator>
+        <requiresOnline>false</requiresOnline>
+        <inheritedByDefault>true</inheritedByDefault>
+        <implementation>
+            <dependency>
+                <groupId>com.photon.phresco.plugins</groupId>
+                <artifactId>report-phresco-plugin</artifactId>
+                <type>jar</type>
+                <version>2.1.0.2001-SNAPSHOT</version>
+                <class>com.photon.phresco.plugins.ReportPlugin</class>
+            </dependency>
+        </implementation>
+        <language>java</language>
+        <instantiationStrategy>per-lookup</instantiationStrategy>
+        <executionStrategy>once-per-session</executionStrategy>
+        <threadSafe>false</threadSafe>
+        <configuration>
+            <parameters>
+                <parameter>
+                    <name>
+                        <value lang="en">Report Type</value>
+                    </name>
+                    <type>List</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>reportType</key>
+                    <possibleValues>
+                        <value key="crisp">Overall</value>
+                        <value key="detail">Detailed</value>
+                    </possibleValues>
+                    <multiple>false</multiple>
+                    <value></value>
+                    <sort>false</sort>
+                    <show>true</show>
+                </parameter>
+                <parameter>
+                    <name>
+                        <value lang="en">Test Type</value>
+                    </name>
+                    <type>List</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>testType</key>
+                    <possibleValues>
+                        <value key="All">All</value>
+                        <value key="unit">unit</value>
+                        <value key="functional">functional</value>
+                        <value key="performance">performance</value>
+                        <value key="load">load</value>
+                    </possibleValues>
+                    <multiple>false</multiple>
+                    <value></value>
+                    <sort>false</sort>
+                    <show>true</show>
+                </parameter>
+                <parameter>
+                    <name>
+                        <value lang="en">Sonar Url</value>
+                    </name>
+                    <type>Hidden</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>sonarUrl</key>
+                    <multiple>false</multiple>
+                    <value></value>
+                    <sort>false</sort>
+                    <show>false</show>
+                </parameter>
+                <parameter>
+                    <name>
+                        <value lang="en">Logo</value>
+                    </name>
+                    <type>Hidden</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>logo</key>
+                    <multiple>false</multiple>
+                    <value></value>
+                    <sort>false</sort>
+                    <show>false</show>
+                </parameter>
+                <parameter>
+                    <name>
+                        <value lang="en">Theme</value>
+                    </name>
+                    <type>Hidden</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>theme</key>
+                    <multiple>false</multiple>
+                    <value></value>
+                    <sort>false</sort>
+                    <show>false</show>
+                </parameter>
             </parameters>
         </configuration>
     </mojo>
