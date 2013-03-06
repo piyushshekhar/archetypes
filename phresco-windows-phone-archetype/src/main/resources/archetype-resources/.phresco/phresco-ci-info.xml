@@ -140,7 +140,7 @@
                     <description></description>
                     <key>type</key>
                     <multiple>false</multiple>
-                    <value>wp7</value>
+                    <value>winphone</value>
                     <sort>false</sort>
                     <show>true</show>
                 </parameter>
@@ -277,7 +277,7 @@
                     <description></description>
                     <key>type</key>
                     <multiple>false</multiple>
-                    <value>wp7</value>
+                    <value>winphone</value>
                     <sort>false</sort>
                     <show>true</show>
                 </parameter>
