@@ -1,6 +1,97 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <mojos>
     <mojo>
+        <goal>validate-code</goal>
+        <description>Goal which Code Validation for Iphone Natice Project</description>
+        <requiresDirectInvocation>false</requiresDirectInvocation>
+        <requiresProject>true</requiresProject>
+        <requiresReports>false</requiresReports>
+        <aggregator>false</aggregator>
+        <requiresOnline>false</requiresOnline>
+        <inheritedByDefault>true</inheritedByDefault>
+        <implementation>
+           <dependency>
+               <groupId>com.photon.phresco.plugins</groupId>
+               <artifactId>xcode-phresco-plugin</artifactId>
+               <type>jar</type>
+               <version>2.1.0.2001-SNAPSHOT</version>
+               <class>com.photon.phresco.plugins.xcode.XcodePlugin</class>
+           </dependency>
+       </implementation>
+        <language>java</language>
+        <instantiationStrategy>per-lookup</instantiationStrategy>
+        <executionStrategy>once-per-session</executionStrategy>
+        <threadSafe>false</threadSafe>
+        <configuration>
+            <parameters>
+                <parameter>
+                    <name>
+                        <value lang="en">SDK</value>
+                    </name>
+                    <type>DynamicParameter</type>
+                    <dynamicParameter>
+                        <class>com.photon.phresco.framework.param.impl.IosSdkParameterImpl</class>
+                        <dependencies>
+                            <dependency>
+<groupId>com.photon.phresco.framework</groupId>
+<artifactId>phresco-framework-impl</artifactId>
+<type>jar</type>
+<version>2.1.0.2001-SNAPSHOT</version>
+                            </dependency>
+                        </dependencies>
+                    </dynamicParameter>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>sdk</key>
+                    <multiple>false</multiple>
+                    <value></value>
+                    <sort>false</sort>
+                    <show>true</show>
+                </parameter>
+                <parameter>
+                    <name>
+                        <value lang="en">Target</value>
+                    </name>
+                    <type>DynamicParameter</type>
+                    <dynamicParameter>
+                        <class>com.photon.phresco.framework.param.impl.IosTargetParameterImpl</class>
+                        <dependencies>
+                            <dependency>
+                                <groupId>com.photon.phresco.framework</groupId>
+                                <artifactId>phresco-framework-impl</artifactId>
+                                <type>jar</type>
+                                <version>2.1.0.2001-SNAPSHOT</version>
+                            </dependency>
+                        </dependencies>
+                    </dynamicParameter>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>target</key>
+                    <multiple>false</multiple>
+                    <value></value>
+                    <sort>false</sort>
+                    <show>true</show>
+                </parameter>
+                <parameter>
+                    <name>
+                        <value lang="en">Project Type</value>
+                    </name>
+                    <type>String</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>projectType</key>
+                    <multiple>false</multiple>
+                    <value>xcode</value>
+                    <sort>false</sort>
+                    <show>false</show>
+                </parameter>
+            </parameters>
+        </configuration>
+    </mojo>
+    <mojo>
         <goal>package</goal>
         <description>Goal which packages the Iphone static library project</description>
         <requiresDirectInvocation>false</requiresDirectInvocation>
@@ -233,6 +324,244 @@
                     <value></value>
                     <sort>false</sort>
                     <show>true</show>
+                </parameter>
+            </parameters>
+        </configuration>
+    </mojo>
+    <mojo>
+        <goal>unit-test</goal>
+        <description>Goal which Unit Test for Iphone Library Project</description>
+        <requiresDirectInvocation>false</requiresDirectInvocation>
+        <requiresProject>true</requiresProject>
+        <requiresReports>false</requiresReports>
+        <aggregator>false</aggregator>
+        <requiresOnline>false</requiresOnline>
+        <inheritedByDefault>true</inheritedByDefault>
+        <implementation>
+           <dependency>
+               <groupId>com.photon.phresco.plugins</groupId>
+               <artifactId>xcode-phresco-plugin</artifactId>
+               <type>jar</type>
+               <version>2.1.0.2001-SNAPSHOT</version>
+               <class>com.photon.phresco.plugins.xcode.XcodePlugin</class>
+           </dependency>
+       </implementation>
+        <language>java</language>
+        <instantiationStrategy>per-lookup</instantiationStrategy>
+        <executionStrategy>once-per-session</executionStrategy>
+        <threadSafe>false</threadSafe>
+        <configuration>
+            <parameters>
+                <parameter>
+                    <name>
+                        <value lang="en">SDK</value>
+                    </name>
+                    <type>DynamicParameter</type>
+                    <dynamicParameter>
+                        <class>com.photon.phresco.framework.param.impl.IosSdkParameterImpl</class>
+                        <dependencies>
+                            <dependency>
+                                <groupId>com.photon.phresco.framework</groupId>
+                                <artifactId>phresco-framework-impl</artifactId>
+                                <type>jar</type>
+                                <version>2.1.0.2001-SNAPSHOT</version>
+                            </dependency>
+                        </dependencies>
+                    </dynamicParameter>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>sdk</key>
+                    <multiple>false</multiple>
+                    <value></value>
+                    <sort>false</sort>
+                    <show>true</show>
+                </parameter>
+                <parameter>
+                    <name>
+                        <value lang="en">Target</value>
+                    </name>
+                    <type>DynamicParameter</type>
+                    <dynamicParameter>
+                        <class>com.photon.phresco.framework.param.impl.IosTargetParameterImpl</class>
+                        <dependencies>
+                            <dependency>
+                                <groupId>com.photon.phresco.framework</groupId>
+                                <artifactId>phresco-framework-impl</artifactId>
+                                <type>jar</type>
+                                <version>2.1.0.2001-SNAPSHOT</version>
+                            </dependency>
+                        </dependencies>
+                    </dynamicParameter>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>target</key>
+                    <multiple>false</multiple>
+                    <value></value>
+                    <sort>false</sort>
+                    <show>true</show>
+                </parameter>
+                <parameter>
+                    <pluginParameter>framework</pluginParameter>
+                    <mavenCommands>
+                        <mavenCommand>
+                            <key>true</key>
+                            <value>-DapplicationTest=true</value>
+                        </mavenCommand>
+                        <mavenCommand>
+                            <key>false</key>
+                            <value>-DapplicationTest=false</value>
+                        </mavenCommand>
+                    </mavenCommands>
+                    <name>
+                        <value lang="en">Application Test</value>
+                    </name>
+                    <type>Boolean</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>unitTestType</key>
+                    <multiple>false</multiple>
+                    <value>false</value>
+                    <sort>false</sort>
+                    <show>true</show>
+                </parameter>
+                <parameter>
+                    <name>
+                        <value lang="en">Unit test</value>
+                    </name>
+                    <type>String</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>unittest</key>
+                    <multiple>false</multiple>
+                    <value>true</value>
+                    <sort>false</sort>
+                    <show>false</show>
+                </parameter>
+                <parameter>
+                    <name>
+                        <value lang="en">Project Type</value>
+                    </name>
+                    <type>String</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>projectType</key>
+                    <multiple>false</multiple>
+                    <value>xcode</value>
+                    <sort>false</sort>
+                    <show>false</show>
+                </parameter>
+            </parameters>
+        </configuration>
+    </mojo>
+    <mojo>
+        <goal>pdf-report</goal>
+        <description>Goal which generates pdf report for the project</description>
+        <requiresDirectInvocation>false</requiresDirectInvocation>
+        <requiresProject>true</requiresProject>
+        <requiresReports>false</requiresReports>
+        <aggregator>false</aggregator>
+        <requiresOnline>false</requiresOnline>
+        <inheritedByDefault>true</inheritedByDefault>
+        <implementation>
+            <dependency>
+                <groupId>com.photon.phresco.plugins</groupId>
+                <artifactId>report-phresco-plugin</artifactId>
+                <type>jar</type>
+                <version>2.1.0.2001-SNAPSHOT</version>
+                <class>com.photon.phresco.plugins.ReportPlugin</class>
+            </dependency>
+        </implementation>
+        <language>java</language>
+        <instantiationStrategy>per-lookup</instantiationStrategy>
+        <executionStrategy>once-per-session</executionStrategy>
+        <threadSafe>false</threadSafe>
+        <configuration>
+            <parameters>
+                <parameter>
+                    <name>
+                        <value lang="en">Report Type</value>
+                    </name>
+                    <type>List</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>reportType</key>
+                    <possibleValues>
+                        <value key="crisp">Overall</value>
+                        <value key="detail">Detailed</value>
+                    </possibleValues>
+                    <multiple>false</multiple>
+                    <value></value>
+                    <sort>false</sort>
+                    <show>true</show>
+                </parameter>
+                <parameter>
+                    <name>
+                        <value lang="en">Test Type</value>
+                    </name>
+                    <type>List</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>testType</key>
+                    <possibleValues>
+                        <value key="All">All</value>
+                        <value key="unit">unit</value>
+                        <value key="functional">functional</value>
+                        <value key="performance">performance</value>
+                        <value key="load">load</value>
+                    </possibleValues>
+                    <multiple>false</multiple>
+                    <value></value>
+                    <sort>false</sort>
+                    <show>true</show>
+                </parameter>
+                <parameter>
+                    <name>
+                        <value lang="en">Sonar Url</value>
+                    </name>
+                    <type>Hidden</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>sonarUrl</key>
+                    <multiple>false</multiple>
+                    <value></value>
+                    <sort>false</sort>
+                    <show>false</show>
+                </parameter>
+                <parameter>
+                    <name>
+                        <value lang="en">Logo</value>
+                    </name>
+                    <type>Hidden</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>logo</key>
+                    <multiple>false</multiple>
+                    <value></value>
+                    <sort>false</sort>
+                    <show>false</show>
+                </parameter>
+                <parameter>
+                    <name>
+                        <value lang="en">Theme</value>
+                    </name>
+                    <type>Hidden</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>theme</key>
+                    <multiple>false</multiple>
+                    <value></value>
+                    <sort>false</sort>
+                    <show>false</show>
                 </parameter>
             </parameters>
         </configuration>
