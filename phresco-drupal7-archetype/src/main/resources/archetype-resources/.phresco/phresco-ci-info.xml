@@ -500,29 +500,7 @@
                     <value>build</value>
                     <sort>false</sort>
                     <show>true</show>
-                </parameter>                
-                <parameter>
-                    <name>
-                        <value lang="en">Environment</value>
-                    </name>
-                    <type>DynamicParameter</type>
-                    <dynamicParameter>
-                    <class>com.photon.phresco.impl.EnvironmentsParameterImpl</class>
-                    <dependencies>
-                        <dependency>
-                            <groupId>com.photon.phresco.commons</groupId>
-                            <artifactId>phresco-commons</artifactId>
-                            <type>jar</type>
-                            <version>2.1.0.3001-SNAPSHOT</version>
-                        </dependency>
-                    </dependencies>
-                    </dynamicParameter>
-                    <required>true</required>
-                    <editable>true</editable>
-                    <key>buildEnvironmentName</key>
-                    <multiple>false</multiple>
-                    <sort>false</sort>
-                    <show>true</show>
+					<dependency>environmentName</dependency>
                 </parameter>
                 <parameter>
                     <name>
