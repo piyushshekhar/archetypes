@@ -243,6 +243,21 @@
         <threadSafe>false</threadSafe>
         <configuration>
             <parameters>
+				<parameter>
+                    <name>
+                        <value lang="en">Show Settings</value>
+                    </name>
+                    <type>Boolean</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>showSettings</key>
+                    <multiple>false</multiple>
+                    <sort>false</sort>
+                    <show>true</show>
+                    <value>true</value>
+                    <dependency>environmentName</dependency>
+                </parameter>
                 <parameter>
                     <name>
                         <value lang="en">Environment</value>
