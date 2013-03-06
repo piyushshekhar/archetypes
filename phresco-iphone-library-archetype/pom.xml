@@ -3,14 +3,14 @@
     <parent>
         <groupId>com.photon.phresco.archetypes</groupId>
         <artifactId>phresco-archetypes</artifactId>
-        <version>2.1.0.2001-SNAPSHOT</version>
+        <version>2.1.0.3001-SNAPSHOT</version>
         <relativePath>../</relativePath>
     </parent>
     
     <modelVersion>4.0.0</modelVersion>
     <groupId>archetypes</groupId>
     <artifactId>phresco-iphone-library-archetype</artifactId>
-    <version>2.1.0.2001-SNAPSHOT</version>
+    <version>2.1.0.3001-SNAPSHOT</version>
     <name>Archetype - phresco-iphone-library-archetype</name>
     <url>http://www.phresco.org</url>
     <description>phresco-iphone-library-archetype</description>

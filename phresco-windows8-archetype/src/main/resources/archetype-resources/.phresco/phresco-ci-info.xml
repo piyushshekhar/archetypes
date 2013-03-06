@@ -182,7 +182,7 @@
                                 <groupId>com.photon.phresco.commons</groupId>
                                 <artifactId>phresco-commons</artifactId>
                                 <type>jar</type>
-                                <version>2.1.0.2001-SNAPSHOT</version>
+                                <version>2.1.0.3001-SNAPSHOT</version>
                             </dependency>
                         </dependencies>
                     </dynamicParameter>
@@ -244,7 +244,7 @@
                <groupId>com.photon.phresco.plugins</groupId>
                <artifactId>windows-phone-phresco-plugin</artifactId>
                <type>jar</type>
-               <version>2.1.0.2001-SNAPSHOT</version>
+               <version>2.1.0.3001-SNAPSHOT</version>
                <class>com.photon.phresco.plugins.windows.WPPlugin</class>
            </dependency>
        </implementation>
@@ -294,7 +294,7 @@
                                 <groupId>com.photon.phresco.commons</groupId>
                                 <artifactId>phresco-commons</artifactId>
                                 <type>jar</type>
-                                <version>2.1.0.2001-SNAPSHOT</version>
+                                <version>2.1.0.3001-SNAPSHOT</version>
                             </dependency>
                         </dependencies>
                     </dynamicParameter>
@@ -356,7 +356,7 @@
                <groupId>com.photon.phresco.plugins</groupId>
                <artifactId>windows-phone-phresco-plugin</artifactId>
                <type>jar</type>
-               <version>2.1.0.2001-SNAPSHOT</version>
+               <version>2.1.0.3001-SNAPSHOT</version>
                <class>com.photon.phresco.plugins.windows.WPPlugin</class>
            </dependency>
        </implementation>
@@ -409,7 +409,7 @@
                         <groupId>com.photon.phresco.commons</groupId>
                         <artifactId>phresco-commons</artifactId>
                         <type>jar</type>
-                        <version>2.1.0.2001-SNAPSHOT</version>
+                        <version>2.1.0.3001-SNAPSHOT</version>
                     </dependency>
                 </dependencies>
                 </dynamicParameter>
@@ -459,7 +459,7 @@
                 <groupId>com.photon.phresco.plugins</groupId>
                 <artifactId>report-phresco-plugin</artifactId>
                 <type>jar</type>
-                <version>2.1.0.2001-SNAPSHOT</version>
+                <version>2.1.0.3001-SNAPSHOT</version>
                 <class>com.photon.phresco.plugins.ReportPlugin</class>
             </dependency>
         </implementation>
@@ -567,7 +567,7 @@
                <groupId>com.photon.phresco.plugins</groupId>
                <artifactId>ci-phresco-plugin</artifactId>
                <type>jar</type>
-               <version>2.1.0.2001-SNAPSHOT</version>
+               <version>2.1.0.3001-SNAPSHOT</version>
                <class>com.photon.phresco.plugins.CIPlugin</class>
            </dependency>
        </implementation>
