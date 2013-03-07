@@ -9,15 +9,15 @@
         <aggregator>false</aggregator>
         <requiresOnline>false</requiresOnline>
         <inheritedByDefault>true</inheritedByDefault>
-		<implementation>
-           <dependency>
-               <groupId>com.photon.phresco.plugins</groupId>
-               <artifactId>windows-phone-phresco-plugin</artifactId>
-               <type>jar</type>
-               <version>2.1.0.3001-SNAPSHOT</version>
-               <class>com.photon.phresco.plugins.windows.WPPlugin</class>
-           </dependency>
-       </implementation>
+        <implementation>
+            <dependency>
+                <groupId>com.photon.phresco.plugins</groupId>
+                <artifactId>windows-phone-phresco-plugin</artifactId>
+                <type>jar</type>
+                <version>2.1.0.3001-SNAPSHOT</version>
+                <class>com.photon.phresco.plugins.windows.WPPlugin</class>
+            </dependency>
+        </implementation>
         <language>java</language>
         <instantiationStrategy>per-lookup</instantiationStrategy>
         <executionStrategy>once-per-session</executionStrategy>
@@ -33,23 +33,23 @@
                         <class>com.photon.phresco.impl.EnvironmentsParameterImpl</class>
                         <dependencies>
                             <dependency>
-								<groupId>com.photon.phresco.commons</groupId>
-								<artifactId>phresco-commons</artifactId>
-								<type>jar</type>
-								<version>2.1.0.3001-SNAPSHOT</version>
+<groupId>com.photon.phresco.commons</groupId>
+<artifactId>phresco-commons</artifactId>
+<type>jar</type>
+<version>2.1.0.3001-SNAPSHOT</version>
                             </dependency>
                         </dependencies>
                     </dynamicParameter>
                     <required>true</required>
                     <editable>true</editable>
                     <key>environmentName</key>
-					<multiple>false</multiple>
-					<sort>false</sort>
-					<show>true</show>
-                    <value></value>
+                    <multiple>false</multiple>
+                    <value>Production</value>
+                    <sort>false</sort>
+                    <show>true</show>
                 </parameter>
-				 <parameter>
-					 <name>
+                <parameter>
+                    <name>
                         <value lang="en">TYPE</value>
                     </name>
                     <type>hidden</type>
@@ -62,23 +62,29 @@
                     <sort>false</sort>
                     <show>true</show>
                 </parameter>
-				
-				<parameter>
+                <parameter>
                     <name>
                         <value lang="en">Target</value>
                     </name>
-                    <type>List</type>
-                    <required>false</required>
+                    <type>DynamicParameter</type>
+                    <dynamicParameter>
+                        <class>com.photon.phresco.impl.WPDeployTargetImpl</class>
+                        <dependencies>
+                            <dependency>
+<groupId>com.photon.phresco.commons</groupId>
+<artifactId>phresco-commons</artifactId>
+<type>jar</type>
+<version>2.1.0.3001-SNAPSHOT</version>
+                            </dependency>
+                        </dependencies>
+                    </dynamicParameter>
+                    <required>true</required>
                     <editable>true</editable>
                     <key>target</key>
-                    <possibleValues>
-                        <value key="emulator">Emulator</value>
-                        <value key="devices">Device</value>
-                    </possibleValues>
-					<multiple>false</multiple>
-					<sort>false</sort>
-					<show>true</show>
+                    <multiple>false</multiple>
                     <value></value>
+                    <sort>false</sort>
+                    <show>true</show>
                 </parameter>
                 <parameter>
                     <pluginParameter>framework</pluginParameter>
@@ -109,9 +115,9 @@
                         <value key="showDebug">Show Debug</value>
                     </possibleValues>
                     <multiple>false</multiple>
-					<sort>false</sort>
-					<show>true</show>
-                    <value></value>
+                    <value>showErrors</value>
+                    <sort>false</sort>
+                    <show>true</show>
                 </parameter>
                 <parameter>
                     <name>
@@ -122,10 +128,10 @@
                     <editable>true</editable>
                     <description></description>
                     <key>buildNumber</key>
-					<multiple>false</multiple>
-					<sort>false</sort>
-					<show>false</show>
-                    <value></value>
+                    <multiple>false</multiple>
+                    <value>1</value>
+                    <sort>false</sort>
+                    <show>false</show>
                 </parameter>
             </parameters>
         </configuration>
