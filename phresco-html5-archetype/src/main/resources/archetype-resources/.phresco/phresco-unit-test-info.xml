@@ -45,8 +45,47 @@
                     <key>testAgainst</key>
                     <possibleValues>
                         <value key="java">java</value>
-                        <value key="js">js</value>
+                        <value key="js" dependency="environmentName">js</value>
                     </possibleValues>
+                    <multiple>false</multiple>
+                    <value></value>
+                    <sort>false</sort>
+                    <show>true</show>
+                </parameter>
+				 <parameter>
+                    <name>
+                        <value lang="en">Show Settings</value>
+                    </name>
+                    <type>Boolean</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>showSettings</key>
+                    <multiple>false</multiple>
+                    <value></value>
+                    <sort>false</sort>
+                    <show>true</show>
+                    <dependency>environmentName</dependency>
+                </parameter>
+				 <parameter>
+                    <name>
+                        <value lang="en">Environment</value>
+                    </name>
+                    <type>DynamicParameter</type>
+                    <dynamicParameter>
+                        <class>com.photon.phresco.impl.EnvironmentsParameterImpl</class>
+                        <dependencies>
+                            <dependency>
+								<groupId>com.photon.phresco.commons</groupId>
+								<artifactId>phresco-commons</artifactId>
+								<type>jar</type>
+								<version>2.1.0.3001-SNAPSHOT</version>
+                            </dependency>
+                        </dependencies>
+                    </dynamicParameter>
+                    <required>true</required>
+                    <editable>true</editable>
+                    <key>environmentName</key>
                     <multiple>false</multiple>
                     <value></value>
                     <sort>false</sort>
