@@ -55,6 +55,7 @@
 		
 		<!-- Test, Test Report and Test Suite Directories -->
 		<phresco.unitTest.dir>/test/unit</phresco.unitTest.dir>
+		<phresco.manualTest.testcase.path>/test/manual</phresco.manualTest.testcase.path>
 		<phresco.unitTest.report.dir>/test/unit/target/surefire-reports</phresco.unitTest.report.dir>
 		<phresco.unitTest.testsuite.xpath>/testsuites/testsuite</phresco.unitTest.testsuite.xpath>
 		<phresco.unitTest.testcase.path>/testcase</phresco.unitTest.testcase.path>

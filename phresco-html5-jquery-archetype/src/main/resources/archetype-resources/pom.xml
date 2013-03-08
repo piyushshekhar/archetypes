@@ -329,6 +329,7 @@
 		<phresco.unitTest.js.report.dir>/do_not_checkin/target/jstest/report</phresco.unitTest.js.report.dir>
         <phresco.unitTest.js.testsuite.xpath>/testsuite</phresco.unitTest.js.testsuite.xpath>
         <phresco.unitTest.js.testcase.path>/testcase</phresco.unitTest.js.testcase.path> 
+		<phresco.manualTest.testcase.path>/test/manual</phresco.manualTest.testcase.path>
 		<phresco.unitTest.java.report.dir>/do_not_checkin/target/surefire-reports</phresco.unitTest.java.report.dir>
         <phresco.unitTest.java.testsuite.xpath>/testsuite</phresco.unitTest.java.testsuite.xpath>
         <phresco.unitTest.java.testcase.path>/testcase</phresco.unitTest.java.testcase.path> 	

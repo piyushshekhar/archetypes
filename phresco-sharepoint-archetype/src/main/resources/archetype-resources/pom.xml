@@ -32,6 +32,7 @@
         <dotnet.tool.version>3.5</dotnet.tool.version>
         <sonar.language>cs</sonar.language>
 		<phresco.unitTest.dir>/source/test</phresco.unitTest.dir>
+		<phresco.manualTest.testcase.path>/test/manual</phresco.manualTest.testcase.path>
 		<phresco.unitTest.report.dir>/source/test/target/nunit-report</phresco.unitTest.report.dir>
 		<phresco.unitTest.testsuite.xpath>/test-results/test-suite/results/test-suite/results/test-suite/results/test-suite</phresco.unitTest.testsuite.xpath>
 		<phresco.unitTest.testcase.path>/results/test-case</phresco.unitTest.testcase.path>

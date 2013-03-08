@@ -93,6 +93,7 @@
 		<phresco.unitTest.report.dir>/source/OCUnitReports</phresco.unitTest.report.dir>
 		<phresco.unitTest.testsuite.xpath>/testsuite</phresco.unitTest.testsuite.xpath>
 		<phresco.unitTest.testcase.path>/testcase</phresco.unitTest.testcase.path>
+		<phresco.manualTest.testcase.path>/test/manual</phresco.manualTest.testcase.path>
 		<phresco.functionalTest.selenium.tool>UIAutomation</phresco.functionalTest.selenium.tool>
 		<phresco.functionalTest.dir>/test/functional</phresco.functionalTest.dir>
 		<phresco.functionalTest.report.dir>/do_not_checkin</phresco.functionalTest.report.dir>
