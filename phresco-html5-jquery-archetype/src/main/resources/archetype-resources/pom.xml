@@ -124,7 +124,7 @@
 					<coverage>true</coverage>
 					<skipTests>${js.skipTest}</skipTests>
 					<sourceExcludes>
-						<sourceExclude>eshop/widgets/Init.js</sourceExclude>
+						<sourceExclude>js/eshop/widgets/Init.js</sourceExclude>
 					</sourceExcludes>
 				</configuration>
 			</plugin>
