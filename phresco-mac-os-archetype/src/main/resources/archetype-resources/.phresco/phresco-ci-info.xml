@@ -26,31 +26,6 @@
             <parameters>
                 <parameter>
                     <name>
-                        <value lang="en">SDK</value>
-                    </name>
-                    <type>DynamicParameter</type>
-                    <dynamicParameter>
-                        <class>com.photon.phresco.framework.param.impl.IosSdkParameterImpl</class>
-                        <dependencies>
-                            <dependency>
-<groupId>com.photon.phresco.framework</groupId>
-<artifactId>phresco-framework-impl</artifactId>
-<type>jar</type>
-<version>2.1.0.3001-SNAPSHOT</version>
-                            </dependency>
-                        </dependencies>
-                    </dynamicParameter>
-                    <required>false</required>
-                    <editable>true</editable>
-                    <description></description>
-                    <key>sdk</key>
-                    <multiple>false</multiple>
-                    <value></value>
-                    <sort>false</sort>
-                    <show>true</show>
-                </parameter>
-                <parameter>
-                    <name>
                         <value lang="en">Target</value>
                     </name>
                     <type>DynamicParameter</type>
@@ -84,7 +59,7 @@
                     <description></description>
                     <key>projectType</key>
                     <multiple>false</multiple>
-                    <value>xcode</value>
+                    <value>mac</value>
                     <sort>false</sort>
                     <show>false</show>
                 </parameter>
@@ -93,7 +68,7 @@
     </mojo>
     <mojo>
         <goal>package</goal>
-        <description>Goal which packages the Iphone Native Project</description>
+        <description>Goal which packages the MAC APP Project</description>
         <requiresDirectInvocation>false</requiresDirectInvocation>
         <requiresProject>true</requiresProject>
         <requiresReports>false</requiresReports>
@@ -133,13 +108,13 @@
                     <name>
                         <value lang="en">Project Type</value>
                     </name>
-                    <type>String</type>
+                    <type>Hidden</type>
                     <required>false</required>
                     <editable>true</editable>
                     <description></description>
                     <key>projectType</key>
                     <multiple>false</multiple>
-                    <value>xcode</value>
+                    <value>mac</value>
                     <sort>false</sort>
                     <show>false</show>
                 </parameter>
@@ -153,9 +128,9 @@
                     <description></description>
                     <key>buildNumber</key>
                     <multiple>false</multiple>
-                    <value>1</value>
+                    <value></value>
                     <sort>false</sort>
-                    <show>false</show>
+                    <show>true</show>
                 </parameter>
                 <parameter>
                     <name>
@@ -181,41 +156,16 @@
                         <class>com.photon.phresco.impl.EnvironmentsParameterImpl</class>
                         <dependencies>
                             <dependency>
-                                <groupId>com.photon.phresco.commons</groupId>
-                                <artifactId>phresco-commons</artifactId>
-                                <type>jar</type>
-                                <version>2.1.0.3001-SNAPSHOT</version>
+								<groupId>com.photon.phresco.commons</groupId>
+								<artifactId>phresco-commons</artifactId>
+								<type>jar</type>
+								<version>2.1.0.3001-SNAPSHOT</version>
                             </dependency>
                         </dependencies>
                     </dynamicParameter>
                     <required>true</required>
                     <editable>true</editable>
                     <key>environmentName</key>
-                    <multiple>false</multiple>
-                    <value></value>
-                    <sort>false</sort>
-                    <show>true</show>
-                </parameter>
-                <parameter>
-                    <name>
-                        <value lang="en">SDK</value>
-                    </name>
-                    <type>DynamicParameter</type>
-                    <dynamicParameter>
-                        <class>com.photon.phresco.framework.param.impl.IosSdkParameterImpl</class>
-                        <dependencies>
-                            <dependency>
-                                <groupId>com.photon.phresco.framework</groupId>
-                                <artifactId>phresco-framework-impl</artifactId>
-                                <type>jar</type>
-                                <version>2.1.0.3001-SNAPSHOT</version>
-                            </dependency>
-                        </dependencies>
-                    </dynamicParameter>
-                    <required>false</required>
-                    <editable>true</editable>
-                    <description></description>
-                    <key>sdk</key>
                     <multiple>false</multiple>
                     <value></value>
                     <sort>false</sort>
@@ -230,10 +180,10 @@
                         <class>com.photon.phresco.framework.param.impl.IosTargetParameterImpl</class>
                         <dependencies>
                             <dependency>
-                                <groupId>com.photon.phresco.framework</groupId>
-                                <artifactId>phresco-framework-impl</artifactId>
-                                <type>jar</type>
-                                <version>2.1.0.3001-SNAPSHOT</version>
+								<groupId>com.photon.phresco.framework</groupId>
+								<artifactId>phresco-framework-impl</artifactId>
+								<type>jar</type>
+								<version>2.1.0.3001-SNAPSHOT</version>
                             </dependency>
                         </dependencies>
                     </dynamicParameter>
@@ -325,19 +275,44 @@
                     <sort>false</sort>
                     <show>true</show>
                 </parameter>
+				<parameter>
+                    <name>
+                        <value lang="en">Theme</value>
+                    </name>
+                    <type>DynamicParameter</type>
+                    <dynamicParameter>
+                        <class>com.photon.phresco.framework.param.impl.IosThemesBundleFilterImpl</class>
+                        <dependencies>
+                            <dependency>
+								<groupId>com.photon.phresco.framework</groupId>
+								<artifactId>phresco-framework-impl</artifactId>
+								<type>jar</type>
+								<version>2.1.0.3001-SNAPSHOT</version>
+                            </dependency>
+                        </dependencies>
+                    </dynamicParameter>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>theme</key>
+                    <multiple>false</multiple>
+                    <value></value>
+                    <sort>false</sort>
+                    <show>true</show>
+                </parameter>
             </parameters>
         </configuration>
     </mojo>
     <mojo>
         <goal>deploy</goal>
-        <description>Goal which deploys the Iphone Native Project</description>
+        <description>Goal which deploys the MAC APP Project</description>
         <requiresDirectInvocation>false</requiresDirectInvocation>
         <requiresProject>true</requiresProject>
         <requiresReports>false</requiresReports>
         <aggregator>false</aggregator>
         <requiresOnline>false</requiresOnline>
         <inheritedByDefault>true</inheritedByDefault>
-        <implementation>
+		<implementation>
            <dependency>
                <groupId>com.photon.phresco.plugins</groupId>
                <artifactId>xcode-phresco-plugin</artifactId>
@@ -352,78 +327,6 @@
         <threadSafe>false</threadSafe>
         <configuration>
             <parameters>
-                <parameter>
-                    <pluginParameter>framework</pluginParameter>
-                    <mavenCommands>
-                        <mavenCommand>
-                            <key>simulator</key>
-                            <value>-Ddevice.deploy=false</value>
-                        </mavenCommand>
-                        <mavenCommand>
-                            <key>device</key>
-                            <value>-Ddevice.deploy=true</value>
-                        </mavenCommand>
-                    </mavenCommands>
-                    <name>
-                        <value lang="en">Device Type</value>
-                    </name>
-                    <type>List</type>
-                    <required>false</required>
-                    <editable>true</editable>
-                    <description></description>
-                    <key>deviceType</key>
-                    <possibleValues>
-                        <value key="simulator" dependency="sdkVersion,family">Simulator</value>
-                        <value key="device">Device</value>
-                    </possibleValues>
-                    <multiple>false</multiple>
-                    <value>simulator</value>
-                    <sort>false</sort>
-                    <show>true</show>
-                </parameter>
-                <parameter>
-                    <name>
-                        <value lang="en">Simulator</value>
-                    </name>
-                    <type>DynamicParameter</type>
-                    <dynamicParameter>
-                        <class>com.photon.phresco.framework.param.impl.IosSimSDKVersionsParameterImpl</class>
-                        <dependencies>
-                            <dependency>
-                                <groupId>com.photon.phresco.framework</groupId>
-                                <artifactId>phresco-framework-impl</artifactId>
-                                <type>jar</type>
-                                <version>2.1.0.3001-SNAPSHOT</version>
-                            </dependency>
-                        </dependencies>
-                    </dynamicParameter>
-                    <required>false</required>
-                    <editable>true</editable>
-                    <description></description>
-                    <key>sdkVersion</key>
-                    <multiple>false</multiple>
-                    <value></value>
-                    <sort>false</sort>
-                    <show>false</show>
-                </parameter>
-                <parameter>
-                    <name>
-                        <value lang="en">Family</value>
-                    </name>
-                    <type>List</type>
-                    <required>false</required>
-                    <editable>true</editable>
-                    <description></description>
-                    <key>family</key>
-                    <possibleValues>
-                        <value key="iphone">iphone</value>
-                        <value key="ipad">ipad</value>
-                    </possibleValues>
-                    <multiple>false</multiple>
-                    <value></value>
-                    <sort>false</sort>
-                    <show>false</show>
-                </parameter>
                 <parameter>
                     <pluginParameter>framework</pluginParameter>
                     <mavenCommands>
@@ -467,21 +370,21 @@
                     <description></description>
                     <key>buildNumber</key>
                     <multiple>false</multiple>
-                    <value>1</value>
+                    <value></value>
                     <sort>false</sort>
                     <show>false</show>
                 </parameter>
-                <parameter>
+				<parameter>
                     <name>
-                        <value lang="en">Trigger Simulator</value>
+                        <value lang="en">Project Type</value>
                     </name>
-                    <type>Boolean</type>
+                    <type>Hidden</type>
                     <required>false</required>
                     <editable>true</editable>
                     <description></description>
-                    <key>triggerSimulator</key>
+                    <key>projectType</key>
                     <multiple>false</multiple>
-                    <value>false</value>
+                    <value>mac</value>
                     <sort>false</sort>
                     <show>false</show>
                 </parameter>
@@ -490,7 +393,7 @@
     </mojo>
     <mojo>
         <goal>unit-test</goal>
-        <description>Goal which Unit Test for Iphone Natice Project</description>
+        <description>Goal which Unit Test for MAC APP Project</description>
         <requiresDirectInvocation>false</requiresDirectInvocation>
         <requiresProject>true</requiresProject>
         <requiresReports>false</requiresReports>
@@ -514,31 +417,6 @@
             <parameters>
                 <parameter>
                     <name>
-                        <value lang="en">SDK</value>
-                    </name>
-                    <type>DynamicParameter</type>
-                    <dynamicParameter>
-                        <class>com.photon.phresco.framework.param.impl.IosSdkParameterImpl</class>
-                        <dependencies>
-                            <dependency>
-                                <groupId>com.photon.phresco.framework</groupId>
-                                <artifactId>phresco-framework-impl</artifactId>
-                                <type>jar</type>
-                                <version>2.1.0.3001-SNAPSHOT</version>
-                            </dependency>
-                        </dependencies>
-                    </dynamicParameter>
-                    <required>false</required>
-                    <editable>true</editable>
-                    <description></description>
-                    <key>sdk</key>
-                    <multiple>false</multiple>
-                    <value></value>
-                    <sort>false</sort>
-                    <show>true</show>
-                </parameter>
-                <parameter>
-                    <name>
                         <value lang="en">Target</value>
                     </name>
                     <type>DynamicParameter</type>
@@ -546,10 +424,10 @@
                         <class>com.photon.phresco.framework.param.impl.IosTargetParameterImpl</class>
                         <dependencies>
                             <dependency>
-                                <groupId>com.photon.phresco.framework</groupId>
-                                <artifactId>phresco-framework-impl</artifactId>
-                                <type>jar</type>
-                                <version>2.1.0.3001-SNAPSHOT</version>
+								<groupId>com.photon.phresco.framework</groupId>
+								<artifactId>phresco-framework-impl</artifactId>
+								<type>jar</type>
+								<version>2.1.0.3001-SNAPSHOT</version>
                             </dependency>
                         </dependencies>
                     </dynamicParameter>
@@ -611,7 +489,7 @@
                     <description></description>
                     <key>projectType</key>
                     <multiple>false</multiple>
-                    <value>xcode</value>
+                    <value>mac</value>
                     <sort>false</sort>
                     <show>false</show>
                 </parameter>

@@ -2,7 +2,7 @@
 <mojos>
     <mojo>
         <goal>unit-test</goal>
-        <description>Goal which Unit Test for Iphone Natice Project</description>
+        <description>Goal which Unit Test for MAC APP Project</description>
         <requiresDirectInvocation>false</requiresDirectInvocation>
         <requiresProject>true</requiresProject>
         <requiresReports>false</requiresReports>
@@ -24,31 +24,6 @@
         <threadSafe>false</threadSafe>
         <configuration>
             <parameters>
-                <parameter>
-                    <name>
-                        <value lang="en">SDK</value>
-                    </name>
-                    <type>DynamicParameter</type>
-                    <dynamicParameter>
-                        <class>com.photon.phresco.framework.param.impl.IosSdkParameterImpl</class>
-                        <dependencies>
-                            <dependency>
-								<groupId>com.photon.phresco.framework</groupId>
-								<artifactId>phresco-framework-impl</artifactId>
-								<type>jar</type>
-								<version>2.1.0.3001-SNAPSHOT</version>
-                            </dependency>
-                        </dependencies>
-                    </dynamicParameter>
-                    <required>false</required>
-                    <editable>true</editable>
-                    <description></description>
-                    <key>sdk</key>
-                    <multiple>false</multiple>
-                    <value></value>
-                    <sort>false</sort>
-                    <show>true</show>
-                </parameter>
                 <parameter>
                     <name>
                         <value lang="en">Target</value>
@@ -123,7 +98,7 @@
                     <description></description>
                     <key>projectType</key>
                     <multiple>false</multiple>
-                    <value>xcode</value>
+                    <value>mac</value>
                     <sort>false</sort>
                     <show>false</show>
                 </parameter>
