@@ -32,7 +32,7 @@
         <plugin>
             <groupId>com.photon.phresco.plugins.xcode</groupId>
             <artifactId>xcode-maven-plugin</artifactId>
-            <version>2.1.0.2001-SNAPSHOT</version>
+            <version>2.1.0.3003-SNAPSHOT</version>
             <extensions>true</extensions>
             <configuration>
                 <xcodeProject>./source/Phresco.xcodeproj</xcodeProject>
@@ -41,7 +41,7 @@
         <plugin>
             <groupId>com.photon.phresco.plugins</groupId>
             <artifactId>phresco-maven-plugin</artifactId>
-            <version>2.1.0.2001-SNAPSHOT</version>
+            <version>2.1.0.3003-SNAPSHOT</version>
             <extensions>true</extensions>
         </plugin>
 	  </plugins>
@@ -92,6 +92,7 @@
     <properties>
         <phresco.unitTest.report.dir>/source/OCUnitReports</phresco.unitTest.report.dir>
         <phresco.unitTest.testsuite.xpath>/testsuite</phresco.unitTest.testsuite.xpath>
+		<phresco.manualTest.testcase.path>/test/manual</phresco.manualTest.testcase.path>
         <phresco.unitTest.testcase.path>/testcase</phresco.unitTest.testcase.path>
     		<phresco.module.source.dir>/source/ThirdParty</phresco.module.source.dir>
     		<phresco.jslibs.source.dir>/source/www/JSLibs</phresco.jslibs.source.dir>

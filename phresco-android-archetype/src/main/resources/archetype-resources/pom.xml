@@ -32,6 +32,7 @@
 		<phresco.unitTest.dir>/test/unit</phresco.unitTest.dir>
         <phresco.unitTest.report.dir>/test/unit/do_not_checkin/target/surefire-reports</phresco.unitTest.report.dir>
         <phresco.unitTest.testsuite.xpath>/testsuites/testsuite</phresco.unitTest.testsuite.xpath>
+		<phresco.manualTest.testcase.path>/test/manual</phresco.manualTest.testcase.path>
         <phresco.unitTest.testcase.path>/testcase</phresco.unitTest.testcase.path>
         <phresco.functionalTest.selenium.tool>webdriver</phresco.functionalTest.selenium.tool>
         <phresco.functionalTest.dir>/test/functional</phresco.functionalTest.dir>
@@ -66,13 +67,13 @@
 				<plugin>
 					<groupId>com.photon.maven.plugins.android.generation2</groupId>
 					<artifactId>android-maven-plugin</artifactId>
-					<version>2.1.0.2001-SNAPSHOT</version>
+					<version>2.1.0.3003-SNAPSHOT</version>
 					<extensions>true</extensions>
 				</plugin>
 				<plugin>
                     <groupId>com.photon.phresco.plugins</groupId>
                     <artifactId>phresco-maven-plugin</artifactId>
-                    <version>2.1.0.2001-SNAPSHOT</version>
+                    <version>2.1.0.3003-SNAPSHOT</version>
                 </plugin>
 			</plugins>
 		</pluginManagement>
@@ -95,7 +96,7 @@
 			<plugin>
                 <groupId>com.photon.phresco.plugins</groupId>
                 <artifactId>phresco-maven-plugin</artifactId>
-                <version>2.1.0.2001-SNAPSHOT</version>
+                <version>2.1.0.3003-SNAPSHOT</version>
             </plugin>
         </plugins>
 	</build>

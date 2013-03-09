@@ -76,7 +76,7 @@
                <groupId>com.photon.phresco.plugins</groupId>
                <artifactId>blackberry-phresco-plugin</artifactId>
                <type>jar</type>
-               <version>2.1.0.2001-SNAPSHOT</version>
+               <version>2.1.0.3003-SNAPSHOT</version>
                <class>com.photon.phresco.plugins.blackberry.BlackBerryPlugin</class>
            </dependency>
        </implementation>
@@ -187,7 +187,7 @@
                                 <groupId>com.photon.phresco.commons</groupId>
                                 <artifactId>phresco-commons</artifactId>
                                 <type>jar</type>
-                                <version>2.1.0.2001-SNAPSHOT</version>
+                                <version>2.1.0.3003-SNAPSHOT</version>
                             </dependency>
                         </dependencies>
                     </dynamicParameter>
@@ -249,7 +249,7 @@
                <groupId>com.photon.phresco.plugins</groupId>
                <artifactId>blackberry-phresco-plugin</artifactId>
                <type>jar</type>
-               <version>2.1.0.2001-SNAPSHOT</version>
+               <version>2.1.0.3003-SNAPSHOT</version>
                <class>com.photon.phresco.plugins.blackberry.BlackBerryPlugin</class>
            </dependency>
        </implementation>
@@ -273,6 +273,21 @@
                     <show>false</show>
                     <value>1</value>
                 </parameter>
+				<parameter>
+                    <name>
+                        <value lang="en">Show Settings</value>
+                    </name>
+                    <type>Boolean</type>
+                    <required>false</required>
+                    <editable>true</editable>
+                    <description></description>
+                    <key>showSettings</key>
+                    <multiple>false</multiple>
+                    <sort>false</sort>
+                    <show>true</show>
+                    <value>true</value>
+                    <dependency>environmentName</dependency>
+                </parameter>
                 <parameter>
                     <name>
                         <value lang="en">Environment</value>
@@ -285,7 +300,7 @@
                                 <groupId>com.photon.phresco.commons</groupId>
                                 <artifactId>phresco-commons</artifactId>
                                 <type>jar</type>
-                                <version>2.1.0.2001-SNAPSHOT</version>
+                                <version>2.1.0.3003-SNAPSHOT</version>
                             </dependency>
                         </dependencies>
                     </dynamicParameter>
@@ -412,7 +427,7 @@
                         <groupId>com.photon.phresco.commons</groupId>
                         <artifactId>phresco-commons</artifactId>
                         <type>jar</type>
-                        <version>2.1.0.2001-SNAPSHOT</version>
+                        <version>2.1.0.3003-SNAPSHOT</version>
                     </dependency>
                 </dependencies>
                 </dynamicParameter>
@@ -441,7 +456,7 @@
                 <groupId>com.photon.phresco.plugins</groupId>
                 <artifactId>report-phresco-plugin</artifactId>
                 <type>jar</type>
-                <version>2.1.0.2001-SNAPSHOT</version>
+                <version>2.1.0.3003-SNAPSHOT</version>
                 <class>com.photon.phresco.plugins.ReportPlugin</class>
             </dependency>
         </implementation>
@@ -549,7 +564,7 @@
                <groupId>com.photon.phresco.plugins</groupId>
                <artifactId>ci-phresco-plugin</artifactId>
                <type>jar</type>
-               <version>2.1.0.2001-SNAPSHOT</version>
+               <version>2.1.0.3003-SNAPSHOT</version>
                <class>com.photon.phresco.plugins.CIPlugin</class>
            </dependency>
        </implementation>
